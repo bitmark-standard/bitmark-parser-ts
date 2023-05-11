@@ -1,0 +1,82 @@
+To use ts-node:
+
+1. npm install @types/ramda --save
+--> this will hinder make. To resolve it, remove @types/ramda (npm uninstall @types/ramda).
+
+X 2. Add  "type": "module" in package.json
+
+3. Add --esm to ts-node command
+
+$ ts-node --esm call.ts tests/bug.bit
+
+> remove warnings and options
+tsc call.ts --experimentalDecorators -t es2020 --outDir "./tsoutput/"
+> tsconfig.json is recognized when you don't specify the root filename on the command line
+
+tsconfig.json manual = https://www.typescriptlang.org/tsconfig
+
+
+
+
+To build Parcel bundle:
+
+$ npm run build-bundle
+
+
+Error
+
+> Accessors are only available when targeting ECMAScript 5 and higher
+https://stackoverflow.com/questions/41010780/accessors-are-only-available-when-targeting-ecmascript-5-and-higher
+
+-------------------------------------
+ts-node exec error resolution:
+
+1. Change the import stmt in *Lexer.ts and *Parser.ts. Like so
+
+e.g. typescript-es6/bitmarkParser.ts .. simply add .js to the import filenames
+
+import { ATN } from "antlr4ts/atn/ATN.js";
+import { ATNDeserializer } from "antlr4ts/atn/ATNDeserializer.js";
+import { FailedPredicateException } from "antlr4ts/FailedPredicateException.js";
+import { NotNull } from "antlr4ts/Decorators.js";
+import { NoViableAltException } from "antlr4ts/NoViableAltException.js";
+import { Override } from "antlr4ts/Decorators.js";
+import { Parser } from "antlr4ts/Parser.js";
+import { ParserRuleContext } from "antlr4ts/ParserRuleContext.js";
+import { ParserATNSimulator } from "antlr4ts/atn/ParserATNSimulator.js";
+import { ParseTreeListener } from "antlr4ts/tree/ParseTreeListener.js";
+import { ParseTreeVisitor } from "antlr4ts/tree/ParseTreeVisitor.js";
+import { RecognitionException } from "antlr4ts/RecognitionException.js";
+import { RuleContext } from "antlr4ts/RuleContext.js";
+//import { RuleVersion } from "antlr4ts/RuleVersion.js";
+import { TerminalNode } from "antlr4ts/tree/TerminalNode.js";
+import { Token } from "antlr4ts/Token.js";
+import { TokenStream } from "antlr4ts/TokenStream.js";
+import { Vocabulary } from "antlr4ts/Vocabulary.js";
+import { VocabularyImpl } from "antlr4ts/VocabularyImpl.js";
+
+import * as Utils from "antlr4ts/misc/Utils.js";
+
+e.g. bitmarkLexerr.ts .. same thing. Add .js.
+
+import { ATN } from "antlr4ts/atn/ATN.js";
+import { ATNDeserializer } from "antlr4ts/atn/ATNDeserializer.js";
+import { CharStream } from "antlr4ts/CharStream.js";
+import { Lexer } from "antlr4ts/Lexer.js";
+import { LexerATNSimulator } from "antlr4ts/atn/LexerATNSimulator.js";
+import { NotNull } from "antlr4ts/Decorators.js";
+import { Override } from "antlr4ts/Decorators.js";
+import { RuleContext } from "antlr4ts/RuleContext.js";
+import { Vocabulary } from "antlr4ts/Vocabulary.js";
+import { VocabularyImpl } from "antlr4ts/VocabularyImpl.js";
+
+import * as Utils from "antlr4ts/misc/Utils.js";
+
+
+Good steps:
+
+1. cd src
+2. make -f makefiles/makefile-typescript.mk
+3. python tools/addjs2import.py TypeScript/*.ts
+4. ts-node --esm call.ts tests/bug.bit
+

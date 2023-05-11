@@ -1,0 +1,30 @@
+[.vendor-amcharts-5-chart:json]
+[@id:298225]
+[%item 1]
+[!This is my first chart bit with a JSON body]
+{"Test": 100, "Test2": "Json"}
+
+
+[.vendor-amcharts-5-chart]
+[@id:298225]
+[%item 1]
+[!This is my first chart bit with a JSON body]
+{"Testing": 200, "Checking": [1,2,3,4,5,6]}
+
+
+[.vendor-amcharts-5-chart:json]
+[!this is a json bit]
+[%item 2]
+{
+  "name": "@bitmark-standard/bitmark-grammar",
+  "version": "1.0.23",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitmark-standard/bitmark-grammar.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "keywords": [ "bitmark", "grammar", "parser" ],
+  "keywords": [ {"bitmark":0},{"grammar":1},{"parser":2}]  
+}

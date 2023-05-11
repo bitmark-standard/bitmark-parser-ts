@@ -1,0 +1,41 @@
+{
+  "files": ["call.ts"],
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "es2020",
+    "moduleResolution": "node",
+    "ignoreDeprecations": "5.0",
+    "sourceMap": true,
+    "outDir": "./tsoutput",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": true,
+    "noEmitOnError": false,
+    "lib": ["es2020.string"],
+    "typeRoots": [
+      "../node_modules/@types"
+    ],
+    "esModuleInterop": false,
+    "moduleResolution": "node",
+    "incremental": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "strictBindCallApply": false,
+    "forceConsistentCasingInFileNames": false,
+    "noFallthroughCasesInSwitch": false,
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "baseUrl": "./"
+  },
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  },
+  "include": [
+    "../node_modules/@types/**/*.ts",
+    "../node_modules/@colors/**/*.ts",
+    "./*.ts"
+  ],
+  "exclude": ["node_modules"]
+}
