@@ -2,14 +2,19 @@
 
 A typescript bitmark-parser
 
-#### To run with ts-node:
 
-    $ cd src
-    $ ts-node --esm call.ts tests/bug.bit
+#### On the fresh start (one time only)
+
+    $ npm install
 
 #### Building the parser typescript source files:
 
     $ npm run build-ts
+
+#### To run with ts-node:
+
+    $ cd src
+    $ ts-node --esm call.ts tests/bug.bit
 
 
 #### Building the Parcel bundle (with an example html)
@@ -17,8 +22,10 @@ A typescript bitmark-parser
 Example HTML is the bundle-test.html, and the example main is main.ts. At the root of the package, do
 
     $ npm run build-bundle
-    
-You need to tweak dist/bundle-test.html -- the default src specification is `src="/main.aa9d12ad.js"`. You will need to copy dist/* to your local apache www directory. But you will have to tweak this src if you are copying the files to a different directory. For me the js files reside in the same direcory as the html, I just add '.' like this `src="./main.aa9d12ad.js"`. Below is a generated bundle-test.html.
+
+This command will build the html, js bunlde and map in the /dist directory.
+
+You need to tweak dist/bundle-test.html -- the default src specification is `src="/main.aa9d12ad.js"`. You will need to copy dist/* to your local apache www directory. But you will have to tweak this src value (location of the file) if you are copying the files to a different directory. For me the js files reside in the same direcory as the html, I just add '.' like this `src="./main.aa9d12ad.js"`. Below is a generated bundle-test.html.
 ```
 <!doctype html><!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]--><!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]--><!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]--><!--[if gt IE 8]><!--><html class="no-js"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title></title><meta name="description" content=""><meta name="viewport" content="width=device-width, initial-scale=1"><script src="./main.aa9d12ad.js" crossorigin></script></head><body> </body></html>
 ```
@@ -29,5 +36,5 @@ arse(n)}var r="[.conversation-right-1]\nYoo!\n",o="\n[.bot-action-response]\n===
 },{"./src/index.ts":"B6dB"}]},{},["ZCfc"], null)
 //# sourceMappingURL=./main.aa9d12ad.js.map
 ```
-That's it. You copy the three files `bundle-test.html, main.aa9d12ad.js, main.aa9d12ad.js.map` to your webserver document directory.
+That's it. You copy the three files `dist/bundle-test.html, dist/main.aa9d12ad.js, dist/main.aa9d12ad.js.map` to your webserver document directory.
 

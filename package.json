@@ -5,6 +5,7 @@
     "type": "git",
     "url": "git+https://github.com/bitmark-standard/bitmark-parser-ts.git"
   },
+  "main": "main.ts",
   "keywords": [
     "bitmark",
     "grammar",
