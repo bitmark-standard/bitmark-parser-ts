@@ -1,3 +1,2 @@
 *.g4 linguist-language=ANTLR
 *.js linguist-generated
-*.ts linguist-generated
