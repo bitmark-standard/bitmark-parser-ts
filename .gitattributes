@@ -11,3 +11,4 @@ src/Flashcard/*.ts  linguist-generated
 src/MiscBits/*.ts   linguist-generated
 src/Truefalse/*.ts  linguist-generated
 src/Sequence/*.ts   linguist-generated
+node_modules/*.ts   linguist-documentation
