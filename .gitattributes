@@ -1,4 +1,5 @@
 *.g4 linguist-language=ANTLR
 *.js linguist-generated
-/src/typescript-es6/antlr4es6 linguist-generated
-/src/typescript-es6/antlr4ts  linguist-generated
+/src/typescript-es6/antlr4es6/*.ts linguist-generated
+/src/typescript-es6/antlr4ts/*.ts  linguist-generated
+
