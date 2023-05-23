@@ -223,7 +223,7 @@ class BitUtil {
 	let fromTo: any[] = [], bitHeads = [];
 	let matches: IterableIterator<RegExpMatchArray>;
 	
-	regex = /(\[\.[^\]]+\])/sg;
+	regex = /(\[\.[^\]\.]+\])/sg;
 	matches = this.source.matchAll(regex);  // all bit starts
 
 	for (m of matches) {
@@ -470,7 +470,7 @@ class BitUtil {
     extract_json(text: string): string {
 	const start = text.indexOf('\n{');
 	const end = text.lastIndexOf('}');
-	let result = text.substring(start, end);
+	let result = text.substring(start, end+1);
 	return result.trim();
     }
     

@@ -11,7 +11,7 @@ TYPESCRIPTCOMPILER=$(NODE_MODULES)/typescript/bin/tsc
 RM=rm
 
 BABEL_DIR=./babel
-.PHONY: build es6 
+.PHONY: build typescript
 
 antlr_dir=./MiscBits/
 ts_dir=./TypeScript/
@@ -55,9 +55,9 @@ sequence_js_files = sequenceLexer.js sequenceParser.js
 common_lexer_file=./MiscBits/common_lexer.g4
 common_parser_file=./MiscBits/common_parser.g4
 
-.DEFAULT_GOAL = es6
+.DEFAULT_GOAL = typescript
 
-es6: $(grammar_file)
+typescript: $(grammar_file)
 	$(PYTHON_EXECUTABLE) ./tools/replace_parser_content.py ./MiscBits/_bitmarkLexer.g4 $(common_lexer_file) $(bitmark_lexer_file) '<<<<<<common<<<<<<'
 	$(PYTHON_EXECUTABLE) ./tools/replace_parser_content.py ./MiscBits/_bitmarkParser.g4 $(common_parser_file) $(bitmark_parser_file) '<<<<<<common<<<<<<'
 	$(NODE_MODULES)/antlr4ts-cli/antlr4ts $(ANTLR_OPT) $(bitmark_lexer_file);

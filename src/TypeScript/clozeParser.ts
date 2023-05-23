@@ -73,114 +73,115 @@ export class clozeParser extends Parser {
 	public static readonly STRING = 45;
 	public static readonly NL = 46;
 	public static readonly NOTBITMARK = 47;
-	public static readonly SENTENCE = 48;
-	public static readonly BARSTRING = 49;
-	public static readonly OPAT = 50;
-	public static readonly AtProgress = 51;
-	public static readonly AtReference = 52;
-	public static readonly AtWidth = 53;
-	public static readonly AtHeight = 54;
-	public static readonly AtProgressPoints = 55;
-	public static readonly AtShortanswer = 56;
-	public static readonly AtLonganswer = 57;
-	public static readonly AtExampleWithStr = 58;
-	public static readonly AtExamplecol = 59;
-	public static readonly AtExamplecl = 60;
-	public static readonly AtSampleSolution = 61;
-	public static readonly AtPartialAnswerS = 62;
-	public static readonly AtPartialAnswer = 63;
-	public static readonly AtLabeltrue = 64;
-	public static readonly AtLabelfalse = 65;
-	public static readonly AtPoints = 66;
-	public static readonly AtSrc = 67;
-	public static readonly AtPartner = 68;
-	public static readonly OPATALT = 69;
-	public static readonly OPAMARK = 70;
-	public static readonly ShowInIndex = 71;
-	public static readonly OpAtCaption = 72;
-	public static readonly OpAtLicense = 73;
-	public static readonly OpAtCopyright = 74;
-	public static readonly OpAtSearch = 75;
-	public static readonly OpAtIsTracked = 76;
-	public static readonly OpAtIsInfoOnly = 77;
-	public static readonly AtDate = 78;
-	public static readonly Http = 79;
-	public static readonly Https = 80;
-	public static readonly AmpAudio = 81;
-	public static readonly AmpImage = 82;
-	public static readonly AmpImageZoom = 83;
-	public static readonly AmpImageWAudio = 84;
-	public static readonly AmpVideo = 85;
-	public static readonly AmpArticle = 86;
-	public static readonly AmpDocument = 87;
-	public static readonly AmpApp = 88;
-	public static readonly AmpWebsite = 89;
-	public static readonly AmpStillImageFilm = 90;
-	public static readonly AmpPdf = 91;
-	public static readonly OpAmpAudio = 92;
-	public static readonly OpAmpImage = 93;
-	public static readonly OpAmpImageZoom = 94;
-	public static readonly OpAmpImageWAudio = 95;
-	public static readonly OpAmpVideo = 96;
-	public static readonly OpAmpArticle = 97;
-	public static readonly OpAmpArticleAtt = 98;
-	public static readonly OpAmpDocument = 99;
-	public static readonly OpAmpApp = 100;
-	public static readonly OpAmpWebsite = 101;
-	public static readonly OpAmpStillImageFilm = 102;
-	public static readonly BracEnclose = 103;
-	public static readonly AmpAudioLink = 104;
-	public static readonly AmpImageLink = 105;
-	public static readonly AmpVideoLink = 106;
-	public static readonly AmpArticleLink = 107;
-	public static readonly AmpDocumentLink = 108;
-	public static readonly AmpDocumentDownload = 109;
-	public static readonly AmpAppLink = 110;
-	public static readonly AmpWebsiteLink = 111;
-	public static readonly AmpStillImageFilmLink = 112;
-	public static readonly OpAmpAudioLink = 113;
-	public static readonly OpAmpImageLink = 114;
-	public static readonly OpAmpVideoLink = 115;
-	public static readonly OpAmpArticleLink = 116;
-	public static readonly OpAmpDocumentLink = 117;
-	public static readonly OpAmpDocumentDownload = 118;
-	public static readonly OpAmpAppLink = 119;
-	public static readonly OpAmpWebsiteLink = 120;
-	public static readonly OpAmpStillImageFilmLink = 121;
-	public static readonly AmpImageEmbed = 122;
-	public static readonly AmpVideoEmbed = 123;
-	public static readonly AmpAudioEmbed = 124;
-	public static readonly AmpDocumentEmbed = 125;
-	public static readonly AmpStillImageFilmEmbed = 126;
-	public static readonly OpAmpImageEmbed = 127;
-	public static readonly OpAmpVideoEmbed = 128;
-	public static readonly OpAmpAudioEmbed = 129;
-	public static readonly OpAmpDocumentEmbed = 130;
-	public static readonly OpAmpStillImageFilmEmbed = 131;
-	public static readonly BitmarkMinus = 132;
-	public static readonly BitmarkPlus = 133;
-	public static readonly ColonText = 134;
-	public static readonly ColonJson = 135;
-	public static readonly Prosemirror = 136;
-	public static readonly Placeholder = 137;
-	public static readonly BASIC = 138;
-	public static readonly JPG = 139;
-	public static readonly PNG = 140;
-	public static readonly GIF = 141;
-	public static readonly SVG = 142;
-	public static readonly MP2 = 143;
-	public static readonly MP3 = 144;
-	public static readonly MP4 = 145;
-	public static readonly FLV = 146;
-	public static readonly WMV = 147;
-	public static readonly MPEG = 148;
-	public static readonly MPG = 149;
-	public static readonly TEL = 150;
-	public static readonly DotArticleAtt = 151;
-	public static readonly STAR = 152;
-	public static readonly URL = 153;
-	public static readonly LIST_LINE = 154;
-	public static readonly ENCLBARS = 155;
+	public static readonly ELIPSIS = 48;
+	public static readonly SENTENCE = 49;
+	public static readonly BARSTRING = 50;
+	public static readonly OPAT = 51;
+	public static readonly AtProgress = 52;
+	public static readonly AtReference = 53;
+	public static readonly AtWidth = 54;
+	public static readonly AtHeight = 55;
+	public static readonly AtProgressPoints = 56;
+	public static readonly AtShortanswer = 57;
+	public static readonly AtLonganswer = 58;
+	public static readonly AtExampleWithStr = 59;
+	public static readonly AtExamplecol = 60;
+	public static readonly AtExamplecl = 61;
+	public static readonly AtSampleSolution = 62;
+	public static readonly AtPartialAnswerS = 63;
+	public static readonly AtPartialAnswer = 64;
+	public static readonly AtLabeltrue = 65;
+	public static readonly AtLabelfalse = 66;
+	public static readonly AtPoints = 67;
+	public static readonly AtSrc = 68;
+	public static readonly AtPartner = 69;
+	public static readonly OPATALT = 70;
+	public static readonly OPAMARK = 71;
+	public static readonly ShowInIndex = 72;
+	public static readonly OpAtCaption = 73;
+	public static readonly OpAtLicense = 74;
+	public static readonly OpAtCopyright = 75;
+	public static readonly OpAtSearch = 76;
+	public static readonly OpAtIsTracked = 77;
+	public static readonly OpAtIsInfoOnly = 78;
+	public static readonly AtDate = 79;
+	public static readonly Http = 80;
+	public static readonly Https = 81;
+	public static readonly AmpAudio = 82;
+	public static readonly AmpImage = 83;
+	public static readonly AmpImageZoom = 84;
+	public static readonly AmpImageWAudio = 85;
+	public static readonly AmpVideo = 86;
+	public static readonly AmpArticle = 87;
+	public static readonly AmpDocument = 88;
+	public static readonly AmpApp = 89;
+	public static readonly AmpWebsite = 90;
+	public static readonly AmpStillImageFilm = 91;
+	public static readonly AmpPdf = 92;
+	public static readonly OpAmpAudio = 93;
+	public static readonly OpAmpImage = 94;
+	public static readonly OpAmpImageZoom = 95;
+	public static readonly OpAmpImageWAudio = 96;
+	public static readonly OpAmpVideo = 97;
+	public static readonly OpAmpArticle = 98;
+	public static readonly OpAmpArticleAtt = 99;
+	public static readonly OpAmpDocument = 100;
+	public static readonly OpAmpApp = 101;
+	public static readonly OpAmpWebsite = 102;
+	public static readonly OpAmpStillImageFilm = 103;
+	public static readonly BracEnclose = 104;
+	public static readonly AmpAudioLink = 105;
+	public static readonly AmpImageLink = 106;
+	public static readonly AmpVideoLink = 107;
+	public static readonly AmpArticleLink = 108;
+	public static readonly AmpDocumentLink = 109;
+	public static readonly AmpDocumentDownload = 110;
+	public static readonly AmpAppLink = 111;
+	public static readonly AmpWebsiteLink = 112;
+	public static readonly AmpStillImageFilmLink = 113;
+	public static readonly OpAmpAudioLink = 114;
+	public static readonly OpAmpImageLink = 115;
+	public static readonly OpAmpVideoLink = 116;
+	public static readonly OpAmpArticleLink = 117;
+	public static readonly OpAmpDocumentLink = 118;
+	public static readonly OpAmpDocumentDownload = 119;
+	public static readonly OpAmpAppLink = 120;
+	public static readonly OpAmpWebsiteLink = 121;
+	public static readonly OpAmpStillImageFilmLink = 122;
+	public static readonly AmpImageEmbed = 123;
+	public static readonly AmpVideoEmbed = 124;
+	public static readonly AmpAudioEmbed = 125;
+	public static readonly AmpDocumentEmbed = 126;
+	public static readonly AmpStillImageFilmEmbed = 127;
+	public static readonly OpAmpImageEmbed = 128;
+	public static readonly OpAmpVideoEmbed = 129;
+	public static readonly OpAmpAudioEmbed = 130;
+	public static readonly OpAmpDocumentEmbed = 131;
+	public static readonly OpAmpStillImageFilmEmbed = 132;
+	public static readonly BitmarkMinus = 133;
+	public static readonly BitmarkPlus = 134;
+	public static readonly ColonText = 135;
+	public static readonly ColonJson = 136;
+	public static readonly Prosemirror = 137;
+	public static readonly Placeholder = 138;
+	public static readonly BASIC = 139;
+	public static readonly JPG = 140;
+	public static readonly PNG = 141;
+	public static readonly GIF = 142;
+	public static readonly SVG = 143;
+	public static readonly MP2 = 144;
+	public static readonly MP3 = 145;
+	public static readonly MP4 = 146;
+	public static readonly FLV = 147;
+	public static readonly WMV = 148;
+	public static readonly MPEG = 149;
+	public static readonly MPG = 150;
+	public static readonly TEL = 151;
+	public static readonly DotArticleAtt = 152;
+	public static readonly STAR = 153;
+	public static readonly URL = 154;
+	public static readonly LIST_LINE = 155;
+	public static readonly ENCLBARS = 156;
 	public static readonly RULE_bitmark = 0;
 	public static readonly RULE_bitmark_ = 1;
 	public static readonly RULE_clozes = 2;
@@ -305,24 +306,25 @@ export class clozeParser extends Parser {
 		undefined, undefined, "'[#'", undefined, "':'", "'&'", "'::'", "'+'", 
 		"'.@'", "'>'", "'<'", "'=='", "'\u25BA'", "'\u2192'", undefined, "'_'", 
 		undefined, undefined, undefined, undefined, undefined, undefined, undefined, 
-		undefined, undefined, undefined, undefined, undefined, undefined, "'[@'", 
+		undefined, undefined, undefined, undefined, undefined, undefined, undefined, 
+		"'[@'", undefined, undefined, undefined, undefined, undefined, undefined, 
 		undefined, undefined, undefined, undefined, undefined, undefined, undefined, 
 		undefined, undefined, undefined, undefined, undefined, undefined, undefined, 
 		undefined, undefined, undefined, undefined, undefined, undefined, undefined, 
+		undefined, "'http://'", "'https://'", "'&audio'", "'&image'", "'&image-zoom'", 
+		"'&image-with-audio'", "'&video'", "'&article'", "'&document'", "'&app'", 
+		"'&website'", "'&still-image-film'", "'&pdf'", undefined, undefined, undefined, 
 		undefined, undefined, undefined, undefined, undefined, undefined, undefined, 
-		"'http://'", "'https://'", "'&audio'", "'&image'", "'&image-zoom'", "'&image-with-audio'", 
-		"'&video'", "'&article'", "'&document'", "'&app'", "'&website'", "'&still-image-film'", 
-		"'&pdf'", undefined, undefined, undefined, undefined, undefined, undefined, 
-		undefined, undefined, undefined, undefined, undefined, undefined, "'&audio-link'", 
-		"'&image-link'", "'&video-link'", "'&article-link'", "'&document-link'", 
-		"'&document-download'", "'&app-link'", "'&website-link'", "'&still-image-film-link'", 
-		undefined, undefined, undefined, undefined, undefined, undefined, undefined, 
-		undefined, undefined, "'&image-embed'", "'&video-embed'", "'&daudio-embed'", 
-		"'&document-embed'", "'&still-image-film-embed'", undefined, undefined, 
-		undefined, undefined, undefined, "':bitmark--'", "':bitmark++'", "':text'", 
-		"':json'", "':prosemirror'", "':placeholder'", "':basic'", "':jpg'", "':png'", 
-		"':gif'", "':svg'", "':mp2'", "':mp3'", "':mp4'", "':flv'", "':wmv'", 
-		"':mpeg'", "':mpg'", "'tel:'", "'.article-attachment'", "'*'",
+		undefined, undefined, "'&audio-link'", "'&image-link'", "'&video-link'", 
+		"'&article-link'", "'&document-link'", "'&document-download'", "'&app-link'", 
+		"'&website-link'", "'&still-image-film-link'", undefined, undefined, undefined, 
+		undefined, undefined, undefined, undefined, undefined, undefined, "'&image-embed'", 
+		"'&video-embed'", "'&daudio-embed'", "'&document-embed'", "'&still-image-film-embed'", 
+		undefined, undefined, undefined, undefined, undefined, "':bitmark--'", 
+		"':bitmark++'", "':text'", "':json'", "':prosemirror'", "':placeholder'", 
+		"':basic'", "':jpg'", "':png'", "':gif'", "':svg'", "':mp2'", "':mp3'", 
+		"':mp4'", "':flv'", "':wmv'", "':mpeg'", "':mpg'", "'tel:'", "'.article-attachment'", 
+		"'*'",
 	];
 	private static readonly _SYMBOLIC_NAMES: Array<string | undefined> = [
 		undefined, "S", "OPDOT", "BitCloze", "BitClozeinstgrp", "BitClozesolgrp", 
@@ -331,8 +333,8 @@ export class clozeParser extends Parser {
 		"OPHASH", "CL", "COLON", "AMP", "DBLCOLON", "PLUS", "DotAt", "Greater", 
 		"Less", "DBLEQ", "RightAngle", "RightArrow", "OP_N_ETC", "UNSCO", "COMMENT", 
 		"DCANY", "Image_type", "Audio_type", "Video_type", "ArticleText", "NOTCL", 
-		"NUMERIC", "STRING", "NL", "NOTBITMARK", "SENTENCE", "BARSTRING", "OPAT", 
-		"AtProgress", "AtReference", "AtWidth", "AtHeight", "AtProgressPoints", 
+		"NUMERIC", "STRING", "NL", "NOTBITMARK", "ELIPSIS", "SENTENCE", "BARSTRING", 
+		"OPAT", "AtProgress", "AtReference", "AtWidth", "AtHeight", "AtProgressPoints", 
 		"AtShortanswer", "AtLonganswer", "AtExampleWithStr", "AtExamplecol", "AtExamplecl", 
 		"AtSampleSolution", "AtPartialAnswerS", "AtPartialAnswer", "AtLabeltrue", 
 		"AtLabelfalse", "AtPoints", "AtSrc", "AtPartner", "OPATALT", "OPAMARK", 
@@ -2032,7 +2034,7 @@ export class clozeParser extends Parser {
 			this.state = 567;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			while (((((_la - 81)) & ~0x1F) === 0 && ((1 << (_la - 81)) & ((1 << (clozeParser.AmpAudio - 81)) | (1 << (clozeParser.AmpImage - 81)) | (1 << (clozeParser.AmpImageZoom - 81)) | (1 << (clozeParser.AmpImageWAudio - 81)) | (1 << (clozeParser.AmpVideo - 81)) | (1 << (clozeParser.AmpArticle - 81)) | (1 << (clozeParser.AmpDocument - 81)) | (1 << (clozeParser.AmpApp - 81)) | (1 << (clozeParser.AmpWebsite - 81)) | (1 << (clozeParser.AmpStillImageFilm - 81)) | (1 << (clozeParser.AmpPdf - 81)) | (1 << (clozeParser.AmpAudioLink - 81)) | (1 << (clozeParser.AmpImageLink - 81)) | (1 << (clozeParser.AmpVideoLink - 81)) | (1 << (clozeParser.AmpArticleLink - 81)) | (1 << (clozeParser.AmpDocumentLink - 81)) | (1 << (clozeParser.AmpDocumentDownload - 81)) | (1 << (clozeParser.AmpAppLink - 81)) | (1 << (clozeParser.AmpWebsiteLink - 81)) | (1 << (clozeParser.AmpStillImageFilmLink - 81)))) !== 0) || ((((_la - 123)) & ~0x1F) === 0 && ((1 << (_la - 123)) & ((1 << (clozeParser.AmpVideoEmbed - 123)) | (1 << (clozeParser.AmpDocumentEmbed - 123)) | (1 << (clozeParser.AmpStillImageFilmEmbed - 123)) | (1 << (clozeParser.ColonText - 123)) | (1 << (clozeParser.ColonJson - 123)))) !== 0)) {
+			while (((((_la - 82)) & ~0x1F) === 0 && ((1 << (_la - 82)) & ((1 << (clozeParser.AmpAudio - 82)) | (1 << (clozeParser.AmpImage - 82)) | (1 << (clozeParser.AmpImageZoom - 82)) | (1 << (clozeParser.AmpImageWAudio - 82)) | (1 << (clozeParser.AmpVideo - 82)) | (1 << (clozeParser.AmpArticle - 82)) | (1 << (clozeParser.AmpDocument - 82)) | (1 << (clozeParser.AmpApp - 82)) | (1 << (clozeParser.AmpWebsite - 82)) | (1 << (clozeParser.AmpStillImageFilm - 82)) | (1 << (clozeParser.AmpPdf - 82)) | (1 << (clozeParser.AmpAudioLink - 82)) | (1 << (clozeParser.AmpImageLink - 82)) | (1 << (clozeParser.AmpVideoLink - 82)) | (1 << (clozeParser.AmpArticleLink - 82)) | (1 << (clozeParser.AmpDocumentLink - 82)) | (1 << (clozeParser.AmpDocumentDownload - 82)) | (1 << (clozeParser.AmpAppLink - 82)) | (1 << (clozeParser.AmpWebsiteLink - 82)) | (1 << (clozeParser.AmpStillImageFilmLink - 82)))) !== 0) || ((((_la - 124)) & ~0x1F) === 0 && ((1 << (_la - 124)) & ((1 << (clozeParser.AmpVideoEmbed - 124)) | (1 << (clozeParser.AmpDocumentEmbed - 124)) | (1 << (clozeParser.AmpStillImageFilmEmbed - 124)) | (1 << (clozeParser.ColonText - 124)) | (1 << (clozeParser.ColonJson - 124)))) !== 0)) {
 				{
 				this.state = 565;
 				this._errHandler.sync(this);
@@ -2111,7 +2113,7 @@ export class clozeParser extends Parser {
 			{
 			this.state = 570;
 			_la = this._input.LA(1);
-			if (!(((((_la - 86)) & ~0x1F) === 0 && ((1 << (_la - 86)) & ((1 << (clozeParser.AmpArticle - 86)) | (1 << (clozeParser.AmpDocument - 86)) | (1 << (clozeParser.AmpWebsite - 86)) | (1 << (clozeParser.AmpStillImageFilm - 86)) | (1 << (clozeParser.AmpAudioLink - 86)) | (1 << (clozeParser.AmpImageLink - 86)) | (1 << (clozeParser.AmpVideoLink - 86)) | (1 << (clozeParser.AmpArticleLink - 86)) | (1 << (clozeParser.AmpDocumentLink - 86)) | (1 << (clozeParser.AmpDocumentDownload - 86)) | (1 << (clozeParser.AmpAppLink - 86)) | (1 << (clozeParser.AmpWebsiteLink - 86)) | (1 << (clozeParser.AmpStillImageFilmLink - 86)))) !== 0) || ((((_la - 123)) & ~0x1F) === 0 && ((1 << (_la - 123)) & ((1 << (clozeParser.AmpVideoEmbed - 123)) | (1 << (clozeParser.AmpAudioEmbed - 123)) | (1 << (clozeParser.AmpDocumentEmbed - 123)) | (1 << (clozeParser.AmpStillImageFilmEmbed - 123)) | (1 << (clozeParser.BitmarkMinus - 123)) | (1 << (clozeParser.BitmarkPlus - 123)) | (1 << (clozeParser.ColonJson - 123)) | (1 << (clozeParser.Prosemirror - 123)) | (1 << (clozeParser.Placeholder - 123)))) !== 0))) {
+			if (!(((((_la - 87)) & ~0x1F) === 0 && ((1 << (_la - 87)) & ((1 << (clozeParser.AmpArticle - 87)) | (1 << (clozeParser.AmpDocument - 87)) | (1 << (clozeParser.AmpWebsite - 87)) | (1 << (clozeParser.AmpStillImageFilm - 87)) | (1 << (clozeParser.AmpAudioLink - 87)) | (1 << (clozeParser.AmpImageLink - 87)) | (1 << (clozeParser.AmpVideoLink - 87)) | (1 << (clozeParser.AmpArticleLink - 87)) | (1 << (clozeParser.AmpDocumentLink - 87)) | (1 << (clozeParser.AmpDocumentDownload - 87)) | (1 << (clozeParser.AmpAppLink - 87)) | (1 << (clozeParser.AmpWebsiteLink - 87)) | (1 << (clozeParser.AmpStillImageFilmLink - 87)))) !== 0) || ((((_la - 124)) & ~0x1F) === 0 && ((1 << (_la - 124)) & ((1 << (clozeParser.AmpVideoEmbed - 124)) | (1 << (clozeParser.AmpAudioEmbed - 124)) | (1 << (clozeParser.AmpDocumentEmbed - 124)) | (1 << (clozeParser.AmpStillImageFilmEmbed - 124)) | (1 << (clozeParser.BitmarkMinus - 124)) | (1 << (clozeParser.BitmarkPlus - 124)) | (1 << (clozeParser.ColonJson - 124)) | (1 << (clozeParser.Prosemirror - 124)) | (1 << (clozeParser.Placeholder - 124)))) !== 0))) {
 			this._errHandler.recoverInline(this);
 			} else {
 				if (this._input.LA(1) === Token.EOF) {
@@ -2518,7 +2520,7 @@ export class clozeParser extends Parser {
 			{
 			this.state = 613;
 			_la = this._input.LA(1);
-			if (!(((((_la - 87)) & ~0x1F) === 0 && ((1 << (_la - 87)) & ((1 << (clozeParser.AmpDocument - 87)) | (1 << (clozeParser.AmpDocumentLink - 87)) | (1 << (clozeParser.AmpDocumentDownload - 87)))) !== 0) || _la === clozeParser.AmpDocumentEmbed)) {
+			if (!(((((_la - 88)) & ~0x1F) === 0 && ((1 << (_la - 88)) & ((1 << (clozeParser.AmpDocument - 88)) | (1 << (clozeParser.AmpDocumentLink - 88)) | (1 << (clozeParser.AmpDocumentDownload - 88)))) !== 0) || _la === clozeParser.AmpDocumentEmbed)) {
 			this._errHandler.recoverInline(this);
 			} else {
 				if (this._input.LA(1) === Token.EOF) {
@@ -2698,7 +2700,7 @@ export class clozeParser extends Parser {
 			{
 			this.state = 623;
 			_la = this._input.LA(1);
-			if (!(((((_la - 99)) & ~0x1F) === 0 && ((1 << (_la - 99)) & ((1 << (clozeParser.OpAmpDocument - 99)) | (1 << (clozeParser.OpAmpDocumentLink - 99)) | (1 << (clozeParser.OpAmpDocumentDownload - 99)) | (1 << (clozeParser.OpAmpDocumentEmbed - 99)))) !== 0))) {
+			if (!(((((_la - 100)) & ~0x1F) === 0 && ((1 << (_la - 100)) & ((1 << (clozeParser.OpAmpDocument - 100)) | (1 << (clozeParser.OpAmpDocumentLink - 100)) | (1 << (clozeParser.OpAmpDocumentDownload - 100)) | (1 << (clozeParser.OpAmpDocumentEmbed - 100)))) !== 0))) {
 			this._errHandler.recoverInline(this);
 			} else {
 				if (this._input.LA(1) === Token.EOF) {
@@ -2889,7 +2891,7 @@ export class clozeParser extends Parser {
 			{
 			this.state = 646;
 			_la = this._input.LA(1);
-			if (!(((((_la - 102)) & ~0x1F) === 0 && ((1 << (_la - 102)) & ((1 << (clozeParser.OpAmpStillImageFilm - 102)) | (1 << (clozeParser.OpAmpStillImageFilmLink - 102)) | (1 << (clozeParser.OpAmpStillImageFilmEmbed - 102)))) !== 0))) {
+			if (!(((((_la - 103)) & ~0x1F) === 0 && ((1 << (_la - 103)) & ((1 << (clozeParser.OpAmpStillImageFilm - 103)) | (1 << (clozeParser.OpAmpStillImageFilmLink - 103)) | (1 << (clozeParser.OpAmpStillImageFilmEmbed - 103)))) !== 0))) {
 			this._errHandler.recoverInline(this);
 			} else {
 				if (this._input.LA(1) === Token.EOF) {
@@ -3546,7 +3548,7 @@ export class clozeParser extends Parser {
 				{
 				this.state = 771;
 				_la = this._input.LA(1);
-				if (!(((((_la - 69)) & ~0x1F) === 0 && ((1 << (_la - 69)) & ((1 << (clozeParser.OPATALT - 69)) | (1 << (clozeParser.OpAtCaption - 69)) | (1 << (clozeParser.OpAtLicense - 69)) | (1 << (clozeParser.OpAtCopyright - 69)) | (1 << (clozeParser.OpAtSearch - 69)))) !== 0))) {
+				if (!(((((_la - 70)) & ~0x1F) === 0 && ((1 << (_la - 70)) & ((1 << (clozeParser.OPATALT - 70)) | (1 << (clozeParser.OpAtCaption - 70)) | (1 << (clozeParser.OpAtLicense - 70)) | (1 << (clozeParser.OpAtCopyright - 70)) | (1 << (clozeParser.OpAtSearch - 70)))) !== 0))) {
 				this._errHandler.recoverInline(this);
 				} else {
 					if (this._input.LA(1) === Token.EOF) {
@@ -3650,7 +3652,7 @@ export class clozeParser extends Parser {
 				{
 				this.state = 790;
 				_la = this._input.LA(1);
-				if (!(((((_la - 69)) & ~0x1F) === 0 && ((1 << (_la - 69)) & ((1 << (clozeParser.OPATALT - 69)) | (1 << (clozeParser.OpAtCaption - 69)) | (1 << (clozeParser.OpAtLicense - 69)) | (1 << (clozeParser.OpAtCopyright - 69)) | (1 << (clozeParser.OpAtSearch - 69)))) !== 0))) {
+				if (!(((((_la - 70)) & ~0x1F) === 0 && ((1 << (_la - 70)) & ((1 << (clozeParser.OPATALT - 70)) | (1 << (clozeParser.OpAtCaption - 70)) | (1 << (clozeParser.OpAtLicense - 70)) | (1 << (clozeParser.OpAtCopyright - 70)) | (1 << (clozeParser.OpAtSearch - 70)))) !== 0))) {
 				this._errHandler.recoverInline(this);
 				} else {
 					if (this._input.LA(1) === Token.EOF) {
@@ -4009,6 +4011,7 @@ export class clozeParser extends Parser {
 						case clozeParser.NUMERIC:
 						case clozeParser.STRING:
 						case clozeParser.NOTBITMARK:
+						case clozeParser.ELIPSIS:
 						case clozeParser.SENTENCE:
 						case clozeParser.BARSTRING:
 						case clozeParser.URL:
@@ -4072,7 +4075,7 @@ export class clozeParser extends Parser {
 				{
 				this.state = 869;
 				_la = this._input.LA(1);
-				if (!(((((_la - 69)) & ~0x1F) === 0 && ((1 << (_la - 69)) & ((1 << (clozeParser.OPATALT - 69)) | (1 << (clozeParser.OpAtCaption - 69)) | (1 << (clozeParser.OpAtLicense - 69)) | (1 << (clozeParser.OpAtCopyright - 69)) | (1 << (clozeParser.OpAtSearch - 69)))) !== 0))) {
+				if (!(((((_la - 70)) & ~0x1F) === 0 && ((1 << (_la - 70)) & ((1 << (clozeParser.OPATALT - 70)) | (1 << (clozeParser.OpAtCaption - 70)) | (1 << (clozeParser.OpAtLicense - 70)) | (1 << (clozeParser.OpAtCopyright - 70)) | (1 << (clozeParser.OpAtSearch - 70)))) !== 0))) {
 				this._errHandler.recoverInline(this);
 				} else {
 					if (this._input.LA(1) === Token.EOF) {
@@ -4227,7 +4230,7 @@ export class clozeParser extends Parser {
 				this.state = 902;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
-				while (((((_la - 25)) & ~0x1F) === 0 && ((1 << (_la - 25)) & ((1 << (clozeParser.COLON - 25)) | (1 << (clozeParser.AMP - 25)) | (1 << (clozeParser.Greater - 25)) | (1 << (clozeParser.Less - 25)) | (1 << (clozeParser.RightAngle - 25)) | (1 << (clozeParser.RightArrow - 25)) | (1 << (clozeParser.NOTBITMARK - 25)) | (1 << (clozeParser.SENTENCE - 25)) | (1 << (clozeParser.BARSTRING - 25)))) !== 0)) {
+				while (((((_la - 25)) & ~0x1F) === 0 && ((1 << (_la - 25)) & ((1 << (clozeParser.COLON - 25)) | (1 << (clozeParser.AMP - 25)) | (1 << (clozeParser.Greater - 25)) | (1 << (clozeParser.Less - 25)) | (1 << (clozeParser.RightAngle - 25)) | (1 << (clozeParser.RightArrow - 25)) | (1 << (clozeParser.NOTBITMARK - 25)) | (1 << (clozeParser.ELIPSIS - 25)) | (1 << (clozeParser.SENTENCE - 25)) | (1 << (clozeParser.BARSTRING - 25)))) !== 0)) {
 					{
 					this.state = 900;
 					this._errHandler.sync(this);
@@ -4244,6 +4247,7 @@ export class clozeParser extends Parser {
 					case clozeParser.RightAngle:
 					case clozeParser.RightArrow:
 					case clozeParser.NOTBITMARK:
+					case clozeParser.ELIPSIS:
 					case clozeParser.SENTENCE:
 					case clozeParser.BARSTRING:
 						{
@@ -4318,7 +4322,7 @@ export class clozeParser extends Parser {
 			this.state = 923;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
-			while (((((_la - 25)) & ~0x1F) === 0 && ((1 << (_la - 25)) & ((1 << (clozeParser.COLON - 25)) | (1 << (clozeParser.AMP - 25)) | (1 << (clozeParser.Greater - 25)) | (1 << (clozeParser.Less - 25)) | (1 << (clozeParser.RightAngle - 25)) | (1 << (clozeParser.RightArrow - 25)) | (1 << (clozeParser.NOTBITMARK - 25)) | (1 << (clozeParser.SENTENCE - 25)) | (1 << (clozeParser.BARSTRING - 25)))) !== 0)) {
+			while (((((_la - 25)) & ~0x1F) === 0 && ((1 << (_la - 25)) & ((1 << (clozeParser.COLON - 25)) | (1 << (clozeParser.AMP - 25)) | (1 << (clozeParser.Greater - 25)) | (1 << (clozeParser.Less - 25)) | (1 << (clozeParser.RightAngle - 25)) | (1 << (clozeParser.RightArrow - 25)) | (1 << (clozeParser.NOTBITMARK - 25)) | (1 << (clozeParser.ELIPSIS - 25)) | (1 << (clozeParser.SENTENCE - 25)) | (1 << (clozeParser.BARSTRING - 25)))) !== 0)) {
 				{
 				this.state = 921;
 				this._errHandler.sync(this);
@@ -4335,6 +4339,7 @@ export class clozeParser extends Parser {
 				case clozeParser.RightAngle:
 				case clozeParser.RightArrow:
 				case clozeParser.NOTBITMARK:
+				case clozeParser.ELIPSIS:
 				case clozeParser.SENTENCE:
 				case clozeParser.BARSTRING:
 					{
@@ -4592,7 +4597,7 @@ export class clozeParser extends Parser {
 				this.state = 984;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
-				while ((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << clozeParser.S) | (1 << clozeParser.OPS) | (1 << clozeParser.CL) | (1 << clozeParser.COLON) | (1 << clozeParser.AMP) | (1 << clozeParser.Greater) | (1 << clozeParser.Less))) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & ((1 << (clozeParser.DBLEQ - 32)) | (1 << (clozeParser.RightAngle - 32)) | (1 << (clozeParser.RightArrow - 32)) | (1 << (clozeParser.OP_N_ETC - 32)) | (1 << (clozeParser.NUMERIC - 32)) | (1 << (clozeParser.STRING - 32)) | (1 << (clozeParser.NL - 32)) | (1 << (clozeParser.NOTBITMARK - 32)) | (1 << (clozeParser.SENTENCE - 32)) | (1 << (clozeParser.BARSTRING - 32)))) !== 0) || _la === clozeParser.URL) {
+				while ((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << clozeParser.S) | (1 << clozeParser.OPS) | (1 << clozeParser.CL) | (1 << clozeParser.COLON) | (1 << clozeParser.AMP) | (1 << clozeParser.Greater) | (1 << clozeParser.Less))) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & ((1 << (clozeParser.DBLEQ - 32)) | (1 << (clozeParser.RightAngle - 32)) | (1 << (clozeParser.RightArrow - 32)) | (1 << (clozeParser.OP_N_ETC - 32)) | (1 << (clozeParser.NUMERIC - 32)) | (1 << (clozeParser.STRING - 32)) | (1 << (clozeParser.NL - 32)) | (1 << (clozeParser.NOTBITMARK - 32)) | (1 << (clozeParser.ELIPSIS - 32)) | (1 << (clozeParser.SENTENCE - 32)) | (1 << (clozeParser.BARSTRING - 32)))) !== 0) || _la === clozeParser.URL) {
 					{
 					this.state = 982;
 					this._errHandler.sync(this);
@@ -4718,7 +4723,7 @@ export class clozeParser extends Parser {
 				this.state = 1008;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
-				while ((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << clozeParser.S) | (1 << clozeParser.OPS) | (1 << clozeParser.CL) | (1 << clozeParser.COLON) | (1 << clozeParser.AMP) | (1 << clozeParser.Greater) | (1 << clozeParser.Less))) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & ((1 << (clozeParser.DBLEQ - 32)) | (1 << (clozeParser.RightAngle - 32)) | (1 << (clozeParser.RightArrow - 32)) | (1 << (clozeParser.OP_N_ETC - 32)) | (1 << (clozeParser.NUMERIC - 32)) | (1 << (clozeParser.STRING - 32)) | (1 << (clozeParser.NL - 32)) | (1 << (clozeParser.NOTBITMARK - 32)) | (1 << (clozeParser.SENTENCE - 32)) | (1 << (clozeParser.BARSTRING - 32)))) !== 0) || _la === clozeParser.URL) {
+				while ((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << clozeParser.S) | (1 << clozeParser.OPS) | (1 << clozeParser.CL) | (1 << clozeParser.COLON) | (1 << clozeParser.AMP) | (1 << clozeParser.Greater) | (1 << clozeParser.Less))) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & ((1 << (clozeParser.DBLEQ - 32)) | (1 << (clozeParser.RightAngle - 32)) | (1 << (clozeParser.RightArrow - 32)) | (1 << (clozeParser.OP_N_ETC - 32)) | (1 << (clozeParser.NUMERIC - 32)) | (1 << (clozeParser.STRING - 32)) | (1 << (clozeParser.NL - 32)) | (1 << (clozeParser.NOTBITMARK - 32)) | (1 << (clozeParser.ELIPSIS - 32)) | (1 << (clozeParser.SENTENCE - 32)) | (1 << (clozeParser.BARSTRING - 32)))) !== 0) || _la === clozeParser.URL) {
 					{
 					this.state = 1006;
 					this._errHandler.sync(this);
@@ -4966,9 +4971,9 @@ export class clozeParser extends Parser {
 		let _la: number;
 		try {
 			let _alt: number;
-			this.state = 1086;
+			this.state = 1092;
 			this._errHandler.sync(this);
-			switch ( this.interpreter.adaptivePredict(this._input, 149, this._ctx) ) {
+			switch ( this.interpreter.adaptivePredict(this._input, 150, this._ctx) ) {
 			case 1:
 				this.enterOuterAlt(_localctx, 1);
 				{
@@ -4976,17 +4981,19 @@ export class clozeParser extends Parser {
 				this.match(clozeParser.OPB);
 				this.state = 1044;
 				this._errHandler.sync(this);
-				_la = this._input.LA(1);
-				while (_la === clozeParser.NL) {
-					{
-					{
-					this.state = 1041;
-					this.match(clozeParser.NL);
-					}
+				_alt = this.interpreter.adaptivePredict(this._input, 141, this._ctx);
+				while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
+					if (_alt === 1) {
+						{
+						{
+						this.state = 1041;
+						this.match(clozeParser.NL);
+						}
+						}
 					}
 					this.state = 1046;
 					this._errHandler.sync(this);
-					_la = this._input.LA(1);
+					_alt = this.interpreter.adaptivePredict(this._input, 141, this._ctx);
 				}
 				this.state = 1048;
 				this._errHandler.sync(this);
@@ -4998,69 +5005,83 @@ export class clozeParser extends Parser {
 					}
 					break;
 				}
-				this.state = 1071;
+				this.state = 1077;
 				this._errHandler.sync(this);
-				_alt = this.interpreter.adaptivePredict(this._input, 146, this._ctx);
-				while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
-					if (_alt === 1) {
-						{
-						{
-						this.state = 1050;
-						this.s_and_w();
-						this.state = 1060;
-						this._errHandler.sync(this);
-						_alt = this.interpreter.adaptivePredict(this._input, 144, this._ctx);
-						while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
-							if (_alt === 1) {
-								{
-								{
-								this.state = 1051;
-								this.match(clozeParser.NL);
-								this.state = 1055;
-								this._errHandler.sync(this);
-								_alt = this.interpreter.adaptivePredict(this._input, 143, this._ctx);
-								while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
-									if (_alt === 1) {
-										{
-										{
-										this.state = 1052;
-										this.match(clozeParser.S);
-										}
-										}
-									}
-									this.state = 1057;
-									this._errHandler.sync(this);
-									_alt = this.interpreter.adaptivePredict(this._input, 143, this._ctx);
-								}
-								}
-								}
+				_la = this._input.LA(1);
+				while (_la === clozeParser.NL) {
+					{
+					{
+					this.state = 1050;
+					this.match(clozeParser.NL);
+					this.state = 1054;
+					this._errHandler.sync(this);
+					_alt = this.interpreter.adaptivePredict(this._input, 143, this._ctx);
+					while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
+						if (_alt === 1) {
+							{
+							{
+							this.state = 1051;
+							this.s_and_w();
 							}
-							this.state = 1062;
-							this._errHandler.sync(this);
-							_alt = this.interpreter.adaptivePredict(this._input, 144, this._ctx);
+							}
 						}
-						this.state = 1066;
+						this.state = 1056;
 						this._errHandler.sync(this);
-						_la = this._input.LA(1);
-						while (_la === clozeParser.NL) {
+						_alt = this.interpreter.adaptivePredict(this._input, 143, this._ctx);
+					}
+					this.state = 1066;
+					this._errHandler.sync(this);
+					_alt = this.interpreter.adaptivePredict(this._input, 145, this._ctx);
+					while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
+						if (_alt === 1) {
 							{
 							{
-							this.state = 1063;
+							this.state = 1057;
+							this.match(clozeParser.NL);
+							this.state = 1061;
+							this._errHandler.sync(this);
+							_la = this._input.LA(1);
+							while (_la === clozeParser.S) {
+								{
+								{
+								this.state = 1058;
+								this.match(clozeParser.S);
+								}
+								}
+								this.state = 1063;
+								this._errHandler.sync(this);
+								_la = this._input.LA(1);
+							}
+							}
+							}
+						}
+						this.state = 1068;
+						this._errHandler.sync(this);
+						_alt = this.interpreter.adaptivePredict(this._input, 145, this._ctx);
+					}
+					this.state = 1072;
+					this._errHandler.sync(this);
+					_alt = this.interpreter.adaptivePredict(this._input, 146, this._ctx);
+					while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
+						if (_alt === 1) {
+							{
+							{
+							this.state = 1069;
 							this.match(clozeParser.NL);
 							}
 							}
-							this.state = 1068;
-							this._errHandler.sync(this);
-							_la = this._input.LA(1);
 						}
-						}
-						}
+						this.state = 1074;
+						this._errHandler.sync(this);
+						_alt = this.interpreter.adaptivePredict(this._input, 146, this._ctx);
 					}
-					this.state = 1073;
+					}
+					}
+					this.state = 1079;
 					this._errHandler.sync(this);
-					_alt = this.interpreter.adaptivePredict(this._input, 146, this._ctx);
+					_la = this._input.LA(1);
 				}
-				this.state = 1074;
+				this.state = 1080;
 				this.match(clozeParser.CL);
 				}
 				break;
@@ -5068,33 +5089,33 @@ export class clozeParser extends Parser {
 			case 2:
 				this.enterOuterAlt(_localctx, 2);
 				{
-				this.state = 1075;
+				this.state = 1081;
 				this.match(clozeParser.OPB);
-				this.state = 1079;
+				this.state = 1085;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 				while (_la === clozeParser.NL) {
 					{
 					{
-					this.state = 1076;
+					this.state = 1082;
 					this.match(clozeParser.NL);
 					}
 					}
-					this.state = 1081;
+					this.state = 1087;
 					this._errHandler.sync(this);
 					_la = this._input.LA(1);
 				}
-				this.state = 1083;
+				this.state = 1089;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
-				if ((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << clozeParser.S) | (1 << clozeParser.OPS) | (1 << clozeParser.CL) | (1 << clozeParser.COLON) | (1 << clozeParser.AMP) | (1 << clozeParser.Greater) | (1 << clozeParser.Less))) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & ((1 << (clozeParser.DBLEQ - 32)) | (1 << (clozeParser.RightAngle - 32)) | (1 << (clozeParser.RightArrow - 32)) | (1 << (clozeParser.OP_N_ETC - 32)) | (1 << (clozeParser.NUMERIC - 32)) | (1 << (clozeParser.STRING - 32)) | (1 << (clozeParser.NOTBITMARK - 32)) | (1 << (clozeParser.SENTENCE - 32)) | (1 << (clozeParser.BARSTRING - 32)))) !== 0) || _la === clozeParser.URL) {
+				if ((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << clozeParser.S) | (1 << clozeParser.OPS) | (1 << clozeParser.CL) | (1 << clozeParser.COLON) | (1 << clozeParser.AMP) | (1 << clozeParser.Greater) | (1 << clozeParser.Less))) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & ((1 << (clozeParser.DBLEQ - 32)) | (1 << (clozeParser.RightAngle - 32)) | (1 << (clozeParser.RightArrow - 32)) | (1 << (clozeParser.OP_N_ETC - 32)) | (1 << (clozeParser.NUMERIC - 32)) | (1 << (clozeParser.STRING - 32)) | (1 << (clozeParser.NOTBITMARK - 32)) | (1 << (clozeParser.ELIPSIS - 32)) | (1 << (clozeParser.SENTENCE - 32)) | (1 << (clozeParser.BARSTRING - 32)))) !== 0) || _la === clozeParser.URL) {
 					{
-					this.state = 1082;
+					this.state = 1088;
 					this.s_and_w();
 					}
 				}
 
-				this.state = 1085;
+				this.state = 1091;
 				this.match(clozeParser.EOF);
 				}
 				break;
@@ -5122,15 +5143,15 @@ export class clozeParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1088;
+			this.state = 1094;
 			this.match(clozeParser.OPQ);
-			this.state = 1090;
+			this.state = 1096;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
 			do {
 				{
 				{
-				this.state = 1089;
+				this.state = 1095;
 				_la = this._input.LA(1);
 				if (_la <= 0 || (_la === clozeParser.CL)) {
 				this._errHandler.recoverInline(this);
@@ -5144,11 +5165,11 @@ export class clozeParser extends Parser {
 				}
 				}
 				}
-				this.state = 1092;
+				this.state = 1098;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
-			} while ((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << clozeParser.S) | (1 << clozeParser.OPDOT) | (1 << clozeParser.BitCloze) | (1 << clozeParser.BitClozeinstgrp) | (1 << clozeParser.BitClozesolgrp) | (1 << clozeParser.BitClozeandmulti) | (1 << clozeParser.OPSP) | (1 << clozeParser.OPDOLL) | (1 << clozeParser.OPBUL) | (1 << clozeParser.OPESC) | (1 << clozeParser.OPRANGLES) | (1 << clozeParser.OPRANGLEL) | (1 << clozeParser.OPDANGLE) | (1 << clozeParser.OPU) | (1 << clozeParser.OPB) | (1 << clozeParser.OPQ) | (1 << clozeParser.OPA) | (1 << clozeParser.OPP) | (1 << clozeParser.OPM) | (1 << clozeParser.OPS) | (1 << clozeParser.OPR) | (1 << clozeParser.OPC) | (1 << clozeParser.OPHASH) | (1 << clozeParser.COLON) | (1 << clozeParser.AMP) | (1 << clozeParser.DBLCOLON) | (1 << clozeParser.PLUS) | (1 << clozeParser.DotAt) | (1 << clozeParser.Greater) | (1 << clozeParser.Less))) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & ((1 << (clozeParser.DBLEQ - 32)) | (1 << (clozeParser.RightAngle - 32)) | (1 << (clozeParser.RightArrow - 32)) | (1 << (clozeParser.OP_N_ETC - 32)) | (1 << (clozeParser.UNSCO - 32)) | (1 << (clozeParser.COMMENT - 32)) | (1 << (clozeParser.DCANY - 32)) | (1 << (clozeParser.Image_type - 32)) | (1 << (clozeParser.Audio_type - 32)) | (1 << (clozeParser.Video_type - 32)) | (1 << (clozeParser.ArticleText - 32)) | (1 << (clozeParser.NOTCL - 32)) | (1 << (clozeParser.NUMERIC - 32)) | (1 << (clozeParser.STRING - 32)) | (1 << (clozeParser.NL - 32)) | (1 << (clozeParser.NOTBITMARK - 32)) | (1 << (clozeParser.SENTENCE - 32)) | (1 << (clozeParser.BARSTRING - 32)) | (1 << (clozeParser.OPAT - 32)) | (1 << (clozeParser.AtProgress - 32)) | (1 << (clozeParser.AtReference - 32)) | (1 << (clozeParser.AtWidth - 32)) | (1 << (clozeParser.AtHeight - 32)) | (1 << (clozeParser.AtProgressPoints - 32)) | (1 << (clozeParser.AtShortanswer - 32)) | (1 << (clozeParser.AtLonganswer - 32)) | (1 << (clozeParser.AtExampleWithStr - 32)) | (1 << (clozeParser.AtExamplecol - 32)) | (1 << (clozeParser.AtExamplecl - 32)) | (1 << (clozeParser.AtSampleSolution - 32)) | (1 << (clozeParser.AtPartialAnswerS - 32)) | (1 << (clozeParser.AtPartialAnswer - 32)))) !== 0) || ((((_la - 64)) & ~0x1F) === 0 && ((1 << (_la - 64)) & ((1 << (clozeParser.AtLabeltrue - 64)) | (1 << (clozeParser.AtLabelfalse - 64)) | (1 << (clozeParser.AtPoints - 64)) | (1 << (clozeParser.AtSrc - 64)) | (1 << (clozeParser.AtPartner - 64)) | (1 << (clozeParser.OPATALT - 64)) | (1 << (clozeParser.OPAMARK - 64)) | (1 << (clozeParser.ShowInIndex - 64)) | (1 << (clozeParser.OpAtCaption - 64)) | (1 << (clozeParser.OpAtLicense - 64)) | (1 << (clozeParser.OpAtCopyright - 64)) | (1 << (clozeParser.OpAtSearch - 64)) | (1 << (clozeParser.OpAtIsTracked - 64)) | (1 << (clozeParser.OpAtIsInfoOnly - 64)) | (1 << (clozeParser.AtDate - 64)) | (1 << (clozeParser.Http - 64)) | (1 << (clozeParser.Https - 64)) | (1 << (clozeParser.AmpAudio - 64)) | (1 << (clozeParser.AmpImage - 64)) | (1 << (clozeParser.AmpImageZoom - 64)) | (1 << (clozeParser.AmpImageWAudio - 64)) | (1 << (clozeParser.AmpVideo - 64)) | (1 << (clozeParser.AmpArticle - 64)) | (1 << (clozeParser.AmpDocument - 64)) | (1 << (clozeParser.AmpApp - 64)) | (1 << (clozeParser.AmpWebsite - 64)) | (1 << (clozeParser.AmpStillImageFilm - 64)) | (1 << (clozeParser.AmpPdf - 64)) | (1 << (clozeParser.OpAmpAudio - 64)) | (1 << (clozeParser.OpAmpImage - 64)) | (1 << (clozeParser.OpAmpImageZoom - 64)) | (1 << (clozeParser.OpAmpImageWAudio - 64)))) !== 0) || ((((_la - 96)) & ~0x1F) === 0 && ((1 << (_la - 96)) & ((1 << (clozeParser.OpAmpVideo - 96)) | (1 << (clozeParser.OpAmpArticle - 96)) | (1 << (clozeParser.OpAmpArticleAtt - 96)) | (1 << (clozeParser.OpAmpDocument - 96)) | (1 << (clozeParser.OpAmpApp - 96)) | (1 << (clozeParser.OpAmpWebsite - 96)) | (1 << (clozeParser.OpAmpStillImageFilm - 96)) | (1 << (clozeParser.BracEnclose - 96)) | (1 << (clozeParser.AmpAudioLink - 96)) | (1 << (clozeParser.AmpImageLink - 96)) | (1 << (clozeParser.AmpVideoLink - 96)) | (1 << (clozeParser.AmpArticleLink - 96)) | (1 << (clozeParser.AmpDocumentLink - 96)) | (1 << (clozeParser.AmpDocumentDownload - 96)) | (1 << (clozeParser.AmpAppLink - 96)) | (1 << (clozeParser.AmpWebsiteLink - 96)) | (1 << (clozeParser.AmpStillImageFilmLink - 96)) | (1 << (clozeParser.OpAmpAudioLink - 96)) | (1 << (clozeParser.OpAmpImageLink - 96)) | (1 << (clozeParser.OpAmpVideoLink - 96)) | (1 << (clozeParser.OpAmpArticleLink - 96)) | (1 << (clozeParser.OpAmpDocumentLink - 96)) | (1 << (clozeParser.OpAmpDocumentDownload - 96)) | (1 << (clozeParser.OpAmpAppLink - 96)) | (1 << (clozeParser.OpAmpWebsiteLink - 96)) | (1 << (clozeParser.OpAmpStillImageFilmLink - 96)) | (1 << (clozeParser.AmpImageEmbed - 96)) | (1 << (clozeParser.AmpVideoEmbed - 96)) | (1 << (clozeParser.AmpAudioEmbed - 96)) | (1 << (clozeParser.AmpDocumentEmbed - 96)) | (1 << (clozeParser.AmpStillImageFilmEmbed - 96)) | (1 << (clozeParser.OpAmpImageEmbed - 96)))) !== 0) || ((((_la - 128)) & ~0x1F) === 0 && ((1 << (_la - 128)) & ((1 << (clozeParser.OpAmpVideoEmbed - 128)) | (1 << (clozeParser.OpAmpAudioEmbed - 128)) | (1 << (clozeParser.OpAmpDocumentEmbed - 128)) | (1 << (clozeParser.OpAmpStillImageFilmEmbed - 128)) | (1 << (clozeParser.BitmarkMinus - 128)) | (1 << (clozeParser.BitmarkPlus - 128)) | (1 << (clozeParser.ColonText - 128)) | (1 << (clozeParser.ColonJson - 128)) | (1 << (clozeParser.Prosemirror - 128)) | (1 << (clozeParser.Placeholder - 128)) | (1 << (clozeParser.BASIC - 128)) | (1 << (clozeParser.JPG - 128)) | (1 << (clozeParser.PNG - 128)) | (1 << (clozeParser.GIF - 128)) | (1 << (clozeParser.SVG - 128)) | (1 << (clozeParser.MP2 - 128)) | (1 << (clozeParser.MP3 - 128)) | (1 << (clozeParser.MP4 - 128)) | (1 << (clozeParser.FLV - 128)) | (1 << (clozeParser.WMV - 128)) | (1 << (clozeParser.MPEG - 128)) | (1 << (clozeParser.MPG - 128)) | (1 << (clozeParser.TEL - 128)) | (1 << (clozeParser.DotArticleAtt - 128)) | (1 << (clozeParser.STAR - 128)) | (1 << (clozeParser.URL - 128)) | (1 << (clozeParser.LIST_LINE - 128)) | (1 << (clozeParser.ENCLBARS - 128)))) !== 0));
-			this.state = 1094;
+			} while ((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << clozeParser.S) | (1 << clozeParser.OPDOT) | (1 << clozeParser.BitCloze) | (1 << clozeParser.BitClozeinstgrp) | (1 << clozeParser.BitClozesolgrp) | (1 << clozeParser.BitClozeandmulti) | (1 << clozeParser.OPSP) | (1 << clozeParser.OPDOLL) | (1 << clozeParser.OPBUL) | (1 << clozeParser.OPESC) | (1 << clozeParser.OPRANGLES) | (1 << clozeParser.OPRANGLEL) | (1 << clozeParser.OPDANGLE) | (1 << clozeParser.OPU) | (1 << clozeParser.OPB) | (1 << clozeParser.OPQ) | (1 << clozeParser.OPA) | (1 << clozeParser.OPP) | (1 << clozeParser.OPM) | (1 << clozeParser.OPS) | (1 << clozeParser.OPR) | (1 << clozeParser.OPC) | (1 << clozeParser.OPHASH) | (1 << clozeParser.COLON) | (1 << clozeParser.AMP) | (1 << clozeParser.DBLCOLON) | (1 << clozeParser.PLUS) | (1 << clozeParser.DotAt) | (1 << clozeParser.Greater) | (1 << clozeParser.Less))) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & ((1 << (clozeParser.DBLEQ - 32)) | (1 << (clozeParser.RightAngle - 32)) | (1 << (clozeParser.RightArrow - 32)) | (1 << (clozeParser.OP_N_ETC - 32)) | (1 << (clozeParser.UNSCO - 32)) | (1 << (clozeParser.COMMENT - 32)) | (1 << (clozeParser.DCANY - 32)) | (1 << (clozeParser.Image_type - 32)) | (1 << (clozeParser.Audio_type - 32)) | (1 << (clozeParser.Video_type - 32)) | (1 << (clozeParser.ArticleText - 32)) | (1 << (clozeParser.NOTCL - 32)) | (1 << (clozeParser.NUMERIC - 32)) | (1 << (clozeParser.STRING - 32)) | (1 << (clozeParser.NL - 32)) | (1 << (clozeParser.NOTBITMARK - 32)) | (1 << (clozeParser.ELIPSIS - 32)) | (1 << (clozeParser.SENTENCE - 32)) | (1 << (clozeParser.BARSTRING - 32)) | (1 << (clozeParser.OPAT - 32)) | (1 << (clozeParser.AtProgress - 32)) | (1 << (clozeParser.AtReference - 32)) | (1 << (clozeParser.AtWidth - 32)) | (1 << (clozeParser.AtHeight - 32)) | (1 << (clozeParser.AtProgressPoints - 32)) | (1 << (clozeParser.AtShortanswer - 32)) | (1 << (clozeParser.AtLonganswer - 32)) | (1 << (clozeParser.AtExampleWithStr - 32)) | (1 << (clozeParser.AtExamplecol - 32)) | (1 << (clozeParser.AtExamplecl - 32)) | (1 << (clozeParser.AtSampleSolution - 32)) | (1 << (clozeParser.AtPartialAnswerS - 32)))) !== 0) || ((((_la - 64)) & ~0x1F) === 0 && ((1 << (_la - 64)) & ((1 << (clozeParser.AtPartialAnswer - 64)) | (1 << (clozeParser.AtLabeltrue - 64)) | (1 << (clozeParser.AtLabelfalse - 64)) | (1 << (clozeParser.AtPoints - 64)) | (1 << (clozeParser.AtSrc - 64)) | (1 << (clozeParser.AtPartner - 64)) | (1 << (clozeParser.OPATALT - 64)) | (1 << (clozeParser.OPAMARK - 64)) | (1 << (clozeParser.ShowInIndex - 64)) | (1 << (clozeParser.OpAtCaption - 64)) | (1 << (clozeParser.OpAtLicense - 64)) | (1 << (clozeParser.OpAtCopyright - 64)) | (1 << (clozeParser.OpAtSearch - 64)) | (1 << (clozeParser.OpAtIsTracked - 64)) | (1 << (clozeParser.OpAtIsInfoOnly - 64)) | (1 << (clozeParser.AtDate - 64)) | (1 << (clozeParser.Http - 64)) | (1 << (clozeParser.Https - 64)) | (1 << (clozeParser.AmpAudio - 64)) | (1 << (clozeParser.AmpImage - 64)) | (1 << (clozeParser.AmpImageZoom - 64)) | (1 << (clozeParser.AmpImageWAudio - 64)) | (1 << (clozeParser.AmpVideo - 64)) | (1 << (clozeParser.AmpArticle - 64)) | (1 << (clozeParser.AmpDocument - 64)) | (1 << (clozeParser.AmpApp - 64)) | (1 << (clozeParser.AmpWebsite - 64)) | (1 << (clozeParser.AmpStillImageFilm - 64)) | (1 << (clozeParser.AmpPdf - 64)) | (1 << (clozeParser.OpAmpAudio - 64)) | (1 << (clozeParser.OpAmpImage - 64)) | (1 << (clozeParser.OpAmpImageZoom - 64)))) !== 0) || ((((_la - 96)) & ~0x1F) === 0 && ((1 << (_la - 96)) & ((1 << (clozeParser.OpAmpImageWAudio - 96)) | (1 << (clozeParser.OpAmpVideo - 96)) | (1 << (clozeParser.OpAmpArticle - 96)) | (1 << (clozeParser.OpAmpArticleAtt - 96)) | (1 << (clozeParser.OpAmpDocument - 96)) | (1 << (clozeParser.OpAmpApp - 96)) | (1 << (clozeParser.OpAmpWebsite - 96)) | (1 << (clozeParser.OpAmpStillImageFilm - 96)) | (1 << (clozeParser.BracEnclose - 96)) | (1 << (clozeParser.AmpAudioLink - 96)) | (1 << (clozeParser.AmpImageLink - 96)) | (1 << (clozeParser.AmpVideoLink - 96)) | (1 << (clozeParser.AmpArticleLink - 96)) | (1 << (clozeParser.AmpDocumentLink - 96)) | (1 << (clozeParser.AmpDocumentDownload - 96)) | (1 << (clozeParser.AmpAppLink - 96)) | (1 << (clozeParser.AmpWebsiteLink - 96)) | (1 << (clozeParser.AmpStillImageFilmLink - 96)) | (1 << (clozeParser.OpAmpAudioLink - 96)) | (1 << (clozeParser.OpAmpImageLink - 96)) | (1 << (clozeParser.OpAmpVideoLink - 96)) | (1 << (clozeParser.OpAmpArticleLink - 96)) | (1 << (clozeParser.OpAmpDocumentLink - 96)) | (1 << (clozeParser.OpAmpDocumentDownload - 96)) | (1 << (clozeParser.OpAmpAppLink - 96)) | (1 << (clozeParser.OpAmpWebsiteLink - 96)) | (1 << (clozeParser.OpAmpStillImageFilmLink - 96)) | (1 << (clozeParser.AmpImageEmbed - 96)) | (1 << (clozeParser.AmpVideoEmbed - 96)) | (1 << (clozeParser.AmpAudioEmbed - 96)) | (1 << (clozeParser.AmpDocumentEmbed - 96)) | (1 << (clozeParser.AmpStillImageFilmEmbed - 96)))) !== 0) || ((((_la - 128)) & ~0x1F) === 0 && ((1 << (_la - 128)) & ((1 << (clozeParser.OpAmpImageEmbed - 128)) | (1 << (clozeParser.OpAmpVideoEmbed - 128)) | (1 << (clozeParser.OpAmpAudioEmbed - 128)) | (1 << (clozeParser.OpAmpDocumentEmbed - 128)) | (1 << (clozeParser.OpAmpStillImageFilmEmbed - 128)) | (1 << (clozeParser.BitmarkMinus - 128)) | (1 << (clozeParser.BitmarkPlus - 128)) | (1 << (clozeParser.ColonText - 128)) | (1 << (clozeParser.ColonJson - 128)) | (1 << (clozeParser.Prosemirror - 128)) | (1 << (clozeParser.Placeholder - 128)) | (1 << (clozeParser.BASIC - 128)) | (1 << (clozeParser.JPG - 128)) | (1 << (clozeParser.PNG - 128)) | (1 << (clozeParser.GIF - 128)) | (1 << (clozeParser.SVG - 128)) | (1 << (clozeParser.MP2 - 128)) | (1 << (clozeParser.MP3 - 128)) | (1 << (clozeParser.MP4 - 128)) | (1 << (clozeParser.FLV - 128)) | (1 << (clozeParser.WMV - 128)) | (1 << (clozeParser.MPEG - 128)) | (1 << (clozeParser.MPG - 128)) | (1 << (clozeParser.TEL - 128)) | (1 << (clozeParser.DotArticleAtt - 128)) | (1 << (clozeParser.STAR - 128)) | (1 << (clozeParser.URL - 128)) | (1 << (clozeParser.LIST_LINE - 128)) | (1 << (clozeParser.ENCLBARS - 128)))) !== 0));
+			this.state = 1100;
 			this.match(clozeParser.CL);
 			}
 		}
@@ -5172,22 +5193,22 @@ export class clozeParser extends Parser {
 		this.enterRule(_localctx, 134, clozeParser.RULE_title);
 		try {
 			let _alt: number;
-			this.state = 1108;
+			this.state = 1114;
 			this._errHandler.sync(this);
-			switch ( this.interpreter.adaptivePredict(this._input, 153, this._ctx) ) {
+			switch ( this.interpreter.adaptivePredict(this._input, 154, this._ctx) ) {
 			case 1:
 				this.enterOuterAlt(_localctx, 1);
 				{
-				this.state = 1096;
+				this.state = 1102;
 				this.match(clozeParser.OPHASH);
-				this.state = 1099;
+				this.state = 1105;
 				this._errHandler.sync(this);
 				_alt = 1;
 				do {
 					switch (_alt) {
 					case 1:
 						{
-						this.state = 1099;
+						this.state = 1105;
 						this._errHandler.sync(this);
 						switch (this._input.LA(1)) {
 						case clozeParser.S:
@@ -5204,17 +5225,18 @@ export class clozeParser extends Parser {
 						case clozeParser.NUMERIC:
 						case clozeParser.STRING:
 						case clozeParser.NOTBITMARK:
+						case clozeParser.ELIPSIS:
 						case clozeParser.SENTENCE:
 						case clozeParser.BARSTRING:
 						case clozeParser.URL:
 							{
-							this.state = 1097;
+							this.state = 1103;
 							this.s_and_w();
 							}
 							break;
 						case clozeParser.NL:
 							{
-							this.state = 1098;
+							this.state = 1104;
 							this.match(clozeParser.NL);
 							}
 							break;
@@ -5226,11 +5248,11 @@ export class clozeParser extends Parser {
 					default:
 						throw new NoViableAltException(this);
 					}
-					this.state = 1101;
+					this.state = 1107;
 					this._errHandler.sync(this);
-					_alt = this.interpreter.adaptivePredict(this._input, 152, this._ctx);
+					_alt = this.interpreter.adaptivePredict(this._input, 153, this._ctx);
 				} while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER);
-				this.state = 1103;
+				this.state = 1109;
 				this.match(clozeParser.CL);
 				}
 				break;
@@ -5238,11 +5260,11 @@ export class clozeParser extends Parser {
 			case 2:
 				this.enterOuterAlt(_localctx, 2);
 				{
-				this.state = 1104;
+				this.state = 1110;
 				this.match(clozeParser.OPHASH);
-				this.state = 1105;
+				this.state = 1111;
 				this.s_and_w();
-				this.state = 1106;
+				this.state = 1112;
 				this.match(clozeParser.EOF);
 				}
 				break;
@@ -5267,28 +5289,28 @@ export class clozeParser extends Parser {
 		let _localctx: Bool_labelContext = new Bool_labelContext(this._ctx, this.state);
 		this.enterRule(_localctx, 136, clozeParser.RULE_bool_label);
 		try {
-			this.state = 1118;
+			this.state = 1124;
 			this._errHandler.sync(this);
 			switch (this._input.LA(1)) {
 			case clozeParser.AtLabeltrue:
 				this.enterOuterAlt(_localctx, 1);
 				{
-				this.state = 1110;
+				this.state = 1116;
 				this.match(clozeParser.AtLabeltrue);
-				this.state = 1111;
+				this.state = 1117;
 				this.s_and_w();
-				this.state = 1112;
+				this.state = 1118;
 				this.match(clozeParser.CL);
 				}
 				break;
 			case clozeParser.AtLabelfalse:
 				this.enterOuterAlt(_localctx, 2);
 				{
-				this.state = 1114;
+				this.state = 1120;
 				this.match(clozeParser.AtLabelfalse);
-				this.state = 1115;
+				this.state = 1121;
 				this.s_and_w();
-				this.state = 1116;
+				this.state = 1122;
 				this.match(clozeParser.CL);
 				}
 				break;
@@ -5315,19 +5337,19 @@ export class clozeParser extends Parser {
 		let _localctx: Progress_pointsContext = new Progress_pointsContext(this._ctx, this.state);
 		this.enterRule(_localctx, 138, clozeParser.RULE_progress_points);
 		try {
-			this.state = 1129;
+			this.state = 1135;
 			this._errHandler.sync(this);
-			switch ( this.interpreter.adaptivePredict(this._input, 155, this._ctx) ) {
+			switch ( this.interpreter.adaptivePredict(this._input, 156, this._ctx) ) {
 			case 1:
 				this.enterOuterAlt(_localctx, 1);
 				{
-				this.state = 1120;
+				this.state = 1126;
 				this.match(clozeParser.AtProgressPoints);
-				this.state = 1121;
+				this.state = 1127;
 				this.match(clozeParser.COLON);
-				this.state = 1122;
+				this.state = 1128;
 				this.match(clozeParser.NUMERIC);
-				this.state = 1123;
+				this.state = 1129;
 				this.match(clozeParser.CL);
 				}
 				break;
@@ -5335,13 +5357,13 @@ export class clozeParser extends Parser {
 			case 2:
 				this.enterOuterAlt(_localctx, 2);
 				{
-				this.state = 1124;
+				this.state = 1130;
 				this.match(clozeParser.AtProgressPoints);
-				this.state = 1125;
+				this.state = 1131;
 				this.match(clozeParser.COLON);
-				this.state = 1126;
+				this.state = 1132;
 				this.s_and_w();
-				this.state = 1127;
+				this.state = 1133;
 				this.match(clozeParser.CL);
 				}
 				break;
@@ -5368,11 +5390,11 @@ export class clozeParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1131;
+			this.state = 1137;
 			this.match(clozeParser.OpAtIsTracked);
-			this.state = 1132;
+			this.state = 1138;
 			this.s_and_w();
-			this.state = 1133;
+			this.state = 1139;
 			this.match(clozeParser.CL);
 			}
 		}
@@ -5397,11 +5419,11 @@ export class clozeParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1135;
+			this.state = 1141;
 			this.match(clozeParser.OpAtIsInfoOnly);
-			this.state = 1136;
+			this.state = 1142;
 			this.s_and_w();
-			this.state = 1137;
+			this.state = 1143;
 			this.match(clozeParser.CL);
 			}
 		}
@@ -5428,37 +5450,37 @@ export class clozeParser extends Parser {
 			let _alt: number;
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1139;
+			this.state = 1145;
 			this.atdef_();
-			this.state = 1149;
+			this.state = 1155;
 			this._errHandler.sync(this);
-			_alt = this.interpreter.adaptivePredict(this._input, 157, this._ctx);
+			_alt = this.interpreter.adaptivePredict(this._input, 158, this._ctx);
 			while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
 				if (_alt === 1) {
 					{
 					{
-					this.state = 1143;
+					this.state = 1149;
 					this._errHandler.sync(this);
 					_la = this._input.LA(1);
 					while (_la === clozeParser.NL) {
 						{
 						{
-						this.state = 1140;
+						this.state = 1146;
 						this.match(clozeParser.NL);
 						}
 						}
-						this.state = 1145;
+						this.state = 1151;
 						this._errHandler.sync(this);
 						_la = this._input.LA(1);
 					}
-					this.state = 1146;
+					this.state = 1152;
 					this.atdef_();
 					}
 					}
 				}
-				this.state = 1151;
+				this.state = 1157;
 				this._errHandler.sync(this);
-				_alt = this.interpreter.adaptivePredict(this._input, 157, this._ctx);
+				_alt = this.interpreter.adaptivePredict(this._input, 158, this._ctx);
 			}
 			}
 		}
@@ -5483,17 +5505,17 @@ export class clozeParser extends Parser {
 		let _la: number;
 		try {
 			let _alt: number;
-			this.state = 1174;
+			this.state = 1180;
 			this._errHandler.sync(this);
 			switch (this._input.LA(1)) {
 			case clozeParser.OPA:
 				this.enterOuterAlt(_localctx, 1);
 				{
-				this.state = 1152;
+				this.state = 1158;
 				this.match(clozeParser.OPA);
-				this.state = 1153;
+				this.state = 1159;
 				this.s_and_w();
-				this.state = 1154;
+				this.state = 1160;
 				_la = this._input.LA(1);
 				if (!(_la === clozeParser.COLON || _la === clozeParser.DBLCOLON)) {
 				this._errHandler.recoverInline(this);
@@ -5505,70 +5527,70 @@ export class clozeParser extends Parser {
 					this._errHandler.reportMatch(this);
 					this.consume();
 				}
-				this.state = 1155;
-				this.s_and_w();
 				this.state = 1161;
+				this.s_and_w();
+				this.state = 1167;
 				this._errHandler.sync(this);
-				_alt = this.interpreter.adaptivePredict(this._input, 159, this._ctx);
+				_alt = this.interpreter.adaptivePredict(this._input, 160, this._ctx);
 				while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
 					if (_alt === 1) {
 						{
-						this.state = 1159;
+						this.state = 1165;
 						this._errHandler.sync(this);
-						switch ( this.interpreter.adaptivePredict(this._input, 158, this._ctx) ) {
+						switch ( this.interpreter.adaptivePredict(this._input, 159, this._ctx) ) {
 						case 1:
 							{
-							this.state = 1156;
+							this.state = 1162;
 							this.match(clozeParser.NL);
 							}
 							break;
 
 						case 2:
 							{
-							this.state = 1157;
+							this.state = 1163;
 							this.match(clozeParser.COLON);
 							}
 							break;
 
 						case 3:
 							{
-							this.state = 1158;
+							this.state = 1164;
 							this.s_and_w();
 							}
 							break;
 						}
 						}
 					}
-					this.state = 1163;
+					this.state = 1169;
 					this._errHandler.sync(this);
-					_alt = this.interpreter.adaptivePredict(this._input, 159, this._ctx);
+					_alt = this.interpreter.adaptivePredict(this._input, 160, this._ctx);
 				}
-				this.state = 1164;
+				this.state = 1170;
 				this.match(clozeParser.CL);
 				}
 				break;
 			case clozeParser.OpAtCopyright:
 				this.enterOuterAlt(_localctx, 2);
 				{
-				this.state = 1166;
+				this.state = 1172;
 				this.match(clozeParser.OpAtCopyright);
-				this.state = 1170;
+				this.state = 1176;
 				this._errHandler.sync(this);
-				_alt = this.interpreter.adaptivePredict(this._input, 160, this._ctx);
+				_alt = this.interpreter.adaptivePredict(this._input, 161, this._ctx);
 				while (_alt !== 1 && _alt !== ATN.INVALID_ALT_NUMBER) {
 					if (_alt === 1 + 1) {
 						{
 						{
-						this.state = 1167;
+						this.state = 1173;
 						this.matchWildcard();
 						}
 						}
 					}
-					this.state = 1172;
+					this.state = 1178;
 					this._errHandler.sync(this);
-					_alt = this.interpreter.adaptivePredict(this._input, 160, this._ctx);
+					_alt = this.interpreter.adaptivePredict(this._input, 161, this._ctx);
 				}
-				this.state = 1173;
+				this.state = 1179;
 				this.match(clozeParser.CL);
 				}
 				break;
@@ -5597,41 +5619,41 @@ export class clozeParser extends Parser {
 		let _la: number;
 		try {
 			let _alt: number;
-			this.state = 1195;
+			this.state = 1201;
 			this._errHandler.sync(this);
-			switch ( this.interpreter.adaptivePredict(this._input, 166, this._ctx) ) {
+			switch ( this.interpreter.adaptivePredict(this._input, 167, this._ctx) ) {
 			case 1:
 				this.enterOuterAlt(_localctx, 1);
 				{
-				this.state = 1176;
+				this.state = 1182;
 				this.match(clozeParser.OPDOLL);
-				this.state = 1180;
+				this.state = 1186;
 				this._errHandler.sync(this);
 				_alt = 1;
 				do {
 					switch (_alt) {
 					case 1:
 						{
-						this.state = 1180;
+						this.state = 1186;
 						this._errHandler.sync(this);
-						switch ( this.interpreter.adaptivePredict(this._input, 162, this._ctx) ) {
+						switch ( this.interpreter.adaptivePredict(this._input, 163, this._ctx) ) {
 						case 1:
 							{
-							this.state = 1177;
+							this.state = 1183;
 							this.s_and_w();
 							}
 							break;
 
 						case 2:
 							{
-							this.state = 1178;
+							this.state = 1184;
 							this.match(clozeParser.COLON);
 							}
 							break;
 
 						case 3:
 							{
-							this.state = 1179;
+							this.state = 1185;
 							this.match(clozeParser.NL);
 							}
 							break;
@@ -5641,11 +5663,11 @@ export class clozeParser extends Parser {
 					default:
 						throw new NoViableAltException(this);
 					}
-					this.state = 1182;
+					this.state = 1188;
 					this._errHandler.sync(this);
-					_alt = this.interpreter.adaptivePredict(this._input, 163, this._ctx);
+					_alt = this.interpreter.adaptivePredict(this._input, 164, this._ctx);
 				} while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER);
-				this.state = 1184;
+				this.state = 1190;
 				this.match(clozeParser.CL);
 				}
 				break;
@@ -5653,43 +5675,43 @@ export class clozeParser extends Parser {
 			case 2:
 				this.enterOuterAlt(_localctx, 2);
 				{
-				this.state = 1185;
-				this.match(clozeParser.OPDOLL);
 				this.state = 1191;
+				this.match(clozeParser.OPDOLL);
+				this.state = 1197;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
-				while ((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << clozeParser.S) | (1 << clozeParser.OPS) | (1 << clozeParser.CL) | (1 << clozeParser.COLON) | (1 << clozeParser.AMP) | (1 << clozeParser.Greater) | (1 << clozeParser.Less))) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & ((1 << (clozeParser.DBLEQ - 32)) | (1 << (clozeParser.RightAngle - 32)) | (1 << (clozeParser.RightArrow - 32)) | (1 << (clozeParser.OP_N_ETC - 32)) | (1 << (clozeParser.NUMERIC - 32)) | (1 << (clozeParser.STRING - 32)) | (1 << (clozeParser.NL - 32)) | (1 << (clozeParser.NOTBITMARK - 32)) | (1 << (clozeParser.SENTENCE - 32)) | (1 << (clozeParser.BARSTRING - 32)))) !== 0) || _la === clozeParser.URL) {
+				while ((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << clozeParser.S) | (1 << clozeParser.OPS) | (1 << clozeParser.CL) | (1 << clozeParser.COLON) | (1 << clozeParser.AMP) | (1 << clozeParser.Greater) | (1 << clozeParser.Less))) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & ((1 << (clozeParser.DBLEQ - 32)) | (1 << (clozeParser.RightAngle - 32)) | (1 << (clozeParser.RightArrow - 32)) | (1 << (clozeParser.OP_N_ETC - 32)) | (1 << (clozeParser.NUMERIC - 32)) | (1 << (clozeParser.STRING - 32)) | (1 << (clozeParser.NL - 32)) | (1 << (clozeParser.NOTBITMARK - 32)) | (1 << (clozeParser.ELIPSIS - 32)) | (1 << (clozeParser.SENTENCE - 32)) | (1 << (clozeParser.BARSTRING - 32)))) !== 0) || _la === clozeParser.URL) {
 					{
-					this.state = 1189;
+					this.state = 1195;
 					this._errHandler.sync(this);
-					switch ( this.interpreter.adaptivePredict(this._input, 164, this._ctx) ) {
+					switch ( this.interpreter.adaptivePredict(this._input, 165, this._ctx) ) {
 					case 1:
 						{
-						this.state = 1186;
+						this.state = 1192;
 						this.s_and_w();
 						}
 						break;
 
 					case 2:
 						{
-						this.state = 1187;
+						this.state = 1193;
 						this.match(clozeParser.COLON);
 						}
 						break;
 
 					case 3:
 						{
-						this.state = 1188;
+						this.state = 1194;
 						this.match(clozeParser.NL);
 						}
 						break;
 					}
 					}
-					this.state = 1193;
+					this.state = 1199;
 					this._errHandler.sync(this);
 					_la = this._input.LA(1);
 				}
-				this.state = 1194;
+				this.state = 1200;
 				this.match(clozeParser.EOF);
 				}
 				break;
@@ -5716,19 +5738,19 @@ export class clozeParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1197;
+			this.state = 1203;
 			this.match(clozeParser.OPDANGLE);
-			this.state = 1199;
+			this.state = 1205;
 			this._errHandler.sync(this);
-			switch ( this.interpreter.adaptivePredict(this._input, 167, this._ctx) ) {
+			switch ( this.interpreter.adaptivePredict(this._input, 168, this._ctx) ) {
 			case 1:
 				{
-				this.state = 1198;
+				this.state = 1204;
 				this.s_and_w();
 				}
 				break;
 			}
-			this.state = 1201;
+			this.state = 1207;
 			this.match(clozeParser.CL);
 			}
 		}
@@ -5754,30 +5776,30 @@ export class clozeParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1207;
+			this.state = 1213;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
 			do {
 				{
 				{
-				this.state = 1203;
+				this.state = 1209;
 				this.s_and_w();
-				this.state = 1205;
+				this.state = 1211;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 				if (_la === clozeParser.NL) {
 					{
-					this.state = 1204;
+					this.state = 1210;
 					this.nl();
 					}
 				}
 
 				}
 				}
-				this.state = 1209;
+				this.state = 1215;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
-			} while ((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << clozeParser.S) | (1 << clozeParser.OPS) | (1 << clozeParser.CL) | (1 << clozeParser.COLON) | (1 << clozeParser.AMP) | (1 << clozeParser.Greater) | (1 << clozeParser.Less))) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & ((1 << (clozeParser.DBLEQ - 32)) | (1 << (clozeParser.RightAngle - 32)) | (1 << (clozeParser.RightArrow - 32)) | (1 << (clozeParser.OP_N_ETC - 32)) | (1 << (clozeParser.NUMERIC - 32)) | (1 << (clozeParser.STRING - 32)) | (1 << (clozeParser.NOTBITMARK - 32)) | (1 << (clozeParser.SENTENCE - 32)) | (1 << (clozeParser.BARSTRING - 32)))) !== 0) || _la === clozeParser.URL);
+			} while ((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << clozeParser.S) | (1 << clozeParser.OPS) | (1 << clozeParser.CL) | (1 << clozeParser.COLON) | (1 << clozeParser.AMP) | (1 << clozeParser.Greater) | (1 << clozeParser.Less))) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & ((1 << (clozeParser.DBLEQ - 32)) | (1 << (clozeParser.RightAngle - 32)) | (1 << (clozeParser.RightArrow - 32)) | (1 << (clozeParser.OP_N_ETC - 32)) | (1 << (clozeParser.NUMERIC - 32)) | (1 << (clozeParser.STRING - 32)) | (1 << (clozeParser.NOTBITMARK - 32)) | (1 << (clozeParser.ELIPSIS - 32)) | (1 << (clozeParser.SENTENCE - 32)) | (1 << (clozeParser.BARSTRING - 32)))) !== 0) || _la === clozeParser.URL);
 			}
 		}
 		catch (re) {
@@ -5801,34 +5823,34 @@ export class clozeParser extends Parser {
 		let _la: number;
 		try {
 			let _alt: number;
-			this.state = 1258;
+			this.state = 1264;
 			this._errHandler.sync(this);
-			switch ( this.interpreter.adaptivePredict(this._input, 177, this._ctx) ) {
+			switch ( this.interpreter.adaptivePredict(this._input, 178, this._ctx) ) {
 			case 1:
 				this.enterOuterAlt(_localctx, 1);
 				{
-				this.state = 1211;
+				this.state = 1217;
 				this.match(clozeParser.STRING);
-				this.state = 1218;
+				this.state = 1224;
 				this._errHandler.sync(this);
-				switch ( this.interpreter.adaptivePredict(this._input, 171, this._ctx) ) {
+				switch ( this.interpreter.adaptivePredict(this._input, 172, this._ctx) ) {
 				case 1:
 					{
-					this.state = 1213;
+					this.state = 1219;
 					this._errHandler.sync(this);
 					_la = this._input.LA(1);
 					do {
 						{
 						{
-						this.state = 1212;
+						this.state = 1218;
 						this.match(clozeParser.S);
 						}
 						}
-						this.state = 1215;
+						this.state = 1221;
 						this._errHandler.sync(this);
 						_la = this._input.LA(1);
 					} while (_la === clozeParser.S);
-					this.state = 1217;
+					this.state = 1223;
 					this.numeric();
 					}
 					break;
@@ -5839,28 +5861,28 @@ export class clozeParser extends Parser {
 			case 2:
 				this.enterOuterAlt(_localctx, 2);
 				{
-				this.state = 1220;
+				this.state = 1226;
 				this.words();
-				this.state = 1227;
+				this.state = 1233;
 				this._errHandler.sync(this);
-				switch ( this.interpreter.adaptivePredict(this._input, 173, this._ctx) ) {
+				switch ( this.interpreter.adaptivePredict(this._input, 174, this._ctx) ) {
 				case 1:
 					{
-					this.state = 1222;
+					this.state = 1228;
 					this._errHandler.sync(this);
 					_la = this._input.LA(1);
 					do {
 						{
 						{
-						this.state = 1221;
+						this.state = 1227;
 						this.match(clozeParser.S);
 						}
 						}
-						this.state = 1224;
+						this.state = 1230;
 						this._errHandler.sync(this);
 						_la = this._input.LA(1);
 					} while (_la === clozeParser.S);
-					this.state = 1226;
+					this.state = 1232;
 					this.numeric();
 					}
 					break;
@@ -5871,11 +5893,11 @@ export class clozeParser extends Parser {
 			case 3:
 				this.enterOuterAlt(_localctx, 3);
 				{
-				this.state = 1229;
+				this.state = 1235;
 				this.match(clozeParser.OPS);
-				this.state = 1230;
+				this.state = 1236;
 				this.s_and_w();
-				this.state = 1231;
+				this.state = 1237;
 				this.match(clozeParser.CL);
 				}
 				break;
@@ -5883,7 +5905,7 @@ export class clozeParser extends Parser {
 			case 4:
 				this.enterOuterAlt(_localctx, 4);
 				{
-				this.state = 1233;
+				this.state = 1239;
 				this.match(clozeParser.NUMERIC);
 				}
 				break;
@@ -5891,37 +5913,37 @@ export class clozeParser extends Parser {
 			case 5:
 				this.enterOuterAlt(_localctx, 5);
 				{
-				this.state = 1237;
+				this.state = 1243;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 				while (_la === clozeParser.S) {
 					{
 					{
-					this.state = 1234;
+					this.state = 1240;
 					this.match(clozeParser.S);
 					}
 					}
-					this.state = 1239;
+					this.state = 1245;
 					this._errHandler.sync(this);
 					_la = this._input.LA(1);
 				}
-				this.state = 1240;
+				this.state = 1246;
 				this.match(clozeParser.COLON);
-				this.state = 1244;
+				this.state = 1250;
 				this._errHandler.sync(this);
-				_alt = this.interpreter.adaptivePredict(this._input, 175, this._ctx);
+				_alt = this.interpreter.adaptivePredict(this._input, 176, this._ctx);
 				while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
 					if (_alt === 1) {
 						{
 						{
-						this.state = 1241;
+						this.state = 1247;
 						this.match(clozeParser.S);
 						}
 						}
 					}
-					this.state = 1246;
+					this.state = 1252;
 					this._errHandler.sync(this);
-					_alt = this.interpreter.adaptivePredict(this._input, 175, this._ctx);
+					_alt = this.interpreter.adaptivePredict(this._input, 176, this._ctx);
 				}
 				}
 				break;
@@ -5929,23 +5951,23 @@ export class clozeParser extends Parser {
 			case 6:
 				this.enterOuterAlt(_localctx, 6);
 				{
-				this.state = 1247;
+				this.state = 1253;
 				this.match(clozeParser.AMP);
-				this.state = 1251;
+				this.state = 1257;
 				this._errHandler.sync(this);
-				_alt = this.interpreter.adaptivePredict(this._input, 176, this._ctx);
+				_alt = this.interpreter.adaptivePredict(this._input, 177, this._ctx);
 				while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
 					if (_alt === 1) {
 						{
 						{
-						this.state = 1248;
+						this.state = 1254;
 						this.match(clozeParser.S);
 						}
 						}
 					}
-					this.state = 1253;
+					this.state = 1259;
 					this._errHandler.sync(this);
-					_alt = this.interpreter.adaptivePredict(this._input, 176, this._ctx);
+					_alt = this.interpreter.adaptivePredict(this._input, 177, this._ctx);
 				}
 				}
 				break;
@@ -5953,7 +5975,7 @@ export class clozeParser extends Parser {
 			case 7:
 				this.enterOuterAlt(_localctx, 7);
 				{
-				this.state = 1254;
+				this.state = 1260;
 				this.match(clozeParser.CL);
 				}
 				break;
@@ -5961,7 +5983,7 @@ export class clozeParser extends Parser {
 			case 8:
 				this.enterOuterAlt(_localctx, 8);
 				{
-				this.state = 1255;
+				this.state = 1261;
 				this.match(clozeParser.OP_N_ETC);
 				}
 				break;
@@ -5969,7 +5991,7 @@ export class clozeParser extends Parser {
 			case 9:
 				this.enterOuterAlt(_localctx, 9);
 				{
-				this.state = 1256;
+				this.state = 1262;
 				this.match(clozeParser.DBLEQ);
 				}
 				break;
@@ -5977,7 +5999,7 @@ export class clozeParser extends Parser {
 			case 10:
 				this.enterOuterAlt(_localctx, 10);
 				{
-				this.state = 1257;
+				this.state = 1263;
 				this.match(clozeParser.URL);
 				}
 				break;
@@ -6004,7 +6026,7 @@ export class clozeParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1260;
+			this.state = 1266;
 			this.match(clozeParser.DCANY);
 			}
 		}
@@ -6029,7 +6051,7 @@ export class clozeParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1262;
+			this.state = 1268;
 			this.match(clozeParser.OPU);
 			}
 		}
@@ -6054,7 +6076,7 @@ export class clozeParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1264;
+			this.state = 1270;
 			this.match(clozeParser.OPB);
 			}
 		}
@@ -6079,7 +6101,7 @@ export class clozeParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1266;
+			this.state = 1272;
 			this.match(clozeParser.OPQ);
 			}
 		}
@@ -6104,7 +6126,7 @@ export class clozeParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1268;
+			this.state = 1274;
 			this.match(clozeParser.OPA);
 			}
 		}
@@ -6129,7 +6151,7 @@ export class clozeParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1270;
+			this.state = 1276;
 			this.match(clozeParser.OPP);
 			}
 		}
@@ -6154,7 +6176,7 @@ export class clozeParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1272;
+			this.state = 1278;
 			this.match(clozeParser.OPM);
 			}
 		}
@@ -6179,7 +6201,7 @@ export class clozeParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1274;
+			this.state = 1280;
 			this.match(clozeParser.OPS);
 			}
 		}
@@ -6204,7 +6226,7 @@ export class clozeParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1276;
+			this.state = 1282;
 			this.match(clozeParser.OPR);
 			}
 		}
@@ -6229,7 +6251,7 @@ export class clozeParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1278;
+			this.state = 1284;
 			this.match(clozeParser.OPC);
 			}
 		}
@@ -6254,7 +6276,7 @@ export class clozeParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1280;
+			this.state = 1286;
 			this.match(clozeParser.CL);
 			}
 		}
@@ -6279,7 +6301,7 @@ export class clozeParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1282;
+			this.state = 1288;
 			this.match(clozeParser.CL);
 			}
 		}
@@ -6304,7 +6326,7 @@ export class clozeParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1284;
+			this.state = 1290;
 			this.match(clozeParser.NL);
 			}
 		}
@@ -6329,7 +6351,7 @@ export class clozeParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1286;
+			this.state = 1292;
 			this.match(clozeParser.LIST_LINE);
 			}
 		}
@@ -6354,7 +6376,7 @@ export class clozeParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1288;
+			this.state = 1294;
 			this.match(clozeParser.NUMERIC);
 			}
 		}
@@ -6379,7 +6401,7 @@ export class clozeParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1290;
+			this.state = 1296;
 			this.match(clozeParser.STRING);
 			}
 		}
@@ -6406,45 +6428,51 @@ export class clozeParser extends Parser {
 			let _alt: number;
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1302;
+			this.state = 1309;
 			this._errHandler.sync(this);
 			_alt = 1;
 			do {
 				switch (_alt) {
 				case 1:
 					{
-					this.state = 1302;
+					this.state = 1309;
 					this._errHandler.sync(this);
 					switch (this._input.LA(1)) {
 					case clozeParser.SENTENCE:
 						{
-						this.state = 1292;
+						this.state = 1298;
 						this.match(clozeParser.SENTENCE);
 						}
 						break;
 					case clozeParser.NOTBITMARK:
 						{
-						this.state = 1293;
+						this.state = 1299;
 						this.match(clozeParser.NOTBITMARK);
 						}
 						break;
 					case clozeParser.BARSTRING:
 						{
-						this.state = 1294;
+						this.state = 1300;
 						this.match(clozeParser.BARSTRING);
+						}
+						break;
+					case clozeParser.ELIPSIS:
+						{
+						this.state = 1301;
+						this.match(clozeParser.ELIPSIS);
 						}
 						break;
 					case clozeParser.AMP:
 						{
-						this.state = 1295;
+						this.state = 1302;
 						this.match(clozeParser.AMP);
 						}
 						break;
 					case clozeParser.Greater:
 						{
-						this.state = 1296;
+						this.state = 1303;
 						this.match(clozeParser.Greater);
-						this.state = 1297;
+						this.state = 1304;
 						_la = this._input.LA(1);
 						if (_la <= 0 || (_la === clozeParser.Greater)) {
 						this._errHandler.recoverInline(this);
@@ -6460,9 +6488,9 @@ export class clozeParser extends Parser {
 						break;
 					case clozeParser.Less:
 						{
-						this.state = 1298;
+						this.state = 1305;
 						this.match(clozeParser.Less);
-						this.state = 1299;
+						this.state = 1306;
 						_la = this._input.LA(1);
 						if (_la <= 0 || (_la === clozeParser.Less)) {
 						this._errHandler.recoverInline(this);
@@ -6478,13 +6506,13 @@ export class clozeParser extends Parser {
 						break;
 					case clozeParser.RightArrow:
 						{
-						this.state = 1300;
+						this.state = 1307;
 						this.match(clozeParser.RightArrow);
 						}
 						break;
 					case clozeParser.RightAngle:
 						{
-						this.state = 1301;
+						this.state = 1308;
 						this.match(clozeParser.RightAngle);
 						}
 						break;
@@ -6496,9 +6524,9 @@ export class clozeParser extends Parser {
 				default:
 					throw new NoViableAltException(this);
 				}
-				this.state = 1304;
+				this.state = 1311;
 				this._errHandler.sync(this);
-				_alt = this.interpreter.adaptivePredict(this._input, 179, this._ctx);
+				_alt = this.interpreter.adaptivePredict(this._input, 180, this._ctx);
 			} while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER);
 			}
 		}
@@ -6523,7 +6551,7 @@ export class clozeParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1306;
+			this.state = 1313;
 			this.match(clozeParser.S);
 			}
 		}
@@ -6544,7 +6572,7 @@ export class clozeParser extends Parser {
 
 	private static readonly _serializedATNSegments: number = 3;
 	private static readonly _serializedATNSegment0: string =
-		"\x03\uC91D\uCABA\u058D\uAFBA\u4F53\u0607\uEA8B\uC241\x03\x9D\u051F\x04" +
+		"\x03\uC91D\uCABA\u058D\uAFBA\u4F53\u0607\uEA8B\uC241\x03\x9E\u0526\x04" +
 		"\x02\t\x02\x04\x03\t\x03\x04\x04\t\x04\x04\x05\t\x05\x04\x06\t\x06\x04" +
 		"\x07\t\x07\x04\b\t\b\x04\t\t\t\x04\n\t\n\x04\v\t\v\x04\f\t\f\x04\r\t\r" +
 		"\x04\x0E\t\x0E\x04\x0F\t\x0F\x04\x10\t\x10\x04\x11\t\x11\x04\x12\t\x12" +
@@ -6641,149 +6669,150 @@ export class clozeParser extends Parser {
 		"@\x03@\x03@\x03@\x03A\x03A\x03A\x03A\x06A\u0401\nA\rA\x0EA\u0402\x03A" +
 		"\x03A\x05A\u0407\nA\x03B\x03B\x03B\x03B\x06B\u040D\nB\rB\x0EB\u040E\x03" +
 		"B\x03B\x03C\x03C\x07C\u0415\nC\fC\x0EC\u0418\vC\x03C\x05C\u041B\nC\x03" +
-		"C\x03C\x03C\x07C\u0420\nC\fC\x0EC\u0423\vC\x07C\u0425\nC\fC\x0EC\u0428" +
-		"\vC\x03C\x07C\u042B\nC\fC\x0EC\u042E\vC\x07C\u0430\nC\fC\x0EC\u0433\v" +
-		"C\x03C\x03C\x03C\x07C\u0438\nC\fC\x0EC\u043B\vC\x03C\x05C\u043E\nC\x03" +
-		"C\x05C\u0441\nC\x03D\x03D\x06D\u0445\nD\rD\x0ED\u0446\x03D\x03D\x03E\x03" +
-		"E\x03E\x06E\u044E\nE\rE\x0EE\u044F\x03E\x03E\x03E\x03E\x03E\x05E\u0457" +
-		"\nE\x03F\x03F\x03F\x03F\x03F\x03F\x03F\x03F\x05F\u0461\nF\x03G\x03G\x03" +
-		"G\x03G\x03G\x03G\x03G\x03G\x03G\x05G\u046C\nG\x03H\x03H\x03H\x03H\x03" +
-		"I\x03I\x03I\x03I\x03J\x03J\x07J\u0478\nJ\fJ\x0EJ\u047B\vJ\x03J\x07J\u047E" +
-		"\nJ\fJ\x0EJ\u0481\vJ\x03K\x03K\x03K\x03K\x03K\x03K\x03K\x07K\u048A\nK" +
-		"\fK\x0EK\u048D\vK\x03K\x03K\x03K\x03K\x07K\u0493\nK\fK\x0EK\u0496\vK\x03" +
-		"K\x05K\u0499\nK\x03L\x03L\x03L\x03L\x06L\u049F\nL\rL\x0EL\u04A0\x03L\x03" +
-		"L\x03L\x03L\x03L\x07L\u04A8\nL\fL\x0EL\u04AB\vL\x03L\x05L\u04AE\nL\x03" +
-		"M\x03M\x05M\u04B2\nM\x03M\x03M\x03N\x03N\x05N\u04B8\nN\x06N\u04BA\nN\r" +
-		"N\x0EN\u04BB\x03O\x03O\x06O\u04C0\nO\rO\x0EO\u04C1\x03O\x05O\u04C5\nO" +
-		"\x03O\x03O\x06O\u04C9\nO\rO\x0EO\u04CA\x03O\x05O\u04CE\nO\x03O\x03O\x03" +
-		"O\x03O\x03O\x03O\x07O\u04D6\nO\fO\x0EO\u04D9\vO\x03O\x03O\x07O\u04DD\n" +
-		"O\fO\x0EO\u04E0\vO\x03O\x03O\x07O\u04E4\nO\fO\x0EO\u04E7\vO\x03O\x03O" +
-		"\x03O\x03O\x05O\u04ED\nO\x03P\x03P\x03Q\x03Q\x03R\x03R\x03S\x03S\x03T" +
-		"\x03T\x03U\x03U\x03V\x03V\x03W\x03W\x03X\x03X\x03Y\x03Y\x03Z\x03Z\x03" +
-		"[\x03[\x03\\\x03\\\x03]\x03]\x03^\x03^\x03_\x03_\x03`\x03`\x03`\x03`\x03" +
-		"`\x03`\x03`\x03`\x03`\x03`\x06`\u0519\n`\r`\x0E`\u051A\x03a\x03a\x03a" +
-		"\x06\u0309\u031C\u036B\u0494\x02\x02b\x02\x02\x04\x02\x06\x02\b\x02\n" +
-		"\x02\f\x02\x0E\x02\x10\x02\x12\x02\x14\x02\x16\x02\x18\x02\x1A\x02\x1C" +
-		"\x02\x1E\x02 \x02\"\x02$\x02&\x02(\x02*\x02,\x02.\x020\x022\x024\x026" +
-		"\x028\x02:\x02<\x02>\x02@\x02B\x02D\x02F\x02H\x02J\x02L\x02N\x02P\x02" +
-		"R\x02T\x02V\x02X\x02Z\x02\\\x02^\x02`\x02b\x02d\x02f\x02h\x02j\x02l\x02" +
-		"n\x02p\x02r\x02t\x02v\x02x\x02z\x02|\x02~\x02\x80\x02\x82\x02\x84\x02" +
-		"\x86\x02\x88\x02\x8A\x02\x8C\x02\x8E\x02\x90\x02\x92\x02\x94\x02\x96\x02" +
-		"\x98\x02\x9A\x02\x9C\x02\x9E\x02\xA0\x02\xA2\x02\xA4\x02\xA6\x02\xA8\x02" +
-		"\xAA\x02\xAC\x02\xAE\x02\xB0\x02\xB2\x02\xB4\x02\xB6\x02\xB8\x02\xBA\x02" +
-		"\xBC\x02\xBE\x02\xC0\x02\x02\x14\b\x02XY[\\jr}\x80\x86\x87\x89\x8B\x05" +
-		"\x02WWll}}\x04\x02XXmm\x05\x02YYno\x7F\x7F\x04\x02ZZpp\x04\x02[[qq\x05" +
-		"\x02\\\\rr\x80\x80\x04\x02ccvv\x05\x02eewx\x84\x84\x04\x02ffyy\x04\x02" +
-		"ggzz\x05\x02hh{{\x85\x85\x03\x0278\x04\x02GGJM\x03\x02\x1A\x1A\x04\x02" +
-		"\x1B\x1B\x1D\x1D\x03\x02  \x03\x02!!\x02\u05BF\x02\xCF\x03\x02\x02\x02" +
-		"\x04\xD5\x03\x02\x02\x02\x06\xDB\x03\x02\x02\x02\b\u0106\x03\x02\x02\x02" +
-		"\n\u0108\x03\x02\x02\x02\f\u010A\x03\x02\x02\x02\x0E\u0133\x03\x02\x02" +
-		"\x02\x10\u0168\x03\x02\x02\x02\x12\u019D\x03\x02\x02\x02\x14\u01A8\x03" +
-		"\x02\x02\x02\x16\u01B6\x03\x02\x02\x02\x18\u01E7\x03\x02\x02\x02\x1A\u01EB" +
-		"\x03\x02\x02\x02\x1C\u01F2\x03\x02\x02\x02\x1E\u01FD\x03\x02\x02\x02 " +
-		"\u0208\x03\x02\x02\x02\"\u0213\x03\x02\x02\x02$\u021D\x03\x02\x02\x02" +
-		"&\u022A\x03\x02\x02\x02(\u0231\x03\x02\x02\x02*\u023C\x03\x02\x02\x02" +
-		",\u0247\x03\x02\x02\x02.\u024E\x03\x02\x02\x020\u025E\x03\x02\x02\x02" +
-		"2\u0260\x03\x02\x02\x024\u0265\x03\x02\x02\x026\u0267\x03\x02\x02\x02" +
-		"8\u0269\x03\x02\x02\x02:\u026B\x03\x02\x02\x02<\u026D\x03\x02\x02\x02" +
-		">\u026F\x03\x02\x02\x02@\u0271\x03\x02\x02\x02B\u0273\x03\x02\x02\x02" +
-		"D\u0275\x03\x02\x02\x02F\u0286\x03\x02\x02\x02H\u0288\x03\x02\x02\x02" +
-		"J\u0290\x03\x02\x02\x02L\u0292\x03\x02\x02\x02N\u029C\x03\x02\x02\x02" +
-		"P\u02A6\x03\x02\x02\x02R\u02B3\x03\x02\x02\x02T\u02BA\x03\x02\x02\x02" +
-		"V\u02C5\x03\x02\x02\x02X\u02CC\x03\x02\x02\x02Z\u02D6\x03\x02\x02\x02" +
-		"\\\u02E1\x03\x02\x02\x02^\u02FA\x03\x02\x02\x02`\u030D\x03\x02\x02\x02" +
-		"b\u0320\x03\x02\x02\x02d\u0322\x03\x02\x02\x02f\u0329\x03\x02\x02\x02" +
-		"h\u033D\x03\x02\x02\x02j\u034E\x03\x02\x02\x02l\u036F\x03\x02\x02\x02" +
-		"n\u0371\x03\x02\x02\x02p\u0375\x03\x02\x02\x02r\u0395\x03\x02\x02\x02" +
-		"t\u0397\x03\x02\x02\x02v\u03AC\x03\x02\x02\x02x\u03B5\x03\x02\x02\x02" +
-		"z\u03DE\x03\x02\x02\x02|\u03F6\x03\x02\x02\x02~\u03F8\x03\x02\x02\x02" +
-		"\x80\u03FC\x03\x02\x02\x02\x82\u0408\x03\x02\x02\x02\x84\u0440\x03\x02" +
-		"\x02\x02\x86\u0442\x03\x02\x02\x02\x88\u0456\x03\x02\x02\x02\x8A\u0460" +
-		"\x03\x02\x02\x02\x8C\u046B\x03\x02\x02\x02\x8E\u046D\x03\x02\x02\x02\x90" +
-		"\u0471\x03\x02\x02\x02\x92\u0475\x03\x02\x02\x02\x94\u0498\x03\x02\x02" +
-		"\x02\x96\u04AD\x03\x02\x02\x02\x98\u04AF\x03\x02\x02\x02\x9A\u04B9\x03" +
-		"\x02\x02\x02\x9C\u04EC\x03\x02\x02\x02\x9E\u04EE\x03\x02\x02\x02\xA0\u04F0" +
-		"\x03\x02\x02\x02\xA2\u04F2\x03\x02\x02\x02\xA4\u04F4\x03\x02\x02\x02\xA6" +
-		"\u04F6\x03\x02\x02\x02\xA8\u04F8\x03\x02\x02\x02\xAA\u04FA\x03\x02\x02" +
-		"\x02\xAC\u04FC\x03\x02\x02\x02\xAE\u04FE\x03\x02\x02\x02\xB0\u0500\x03" +
-		"\x02\x02\x02\xB2\u0502\x03\x02\x02\x02\xB4\u0504\x03\x02\x02\x02\xB6\u0506" +
-		"\x03\x02\x02\x02\xB8\u0508\x03\x02\x02\x02\xBA\u050A\x03\x02\x02\x02\xBC" +
-		"\u050C\x03\x02\x02\x02\xBE\u0518\x03\x02\x02\x02\xC0\u051C\x03\x02\x02" +
-		"\x02\xC2\xCC\x05\x04\x03\x02\xC3\xC5\x07\x03\x02\x02\xC4\xC3\x03\x02\x02" +
-		"\x02\xC5\xC8\x03\x02\x02\x02\xC6\xC4\x03\x02\x02\x02\xC6\xC7\x03\x02\x02" +
-		"\x02\xC7\xC9\x03\x02\x02\x02\xC8\xC6\x03\x02\x02\x02\xC9\xCB\x05\xB6\\" +
-		"\x02\xCA\xC6\x03\x02\x02\x02\xCB\xCE\x03\x02\x02\x02\xCC\xCA\x03\x02\x02" +
-		"\x02\xCC\xCD\x03\x02\x02\x02\xCD\xD0\x03\x02\x02\x02\xCE\xCC\x03\x02\x02" +
-		"\x02\xCF\xC2\x03\x02\x02\x02\xD0\xD1\x03\x02\x02\x02\xD1\xCF\x03\x02\x02" +
-		"\x02\xD1\xD2\x03\x02\x02\x02\xD2\xD3\x03\x02\x02\x02\xD3\xD4\x07\x02\x02" +
-		"\x03\xD4\x03\x03\x02\x02\x02\xD5\xD6\x05\x06\x04\x02\xD6\x05\x03\x02\x02" +
-		"\x02\xD7\xDC\x05\f\x07\x02\xD8\xDC\x05\x0E\b\x02\xD9\xDC\x05\x10\t\x02" +
-		"\xDA\xDC\x05\x16\f\x02\xDB\xD7\x03\x02\x02\x02\xDB\xD8\x03\x02\x02\x02" +
-		"\xDB\xD9\x03\x02\x02\x02\xDB\xDA\x03\x02\x02\x02\xDC\x07\x03\x02\x02\x02" +
-		"\xDD\u0107\x07\x9C\x02\x02\xDE\u0107\x071\x02\x02\xDF\u0107\x05\x9EP\x02" +
-		"\xE0\u0107\x05\x12\n\x02\xE1\u0107\x05\x92J\x02\xE2\u0107\x05|?\x02\xE3" +
-		"\u0107\x05r:\x02\xE4\u0107\x05\x84C\x02\xE5\u0107\x05\x86D\x02\xE6\u0107" +
-		"\x05\x9CO\x02\xE7\u0107\x05x=\x02\xE8\u0107\x05\x8AF\x02\xE9\xED\x05Z" +
-		".\x02\xEA\xEC\x05\xB6\\\x02\xEB\xEA\x03\x02\x02\x02\xEC\xEF\x03\x02\x02" +
-		"\x02\xED\xEB\x03\x02\x02\x02\xED\xEE\x03\x02\x02\x02\xEE\u0107\x03\x02" +
-		"\x02\x02\xEF\xED\x03\x02\x02\x02\xF0\xF4\x05d3\x02\xF1\xF3\x05\xB6\\\x02" +
-		"\xF2\xF1\x03\x02\x02\x02\xF3\xF6\x03\x02\x02\x02\xF4\xF2\x03\x02\x02\x02" +
-		"\xF4\xF5\x03\x02\x02\x02\xF5\u0107\x03\x02\x02\x02\xF6\xF4\x03\x02\x02" +
-		"\x02\xF7\xFB\x05V,\x02\xF8\xFA\x05\xB6\\\x02\xF9\xF8\x03\x02\x02\x02\xFA" +
-		"\xFD\x03\x02\x02\x02\xFB\xF9\x03\x02\x02\x02\xFB\xFC\x03\x02\x02\x02\xFC" +
-		"\u0107\x03\x02\x02\x02\xFD\xFB\x03\x02\x02\x02\xFE\u0107\x05J&\x02\xFF" +
-		"\u0107\x05L\'\x02\u0100\u0107\x05P)\x02\u0101\u0107\x05N(\x02\u0102\u0107" +
-		"\x05R*\x02\u0103\u0107\x05v<\x02\u0104\u0107\x05\x98M\x02\u0105\u0107" +
-		"\x05\xC0a\x02\u0106\xDD\x03\x02\x02\x02\u0106\xDE\x03\x02\x02\x02\u0106" +
-		"\xDF\x03\x02\x02\x02\u0106\xE0\x03\x02\x02\x02\u0106\xE1\x03\x02\x02\x02" +
-		"\u0106\xE2\x03\x02\x02\x02\u0106\xE3\x03\x02\x02\x02\u0106\xE4\x03\x02" +
-		"\x02\x02\u0106\xE5\x03\x02\x02\x02\u0106\xE6\x03\x02\x02\x02\u0106\xE7" +
-		"\x03\x02\x02\x02\u0106\xE8\x03\x02\x02\x02\u0106\xE9\x03\x02\x02\x02\u0106" +
-		"\xF0\x03\x02\x02\x02\u0106\xF7\x03\x02\x02\x02\u0106\xFE\x03\x02\x02\x02" +
-		"\u0106\xFF\x03\x02\x02\x02\u0106\u0100\x03\x02\x02\x02\u0106\u0101\x03" +
-		"\x02\x02\x02\u0106\u0102\x03\x02\x02\x02\u0106\u0103\x03\x02\x02\x02\u0106" +
-		"\u0104\x03\x02\x02\x02\u0106\u0105\x03\x02\x02\x02\u0107\t\x03\x02\x02" +
-		"\x02\u0108\u0109\x05\b\x05\x02\u0109\v\x03\x02\x02\x02\u010A\u010B\x07" +
-		"\x05\x02\x02\u010B\u010C\x05(\x15\x02\u010C\u0110\x07\x1A\x02\x02\u010D" +
-		"\u010F\x05\xB6\\\x02\u010E\u010D\x03\x02\x02\x02\u010F\u0112\x03\x02\x02" +
-		"\x02\u0110\u010E\x03\x02\x02\x02\u0110\u0111\x03\x02\x02\x02\u0111\u011A" +
-		"\x03\x02\x02\x02\u0112\u0110\x03\x02\x02\x02\u0113\u0117\x05\b\x05\x02" +
-		"\u0114\u0116\x05\xB6\\\x02\u0115\u0114\x03\x02\x02\x02\u0116\u0119\x03" +
-		"\x02\x02\x02\u0117\u0115\x03\x02\x02\x02\u0117\u0118\x03\x02\x02\x02\u0118" +
-		"\u011B\x03\x02\x02\x02\u0119\u0117\x03\x02\x02\x02\u011A\u0113\x03\x02" +
-		"\x02\x02\u011B\u011C\x03\x02\x02\x02\u011C\u011A\x03\x02\x02\x02\u011C" +
-		"\u011D\x03\x02\x02\x02\u011D\u0121\x03\x02\x02\x02\u011E\u0120\x070\x02" +
-		"\x02\u011F\u011E\x03\x02\x02\x02\u0120\u0123\x03\x02\x02\x02\u0121\u011F" +
-		"\x03\x02\x02\x02\u0121\u0122\x03\x02\x02\x02\u0122\u0131\x03\x02\x02\x02" +
-		"\u0123\u0121\x03\x02\x02\x02\u0124\u012E\x05\n\x06\x02\u0125\u0127\x07" +
-		"0\x02\x02\u0126\u0125\x03\x02\x02\x02\u0127\u012A\x03\x02\x02\x02\u0128" +
-		"\u0126\x03\x02\x02\x02\u0128\u0129\x03\x02\x02\x02\u0129\u012B\x03\x02" +
-		"\x02\x02\u012A\u0128\x03\x02\x02\x02\u012B\u012D\x05\n\x06\x02\u012C\u0128" +
-		"\x03\x02\x02\x02\u012D\u0130\x03\x02\x02\x02\u012E\u012C\x03\x02\x02\x02" +
-		"\u012E\u012F\x03\x02\x02\x02\u012F\u0132\x03\x02\x02\x02\u0130\u012E\x03" +
-		"\x02\x02\x02\u0131\u0124\x03\x02\x02\x02\u0131\u0132\x03\x02\x02\x02\u0132" +
-		"\r\x03\x02\x02\x02\u0133\u0134\x07\x06\x02\x02\u0134\u0135\x05(\x15\x02" +
-		"\u0135\u0137\x07\x1A\x02\x02\u0136\u0138\x05\xB6\\\x02\u0137\u0136\x03" +
-		"\x02\x02\x02\u0137\u0138\x03\x02\x02\x02\u0138\u013C\x03\x02\x02\x02\u0139" +
-		"\u013A\x05r:\x02\u013A\u013B\x05\xB6\\\x02\u013B\u013D\x03\x02\x02\x02" +
-		"\u013C\u0139\x03\x02\x02\x02\u013C\u013D\x03\x02\x02\x02\u013D\u013F\x03" +
-		"\x02\x02\x02\u013E\u0140\x05\x84C\x02\u013F\u013E\x03\x02\x02\x02\u013F" +
-		"\u0140\x03\x02\x02\x02\u0140\u0144\x03\x02\x02\x02\u0141\u0143\x05\xB6" +
-		"\\\x02\u0142\u0141\x03\x02\x02\x02\u0143\u0146\x03\x02\x02\x02\u0144\u0142" +
-		"\x03\x02\x02\x02\u0144\u0145\x03\x02\x02\x02\u0145\u0150\x03\x02\x02\x02" +
-		"\u0146\u0144\x03\x02\x02\x02\u0147\u014B\x05\b\x05\x02\u0148\u014A\x05" +
-		"\xB6\\\x02\u0149\u0148\x03\x02\x02\x02\u014A\u014D\x03\x02\x02\x02\u014B" +
-		"\u0149\x03\x02\x02\x02\u014B\u014C\x03\x02\x02\x02\u014C\u014F\x03\x02" +
-		"\x02\x02\u014D\u014B\x03\x02\x02\x02\u014E\u0147\x03\x02\x02\x02\u014F" +
-		"\u0152\x03\x02\x02\x02\u0150\u014E\x03\x02\x02\x02\u0150\u0151\x03\x02" +
-		"\x02\x02\u0151\u0156\x03\x02\x02\x02\u0152\u0150\x03\x02\x02\x02\u0153" +
-		"\u0155\x070\x02\x02\u0154\u0153\x03\x02\x02\x02\u0155\u0158\x03\x02\x02" +
-		"\x02\u0156\u0154\x03\x02\x02\x02\u0156\u0157\x03\x02\x02\x02\u0157\u0166" +
-		"\x03\x02\x02\x02\u0158\u0156\x03\x02\x02\x02\u0159\u0163\x05\n\x06\x02" +
-		"\u015A\u015C\x070\x02\x02\u015B\u015A\x03\x02\x02\x02\u015C\u015F\x03" +
-		"\x02\x02\x02\u015D\u015B\x03\x02\x02\x02\u015D\u015E\x03\x02\x02\x02\u015E" +
-		"\u0160\x03\x02\x02\x02\u015F\u015D\x03\x02\x02\x02";
+		"C\x03C\x07C\u041F\nC\fC\x0EC\u0422\vC\x03C\x03C\x07C\u0426\nC\fC\x0EC" +
+		"\u0429\vC\x07C\u042B\nC\fC\x0EC\u042E\vC\x03C\x07C\u0431\nC\fC\x0EC\u0434" +
+		"\vC\x07C\u0436\nC\fC\x0EC\u0439\vC\x03C\x03C\x03C\x07C\u043E\nC\fC\x0E" +
+		"C\u0441\vC\x03C\x05C\u0444\nC\x03C\x05C\u0447\nC\x03D\x03D\x06D\u044B" +
+		"\nD\rD\x0ED\u044C\x03D\x03D\x03E\x03E\x03E\x06E\u0454\nE\rE\x0EE\u0455" +
+		"\x03E\x03E\x03E\x03E\x03E\x05E\u045D\nE\x03F\x03F\x03F\x03F\x03F\x03F" +
+		"\x03F\x03F\x05F\u0467\nF\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G" +
+		"\x05G\u0472\nG\x03H\x03H\x03H\x03H\x03I\x03I\x03I\x03I\x03J\x03J\x07J" +
+		"\u047E\nJ\fJ\x0EJ\u0481\vJ\x03J\x07J\u0484\nJ\fJ\x0EJ\u0487\vJ\x03K\x03" +
+		"K\x03K\x03K\x03K\x03K\x03K\x07K\u0490\nK\fK\x0EK\u0493\vK\x03K\x03K\x03" +
+		"K\x03K\x07K\u0499\nK\fK\x0EK\u049C\vK\x03K\x05K\u049F\nK\x03L\x03L\x03" +
+		"L\x03L\x06L\u04A5\nL\rL\x0EL\u04A6\x03L\x03L\x03L\x03L\x03L\x07L\u04AE" +
+		"\nL\fL\x0EL\u04B1\vL\x03L\x05L\u04B4\nL\x03M\x03M\x05M\u04B8\nM\x03M\x03" +
+		"M\x03N\x03N\x05N\u04BE\nN\x06N\u04C0\nN\rN\x0EN\u04C1\x03O\x03O\x06O\u04C6" +
+		"\nO\rO\x0EO\u04C7\x03O\x05O\u04CB\nO\x03O\x03O\x06O\u04CF\nO\rO\x0EO\u04D0" +
+		"\x03O\x05O\u04D4\nO\x03O\x03O\x03O\x03O\x03O\x03O\x07O\u04DC\nO\fO\x0E" +
+		"O\u04DF\vO\x03O\x03O\x07O\u04E3\nO\fO\x0EO\u04E6\vO\x03O\x03O\x07O\u04EA" +
+		"\nO\fO\x0EO\u04ED\vO\x03O\x03O\x03O\x03O\x05O\u04F3\nO\x03P\x03P\x03Q" +
+		"\x03Q\x03R\x03R\x03S\x03S\x03T\x03T\x03U\x03U\x03V\x03V\x03W\x03W\x03" +
+		"X\x03X\x03Y\x03Y\x03Z\x03Z\x03[\x03[\x03\\\x03\\\x03]\x03]\x03^\x03^\x03" +
+		"_\x03_\x03`\x03`\x03`\x03`\x03`\x03`\x03`\x03`\x03`\x03`\x03`\x06`\u0520" +
+		"\n`\r`\x0E`\u0521\x03a\x03a\x03a\x06\u0309\u031C\u036B\u049A\x02\x02b" +
+		"\x02\x02\x04\x02\x06\x02\b\x02\n\x02\f\x02\x0E\x02\x10\x02\x12\x02\x14" +
+		"\x02\x16\x02\x18\x02\x1A\x02\x1C\x02\x1E\x02 \x02\"\x02$\x02&\x02(\x02" +
+		"*\x02,\x02.\x020\x022\x024\x026\x028\x02:\x02<\x02>\x02@\x02B\x02D\x02" +
+		"F\x02H\x02J\x02L\x02N\x02P\x02R\x02T\x02V\x02X\x02Z\x02\\\x02^\x02`\x02" +
+		"b\x02d\x02f\x02h\x02j\x02l\x02n\x02p\x02r\x02t\x02v\x02x\x02z\x02|\x02" +
+		"~\x02\x80\x02\x82\x02\x84\x02\x86\x02\x88\x02\x8A\x02\x8C\x02\x8E\x02" +
+		"\x90\x02\x92\x02\x94\x02\x96\x02\x98\x02\x9A\x02\x9C\x02\x9E\x02\xA0\x02" +
+		"\xA2\x02\xA4\x02\xA6\x02\xA8\x02\xAA\x02\xAC\x02\xAE\x02\xB0\x02\xB2\x02" +
+		"\xB4\x02\xB6\x02\xB8\x02\xBA\x02\xBC\x02\xBE\x02\xC0\x02\x02\x14\b\x02" +
+		"YZ\\]ks~\x81\x87\x88\x8A\x8C\x05\x02XXmm~~\x04\x02YYnn\x05\x02ZZop\x80" +
+		"\x80\x04\x02[[qq\x04\x02\\\\rr\x05\x02]]ss\x81\x81\x04\x02ddww\x05\x02" +
+		"ffxy\x85\x85\x04\x02ggzz\x04\x02hh{{\x05\x02ii||\x86\x86\x03\x0289\x04" +
+		"\x02HHKN\x03\x02\x1A\x1A\x04\x02\x1B\x1B\x1D\x1D\x03\x02  \x03\x02!!\x02" +
+		"\u05C8\x02\xCF\x03\x02\x02\x02\x04\xD5\x03\x02\x02\x02\x06\xDB\x03\x02" +
+		"\x02\x02\b\u0106\x03\x02\x02\x02\n\u0108\x03\x02\x02\x02\f\u010A\x03\x02" +
+		"\x02\x02\x0E\u0133\x03\x02\x02\x02\x10\u0168\x03\x02\x02\x02\x12\u019D" +
+		"\x03\x02\x02\x02\x14\u01A8\x03\x02\x02\x02\x16\u01B6\x03\x02\x02\x02\x18" +
+		"\u01E7\x03\x02\x02\x02\x1A\u01EB\x03\x02\x02\x02\x1C\u01F2\x03\x02\x02" +
+		"\x02\x1E\u01FD\x03\x02\x02\x02 \u0208\x03\x02\x02\x02\"\u0213\x03\x02" +
+		"\x02\x02$\u021D\x03\x02\x02\x02&\u022A\x03\x02\x02\x02(\u0231\x03\x02" +
+		"\x02\x02*\u023C\x03\x02\x02\x02,\u0247\x03\x02\x02\x02.\u024E\x03\x02" +
+		"\x02\x020\u025E\x03\x02\x02\x022\u0260\x03\x02\x02\x024\u0265\x03\x02" +
+		"\x02\x026\u0267\x03\x02\x02\x028\u0269\x03\x02\x02\x02:\u026B\x03\x02" +
+		"\x02\x02<\u026D\x03\x02\x02\x02>\u026F\x03\x02\x02\x02@\u0271\x03\x02" +
+		"\x02\x02B\u0273\x03\x02\x02\x02D\u0275\x03\x02\x02\x02F\u0286\x03\x02" +
+		"\x02\x02H\u0288\x03\x02\x02\x02J\u0290\x03\x02\x02\x02L\u0292\x03\x02" +
+		"\x02\x02N\u029C\x03\x02\x02\x02P\u02A6\x03\x02\x02\x02R\u02B3\x03\x02" +
+		"\x02\x02T\u02BA\x03\x02\x02\x02V\u02C5\x03\x02\x02\x02X\u02CC\x03\x02" +
+		"\x02\x02Z\u02D6\x03\x02\x02\x02\\\u02E1\x03\x02\x02\x02^\u02FA\x03\x02" +
+		"\x02\x02`\u030D\x03\x02\x02\x02b\u0320\x03\x02\x02\x02d\u0322\x03\x02" +
+		"\x02\x02f\u0329\x03\x02\x02\x02h\u033D\x03\x02\x02\x02j\u034E\x03\x02" +
+		"\x02\x02l\u036F\x03\x02\x02\x02n\u0371\x03\x02\x02\x02p\u0375\x03\x02" +
+		"\x02\x02r\u0395\x03\x02\x02\x02t\u0397\x03\x02\x02\x02v\u03AC\x03\x02" +
+		"\x02\x02x\u03B5\x03\x02\x02\x02z\u03DE\x03\x02\x02\x02|\u03F6\x03\x02" +
+		"\x02\x02~\u03F8\x03\x02\x02\x02\x80\u03FC\x03\x02\x02\x02\x82\u0408\x03" +
+		"\x02\x02\x02\x84\u0446\x03\x02\x02\x02\x86\u0448\x03\x02\x02\x02\x88\u045C" +
+		"\x03\x02\x02\x02\x8A\u0466\x03\x02\x02\x02\x8C\u0471\x03\x02\x02\x02\x8E" +
+		"\u0473\x03\x02\x02\x02\x90\u0477\x03\x02\x02\x02\x92\u047B\x03\x02\x02" +
+		"\x02\x94\u049E\x03\x02\x02\x02\x96\u04B3\x03\x02\x02\x02\x98\u04B5\x03" +
+		"\x02\x02\x02\x9A\u04BF\x03\x02\x02\x02\x9C\u04F2\x03\x02\x02\x02\x9E\u04F4" +
+		"\x03\x02\x02\x02\xA0\u04F6\x03\x02\x02\x02\xA2\u04F8\x03\x02\x02\x02\xA4" +
+		"\u04FA\x03\x02\x02\x02\xA6\u04FC\x03\x02\x02\x02\xA8\u04FE\x03\x02\x02" +
+		"\x02\xAA\u0500\x03\x02\x02\x02\xAC\u0502\x03\x02\x02\x02\xAE\u0504\x03" +
+		"\x02\x02\x02\xB0\u0506\x03\x02\x02\x02\xB2\u0508\x03\x02\x02\x02\xB4\u050A" +
+		"\x03\x02\x02\x02\xB6\u050C\x03\x02\x02\x02\xB8\u050E\x03\x02\x02\x02\xBA" +
+		"\u0510\x03\x02\x02\x02\xBC\u0512\x03\x02\x02\x02\xBE\u051F\x03\x02\x02" +
+		"\x02\xC0\u0523\x03\x02\x02\x02\xC2\xCC\x05\x04\x03\x02\xC3\xC5\x07\x03" +
+		"\x02\x02\xC4\xC3\x03\x02\x02\x02\xC5\xC8\x03\x02\x02\x02\xC6\xC4\x03\x02" +
+		"\x02\x02\xC6\xC7\x03\x02\x02\x02\xC7\xC9\x03\x02\x02\x02\xC8\xC6\x03\x02" +
+		"\x02\x02\xC9\xCB\x05\xB6\\\x02\xCA\xC6\x03\x02\x02\x02\xCB\xCE\x03\x02" +
+		"\x02\x02\xCC\xCA\x03\x02\x02\x02\xCC\xCD\x03\x02\x02\x02\xCD\xD0\x03\x02" +
+		"\x02\x02\xCE\xCC\x03\x02\x02\x02\xCF\xC2\x03\x02\x02\x02\xD0\xD1\x03\x02" +
+		"\x02\x02\xD1\xCF\x03\x02\x02\x02\xD1\xD2\x03\x02\x02\x02\xD2\xD3\x03\x02" +
+		"\x02\x02\xD3\xD4\x07\x02\x02\x03\xD4\x03\x03\x02\x02\x02\xD5\xD6\x05\x06" +
+		"\x04\x02\xD6\x05\x03\x02\x02\x02\xD7\xDC\x05\f\x07\x02\xD8\xDC\x05\x0E" +
+		"\b\x02\xD9\xDC\x05\x10\t\x02\xDA\xDC\x05\x16\f\x02\xDB\xD7\x03\x02\x02" +
+		"\x02\xDB\xD8\x03\x02\x02\x02\xDB\xD9\x03\x02\x02\x02\xDB\xDA\x03\x02\x02" +
+		"\x02\xDC\x07\x03\x02\x02\x02\xDD\u0107\x07\x9D\x02\x02\xDE\u0107\x071" +
+		"\x02\x02\xDF\u0107\x05\x9EP\x02\xE0\u0107\x05\x12\n\x02\xE1\u0107\x05" +
+		"\x92J\x02\xE2\u0107\x05|?\x02\xE3\u0107\x05r:\x02\xE4\u0107\x05\x84C\x02" +
+		"\xE5\u0107\x05\x86D\x02\xE6\u0107\x05\x9CO\x02\xE7\u0107\x05x=\x02\xE8" +
+		"\u0107\x05\x8AF\x02\xE9\xED\x05Z.\x02\xEA\xEC\x05\xB6\\\x02\xEB\xEA\x03" +
+		"\x02\x02\x02\xEC\xEF\x03\x02\x02\x02\xED\xEB\x03\x02\x02\x02\xED\xEE\x03" +
+		"\x02\x02\x02\xEE\u0107\x03\x02\x02\x02\xEF\xED\x03\x02\x02\x02\xF0\xF4" +
+		"\x05d3\x02\xF1\xF3\x05\xB6\\\x02\xF2\xF1\x03\x02\x02\x02\xF3\xF6\x03\x02" +
+		"\x02\x02\xF4\xF2\x03\x02\x02\x02\xF4\xF5\x03\x02\x02\x02\xF5\u0107\x03" +
+		"\x02\x02\x02\xF6\xF4\x03\x02\x02\x02\xF7\xFB\x05V,\x02\xF8\xFA\x05\xB6" +
+		"\\\x02\xF9\xF8\x03\x02\x02\x02\xFA\xFD\x03\x02\x02\x02\xFB\xF9\x03\x02" +
+		"\x02\x02\xFB\xFC\x03\x02\x02\x02\xFC\u0107\x03\x02\x02\x02\xFD\xFB\x03" +
+		"\x02\x02\x02\xFE\u0107\x05J&\x02\xFF\u0107\x05L\'\x02\u0100\u0107\x05" +
+		"P)\x02\u0101\u0107\x05N(\x02\u0102\u0107\x05R*\x02\u0103\u0107\x05v<\x02" +
+		"\u0104\u0107\x05\x98M\x02\u0105\u0107\x05\xC0a\x02\u0106\xDD\x03\x02\x02" +
+		"\x02\u0106\xDE\x03\x02\x02\x02\u0106\xDF\x03\x02\x02\x02\u0106\xE0\x03" +
+		"\x02\x02\x02\u0106\xE1\x03\x02\x02\x02\u0106\xE2\x03\x02\x02\x02\u0106" +
+		"\xE3\x03\x02\x02\x02\u0106\xE4\x03\x02\x02\x02\u0106\xE5\x03\x02\x02\x02" +
+		"\u0106\xE6\x03\x02\x02\x02\u0106\xE7\x03\x02\x02\x02\u0106\xE8\x03\x02" +
+		"\x02\x02\u0106\xE9\x03\x02\x02\x02\u0106\xF0\x03\x02\x02\x02\u0106\xF7" +
+		"\x03\x02\x02\x02\u0106\xFE\x03\x02\x02\x02\u0106\xFF\x03\x02\x02\x02\u0106" +
+		"\u0100\x03\x02\x02\x02\u0106\u0101\x03\x02\x02\x02\u0106\u0102\x03\x02" +
+		"\x02\x02\u0106\u0103\x03\x02\x02\x02\u0106\u0104\x03\x02\x02\x02\u0106" +
+		"\u0105\x03\x02\x02\x02\u0107\t\x03\x02\x02\x02\u0108\u0109\x05\b\x05\x02" +
+		"\u0109\v\x03\x02\x02\x02\u010A\u010B\x07\x05\x02\x02\u010B\u010C\x05(" +
+		"\x15\x02\u010C\u0110\x07\x1A\x02\x02\u010D\u010F\x05\xB6\\\x02\u010E\u010D" +
+		"\x03\x02\x02\x02\u010F\u0112\x03\x02\x02\x02\u0110\u010E\x03\x02\x02\x02" +
+		"\u0110\u0111\x03\x02\x02\x02\u0111\u011A\x03\x02\x02\x02\u0112\u0110\x03" +
+		"\x02\x02\x02\u0113\u0117\x05\b\x05\x02\u0114\u0116\x05\xB6\\\x02\u0115" +
+		"\u0114\x03\x02\x02\x02\u0116\u0119\x03\x02\x02\x02\u0117\u0115\x03\x02" +
+		"\x02\x02\u0117\u0118\x03\x02\x02\x02\u0118\u011B\x03\x02\x02\x02\u0119" +
+		"\u0117\x03\x02\x02\x02\u011A\u0113\x03\x02\x02\x02\u011B\u011C\x03\x02" +
+		"\x02\x02\u011C\u011A\x03\x02\x02\x02\u011C\u011D\x03\x02\x02\x02\u011D" +
+		"\u0121\x03\x02\x02\x02\u011E\u0120\x070\x02\x02\u011F\u011E\x03\x02\x02" +
+		"\x02\u0120\u0123\x03\x02\x02\x02\u0121\u011F\x03\x02\x02\x02\u0121\u0122" +
+		"\x03\x02\x02\x02\u0122\u0131\x03\x02\x02\x02\u0123\u0121\x03\x02\x02\x02" +
+		"\u0124\u012E\x05\n\x06\x02\u0125\u0127\x070\x02\x02\u0126\u0125\x03\x02" +
+		"\x02\x02\u0127\u012A\x03\x02\x02\x02\u0128\u0126\x03\x02\x02\x02\u0128" +
+		"\u0129\x03\x02\x02\x02\u0129\u012B\x03\x02\x02\x02\u012A\u0128\x03\x02" +
+		"\x02\x02\u012B\u012D\x05\n\x06\x02\u012C\u0128\x03\x02\x02\x02\u012D\u0130" +
+		"\x03\x02\x02\x02\u012E\u012C\x03\x02\x02\x02\u012E\u012F\x03\x02\x02\x02" +
+		"\u012F\u0132\x03\x02\x02\x02\u0130\u012E\x03\x02\x02\x02\u0131\u0124\x03" +
+		"\x02\x02\x02\u0131\u0132\x03\x02\x02\x02\u0132\r\x03\x02\x02\x02\u0133" +
+		"\u0134\x07\x06\x02\x02\u0134\u0135\x05(\x15\x02\u0135\u0137\x07\x1A\x02" +
+		"\x02\u0136\u0138\x05\xB6\\\x02\u0137\u0136\x03\x02\x02\x02\u0137\u0138" +
+		"\x03\x02\x02\x02\u0138\u013C\x03\x02\x02\x02\u0139\u013A\x05r:\x02\u013A" +
+		"\u013B\x05\xB6\\\x02\u013B\u013D\x03\x02\x02\x02\u013C\u0139\x03\x02\x02" +
+		"\x02\u013C\u013D\x03\x02\x02\x02\u013D\u013F\x03\x02\x02\x02\u013E\u0140" +
+		"\x05\x84C\x02\u013F\u013E\x03\x02\x02\x02\u013F\u0140\x03\x02\x02\x02" +
+		"\u0140\u0144\x03\x02\x02\x02\u0141\u0143\x05\xB6\\\x02\u0142\u0141\x03" +
+		"\x02\x02\x02\u0143\u0146\x03\x02\x02\x02\u0144\u0142\x03\x02\x02\x02\u0144" +
+		"\u0145\x03\x02\x02\x02\u0145\u0150\x03\x02\x02\x02\u0146\u0144\x03\x02" +
+		"\x02\x02\u0147\u014B\x05\b\x05\x02\u0148\u014A\x05\xB6\\\x02\u0149\u0148" +
+		"\x03\x02\x02\x02\u014A\u014D\x03\x02\x02\x02\u014B\u0149\x03\x02\x02\x02" +
+		"\u014B\u014C\x03\x02\x02\x02\u014C\u014F\x03\x02\x02\x02\u014D\u014B\x03" +
+		"\x02\x02\x02\u014E\u0147\x03\x02\x02\x02\u014F\u0152\x03\x02\x02\x02\u0150" +
+		"\u014E\x03\x02\x02\x02\u0150\u0151\x03\x02\x02\x02\u0151\u0156\x03\x02" +
+		"\x02\x02\u0152\u0150\x03\x02\x02\x02\u0153\u0155\x070\x02\x02\u0154\u0153" +
+		"\x03\x02\x02\x02\u0155\u0158\x03\x02\x02\x02\u0156\u0154\x03\x02\x02\x02" +
+		"\u0156\u0157\x03\x02\x02\x02\u0157\u0166\x03\x02\x02\x02\u0158\u0156\x03" +
+		"\x02\x02\x02\u0159\u0163\x05\n\x06\x02\u015A\u015C\x070\x02\x02\u015B" +
+		"\u015A\x03\x02\x02\x02\u015C\u015F\x03\x02\x02\x02\u015D\u015B\x03\x02" +
+		"\x02\x02\u015D\u015E";
 	private static readonly _serializedATNSegment1: string =
+		"\x03\x02\x02\x02\u015E\u0160\x03\x02\x02\x02\u015F\u015D\x03\x02\x02\x02" +
 		"\u0160\u0162\x05\n\x06\x02\u0161\u015D\x03\x02\x02\x02\u0162\u0165\x03" +
 		"\x02\x02\x02\u0163\u0161\x03\x02\x02\x02\u0163\u0164\x03\x02\x02\x02\u0164" +
 		"\u0167\x03\x02\x02\x02\u0165\u0163\x03\x02\x02\x02\u0166\u0159\x03\x02" +
@@ -6875,36 +6904,36 @@ export class clozeParser extends Parser {
 		"\x02\x02\u021D\u0221\x05\\/\x02\u021E\u0220\x05`1\x02\u021F\u021E\x03" +
 		"\x02\x02\x02\u0220\u0223\x03\x02\x02\x02\u0221\u021F\x03\x02\x02\x02\u0221" +
 		"\u0222\x03\x02\x02\x02\u0222\u0228\x03\x02\x02\x02\u0223\u0221\x03\x02" +
-		"\x02\x02\u0224\u0225\x07G\x02\x02\u0225\u0226\x05\xBE`\x02\u0226\u0227" +
+		"\x02\x02\u0224\u0225\x07H\x02\x02\u0225\u0226\x05\xBE`\x02\u0226\u0227" +
 		"\x07\x1A\x02\x02\u0227\u0229\x03\x02\x02\x02\u0228\u0224\x03\x02\x02\x02" +
-		"\u0228\u0229\x03\x02\x02\x02\u0229%\x03\x02\x02\x02\u022A\u022B\x07D\x02" +
+		"\u0228\u0229\x03\x02\x02\x02\u0229%\x03\x02\x02\x02\u022A\u022B\x07E\x02" +
 		"\x02\u022B\u022C\x07.\x02\x02\u022C\u022D\x07\x1A\x02\x02\u022D\'\x03" +
 		"\x02\x02\x02\u022E\u0230\x05*\x16\x02\u022F\u022E\x03\x02\x02\x02\u0230" +
 		"\u0233\x03\x02\x02\x02\u0231\u022F\x03\x02\x02\x02\u0231\u0232\x03\x02" +
 		"\x02\x02\u0232\u0239\x03\x02\x02\x02\u0233\u0231\x03\x02\x02\x02\u0234" +
-		"\u0238\x07\x88\x02\x02\u0235\u0238\x07\x89\x02\x02\u0236\u0238\x05,\x17" +
+		"\u0238\x07\x89\x02\x02\u0235\u0238\x07\x8A\x02\x02\u0236\u0238\x05,\x17" +
 		"\x02\u0237\u0234\x03\x02\x02\x02\u0237\u0235\x03\x02\x02\x02\u0237\u0236" +
 		"\x03\x02\x02\x02\u0238\u023B\x03\x02\x02\x02\u0239\u0237\x03\x02\x02\x02" +
 		"\u0239\u023A\x03\x02\x02\x02\u023A)\x03\x02\x02\x02\u023B\u0239\x03\x02" +
 		"\x02\x02\u023C\u023D\t\x02\x02\x02\u023D+\x03\x02\x02\x02\u023E\u0248" +
 		"\x050\x19\x02\u023F\u0248\x05h5\x02\u0240\u0248\x052\x1A\x02\u0241\u0248" +
 		"\x054\x1B\x02\u0242\u0248\x056\x1C\x02\u0243\u0248\x058\x1D\x02\u0244" +
-		"\u0248\x05:\x1E\x02\u0245\u0248\x05<\x1F\x02\u0246\u0248\x07]\x02\x02" +
+		"\u0248\x05:\x1E\x02\u0245\u0248\x05<\x1F\x02\u0246\u0248\x07^\x02\x02" +
 		"\u0247\u023E\x03\x02\x02\x02\u0247\u023F\x03\x02\x02\x02\u0247\u0240\x03" +
 		"\x02\x02\x02\u0247\u0241\x03\x02\x02\x02\u0247\u0242\x03\x02\x02\x02\u0247" +
 		"\u0243\x03\x02\x02\x02\u0247\u0244\x03\x02\x02\x02\u0247\u0245\x03\x02" +
 		"\x02\x02\u0247\u0246\x03\x02\x02\x02\u0248-\x03\x02\x02\x02\u0249\u024F" +
-		"\x07\x86\x02\x02\u024A\u024F\x07\x87\x02\x02\u024B\u024F\x07\x88\x02\x02" +
-		"\u024C\u024F\x07\x89\x02\x02\u024D\u024F\x03\x02\x02\x02\u024E\u0249\x03" +
+		"\x07\x87\x02\x02\u024A\u024F\x07\x88\x02\x02\u024B\u024F\x07\x89\x02\x02" +
+		"\u024C\u024F\x07\x8A\x02\x02\u024D\u024F\x03\x02\x02\x02\u024E\u0249\x03" +
 		"\x02\x02\x02\u024E\u024A\x03\x02\x02\x02\u024E\u024B\x03\x02\x02\x02\u024E" +
 		"\u024C\x03\x02\x02\x02\u024E\u024D\x03\x02\x02\x02\u024F/\x03\x02\x02" +
-		"\x02\u0250\u0253\x07T\x02\x02\u0251\u0254\x07)\x02\x02\u0252\u0254\x07" +
-		"\x99\x02\x02\u0253\u0251\x03\x02\x02\x02\u0253\u0252\x03\x02\x02\x02\u0253" +
-		"\u0254\x03\x02\x02\x02\u0254\u025F\x03\x02\x02\x02\u0255\u0257\x07k\x02" +
+		"\x02\u0250\u0253\x07U\x02\x02\u0251\u0254\x07)\x02\x02\u0252\u0254\x07" +
+		"\x9A\x02\x02\u0253\u0251\x03\x02\x02\x02\u0253\u0252\x03\x02\x02\x02\u0253" +
+		"\u0254\x03\x02\x02\x02\u0254\u025F\x03\x02\x02\x02\u0255\u0257\x07l\x02" +
 		"\x02\u0256\u0258\x07)\x02\x02\u0257\u0256\x03\x02\x02\x02\u0257\u0258" +
-		"\x03\x02\x02\x02\u0258\u025F\x03\x02\x02\x02\u0259\u025B\x07U\x02\x02" +
+		"\x03\x02\x02\x02\u0258\u025F\x03\x02\x02\x02\u0259\u025B\x07V\x02\x02" +
 		"\u025A\u025C\x07)\x02\x02\u025B\u025A\x03\x02\x02\x02\u025B\u025C\x03" +
-		"\x02\x02\x02\u025C\u025F\x03\x02\x02\x02\u025D\u025F\x07V\x02\x02\u025E" +
+		"\x02\x02\x02\u025C\u025F\x03\x02\x02\x02\u025D\u025F\x07W\x02\x02\u025E" +
 		"\u0250\x03\x02\x02\x02\u025E\u0255\x03\x02\x02\x02\u025E\u0259\x03\x02" +
 		"\x02\x02\u025E\u025D\x03\x02\x02\x02\u025F1\x03\x02\x02\x02\u0260\u0263" +
 		"\t\x03\x02\x02\u0261\u0262\x07\x1B\x02\x02\u0262\u0264\x07+\x02\x02\u0263" +
@@ -6915,12 +6944,12 @@ export class clozeParser extends Parser {
 		"\t\b\x02\x02\u026E=\x03\x02\x02\x02\u026F\u0270\t\t\x02\x02\u0270?\x03" +
 		"\x02\x02\x02\u0271\u0272\t\n\x02\x02\u0272A\x03\x02\x02\x02\u0273\u0274" +
 		"\t\v\x02\x02\u0274C\x03\x02\x02\x02\u0275\u0276\t\f\x02\x02\u0276E\x03" +
-		"\x02\x02\x02\u0277\u027A\x07b\x02\x02\u0278\u0279\x07\x1B\x02\x02\u0279" +
+		"\x02\x02\x02\u0277\u027A\x07c\x02\x02\u0278\u0279\x07\x1B\x02\x02\u0279" +
 		"\u027B\x07+\x02\x02\u027A\u0278\x03\x02\x02\x02\u027A\u027B\x03\x02\x02" +
-		"\x02\u027B\u0287\x03\x02\x02\x02\u027C\u027F\x07u\x02\x02\u027D\u027E" +
+		"\x02\u027B\u0287\x03\x02\x02\x02\u027C\u027F\x07v\x02\x02\u027D\u027E" +
 		"\x07\x1B\x02\x02\u027E\u0280\x07+\x02\x02\u027F\u027D\x03\x02\x02\x02" +
 		"\u027F\u0280\x03\x02\x02\x02\u0280\u0287\x03\x02\x02\x02\u0281\u0284\x07" +
-		"\x82\x02\x02\u0282\u0283\x07\x1B\x02\x02\u0283\u0285\x07+\x02\x02\u0284" +
+		"\x83\x02\x02\u0282\u0283\x07\x1B\x02\x02\u0283\u0285\x07+\x02\x02\u0284" +
 		"\u0282\x03\x02\x02\x02\u0284\u0285\x03\x02\x02\x02\u0285\u0287\x03\x02" +
 		"\x02\x02\u0286\u0277\x03\x02\x02\x02\u0286\u027C\x03\x02\x02\x02\u0286" +
 		"\u0281\x03\x02\x02\x02\u0287G\x03\x02\x02\x02\u0288\u0289\t\r\x02\x02" +
@@ -6929,16 +6958,16 @@ export class clozeParser extends Parser {
 		"\x02\x02\x02\u028F\u0291\x07,\x02\x02\u0290\u028A\x03\x02\x02\x02\u0290" +
 		"\u028F\x03\x02\x02\x02\u0291K\x03\x02\x02\x02\u0292\u0293\x05@!\x02\u0293" +
 		"\u0294\x07\x1B\x02\x02\u0294\u0295\x05p9\x02\u0295\u029A\x07\x1A\x02\x02" +
-		"\u0296\u0297\x07G\x02\x02\u0297\u0298\x05\xBE`\x02\u0298\u0299\x07\x1A" +
+		"\u0296\u0297\x07H\x02\x02\u0297\u0298\x05\xBE`\x02\u0298\u0299\x07\x1A" +
 		"\x02\x02\u0299\u029B\x03\x02\x02\x02\u029A\u0296\x03\x02\x02\x02\u029A" +
 		"\u029B\x03\x02\x02\x02\u029BM\x03\x02\x02\x02\u029C\u029D\x05D#\x02\u029D" +
 		"\u029E\x07\x1B\x02\x02\u029E\u029F\x05p9\x02\u029F\u02A4\x07\x1A\x02\x02" +
-		"\u02A0\u02A1\x07G\x02\x02\u02A1\u02A2\x05\xBE`\x02\u02A2\u02A3\x07\x1A" +
+		"\u02A0\u02A1\x07H\x02\x02\u02A1\u02A2\x05\xBE`\x02\u02A2\u02A3\x07\x1A" +
 		"\x02\x02\u02A3\u02A5\x03\x02\x02\x02\u02A4\u02A0\x03\x02\x02\x02\u02A4" +
 		"\u02A5\x03\x02\x02\x02\u02A5O\x03\x02\x02\x02\u02A6\u02A7\x05B\"\x02\u02A7" +
 		"\u02AA\x07\x1B\x02\x02\u02A8\u02AB\x05p9\x02\u02A9\u02AB\x05n8\x02\u02AA" +
 		"\u02A8\x03\x02\x02\x02\u02AA\u02A9\x03\x02\x02\x02\u02AB\u02AC\x03\x02" +
-		"\x02\x02\u02AC\u02B1\x07\x1A\x02\x02\u02AD\u02AE\x07G\x02\x02\u02AE\u02AF" +
+		"\x02\x02\u02AC\u02B1\x07\x1A\x02\x02\u02AD\u02AE\x07H\x02\x02\u02AE\u02AF" +
 		"\x05\xBE`\x02\u02AF\u02B0\x07\x1A\x02\x02\u02B0\u02B2\x03\x02\x02\x02" +
 		"\u02B1\u02AD\x03\x02\x02\x02\u02B1\u02B2\x03\x02\x02\x02\u02B2Q\x03\x02" +
 		"\x02\x02\u02B3\u02B7\x05T+\x02\u02B4\u02B6\x05l7\x02\u02B5\u02B4\x03\x02" +
@@ -6953,27 +6982,27 @@ export class clozeParser extends Parser {
 		"\u02C7\x03\x02\x02\x02\u02C9\u02CA\x03\x02\x02\x02\u02CAW\x03\x02\x02" +
 		"\x02\u02CB\u02C9\x03\x02\x02\x02\u02CC\u02CD\x05F$\x02\u02CD\u02CE\x07" +
 		"\x1B\x02\x02\u02CE\u02CF\x05p9\x02\u02CF\u02D4\x07\x1A\x02\x02\u02D0\u02D1" +
-		"\x07G\x02\x02\u02D1\u02D2\x05\xBE`\x02\u02D2\u02D3\x07\x1A\x02\x02\u02D3" +
+		"\x07H\x02\x02\u02D1\u02D2\x05\xBE`\x02\u02D2\u02D3\x07\x1A\x02\x02\u02D3" +
 		"\u02D5\x03\x02\x02\x02\u02D4\u02D0\x03\x02\x02\x02\u02D4\u02D5\x03\x02" +
 		"\x02\x02\u02D5Y\x03\x02\x02\x02\u02D6\u02DA\x05\\/\x02\u02D7\u02D9\x05" +
 		"`1\x02\u02D8\u02D7\x03\x02\x02\x02\u02D9\u02DC\x03\x02\x02\x02\u02DA\u02D8" +
 		"\x03\x02\x02\x02\u02DA\u02DB\x03\x02\x02\x02\u02DB\u02DF\x03\x02\x02\x02" +
 		"\u02DC\u02DA\x03\x02\x02\x02\u02DD\u02DE\x070\x02\x02\u02DE\u02E0\x07" +
-		"I\x02\x02\u02DF\u02DD\x03\x02\x02\x02\u02DF\u02E0\x03\x02\x02\x02\u02E0" +
+		"J\x02\x02\u02DF\u02DD\x03\x02\x02\x02\u02DF\u02E0\x03\x02\x02\x02\u02E0" +
 		"[\x03\x02\x02\x02\u02E1\u02E2\x05^0\x02\u02E2\u02E6\x07\x1B\x02\x02\u02E3" +
 		"\u02E5\x07\x03\x02\x02\u02E4\u02E3\x03\x02\x02\x02\u02E5\u02E8\x03\x02" +
 		"\x02\x02\u02E6\u02E4\x03\x02\x02\x02\u02E6\u02E7\x03\x02\x02\x02\u02E7" +
 		"\u02E9\x03\x02\x02\x02\u02E8\u02E6\x03\x02\x02\x02\u02E9\u02EA\x05p9\x02" +
-		"\u02EA\u02EB\x07\x1A\x02\x02\u02EB]\x03\x02\x02\x02\u02EC\u02EF\x07_\x02" +
-		"\x02\u02ED\u02F0\x07)\x02\x02\u02EE\u02F0\x07\x99\x02\x02\u02EF\u02ED" +
+		"\u02EA\u02EB\x07\x1A\x02\x02\u02EB]\x03\x02\x02\x02\u02EC\u02EF\x07`\x02" +
+		"\x02\u02ED\u02F0\x07)\x02\x02\u02EE\u02F0\x07\x9A\x02\x02\u02EF\u02ED" +
 		"\x03\x02\x02\x02\u02EF\u02EE\x03\x02\x02\x02\u02EF\u02F0\x03\x02\x02\x02" +
-		"\u02F0\u02FB\x03\x02\x02\x02\u02F1\u02F3\x07t\x02\x02\u02F2\u02F4\x07" +
+		"\u02F0\u02FB\x03\x02\x02\x02\u02F1\u02F3\x07u\x02\x02\u02F2\u02F4\x07" +
 		")\x02\x02\u02F3\u02F2\x03\x02\x02\x02\u02F3\u02F4\x03\x02\x02\x02\u02F4" +
-		"\u02FB\x03\x02\x02\x02\u02F5\u02F7\x07`\x02\x02\u02F6\u02F8\x07)\x02\x02" +
+		"\u02FB\x03\x02\x02\x02\u02F5\u02F7\x07a\x02\x02\u02F6\u02F8\x07)\x02\x02" +
 		"\u02F7\u02F6\x03\x02\x02\x02\u02F7\u02F8\x03\x02\x02\x02\u02F8\u02FB\x03" +
-		"\x02\x02\x02\u02F9\u02FB\x07a\x02\x02\u02FA\u02EC\x03\x02\x02\x02\u02FA" +
+		"\x02\x02\x02\u02F9\u02FB\x07b\x02\x02\u02FA\u02EC\x03\x02\x02\x02\u02FA" +
 		"\u02F1\x03\x02\x02\x02\u02FA\u02F5\x03\x02\x02\x02\u02FA\u02F9\x03\x02" +
-		"\x02\x02\u02FB_\x03\x02\x02\x02\u02FC\u02FD\x07E\x02\x02\u02FD\u02FE\x07" +
+		"\x02\x02\u02FB_\x03\x02\x02\x02\u02FC\u02FD\x07F\x02\x02\u02FD\u02FE\x07" +
 		"\x1B\x02\x02\u02FE\u02FF\x05p9\x02\u02FF\u0300\x07\x1A\x02\x02\u0300\u030E" +
 		"\x03\x02\x02\x02\u0301\u0302\t\x0E\x02\x02\u0302\u0303\x07\x1B\x02\x02" +
 		"\u0303\u0304\x07.\x02\x02\u0304\u030E\x07\x1A\x02\x02\u0305\u0309\t\x0F" +
@@ -6981,7 +7010,7 @@ export class clozeParser extends Parser {
 		"\x03\x02\x02\x02\u0309\u030A\x03\x02\x02\x02\u0309\u0307\x03\x02\x02\x02" +
 		"\u030A\u030C\x03\x02\x02\x02\u030B\u0309\x03\x02\x02\x02\u030C\u030E\x07" +
 		"\x1A\x02\x02\u030D\u02FC\x03\x02\x02\x02\u030D\u0301\x03\x02\x02\x02\u030D" +
-		"\u0305\x03\x02\x02\x02\u030Ea\x03\x02\x02\x02\u030F\u0310\x07E\x02\x02" +
+		"\u0305\x03\x02\x02\x02\u030Ea\x03\x02\x02\x02\u030F\u0310\x07F\x02\x02" +
 		"\u0310\u0311\x07\x1B\x02\x02\u0311\u0312\x05p9\x02\u0312\u0313\x07\x1A" +
 		"\x02\x02\u0313\u0321\x03\x02\x02\x02\u0314\u0315\t\x0E\x02\x02\u0315\u0316" +
 		"\x07\x1B\x02\x02\u0316\u0317\x07.\x02\x02\u0317\u0321\x07\x1A\x02\x02" +
@@ -6994,24 +7023,24 @@ export class clozeParser extends Parser {
 		"\x02\u0325\u0328\x03\x02\x02\x02\u0326\u0324\x03\x02\x02\x02\u0326\u0327" +
 		"\x03\x02\x02\x02\u0327e\x03\x02\x02\x02\u0328\u0326\x03\x02\x02\x02\u0329" +
 		"\u032A\x05j6\x02\u032A\u032B\x07\x1B\x02\x02\u032B\u032C\x05p9\x02\u032C" +
-		"\u0331\x07\x1A\x02\x02\u032D\u032E\x07G\x02\x02\u032E\u032F\x05\xBE`\x02" +
+		"\u0331\x07\x1A\x02\x02\u032D\u032E\x07H\x02\x02\u032E\u032F\x05\xBE`\x02" +
 		"\u032F\u0330\x07\x1A\x02\x02\u0330\u0332\x03\x02\x02\x02\u0331\u032D\x03" +
 		"\x02\x02\x02\u0331\u0332\x03\x02\x02\x02\u0332g\x03\x02\x02\x02\u0333" +
-		"\u0336\x07S\x02\x02\u0334\u0335\x07\x1B\x02\x02\u0335\u0337\x07*\x02\x02" +
+		"\u0336\x07T\x02\x02\u0334\u0335\x07\x1B\x02\x02\u0335\u0337\x07*\x02\x02" +
 		"\u0336\u0334\x03\x02\x02\x02\u0336\u0337\x03\x02\x02\x02\u0337\u033E\x03" +
-		"\x02\x02\x02\u0338\u033B\x07j\x02\x02\u0339\u033A\x07\x1B\x02\x02\u033A" +
+		"\x02\x02\x02\u0338\u033B\x07k\x02\x02\u0339\u033A\x07\x1B\x02\x02\u033A" +
 		"\u033C\x07*\x02\x02\u033B\u0339\x03\x02\x02\x02\u033B\u033C\x03\x02\x02" +
 		"\x02\u033C\u033E\x03\x02\x02\x02\u033D\u0333\x03\x02\x02\x02\u033D\u0338" +
-		"\x03\x02\x02\x02\u033Ei\x03\x02\x02\x02\u033F\u0342\x07^\x02\x02\u0340" +
+		"\x03\x02\x02\x02\u033Ei\x03\x02\x02\x02\u033F\u0342\x07_\x02\x02\u0340" +
 		"\u0341\x07\x1B\x02\x02\u0341\u0343\x07*\x02\x02\u0342\u0340\x03\x02\x02" +
 		"\x02\u0342\u0343\x03\x02\x02\x02\u0343\u034F\x03\x02\x02\x02\u0344\u0347" +
-		"\x07s\x02\x02\u0345\u0346\x07\x1B\x02\x02\u0346\u0348\x07*\x02\x02\u0347" +
+		"\x07t\x02\x02\u0345\u0346\x07\x1B\x02\x02\u0346\u0348\x07*\x02\x02\u0347" +
 		"\u0345\x03\x02\x02\x02\u0347\u0348\x03\x02\x02\x02\u0348\u034F\x03\x02" +
-		"\x02\x02\u0349\u034C\x07\x83\x02\x02\u034A\u034B\x07\x1B\x02\x02\u034B" +
+		"\x02\x02\u0349\u034C\x07\x84\x02\x02\u034A\u034B\x07\x1B\x02\x02\u034B" +
 		"\u034D\x07*\x02\x02\u034C\u034A\x03\x02\x02\x02\u034C\u034D\x03\x02\x02" +
 		"\x02\u034D\u034F\x03\x02\x02\x02\u034E\u033F\x03\x02\x02\x02\u034E\u0344" +
 		"\x03\x02\x02\x02\u034E\u0349\x03\x02\x02\x02\u034Fk\x03\x02\x02\x02\u0350" +
-		"\u0351\x07\x13\x02\x02\u0351\u0354\x05\x9CO\x02\u0352\u0354\x07E\x02\x02" +
+		"\u0351\x07\x13\x02\x02\u0351\u0354\x05\x9CO\x02\u0352\u0354\x07F\x02\x02" +
 		"\u0353\u0350\x03\x02\x02\x02\u0353\u0352\x03\x02\x02\x02\u0354\u0355\x03" +
 		"\x02\x02\x02\u0355\u0359\x07\x1B\x02\x02\u0356\u0358\x07\x03\x02\x02\u0357" +
 		"\u0356\x03\x02\x02\x02\u0358\u035B\x03\x02\x02\x02\u0359\u0357\x03\x02" +
@@ -7026,8 +7055,8 @@ export class clozeParser extends Parser {
 		"\x02\x02\u036B\u0369\x03\x02\x02\x02\u036C\u036E\x03\x02\x02\x02\u036D" +
 		"\u036B\x03\x02\x02\x02\u036E\u0370\x07\x1A\x02\x02\u036F\u0353\x03\x02" +
 		"\x02\x02\u036F\u0363\x03\x02\x02\x02\u036F\u0367\x03\x02\x02\x02\u0370" +
-		"m\x03\x02\x02\x02\u0371\u0372\x07\x98\x02\x02\u0372\u0373\x07\x1E\x02" +
-		"\x02\u0373\u0374\x07.\x02\x02\u0374o\x03\x02\x02\x02\u0375\u0376\x07\x9B" +
+		"m\x03\x02\x02\x02\u0371\u0372\x07\x99\x02\x02\u0372\u0373\x07\x1E\x02" +
+		"\x02\u0373\u0374\x07.\x02\x02\u0374o\x03\x02\x02\x02\u0375\u0376\x07\x9C" +
 		"\x02\x02\u0376q\x03\x02\x02\x02\u0377\u0378\x07\x18\x02\x02\u0378\u0380" +
 		"\x07\x1A\x02\x02\u0379\u037B\x07\x03\x02\x02\u037A\u0379\x03\x02\x02\x02" +
 		"\u037B\u037E\x03\x02\x02\x02\u037C\u037A\x03\x02\x02\x02\u037C\u037D\x03" +
@@ -7054,11 +7083,11 @@ export class clozeParser extends Parser {
 		"\u03AA\x05\x9CO\x02\u03A9\u03A8\x03\x02\x02\x02\u03A9\u03AA\x03\x02\x02" +
 		"\x02\u03AA\u03AB\x03\x02\x02\x02\u03AB\u03AD\x07\x1A\x02\x02\u03AC\u03A2" +
 		"\x03\x02\x02\x02\u03AC\u03A7\x03\x02\x02\x02\u03ADw\x03\x02\x02\x02\u03AE" +
-		"\u03B6\x07>\x02\x02\u03AF\u03B6\x07<\x02\x02\u03B0\u03B2\x07=\x02\x02" +
-		"\u03B1\u03B3\x072\x02\x02\u03B2\u03B1\x03\x02\x02\x02\u03B2\u03B3\x03" +
+		"\u03B6\x07?\x02\x02\u03AF\u03B6\x07=\x02\x02\u03B0\u03B2\x07>\x02\x02" +
+		"\u03B1\u03B3\x073\x02\x02\u03B2\u03B1\x03\x02\x02\x02\u03B2\u03B3\x03" +
 		"\x02\x02\x02\u03B3\u03B4\x03\x02\x02\x02\u03B4\u03B6\x07\x02\x02\x03\u03B5" +
 		"\u03AE\x03\x02\x02\x02\u03B5\u03AF\x03\x02\x02\x02\u03B5\u03B0\x03\x02" +
-		"\x02\x02\u03B6y\x03\x02\x02\x02\u03B7\u03B9\x07i\x02\x02\u03B8\u03BA\x05" +
+		"\x02\x02\u03B6y\x03\x02\x02\x02\u03B7\u03B9\x07j\x02\x02\u03B8\u03BA\x05" +
 		"\x9CO\x02\u03B9\u03B8\x03\x02\x02\x02\u03B9\u03BA\x03\x02\x02\x02\u03BA" +
 		"\u03D0\x03\x02\x02\x02\u03BB\u03C5\x05\x9CO\x02\u03BC\u03C0\x070\x02\x02" +
 		"\u03BD\u03BF\x07\x03\x02\x02\u03BE\u03BD\x03\x02\x02\x02\u03BF\u03C2\x03" +
@@ -7071,35 +7100,35 @@ export class clozeParser extends Parser {
 		"\u03CC\u03CF\x03\x02\x02\x02\u03CD\u03CB\x03\x02\x02\x02\u03CE\u03BB\x03" +
 		"\x02\x02\x02\u03CF\u03D2\x03\x02\x02\x02\u03D0\u03CE\x03\x02\x02\x02\u03D0" +
 		"\u03D1\x03\x02\x02\x02\u03D1\u03D3\x03\x02\x02\x02\u03D2\u03D0\x03\x02" +
-		"\x02\x02\u03D3\u03DF\x07\x1A\x02\x02\u03D4\u03DA\x07i\x02\x02\u03D5\u03D9" +
+		"\x02\x02\u03D3\u03DF\x07\x1A\x02\x02\u03D4\u03DA\x07j\x02\x02\u03D5\u03D9" +
 		"\x05\x9CO\x02\u03D6\u03D9\x070\x02\x02\u03D7\u03D9\x07\x03\x02\x02\u03D8" +
 		"\u03D5\x03\x02\x02\x02\u03D8\u03D6\x03\x02\x02\x02\u03D8\u03D7\x03\x02" +
 		"\x02\x02\u03D9\u03DC\x03\x02\x02\x02\u03DA\u03D8\x03\x02\x02\x02\u03DA" +
 		"\u03DB\x03\x02\x02\x02\u03DB\u03DD\x03\x02\x02\x02\u03DC\u03DA\x03\x02" +
 		"\x02\x02\u03DD\u03DF\x07\x02\x02\x03\u03DE\u03B7\x03\x02\x02\x02\u03DE" +
-		"\u03D4\x03\x02\x02\x02\u03DF{\x03\x02\x02\x02\u03E0\u03E5\x076\x02\x02" +
+		"\u03D4\x03\x02\x02\x02\u03DF{\x03\x02\x02\x02\u03E0\u03E5\x077\x02\x02" +
 		"\u03E1\u03E6\x05\x9CO\x02\u03E2\u03E6\x07\x1B\x02\x02\u03E3\u03E6\x07" +
-		"\x9B\x02\x02\u03E4\u03E6\x070\x02\x02\u03E5\u03E1\x03\x02\x02\x02\u03E5" +
+		"\x9C\x02\x02\u03E4\u03E6\x070\x02\x02\u03E5\u03E1\x03\x02\x02\x02\u03E5" +
 		"\u03E2\x03\x02\x02\x02\u03E5\u03E3\x03\x02\x02\x02\u03E5\u03E4\x03\x02" +
 		"\x02\x02\u03E6\u03E7\x03\x02\x02\x02\u03E7\u03E5\x03\x02\x02\x02\u03E7" +
 		"\u03E8\x03\x02\x02\x02\u03E8\u03E9\x03\x02\x02\x02\u03E9\u03F7\x07\x1A" +
-		"\x02\x02\u03EA\u03F2\x076\x02\x02\u03EB\u03F1\x05\x9CO\x02\u03EC\u03F1" +
-		"\x07\x1B\x02\x02\u03ED\u03F1\x07\x9B\x02\x02\u03EE\u03F1\x070\x02\x02" +
+		"\x02\x02\u03EA\u03F2\x077\x02\x02\u03EB\u03F1\x05\x9CO\x02\u03EC\u03F1" +
+		"\x07\x1B\x02\x02\u03ED\u03F1\x07\x9C\x02\x02\u03EE\u03F1\x070\x02\x02" +
 		"\u03EF\u03F1\x07\x03\x02\x02\u03F0\u03EB\x03\x02\x02\x02\u03F0\u03EC\x03" +
 		"\x02\x02\x02\u03F0\u03ED\x03\x02\x02\x02\u03F0\u03EE\x03\x02\x02\x02\u03F0" +
 		"\u03EF\x03\x02\x02\x02\u03F1\u03F4\x03\x02\x02\x02\u03F2\u03F0\x03\x02" +
 		"\x02\x02\u03F2\u03F3\x03\x02\x02\x02\u03F3\u03F5\x03\x02\x02\x02\u03F4" +
 		"\u03F2\x03\x02\x02\x02\u03F5\u03F7\x07\x02\x02\x03\u03F6\u03E0\x03\x02" +
 		"\x02\x02\u03F6\u03EA\x03\x02\x02\x02\u03F7}\x03\x02\x02\x02\u03F8\u03F9" +
-		"\x075\x02\x02\u03F9\u03FA\x05\x9CO\x02\u03FA\u03FB\x07\x1A\x02\x02\u03FB" +
-		"\x7F\x03\x02\x02\x02\u03FC\u0400\x07P\x02\x02\u03FD\u0401\x05\x9CO\x02" +
+		"\x076\x02\x02\u03F9\u03FA\x05\x9CO\x02\u03FA\u03FB\x07\x1A\x02\x02\u03FB" +
+		"\x7F\x03\x02\x02\x02\u03FC\u0400\x07Q\x02\x02\u03FD\u0401\x05\x9CO\x02" +
 		"\u03FE\u0401\x07\x1B\x02\x02\u03FF\u0401\x070\x02\x02\u0400\u03FD\x03" +
 		"\x02\x02\x02\u0400\u03FE\x03\x02\x02\x02\u0400\u03FF\x03\x02\x02\x02\u0401" +
 		"\u0402\x03\x02\x02\x02\u0402\u0400\x03\x02\x02\x02\u0402\u0403\x03\x02" +
 		"\x02\x02\u0403\u0404\x03\x02\x02\x02\u0404\u0406\x07\x1A\x02\x02\u0405" +
-		"\u0407\x05\x82B\x02\u0406\u0405\x03\x02\x02\x02\u0406\u0407\x03\x02\x02" +
-		"\x02\u0407\x81\x03\x02\x02\x02\u0408\u040C\x07P\x02\x02\u0409\u040D";
+		"\u0407\x05\x82B\x02\u0406\u0405\x03\x02\x02\x02\u0406\u0407\x03\x02";
 	private static readonly _serializedATNSegment2: string =
+		"\x02\x02\u0407\x81\x03\x02\x02\x02\u0408\u040C\x07Q\x02\x02\u0409\u040D" +
 		"\x05\x9CO\x02\u040A\u040D\x07\x1B\x02\x02\u040B\u040D\x070\x02\x02\u040C" +
 		"\u0409\x03\x02\x02\x02\u040C\u040A\x03\x02\x02\x02\u040C\u040B\x03\x02" +
 		"\x02\x02\u040D\u040E\x03\x02\x02\x02\u040E\u040C\x03\x02\x02\x02\u040E" +
@@ -7108,142 +7137,145 @@ export class clozeParser extends Parser {
 		"\x070\x02\x02\u0414\u0413\x03\x02\x02\x02\u0415\u0418\x03\x02\x02\x02" +
 		"\u0416\u0414\x03\x02\x02\x02\u0416\u0417\x03\x02\x02\x02\u0417\u041A\x03" +
 		"\x02\x02\x02\u0418\u0416\x03\x02\x02\x02\u0419\u041B\x05\x9CO\x02\u041A" +
-		"\u0419\x03\x02\x02\x02\u041A\u041B\x03\x02\x02\x02\u041B\u0431\x03\x02" +
-		"\x02\x02\u041C\u0426\x05\x9CO\x02\u041D\u0421\x070\x02\x02\u041E\u0420" +
-		"\x07\x03\x02\x02\u041F\u041E\x03\x02\x02\x02\u0420\u0423\x03\x02\x02\x02" +
-		"\u0421\u041F\x03\x02\x02\x02\u0421\u0422\x03\x02\x02\x02\u0422\u0425\x03" +
-		"\x02\x02\x02\u0423\u0421\x03\x02\x02\x02\u0424\u041D\x03\x02\x02\x02\u0425" +
-		"\u0428\x03\x02\x02\x02\u0426\u0424\x03\x02\x02\x02\u0426\u0427\x03\x02" +
-		"\x02\x02\u0427\u042C\x03\x02\x02\x02\u0428\u0426\x03\x02\x02\x02\u0429" +
-		"\u042B\x070\x02\x02\u042A\u0429\x03\x02\x02\x02\u042B\u042E\x03\x02\x02" +
-		"\x02\u042C\u042A\x03\x02\x02\x02\u042C\u042D\x03\x02\x02\x02\u042D\u0430" +
-		"\x03\x02\x02\x02\u042E\u042C\x03\x02\x02\x02\u042F\u041C\x03\x02\x02\x02" +
-		"\u0430\u0433\x03\x02\x02\x02\u0431\u042F\x03\x02\x02\x02\u0431\u0432\x03" +
-		"\x02\x02\x02\u0432\u0434\x03\x02\x02\x02\u0433\u0431\x03\x02\x02\x02\u0434" +
-		"\u0441\x07\x1A\x02\x02\u0435\u0439\x07\x11\x02\x02\u0436\u0438\x070\x02" +
-		"\x02\u0437\u0436\x03\x02\x02\x02\u0438\u043B\x03\x02\x02\x02\u0439\u0437" +
-		"\x03\x02\x02\x02\u0439\u043A\x03\x02\x02\x02\u043A\u043D\x03\x02\x02\x02" +
-		"\u043B\u0439\x03\x02\x02\x02\u043C\u043E\x05\x9CO\x02\u043D\u043C\x03" +
-		"\x02\x02\x02\u043D\u043E\x03\x02\x02\x02\u043E\u043F\x03\x02\x02\x02\u043F" +
-		"\u0441\x07\x02\x02\x03\u0440\u0412\x03\x02\x02\x02\u0440\u0435\x03\x02" +
-		"\x02\x02\u0441\x85\x03\x02\x02\x02\u0442\u0444\x07\x12\x02\x02\u0443\u0445" +
-		"\n\x10\x02\x02\u0444\u0443\x03\x02\x02\x02\u0445\u0446\x03\x02\x02\x02" +
-		"\u0446\u0444\x03\x02\x02\x02\u0446\u0447\x03\x02\x02\x02\u0447\u0448\x03" +
-		"\x02\x02\x02\u0448\u0449\x07\x1A\x02\x02\u0449\x87\x03\x02\x02\x02\u044A" +
-		"\u044D\x07\x19\x02\x02\u044B\u044E\x05\x9CO\x02\u044C\u044E\x070\x02\x02" +
-		"\u044D\u044B\x03\x02\x02\x02\u044D\u044C\x03\x02\x02\x02\u044E\u044F\x03" +
-		"\x02\x02\x02\u044F\u044D\x03\x02\x02\x02\u044F\u0450\x03\x02\x02\x02\u0450" +
-		"\u0451\x03\x02\x02\x02\u0451\u0457\x07\x1A\x02\x02\u0452\u0453\x07\x19" +
-		"\x02\x02\u0453\u0454\x05\x9CO\x02\u0454\u0455\x07\x02\x02\x03\u0455\u0457" +
-		"\x03\x02\x02\x02\u0456\u044A\x03\x02\x02\x02\u0456\u0452\x03\x02\x02\x02" +
-		"\u0457\x89\x03\x02\x02\x02\u0458\u0459\x07B\x02\x02\u0459\u045A\x05\x9C" +
-		"O\x02\u045A\u045B\x07\x1A\x02\x02\u045B\u0461\x03\x02\x02\x02\u045C\u045D" +
-		"\x07C\x02\x02\u045D\u045E\x05\x9CO\x02\u045E\u045F\x07\x1A\x02\x02\u045F" +
-		"\u0461\x03\x02\x02\x02\u0460\u0458\x03\x02\x02\x02\u0460\u045C\x03\x02" +
-		"\x02\x02\u0461\x8B\x03\x02\x02\x02\u0462\u0463\x079\x02\x02\u0463\u0464" +
-		"\x07\x1B\x02\x02\u0464\u0465\x07.\x02\x02\u0465\u046C\x07\x1A\x02\x02" +
-		"\u0466\u0467\x079\x02\x02\u0467\u0468\x07\x1B\x02\x02\u0468\u0469\x05" +
-		"\x9CO\x02\u0469\u046A\x07\x1A\x02\x02\u046A\u046C\x03\x02\x02\x02\u046B" +
-		"\u0462\x03\x02\x02\x02\u046B\u0466\x03\x02\x02\x02\u046C\x8D\x03\x02\x02" +
-		"\x02\u046D\u046E\x07N\x02\x02\u046E\u046F\x05\x9CO\x02\u046F\u0470\x07" +
-		"\x1A\x02\x02\u0470\x8F\x03\x02\x02\x02\u0471\u0472\x07O\x02\x02\u0472" +
-		"\u0473\x05\x9CO\x02\u0473\u0474\x07\x1A\x02\x02\u0474\x91\x03\x02\x02" +
-		"\x02\u0475\u047F\x05\x94K\x02\u0476\u0478\x070\x02\x02\u0477\u0476\x03" +
-		"\x02\x02\x02\u0478\u047B\x03\x02\x02\x02\u0479\u0477\x03\x02\x02\x02\u0479" +
-		"\u047A\x03\x02\x02\x02\u047A\u047C\x03\x02\x02\x02\u047B\u0479\x03\x02" +
-		"\x02\x02\u047C\u047E\x05\x94K\x02\u047D\u0479\x03\x02\x02\x02\u047E\u0481" +
+		"\u0419\x03\x02\x02\x02\u041A\u041B\x03\x02\x02\x02\u041B\u0437\x03\x02" +
+		"\x02\x02\u041C\u0420\x070\x02\x02\u041D\u041F\x05\x9CO\x02\u041E\u041D" +
+		"\x03\x02\x02\x02\u041F\u0422\x03\x02\x02\x02\u0420\u041E\x03\x02\x02\x02" +
+		"\u0420\u0421\x03\x02\x02\x02\u0421\u042C\x03\x02\x02\x02\u0422\u0420\x03" +
+		"\x02\x02\x02\u0423\u0427\x070\x02\x02\u0424\u0426\x07\x03\x02\x02\u0425" +
+		"\u0424\x03\x02\x02\x02\u0426\u0429\x03\x02\x02\x02\u0427\u0425\x03\x02" +
+		"\x02\x02\u0427\u0428\x03\x02\x02\x02\u0428\u042B\x03\x02\x02\x02\u0429" +
+		"\u0427\x03\x02\x02\x02\u042A\u0423\x03\x02\x02\x02\u042B\u042E\x03\x02" +
+		"\x02\x02\u042C\u042A\x03\x02\x02\x02\u042C\u042D\x03\x02\x02\x02\u042D" +
+		"\u0432\x03\x02\x02\x02\u042E\u042C\x03\x02\x02\x02\u042F\u0431\x070\x02" +
+		"\x02\u0430\u042F\x03\x02\x02\x02\u0431\u0434\x03\x02\x02\x02\u0432\u0430" +
+		"\x03\x02\x02\x02\u0432\u0433\x03\x02\x02\x02\u0433\u0436\x03\x02\x02\x02" +
+		"\u0434\u0432\x03\x02\x02\x02\u0435\u041C\x03\x02\x02\x02\u0436\u0439\x03" +
+		"\x02\x02\x02\u0437\u0435\x03\x02\x02\x02\u0437\u0438\x03\x02\x02\x02\u0438" +
+		"\u043A\x03\x02\x02\x02\u0439\u0437\x03\x02\x02\x02\u043A\u0447\x07\x1A" +
+		"\x02\x02\u043B\u043F\x07\x11\x02\x02\u043C\u043E\x070\x02\x02\u043D\u043C" +
+		"\x03\x02\x02\x02\u043E\u0441\x03\x02\x02\x02\u043F\u043D\x03\x02\x02\x02" +
+		"\u043F\u0440\x03\x02\x02\x02\u0440\u0443\x03\x02\x02\x02\u0441\u043F\x03" +
+		"\x02\x02\x02\u0442\u0444\x05\x9CO\x02\u0443\u0442\x03\x02\x02\x02\u0443" +
+		"\u0444\x03\x02\x02\x02\u0444\u0445\x03\x02\x02\x02\u0445\u0447\x07\x02" +
+		"\x02\x03\u0446\u0412\x03\x02\x02\x02\u0446\u043B\x03\x02\x02\x02\u0447" +
+		"\x85\x03\x02\x02\x02\u0448\u044A\x07\x12\x02\x02\u0449\u044B\n\x10\x02" +
+		"\x02\u044A\u0449\x03\x02\x02\x02\u044B\u044C\x03\x02\x02\x02\u044C\u044A" +
+		"\x03\x02\x02\x02\u044C\u044D\x03\x02\x02\x02\u044D\u044E\x03\x02\x02\x02" +
+		"\u044E\u044F\x07\x1A\x02\x02\u044F\x87\x03\x02\x02\x02\u0450\u0453\x07" +
+		"\x19\x02\x02\u0451\u0454\x05\x9CO\x02\u0452\u0454\x070\x02\x02\u0453\u0451" +
+		"\x03\x02\x02\x02\u0453\u0452\x03\x02\x02\x02\u0454\u0455\x03\x02\x02\x02" +
+		"\u0455\u0453\x03\x02\x02\x02\u0455\u0456\x03\x02\x02\x02\u0456\u0457\x03" +
+		"\x02\x02\x02\u0457\u045D\x07\x1A\x02\x02\u0458\u0459\x07\x19\x02\x02\u0459" +
+		"\u045A\x05\x9CO\x02\u045A\u045B\x07\x02\x02\x03\u045B\u045D\x03\x02\x02" +
+		"\x02\u045C\u0450\x03\x02\x02\x02\u045C\u0458\x03\x02\x02\x02\u045D\x89" +
+		"\x03\x02\x02\x02\u045E\u045F\x07C\x02\x02\u045F\u0460\x05\x9CO\x02\u0460" +
+		"\u0461\x07\x1A\x02\x02\u0461\u0467\x03\x02\x02\x02\u0462\u0463\x07D\x02" +
+		"\x02\u0463\u0464\x05\x9CO\x02\u0464\u0465\x07\x1A\x02\x02\u0465\u0467" +
+		"\x03\x02\x02\x02\u0466\u045E\x03\x02\x02\x02\u0466\u0462\x03\x02\x02\x02" +
+		"\u0467\x8B\x03\x02\x02\x02\u0468\u0469\x07:\x02\x02\u0469\u046A\x07\x1B" +
+		"\x02\x02\u046A\u046B\x07.\x02\x02\u046B\u0472\x07\x1A\x02\x02\u046C\u046D" +
+		"\x07:\x02\x02\u046D\u046E\x07\x1B\x02\x02\u046E\u046F\x05\x9CO\x02\u046F" +
+		"\u0470\x07\x1A\x02\x02\u0470\u0472\x03\x02\x02\x02\u0471\u0468\x03\x02" +
+		"\x02\x02\u0471\u046C\x03\x02\x02\x02\u0472\x8D\x03\x02\x02\x02\u0473\u0474" +
+		"\x07O\x02\x02\u0474\u0475\x05\x9CO\x02\u0475\u0476\x07\x1A\x02\x02\u0476" +
+		"\x8F\x03\x02\x02\x02\u0477\u0478\x07P\x02\x02\u0478\u0479\x05\x9CO\x02" +
+		"\u0479\u047A\x07\x1A\x02\x02\u047A\x91\x03\x02\x02\x02\u047B\u0485\x05" +
+		"\x94K\x02\u047C\u047E\x070\x02\x02\u047D\u047C\x03\x02\x02\x02\u047E\u0481" +
 		"\x03\x02\x02\x02\u047F\u047D\x03\x02\x02\x02\u047F\u0480\x03\x02\x02\x02" +
-		"\u0480\x93\x03\x02\x02\x02\u0481\u047F\x03\x02\x02\x02\u0482\u0483\x07" +
-		"\x13\x02\x02\u0483\u0484\x05\x9CO\x02\u0484\u0485\t\x11\x02\x02\u0485" +
-		"\u048B\x05\x9CO\x02\u0486\u048A\x070\x02\x02\u0487\u048A\x07\x1B\x02\x02" +
-		"\u0488\u048A\x05\x9CO\x02\u0489\u0486\x03\x02\x02\x02\u0489\u0487\x03" +
-		"\x02\x02\x02\u0489\u0488\x03\x02\x02\x02\u048A\u048D\x03\x02\x02\x02\u048B" +
-		"\u0489\x03\x02\x02\x02\u048B\u048C\x03\x02\x02\x02\u048C\u048E\x03\x02" +
-		"\x02\x02\u048D\u048B\x03\x02\x02\x02\u048E\u048F\x07\x1A\x02\x02\u048F" +
-		"\u0499\x03\x02\x02\x02\u0490\u0494\x07L\x02\x02\u0491\u0493\v\x02\x02" +
-		"\x02\u0492\u0491\x03\x02\x02\x02\u0493\u0496\x03\x02\x02\x02\u0494\u0495" +
-		"\x03\x02\x02\x02\u0494\u0492\x03\x02\x02\x02\u0495\u0497\x03\x02\x02\x02" +
-		"\u0496\u0494\x03\x02\x02\x02\u0497\u0499\x07\x1A\x02\x02\u0498\u0482\x03" +
-		"\x02\x02\x02\u0498\u0490\x03\x02\x02\x02\u0499\x95\x03\x02\x02\x02\u049A" +
-		"\u049E\x07\n\x02\x02\u049B\u049F\x05\x9CO\x02\u049C\u049F\x07\x1B\x02" +
-		"\x02\u049D\u049F\x070\x02\x02\u049E\u049B\x03\x02\x02\x02\u049E\u049C" +
-		"\x03\x02\x02\x02\u049E\u049D\x03\x02\x02\x02\u049F\u04A0\x03\x02\x02\x02" +
-		"\u04A0\u049E\x03\x02\x02\x02\u04A0\u04A1\x03\x02\x02\x02\u04A1\u04A2\x03" +
-		"\x02\x02\x02\u04A2\u04AE\x07\x1A\x02\x02\u04A3\u04A9\x07\n\x02\x02\u04A4" +
-		"\u04A8\x05\x9CO\x02\u04A5\u04A8\x07\x1B\x02\x02\u04A6\u04A8\x070\x02\x02" +
-		"\u04A7\u04A4\x03\x02\x02\x02\u04A7\u04A5\x03\x02\x02\x02\u04A7\u04A6\x03" +
-		"\x02\x02\x02\u04A8\u04AB\x03\x02\x02\x02\u04A9\u04A7\x03\x02\x02\x02\u04A9" +
-		"\u04AA\x03\x02\x02\x02\u04AA\u04AC\x03\x02\x02\x02\u04AB\u04A9\x03\x02" +
-		"\x02\x02\u04AC\u04AE\x07\x02\x02\x03\u04AD\u049A\x03\x02\x02\x02\u04AD" +
-		"\u04A3\x03\x02\x02\x02\u04AE\x97\x03\x02\x02\x02\u04AF\u04B1\x07\x0F\x02" +
-		"\x02\u04B0\u04B2\x05\x9CO\x02\u04B1\u04B0\x03\x02\x02\x02\u04B1\u04B2" +
-		"\x03\x02\x02\x02\u04B2\u04B3\x03\x02\x02\x02\u04B3\u04B4\x07\x1A\x02\x02" +
-		"\u04B4\x99\x03\x02\x02\x02\u04B5\u04B7\x05\x9CO\x02\u04B6\u04B8\x05\xB6" +
-		"\\\x02\u04B7\u04B6\x03\x02\x02\x02\u04B7\u04B8\x03\x02\x02\x02\u04B8\u04BA" +
-		"\x03\x02\x02\x02\u04B9\u04B5\x03\x02\x02\x02\u04BA\u04BB\x03\x02\x02\x02" +
-		"\u04BB\u04B9\x03\x02\x02\x02\u04BB\u04BC\x03\x02\x02\x02\u04BC\x9B\x03" +
-		"\x02\x02\x02\u04BD\u04C4\x07/\x02\x02\u04BE\u04C0\x07\x03\x02\x02\u04BF" +
-		"\u04BE\x03\x02\x02\x02\u04C0\u04C1\x03\x02\x02\x02\u04C1\u04BF\x03\x02" +
-		"\x02\x02\u04C1\u04C2\x03\x02\x02\x02\u04C2\u04C3\x03\x02\x02\x02\u04C3" +
-		"\u04C5\x05\xBA^\x02\u04C4\u04BF\x03\x02\x02\x02\u04C4\u04C5\x03\x02\x02" +
-		"\x02\u04C5\u04ED\x03\x02\x02\x02\u04C6\u04CD\x05\xBE`\x02\u04C7\u04C9" +
-		"\x07\x03\x02\x02\u04C8\u04C7\x03\x02\x02\x02\u04C9\u04CA\x03\x02\x02\x02" +
-		"\u04CA\u04C8\x03\x02\x02\x02\u04CA\u04CB\x03\x02\x02\x02\u04CB\u04CC\x03" +
-		"\x02\x02\x02\u04CC\u04CE\x05\xBA^\x02\u04CD\u04C8\x03\x02\x02\x02\u04CD" +
-		"\u04CE\x03\x02\x02\x02\u04CE\u04ED\x03\x02\x02\x02\u04CF\u04D0\x07\x16" +
-		"\x02\x02\u04D0\u04D1\x05\x9CO\x02\u04D1\u04D2\x07\x1A\x02\x02\u04D2\u04ED" +
-		"\x03\x02\x02\x02\u04D3\u04ED\x07.\x02\x02\u04D4\u04D6\x07\x03\x02\x02" +
-		"\u04D5\u04D4\x03\x02\x02\x02\u04D6\u04D9\x03\x02\x02\x02\u04D7\u04D5\x03" +
-		"\x02\x02\x02\u04D7\u04D8\x03\x02\x02\x02\u04D8\u04DA\x03\x02\x02\x02\u04D9" +
-		"\u04D7\x03\x02\x02\x02\u04DA\u04DE\x07\x1B\x02\x02\u04DB\u04DD\x07\x03" +
-		"\x02\x02\u04DC\u04DB\x03\x02\x02\x02\u04DD\u04E0\x03\x02\x02\x02\u04DE" +
-		"\u04DC\x03\x02\x02\x02\u04DE\u04DF\x03\x02\x02\x02\u04DF\u04ED\x03\x02" +
-		"\x02\x02\u04E0\u04DE\x03\x02\x02\x02\u04E1\u04E5\x07\x1C\x02\x02\u04E2" +
-		"\u04E4\x07\x03\x02\x02\u04E3\u04E2\x03\x02\x02\x02\u04E4\u04E7\x03\x02" +
-		"\x02\x02\u04E5\u04E3\x03\x02\x02\x02\u04E5\u04E6\x03\x02\x02\x02\u04E6" +
-		"\u04ED\x03\x02\x02\x02\u04E7\u04E5\x03\x02\x02\x02\u04E8\u04ED\x07\x1A" +
-		"\x02\x02\u04E9\u04ED\x07%\x02\x02\u04EA\u04ED\x07\"\x02\x02\u04EB\u04ED" +
-		"\x07\x9B\x02\x02\u04EC\u04BD\x03\x02\x02\x02\u04EC\u04C6\x03\x02\x02\x02" +
-		"\u04EC\u04CF\x03\x02\x02\x02\u04EC\u04D3\x03\x02\x02\x02\u04EC\u04D7\x03" +
-		"\x02\x02\x02\u04EC\u04E1\x03\x02\x02\x02\u04EC\u04E8\x03\x02\x02\x02\u04EC" +
-		"\u04E9\x03\x02\x02\x02\u04EC\u04EA\x03\x02\x02\x02\u04EC\u04EB\x03\x02" +
-		"\x02\x02\u04ED\x9D\x03\x02\x02\x02\u04EE\u04EF\x07(\x02\x02\u04EF\x9F" +
-		"\x03\x02\x02\x02\u04F0\u04F1\x07\x10\x02\x02\u04F1\xA1\x03\x02\x02\x02" +
-		"\u04F2\u04F3\x07\x11\x02\x02\u04F3\xA3\x03\x02\x02\x02\u04F4\u04F5\x07" +
-		"\x12\x02\x02\u04F5\xA5\x03\x02\x02\x02\u04F6\u04F7\x07\x13\x02\x02\u04F7" +
-		"\xA7\x03\x02\x02\x02\u04F8\u04F9\x07\x14\x02\x02\u04F9\xA9\x03\x02\x02" +
-		"\x02\u04FA\u04FB\x07\x15\x02\x02\u04FB\xAB\x03\x02\x02\x02\u04FC\u04FD" +
-		"\x07\x16\x02\x02\u04FD\xAD\x03\x02\x02\x02\u04FE\u04FF\x07\x17\x02\x02" +
-		"\u04FF\xAF\x03\x02\x02\x02\u0500\u0501\x07\x18\x02\x02\u0501\xB1\x03\x02" +
-		"\x02\x02\u0502\u0503\x07\x1A\x02\x02\u0503\xB3\x03\x02\x02\x02\u0504\u0505" +
-		"\x07\x1A\x02\x02\u0505\xB5\x03\x02\x02\x02\u0506\u0507\x070\x02\x02\u0507" +
-		"\xB7\x03\x02\x02\x02\u0508\u0509\x07\x9C\x02\x02\u0509\xB9\x03\x02\x02" +
-		"\x02\u050A\u050B\x07.\x02\x02\u050B\xBB\x03\x02\x02\x02\u050C\u050D\x07" +
-		"/\x02\x02\u050D\xBD\x03\x02\x02\x02\u050E\u0519\x072\x02\x02\u050F\u0519" +
-		"\x071\x02\x02\u0510\u0519\x073\x02\x02\u0511\u0519\x07\x1C\x02\x02\u0512" +
-		"\u0513\x07 \x02\x02\u0513\u0519\n\x12\x02\x02\u0514\u0515\x07!\x02\x02" +
-		"\u0515\u0519\n\x13\x02\x02\u0516\u0519\x07$\x02\x02\u0517\u0519\x07#\x02" +
-		"\x02\u0518\u050E\x03\x02\x02\x02\u0518\u050F\x03\x02\x02\x02\u0518\u0510" +
-		"\x03\x02\x02\x02\u0518\u0511\x03\x02\x02\x02\u0518\u0512\x03\x02\x02\x02" +
-		"\u0518\u0514\x03\x02\x02\x02\u0518\u0516\x03\x02\x02\x02\u0518\u0517\x03" +
-		"\x02\x02\x02\u0519\u051A\x03\x02\x02\x02\u051A\u0518\x03\x02\x02\x02\u051A" +
-		"\u051B\x03\x02\x02\x02\u051B\xBF\x03\x02\x02\x02\u051C\u051D\x07\x03\x02" +
-		"\x02\u051D\xC1\x03\x02\x02\x02\xB6\xC6\xCC\xD1\xDB\xED\xF4\xFB\u0106\u0110" +
-		"\u0117\u011C\u0121\u0128\u012E\u0131\u0137\u013C\u013F\u0144\u014B\u0150" +
-		"\u0156\u015D\u0163\u0166\u016C\u0171\u0174\u0179\u0180\u0185\u018B\u0192" +
-		"\u0198\u019B\u01A3\u01A5\u01AC\u01B1\u01BC\u01C3\u01CA\u01CD\u01CF\u01D4" +
-		"\u01DB\u01E1\u01E4\u01E7\u01F2\u01F7\u01F9\u01FD\u0203\u0208\u020E\u0213" +
-		"\u0219\u0221\u0228\u0231\u0237\u0239\u0247\u024E\u0253\u0257\u025B\u025E" +
-		"\u0263\u027A\u027F\u0284\u0286\u0290\u029A\u02A4\u02AA\u02B1\u02B7\u02BF" +
-		"\u02C9\u02D4\u02DA\u02DF\u02E6\u02EF\u02F3\u02F7\u02FA\u0309\u030D\u031C" +
-		"\u0320\u0326\u0331\u0336\u033B\u033D\u0342\u0347\u034C\u034E\u0353\u0359" +
-		"\u035E\u0360\u036B\u036F\u037C\u0380\u0386\u0388\u038F\u0393\u0395\u039B" +
-		"\u039D\u03A4\u03A9\u03AC\u03B2\u03B5\u03B9\u03C0\u03C5\u03CB\u03D0\u03D8" +
-		"\u03DA\u03DE\u03E5\u03E7\u03F0\u03F2\u03F6\u0400\u0402\u0406\u040C\u040E" +
-		"\u0416\u041A\u0421\u0426\u042C\u0431\u0439\u043D\u0440\u0446\u044D\u044F" +
-		"\u0456\u0460\u046B\u0479\u047F\u0489\u048B\u0494\u0498\u049E\u04A0\u04A7" +
-		"\u04A9\u04AD\u04B1\u04B7\u04BB\u04C1\u04C4\u04CA\u04CD\u04D7\u04DE\u04E5" +
-		"\u04EC\u0518\u051A";
+		"\u0480\u0482\x03\x02\x02\x02\u0481\u047F\x03\x02\x02\x02\u0482\u0484\x05" +
+		"\x94K\x02\u0483\u047F\x03\x02\x02\x02\u0484\u0487\x03\x02\x02\x02\u0485" +
+		"\u0483\x03\x02\x02\x02\u0485\u0486\x03\x02\x02\x02\u0486\x93\x03\x02\x02" +
+		"\x02\u0487\u0485\x03\x02\x02\x02\u0488\u0489\x07\x13\x02\x02\u0489\u048A" +
+		"\x05\x9CO\x02\u048A\u048B\t\x11\x02\x02\u048B\u0491\x05\x9CO\x02\u048C" +
+		"\u0490\x070\x02\x02\u048D\u0490\x07\x1B\x02\x02\u048E\u0490\x05\x9CO\x02" +
+		"\u048F\u048C\x03\x02\x02\x02\u048F\u048D\x03\x02\x02\x02\u048F\u048E\x03" +
+		"\x02\x02\x02\u0490\u0493\x03\x02\x02\x02\u0491\u048F\x03\x02\x02\x02\u0491" +
+		"\u0492\x03\x02\x02\x02\u0492\u0494\x03\x02\x02\x02\u0493\u0491\x03\x02" +
+		"\x02\x02\u0494\u0495\x07\x1A\x02\x02\u0495\u049F\x03\x02\x02\x02\u0496" +
+		"\u049A\x07M\x02\x02\u0497\u0499\v\x02\x02\x02\u0498\u0497\x03\x02\x02" +
+		"\x02\u0499\u049C\x03\x02\x02\x02\u049A\u049B\x03\x02\x02\x02\u049A\u0498" +
+		"\x03\x02\x02\x02\u049B\u049D\x03\x02\x02\x02\u049C\u049A\x03\x02\x02\x02" +
+		"\u049D\u049F\x07\x1A\x02\x02\u049E\u0488\x03\x02\x02\x02\u049E\u0496\x03" +
+		"\x02\x02\x02\u049F\x95\x03\x02\x02\x02\u04A0\u04A4\x07\n\x02\x02\u04A1" +
+		"\u04A5\x05\x9CO\x02\u04A2\u04A5\x07\x1B\x02\x02\u04A3\u04A5\x070\x02\x02" +
+		"\u04A4\u04A1\x03\x02\x02\x02\u04A4\u04A2\x03\x02\x02\x02\u04A4\u04A3\x03" +
+		"\x02\x02\x02\u04A5\u04A6\x03\x02\x02\x02\u04A6\u04A4\x03\x02\x02\x02\u04A6" +
+		"\u04A7\x03\x02\x02\x02\u04A7\u04A8\x03\x02\x02\x02\u04A8\u04B4\x07\x1A" +
+		"\x02\x02\u04A9\u04AF\x07\n\x02\x02\u04AA\u04AE\x05\x9CO\x02\u04AB\u04AE" +
+		"\x07\x1B\x02\x02\u04AC\u04AE\x070\x02\x02\u04AD\u04AA\x03\x02\x02\x02" +
+		"\u04AD\u04AB\x03\x02\x02\x02\u04AD\u04AC\x03\x02\x02\x02\u04AE\u04B1\x03" +
+		"\x02\x02\x02\u04AF\u04AD\x03\x02\x02\x02\u04AF\u04B0\x03\x02\x02\x02\u04B0" +
+		"\u04B2\x03\x02\x02\x02\u04B1\u04AF\x03\x02\x02\x02\u04B2\u04B4\x07\x02" +
+		"\x02\x03\u04B3\u04A0\x03\x02\x02\x02\u04B3\u04A9\x03\x02\x02\x02\u04B4" +
+		"\x97\x03\x02\x02\x02\u04B5\u04B7\x07\x0F\x02\x02\u04B6\u04B8\x05\x9CO" +
+		"\x02\u04B7\u04B6\x03\x02\x02\x02\u04B7\u04B8\x03\x02\x02\x02\u04B8\u04B9" +
+		"\x03\x02\x02\x02\u04B9\u04BA\x07\x1A\x02\x02\u04BA\x99\x03\x02\x02\x02" +
+		"\u04BB\u04BD\x05\x9CO\x02\u04BC\u04BE\x05\xB6\\\x02\u04BD\u04BC\x03\x02" +
+		"\x02\x02\u04BD\u04BE\x03\x02\x02\x02\u04BE\u04C0\x03\x02\x02\x02\u04BF" +
+		"\u04BB\x03\x02\x02\x02\u04C0\u04C1\x03\x02\x02\x02\u04C1\u04BF\x03\x02" +
+		"\x02\x02\u04C1\u04C2\x03\x02\x02\x02\u04C2\x9B\x03\x02\x02\x02\u04C3\u04CA" +
+		"\x07/\x02\x02\u04C4\u04C6\x07\x03\x02\x02\u04C5\u04C4\x03\x02\x02\x02" +
+		"\u04C6\u04C7\x03\x02\x02\x02\u04C7\u04C5\x03\x02\x02\x02\u04C7\u04C8\x03" +
+		"\x02\x02\x02\u04C8\u04C9\x03\x02\x02\x02\u04C9\u04CB\x05\xBA^\x02\u04CA" +
+		"\u04C5\x03\x02\x02\x02\u04CA\u04CB\x03\x02\x02\x02\u04CB\u04F3\x03\x02" +
+		"\x02\x02\u04CC\u04D3\x05\xBE`\x02\u04CD\u04CF\x07\x03\x02\x02\u04CE\u04CD" +
+		"\x03\x02\x02\x02\u04CF\u04D0\x03\x02\x02\x02\u04D0\u04CE\x03\x02\x02\x02" +
+		"\u04D0\u04D1\x03\x02\x02\x02\u04D1\u04D2\x03\x02\x02\x02\u04D2\u04D4\x05" +
+		"\xBA^\x02\u04D3\u04CE\x03\x02\x02\x02\u04D3\u04D4\x03\x02\x02\x02\u04D4" +
+		"\u04F3\x03\x02\x02\x02\u04D5\u04D6\x07\x16\x02\x02\u04D6\u04D7\x05\x9C" +
+		"O\x02\u04D7\u04D8\x07\x1A\x02\x02\u04D8\u04F3\x03\x02\x02\x02\u04D9\u04F3" +
+		"\x07.\x02\x02\u04DA\u04DC\x07\x03\x02\x02\u04DB\u04DA\x03\x02\x02\x02" +
+		"\u04DC\u04DF\x03\x02\x02\x02\u04DD\u04DB\x03\x02\x02\x02\u04DD\u04DE\x03" +
+		"\x02\x02\x02\u04DE\u04E0\x03\x02\x02\x02\u04DF\u04DD\x03\x02\x02\x02\u04E0" +
+		"\u04E4\x07\x1B\x02\x02\u04E1\u04E3\x07\x03\x02\x02\u04E2\u04E1\x03\x02" +
+		"\x02\x02\u04E3\u04E6\x03\x02\x02\x02\u04E4\u04E2\x03\x02\x02\x02\u04E4" +
+		"\u04E5\x03\x02\x02\x02\u04E5\u04F3\x03\x02\x02\x02\u04E6\u04E4\x03\x02" +
+		"\x02\x02\u04E7\u04EB\x07\x1C\x02\x02\u04E8\u04EA\x07\x03\x02\x02\u04E9" +
+		"\u04E8\x03\x02\x02\x02\u04EA\u04ED\x03\x02\x02\x02\u04EB\u04E9\x03\x02" +
+		"\x02\x02\u04EB\u04EC\x03\x02\x02\x02\u04EC\u04F3\x03\x02\x02\x02\u04ED" +
+		"\u04EB\x03\x02\x02\x02\u04EE\u04F3\x07\x1A\x02\x02\u04EF\u04F3\x07%\x02" +
+		"\x02\u04F0\u04F3\x07\"\x02\x02\u04F1\u04F3\x07\x9C\x02\x02\u04F2\u04C3" +
+		"\x03\x02\x02\x02\u04F2\u04CC\x03\x02\x02\x02\u04F2\u04D5\x03\x02\x02\x02" +
+		"\u04F2\u04D9\x03\x02\x02\x02\u04F2\u04DD\x03\x02\x02\x02\u04F2\u04E7\x03" +
+		"\x02\x02\x02\u04F2\u04EE\x03\x02\x02\x02\u04F2\u04EF\x03\x02\x02\x02\u04F2" +
+		"\u04F0\x03\x02\x02\x02\u04F2\u04F1\x03\x02\x02\x02\u04F3\x9D\x03\x02\x02" +
+		"\x02\u04F4\u04F5\x07(\x02\x02\u04F5\x9F\x03\x02\x02\x02\u04F6\u04F7\x07" +
+		"\x10\x02\x02\u04F7\xA1\x03\x02\x02\x02\u04F8\u04F9\x07\x11\x02\x02\u04F9" +
+		"\xA3\x03\x02\x02\x02\u04FA\u04FB\x07\x12\x02\x02\u04FB\xA5\x03\x02\x02" +
+		"\x02\u04FC\u04FD\x07\x13\x02\x02\u04FD\xA7\x03\x02\x02\x02\u04FE\u04FF" +
+		"\x07\x14\x02\x02\u04FF\xA9\x03\x02\x02\x02\u0500\u0501\x07\x15\x02\x02" +
+		"\u0501\xAB\x03\x02\x02\x02\u0502\u0503\x07\x16\x02\x02\u0503\xAD\x03\x02" +
+		"\x02\x02\u0504\u0505\x07\x17\x02\x02\u0505\xAF\x03\x02\x02\x02\u0506\u0507" +
+		"\x07\x18\x02\x02\u0507\xB1\x03\x02\x02\x02\u0508\u0509\x07\x1A\x02\x02" +
+		"\u0509\xB3\x03\x02\x02\x02\u050A\u050B\x07\x1A\x02\x02\u050B\xB5\x03\x02" +
+		"\x02\x02\u050C\u050D\x070\x02\x02\u050D\xB7\x03\x02\x02\x02\u050E\u050F" +
+		"\x07\x9D\x02\x02\u050F\xB9\x03\x02\x02\x02\u0510\u0511\x07.\x02\x02\u0511" +
+		"\xBB\x03\x02\x02\x02\u0512\u0513\x07/\x02\x02\u0513\xBD\x03\x02\x02\x02" +
+		"\u0514\u0520\x073\x02\x02\u0515\u0520\x071\x02\x02\u0516\u0520\x074\x02" +
+		"\x02\u0517\u0520\x072\x02\x02\u0518\u0520\x07\x1C\x02\x02\u0519\u051A" +
+		"\x07 \x02\x02\u051A\u0520\n\x12\x02\x02\u051B\u051C\x07!\x02\x02\u051C" +
+		"\u0520\n\x13\x02\x02\u051D\u0520\x07$\x02\x02\u051E\u0520\x07#\x02\x02" +
+		"\u051F\u0514\x03\x02\x02\x02\u051F\u0515\x03\x02\x02\x02\u051F\u0516\x03" +
+		"\x02\x02\x02\u051F\u0517\x03\x02\x02\x02\u051F\u0518\x03\x02\x02\x02\u051F" +
+		"\u0519\x03\x02\x02\x02\u051F\u051B\x03\x02\x02\x02\u051F\u051D\x03\x02" +
+		"\x02\x02\u051F\u051E\x03\x02\x02\x02\u0520\u0521\x03\x02\x02\x02\u0521" +
+		"\u051F\x03\x02\x02\x02\u0521\u0522\x03\x02\x02\x02\u0522\xBF\x03\x02\x02" +
+		"\x02\u0523\u0524\x07\x03\x02\x02\u0524\xC1\x03\x02\x02\x02\xB7\xC6\xCC" +
+		"\xD1\xDB\xED\xF4\xFB\u0106\u0110\u0117\u011C\u0121\u0128\u012E\u0131\u0137" +
+		"\u013C\u013F\u0144\u014B\u0150\u0156\u015D\u0163\u0166\u016C\u0171\u0174" +
+		"\u0179\u0180\u0185\u018B\u0192\u0198\u019B\u01A3\u01A5\u01AC\u01B1\u01BC" +
+		"\u01C3\u01CA\u01CD\u01CF\u01D4\u01DB\u01E1\u01E4\u01E7\u01F2\u01F7\u01F9" +
+		"\u01FD\u0203\u0208\u020E\u0213\u0219\u0221\u0228\u0231\u0237\u0239\u0247" +
+		"\u024E\u0253\u0257\u025B\u025E\u0263\u027A\u027F\u0284\u0286\u0290\u029A" +
+		"\u02A4\u02AA\u02B1\u02B7\u02BF\u02C9\u02D4\u02DA\u02DF\u02E6\u02EF\u02F3" +
+		"\u02F7\u02FA\u0309\u030D\u031C\u0320\u0326\u0331\u0336\u033B\u033D\u0342" +
+		"\u0347\u034C\u034E\u0353\u0359\u035E\u0360\u036B\u036F\u037C\u0380\u0386" +
+		"\u0388\u038F\u0393\u0395\u039B\u039D\u03A4\u03A9\u03AC\u03B2\u03B5\u03B9" +
+		"\u03C0\u03C5\u03CB\u03D0\u03D8\u03DA\u03DE\u03E5\u03E7\u03F0\u03F2\u03F6" +
+		"\u0400\u0402\u0406\u040C\u040E\u0416\u041A\u0420\u0427\u042C\u0432\u0437" +
+		"\u043F\u0443\u0446\u044C\u0453\u0455\u045C\u0466\u0471\u047F\u0485\u048F" +
+		"\u0491\u049A\u049E\u04A4\u04A6\u04AD\u04AF\u04B3\u04B7\u04BD\u04C1\u04C7" +
+		"\u04CA\u04D0\u04D3\u04DD\u04E4\u04EB\u04F2\u051F\u0521";
 	public static readonly _serializedATN: string = Utils.join(
 		[
 			clozeParser._serializedATNSegment0,
@@ -10585,6 +10617,15 @@ export class WordsContext extends ParserRuleContext {
 			return this.getTokens(clozeParser.BARSTRING);
 		} else {
 			return this.getToken(clozeParser.BARSTRING, i);
+		}
+	}
+	public ELIPSIS(): TerminalNode[];
+	public ELIPSIS(i: number): TerminalNode;
+	public ELIPSIS(i?: number): TerminalNode | TerminalNode[] {
+		if (i === undefined) {
+			return this.getTokens(clozeParser.ELIPSIS);
+		} else {
+			return this.getToken(clozeParser.ELIPSIS, i);
 		}
 	}
 	public AMP(): TerminalNode[];

@@ -23,5 +23,6 @@ src/tmp/*
 *.tgz
 *.orig
 dist/*
+src/tsoutput/*
 node_modules
 .parcel-cache

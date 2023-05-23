@@ -1618,7 +1618,7 @@ class BitmarkListener {
 	const re = /: *([0-9]+)\]/;
 	let m = code.match(re);
 	if (m == null) {
-	    this.error_listener.manualError(ctx, ctx._start.line-1, 0,
+	    this.error_listener.manualError(ctx, ctx._start.line, 0,
 					    propname + ' property has to be positive integer value');
 	    return null;
 	}
@@ -1651,7 +1651,7 @@ class BitmarkListener {
 	const re = /: *(true|false)\]/;
 	let m = code.match(re);
 	if (m == null) {
-	    this.error_listener.manualError(ctx, ctx._start.line-1, 0,
+	    this.error_listener.manualError(ctx, ctx._start.line, 0,
 					    propname + ' property has to be true or false');
 	    return null;
 	}
@@ -2445,8 +2445,9 @@ class BitmarkListener {
 		const key = what.substr(1);  // remove &
 		bit[slot] = {}; // slot=resource
 		bit[slot]['type'] = key;  // document
-		bit[slot][key] = url;
-		bit[slot]['private'] = {};
+		bit[slot][key] = {};
+		bit[slot][key]['url'] = url;
+		bit[slot][key]['provider'] = this.but.get_domain_from_url(url);
 	    }
 	    if (-1 < ['&document-link', '&document-download'].indexOf(what)) {
 		let key = what.substr(1);  // remove &
@@ -2798,12 +2799,14 @@ class BitmarkListener {
 	}
 	if (this.stk.top().bit.format === 'json') {
 	    try {
-		let json:string = this.but.extract_json(this.stk.top().bit['body']);
+		let text:string = this.but.extract_json(this.stk.top().bit['body']);
 		// Unescaepe []. See escape_json_for_json_bits(text) in index.js.
-		let json_repl:string = json.replace(/&#91;/g, '[');
-		json_repl = json_repl.replace(/&#93;/g, ']');
+		const re1 = new RegExp('&#91;', 'g');
+		const re2 = new RegExp('&#93;', 'g');
+		text = text.replace(re1, '[');
+		text = text.replace(re2, ']');
 		// Parse to validate.
-		JSON.parse(json_repl);
+		JSON.parse(text);
 	    }
 	    catch (err) {
 		// invalid json. Add error.

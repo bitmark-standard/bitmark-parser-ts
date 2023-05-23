@@ -189,7 +189,7 @@ clnsp:		CL ;  // without spaces
 sspl:		SSPL|SSPL2 ;
 
 words:          ( SENTENCE
-		| BARSTRING
+		| BARSTRING  | ELIPSIS
 		| NOTBITMARK
 		| AMP | Greater ~(Greater) | Less ~(Less) 
 		| RightArrow | RightAngle

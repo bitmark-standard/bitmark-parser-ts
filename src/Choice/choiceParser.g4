@@ -317,7 +317,8 @@ dateprop_chained:
 
 // Instruction
 instruction:
-    OPB NL* s_and_w? ( s_and_w ( NL S* )* NL* )* CL
+//    OPB NL* s_and_w? ( s_and_w ( NL S* )* NL* )* CL
+    OPB NL* s_and_w? ( NL s_and_w* ( NL S* )* NL* )* CL   // added ( NL 
   | OPB NL* s_and_w? EOF
 ;
 // Hint
@@ -385,7 +386,7 @@ clnsp:		CL ;  // without spaces
 sspl:		SSPL|SSPL2 ;
 
 words:          ( SENTENCE
-		| BARSTRING
+		| BARSTRING  | ELIPSIS
 		| NOTBITMARK
 		| AMP | Greater ~(Greater) | Less ~(Less) 
 		| RightArrow | RightAngle
