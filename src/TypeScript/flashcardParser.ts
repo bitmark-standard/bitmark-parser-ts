@@ -5459,9 +5459,9 @@ export class flashcardParser extends Parser {
 		let _la: number;
 		try {
 			let _alt: number;
-			this.state = 1184;
+			this.state = 1191;
 			this._errHandler.sync(this);
-			switch ( this.interpreter.adaptivePredict(this._input, 159, this._ctx) ) {
+			switch ( this.interpreter.adaptivePredict(this._input, 160, this._ctx) ) {
 			case 1:
 				this.enterOuterAlt(_localctx, 1);
 				{
@@ -5483,91 +5483,117 @@ export class flashcardParser extends Parser {
 					this._errHandler.sync(this);
 					_alt = this.interpreter.adaptivePredict(this._input, 150, this._ctx);
 				}
-				this.state = 1140;
+				this.state = 1142;
 				this._errHandler.sync(this);
-				_la = this._input.LA(1);
-				if ((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << flashcardParser.S) | (1 << flashcardParser.OPS) | (1 << flashcardParser.COLON) | (1 << flashcardParser.AMP))) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & ((1 << (flashcardParser.Greater - 32)) | (1 << (flashcardParser.Less - 32)) | (1 << (flashcardParser.RightAngle - 32)) | (1 << (flashcardParser.RightArrow - 32)) | (1 << (flashcardParser.NUMERIC - 32)) | (1 << (flashcardParser.STRING - 32)) | (1 << (flashcardParser.NOTBITMARK - 32)) | (1 << (flashcardParser.ELIPSIS - 32)) | (1 << (flashcardParser.SENTENCE - 32)) | (1 << (flashcardParser.BARSTRING - 32)))) !== 0) || _la === flashcardParser.URL) {
-					{
-					this.state = 1139;
-					this.s_and_w();
-					}
-				}
-
-				this.state = 1169;
-				this._errHandler.sync(this);
-				_la = this._input.LA(1);
-				while (_la === flashcardParser.NL) {
-					{
-					{
-					this.state = 1142;
-					this.match(flashcardParser.NL);
-					this.state = 1146;
-					this._errHandler.sync(this);
-					_la = this._input.LA(1);
-					while ((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << flashcardParser.S) | (1 << flashcardParser.OPS) | (1 << flashcardParser.COLON) | (1 << flashcardParser.AMP))) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & ((1 << (flashcardParser.Greater - 32)) | (1 << (flashcardParser.Less - 32)) | (1 << (flashcardParser.RightAngle - 32)) | (1 << (flashcardParser.RightArrow - 32)) | (1 << (flashcardParser.NUMERIC - 32)) | (1 << (flashcardParser.STRING - 32)) | (1 << (flashcardParser.NOTBITMARK - 32)) | (1 << (flashcardParser.ELIPSIS - 32)) | (1 << (flashcardParser.SENTENCE - 32)) | (1 << (flashcardParser.BARSTRING - 32)))) !== 0) || _la === flashcardParser.URL) {
+				_alt = this.interpreter.adaptivePredict(this._input, 151, this._ctx);
+				while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
+					if (_alt === 1) {
 						{
 						{
-						this.state = 1143;
+						this.state = 1139;
 						this.s_and_w();
 						}
 						}
-						this.state = 1148;
+					}
+					this.state = 1144;
+					this._errHandler.sync(this);
+					_alt = this.interpreter.adaptivePredict(this._input, 151, this._ctx);
+				}
+				this.state = 1176;
+				this._errHandler.sync(this);
+				_la = this._input.LA(1);
+				while ((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << flashcardParser.S) | (1 << flashcardParser.OPS) | (1 << flashcardParser.COLON) | (1 << flashcardParser.AMP))) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & ((1 << (flashcardParser.Greater - 32)) | (1 << (flashcardParser.Less - 32)) | (1 << (flashcardParser.RightAngle - 32)) | (1 << (flashcardParser.RightArrow - 32)) | (1 << (flashcardParser.NUMERIC - 32)) | (1 << (flashcardParser.STRING - 32)) | (1 << (flashcardParser.NL - 32)) | (1 << (flashcardParser.NOTBITMARK - 32)) | (1 << (flashcardParser.ELIPSIS - 32)) | (1 << (flashcardParser.SENTENCE - 32)) | (1 << (flashcardParser.BARSTRING - 32)))) !== 0) || _la === flashcardParser.URL) {
+					{
+					{
+					this.state = 1148;
+					this._errHandler.sync(this);
+					_la = this._input.LA(1);
+					while (_la === flashcardParser.NL) {
+						{
+						{
+						this.state = 1145;
+						this.match(flashcardParser.NL);
+						}
+						}
+						this.state = 1150;
 						this._errHandler.sync(this);
 						_la = this._input.LA(1);
 					}
-					this.state = 1158;
+					this.state = 1152;
 					this._errHandler.sync(this);
-					_alt = this.interpreter.adaptivePredict(this._input, 154, this._ctx);
-					while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
-						if (_alt === 1) {
+					_alt = 1;
+					do {
+						switch (_alt) {
+						case 1:
 							{
 							{
-							this.state = 1149;
-							this.match(flashcardParser.NL);
-							this.state = 1153;
-							this._errHandler.sync(this);
-							_la = this._input.LA(1);
-							while (_la === flashcardParser.S) {
-								{
-								{
-								this.state = 1150;
-								this.match(flashcardParser.S);
-								}
-								}
-								this.state = 1155;
-								this._errHandler.sync(this);
-								_la = this._input.LA(1);
+							this.state = 1151;
+							this.s_and_w();
 							}
 							}
-							}
+							break;
+						default:
+							throw new NoViableAltException(this);
 						}
-						this.state = 1160;
+						this.state = 1154;
 						this._errHandler.sync(this);
-						_alt = this.interpreter.adaptivePredict(this._input, 154, this._ctx);
-					}
-					this.state = 1164;
+						_alt = this.interpreter.adaptivePredict(this._input, 153, this._ctx);
+					} while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER);
+					this.state = 1165;
 					this._errHandler.sync(this);
 					_alt = this.interpreter.adaptivePredict(this._input, 155, this._ctx);
 					while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
 						if (_alt === 1) {
 							{
 							{
-							this.state = 1161;
+							this.state = 1156;
+							this.match(flashcardParser.NL);
+							this.state = 1160;
+							this._errHandler.sync(this);
+							_alt = this.interpreter.adaptivePredict(this._input, 154, this._ctx);
+							while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
+								if (_alt === 1) {
+									{
+									{
+									this.state = 1157;
+									this.match(flashcardParser.S);
+									}
+									}
+								}
+								this.state = 1162;
+								this._errHandler.sync(this);
+								_alt = this.interpreter.adaptivePredict(this._input, 154, this._ctx);
+							}
+							}
+							}
+						}
+						this.state = 1167;
+						this._errHandler.sync(this);
+						_alt = this.interpreter.adaptivePredict(this._input, 155, this._ctx);
+					}
+					this.state = 1171;
+					this._errHandler.sync(this);
+					_alt = this.interpreter.adaptivePredict(this._input, 156, this._ctx);
+					while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
+						if (_alt === 1) {
+							{
+							{
+							this.state = 1168;
 							this.match(flashcardParser.NL);
 							}
 							}
 						}
-						this.state = 1166;
+						this.state = 1173;
 						this._errHandler.sync(this);
-						_alt = this.interpreter.adaptivePredict(this._input, 155, this._ctx);
+						_alt = this.interpreter.adaptivePredict(this._input, 156, this._ctx);
 					}
 					}
 					}
-					this.state = 1171;
+					this.state = 1178;
 					this._errHandler.sync(this);
 					_la = this._input.LA(1);
 				}
-				this.state = 1172;
+				this.state = 1179;
 				this.match(flashcardParser.CL);
 				}
 				break;
@@ -5575,33 +5601,33 @@ export class flashcardParser extends Parser {
 			case 2:
 				this.enterOuterAlt(_localctx, 2);
 				{
-				this.state = 1173;
+				this.state = 1180;
 				this.match(flashcardParser.OPB);
-				this.state = 1177;
+				this.state = 1184;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 				while (_la === flashcardParser.NL) {
 					{
 					{
-					this.state = 1174;
+					this.state = 1181;
 					this.match(flashcardParser.NL);
 					}
 					}
-					this.state = 1179;
+					this.state = 1186;
 					this._errHandler.sync(this);
 					_la = this._input.LA(1);
 				}
-				this.state = 1181;
+				this.state = 1188;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 				if ((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << flashcardParser.S) | (1 << flashcardParser.OPS) | (1 << flashcardParser.COLON) | (1 << flashcardParser.AMP))) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & ((1 << (flashcardParser.Greater - 32)) | (1 << (flashcardParser.Less - 32)) | (1 << (flashcardParser.RightAngle - 32)) | (1 << (flashcardParser.RightArrow - 32)) | (1 << (flashcardParser.NUMERIC - 32)) | (1 << (flashcardParser.STRING - 32)) | (1 << (flashcardParser.NOTBITMARK - 32)) | (1 << (flashcardParser.ELIPSIS - 32)) | (1 << (flashcardParser.SENTENCE - 32)) | (1 << (flashcardParser.BARSTRING - 32)))) !== 0) || _la === flashcardParser.URL) {
 					{
-					this.state = 1180;
+					this.state = 1187;
 					this.s_and_w();
 					}
 				}
 
-				this.state = 1183;
+				this.state = 1190;
 				this.match(flashcardParser.EOF);
 				}
 				break;
@@ -5629,15 +5655,15 @@ export class flashcardParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1186;
+			this.state = 1193;
 			this.match(flashcardParser.OPQ);
-			this.state = 1188;
+			this.state = 1195;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
 			do {
 				{
 				{
-				this.state = 1187;
+				this.state = 1194;
 				_la = this._input.LA(1);
 				if (_la <= 0 || (_la === flashcardParser.CL)) {
 				this._errHandler.recoverInline(this);
@@ -5651,11 +5677,11 @@ export class flashcardParser extends Parser {
 				}
 				}
 				}
-				this.state = 1190;
+				this.state = 1197;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 			} while ((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << flashcardParser.OPDOT) | (1 << flashcardParser.S) | (1 << flashcardParser.BitFlash1) | (1 << flashcardParser.BitFlash) | (1 << flashcardParser.BitFlashcardset) | (1 << flashcardParser.BitFlashcardlangset) | (1 << flashcardParser.BitFlashcardlang1) | (1 << flashcardParser.BitVocabulary) | (1 << flashcardParser.BitVocabulary_1) | (1 << flashcardParser.OPDOLL) | (1 << flashcardParser.OPBUL) | (1 << flashcardParser.OPESC) | (1 << flashcardParser.OPRANGLES) | (1 << flashcardParser.OPRANGLEL) | (1 << flashcardParser.OPDANGLE) | (1 << flashcardParser.OPU) | (1 << flashcardParser.OPB) | (1 << flashcardParser.OPQ) | (1 << flashcardParser.OPA) | (1 << flashcardParser.OPP) | (1 << flashcardParser.OPM) | (1 << flashcardParser.OPS) | (1 << flashcardParser.OPR) | (1 << flashcardParser.OPC) | (1 << flashcardParser.OPHASH) | (1 << flashcardParser.COLON) | (1 << flashcardParser.AMP) | (1 << flashcardParser.DBLCOLON) | (1 << flashcardParser.PLUS) | (1 << flashcardParser.DotAt))) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & ((1 << (flashcardParser.Greater - 32)) | (1 << (flashcardParser.Less - 32)) | (1 << (flashcardParser.DBLEQ - 32)) | (1 << (flashcardParser.RightAngle - 32)) | (1 << (flashcardParser.RightArrow - 32)) | (1 << (flashcardParser.EQ - 32)) | (1 << (flashcardParser.EQ2 - 32)) | (1 << (flashcardParser.OR - 32)) | (1 << (flashcardParser.HSPL - 32)) | (1 << (flashcardParser.HSPL2 - 32)) | (1 << (flashcardParser.SSPL - 32)) | (1 << (flashcardParser.SSPL2 - 32)) | (1 << (flashcardParser.COMMENT - 32)) | (1 << (flashcardParser.DCANY - 32)) | (1 << (flashcardParser.Image_type - 32)) | (1 << (flashcardParser.Audio_type - 32)) | (1 << (flashcardParser.Video_type - 32)) | (1 << (flashcardParser.ArticleText - 32)) | (1 << (flashcardParser.NOTCL - 32)) | (1 << (flashcardParser.NUMERIC - 32)) | (1 << (flashcardParser.STRING - 32)) | (1 << (flashcardParser.NL - 32)) | (1 << (flashcardParser.NOTBITMARK - 32)) | (1 << (flashcardParser.ELIPSIS - 32)) | (1 << (flashcardParser.SENTENCE - 32)) | (1 << (flashcardParser.BARSTRING - 32)) | (1 << (flashcardParser.OPAT - 32)) | (1 << (flashcardParser.AtProgress - 32)) | (1 << (flashcardParser.AtReference - 32)) | (1 << (flashcardParser.AtWidth - 32)) | (1 << (flashcardParser.AtHeight - 32)) | (1 << (flashcardParser.AtProgressPoints - 32)))) !== 0) || ((((_la - 64)) & ~0x1F) === 0 && ((1 << (_la - 64)) & ((1 << (flashcardParser.AtShortanswer - 64)) | (1 << (flashcardParser.AtLonganswer - 64)) | (1 << (flashcardParser.AtExampleWithStr - 64)) | (1 << (flashcardParser.AtExamplecol - 64)) | (1 << (flashcardParser.AtExamplecl - 64)) | (1 << (flashcardParser.AtSampleSolution - 64)) | (1 << (flashcardParser.AtPartialAnswerS - 64)) | (1 << (flashcardParser.AtPartialAnswer - 64)) | (1 << (flashcardParser.AtLabeltrue - 64)) | (1 << (flashcardParser.AtLabelfalse - 64)) | (1 << (flashcardParser.AtPoints - 64)) | (1 << (flashcardParser.AtSrc - 64)) | (1 << (flashcardParser.AtPartner - 64)) | (1 << (flashcardParser.OPATALT - 64)) | (1 << (flashcardParser.OPAMARK - 64)) | (1 << (flashcardParser.ShowInIndex - 64)) | (1 << (flashcardParser.OpAtCaption - 64)) | (1 << (flashcardParser.OpAtLicense - 64)) | (1 << (flashcardParser.OpAtCopyright - 64)) | (1 << (flashcardParser.OpAtSearch - 64)) | (1 << (flashcardParser.OpAtIsTracked - 64)) | (1 << (flashcardParser.OpAtIsInfoOnly - 64)) | (1 << (flashcardParser.AtDate - 64)) | (1 << (flashcardParser.Http - 64)) | (1 << (flashcardParser.Https - 64)) | (1 << (flashcardParser.AmpAudio - 64)) | (1 << (flashcardParser.AmpImage - 64)) | (1 << (flashcardParser.AmpImageZoom - 64)) | (1 << (flashcardParser.AmpImageWAudio - 64)) | (1 << (flashcardParser.AmpVideo - 64)) | (1 << (flashcardParser.AmpArticle - 64)) | (1 << (flashcardParser.AmpDocument - 64)))) !== 0) || ((((_la - 96)) & ~0x1F) === 0 && ((1 << (_la - 96)) & ((1 << (flashcardParser.AmpApp - 96)) | (1 << (flashcardParser.AmpWebsite - 96)) | (1 << (flashcardParser.AmpStillImageFilm - 96)) | (1 << (flashcardParser.AmpPdf - 96)) | (1 << (flashcardParser.OpAmpAudio - 96)) | (1 << (flashcardParser.OpAmpImage - 96)) | (1 << (flashcardParser.OpAmpImageZoom - 96)) | (1 << (flashcardParser.OpAmpImageWAudio - 96)) | (1 << (flashcardParser.OpAmpVideo - 96)) | (1 << (flashcardParser.OpAmpArticle - 96)) | (1 << (flashcardParser.OpAmpArticleAtt - 96)) | (1 << (flashcardParser.OpAmpDocument - 96)) | (1 << (flashcardParser.OpAmpApp - 96)) | (1 << (flashcardParser.OpAmpWebsite - 96)) | (1 << (flashcardParser.OpAmpStillImageFilm - 96)) | (1 << (flashcardParser.BracEnclose - 96)) | (1 << (flashcardParser.AmpAudioLink - 96)) | (1 << (flashcardParser.AmpImageLink - 96)) | (1 << (flashcardParser.AmpVideoLink - 96)) | (1 << (flashcardParser.AmpArticleLink - 96)) | (1 << (flashcardParser.AmpDocumentLink - 96)) | (1 << (flashcardParser.AmpDocumentDownload - 96)) | (1 << (flashcardParser.AmpAppLink - 96)) | (1 << (flashcardParser.AmpWebsiteLink - 96)) | (1 << (flashcardParser.AmpStillImageFilmLink - 96)) | (1 << (flashcardParser.OpAmpAudioLink - 96)) | (1 << (flashcardParser.OpAmpImageLink - 96)) | (1 << (flashcardParser.OpAmpVideoLink - 96)) | (1 << (flashcardParser.OpAmpArticleLink - 96)) | (1 << (flashcardParser.OpAmpDocumentLink - 96)) | (1 << (flashcardParser.OpAmpDocumentDownload - 96)) | (1 << (flashcardParser.OpAmpAppLink - 96)))) !== 0) || ((((_la - 128)) & ~0x1F) === 0 && ((1 << (_la - 128)) & ((1 << (flashcardParser.OpAmpWebsiteLink - 128)) | (1 << (flashcardParser.OpAmpStillImageFilmLink - 128)) | (1 << (flashcardParser.AmpImageEmbed - 128)) | (1 << (flashcardParser.AmpVideoEmbed - 128)) | (1 << (flashcardParser.AmpAudioEmbed - 128)) | (1 << (flashcardParser.AmpDocumentEmbed - 128)) | (1 << (flashcardParser.AmpStillImageFilmEmbed - 128)) | (1 << (flashcardParser.OpAmpImageEmbed - 128)) | (1 << (flashcardParser.OpAmpVideoEmbed - 128)) | (1 << (flashcardParser.OpAmpAudioEmbed - 128)) | (1 << (flashcardParser.OpAmpDocumentEmbed - 128)) | (1 << (flashcardParser.OpAmpStillImageFilmEmbed - 128)) | (1 << (flashcardParser.BitmarkMinus - 128)) | (1 << (flashcardParser.BitmarkPlus - 128)) | (1 << (flashcardParser.ColonText - 128)) | (1 << (flashcardParser.ColonJson - 128)) | (1 << (flashcardParser.Prosemirror - 128)) | (1 << (flashcardParser.Placeholder - 128)) | (1 << (flashcardParser.BASIC - 128)) | (1 << (flashcardParser.JPG - 128)) | (1 << (flashcardParser.PNG - 128)) | (1 << (flashcardParser.GIF - 128)) | (1 << (flashcardParser.SVG - 128)) | (1 << (flashcardParser.MP2 - 128)) | (1 << (flashcardParser.MP3 - 128)) | (1 << (flashcardParser.MP4 - 128)) | (1 << (flashcardParser.FLV - 128)) | (1 << (flashcardParser.WMV - 128)) | (1 << (flashcardParser.MPEG - 128)) | (1 << (flashcardParser.MPG - 128)) | (1 << (flashcardParser.TEL - 128)) | (1 << (flashcardParser.DotArticleAtt - 128)))) !== 0) || ((((_la - 160)) & ~0x1F) === 0 && ((1 << (_la - 160)) & ((1 << (flashcardParser.STAR - 160)) | (1 << (flashcardParser.URL - 160)) | (1 << (flashcardParser.LIST_LINE - 160)) | (1 << (flashcardParser.ENCLBARS - 160)))) !== 0));
-			this.state = 1192;
+			this.state = 1199;
 			this.match(flashcardParser.CL);
 			}
 		}
@@ -5679,20 +5705,20 @@ export class flashcardParser extends Parser {
 		this.enterRule(_localctx, 140, flashcardParser.RULE_title);
 		let _la: number;
 		try {
-			this.state = 1206;
+			this.state = 1213;
 			this._errHandler.sync(this);
-			switch ( this.interpreter.adaptivePredict(this._input, 163, this._ctx) ) {
+			switch ( this.interpreter.adaptivePredict(this._input, 164, this._ctx) ) {
 			case 1:
 				this.enterOuterAlt(_localctx, 1);
 				{
-				this.state = 1194;
+				this.state = 1201;
 				this.match(flashcardParser.OPHASH);
-				this.state = 1197;
+				this.state = 1204;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 				do {
 					{
-					this.state = 1197;
+					this.state = 1204;
 					this._errHandler.sync(this);
 					switch (this._input.LA(1)) {
 					case flashcardParser.S:
@@ -5711,13 +5737,13 @@ export class flashcardParser extends Parser {
 					case flashcardParser.BARSTRING:
 					case flashcardParser.URL:
 						{
-						this.state = 1195;
+						this.state = 1202;
 						this.s_and_w();
 						}
 						break;
 					case flashcardParser.NL:
 						{
-						this.state = 1196;
+						this.state = 1203;
 						this.match(flashcardParser.NL);
 						}
 						break;
@@ -5725,11 +5751,11 @@ export class flashcardParser extends Parser {
 						throw new NoViableAltException(this);
 					}
 					}
-					this.state = 1199;
+					this.state = 1206;
 					this._errHandler.sync(this);
 					_la = this._input.LA(1);
 				} while ((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << flashcardParser.S) | (1 << flashcardParser.OPS) | (1 << flashcardParser.COLON) | (1 << flashcardParser.AMP))) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & ((1 << (flashcardParser.Greater - 32)) | (1 << (flashcardParser.Less - 32)) | (1 << (flashcardParser.RightAngle - 32)) | (1 << (flashcardParser.RightArrow - 32)) | (1 << (flashcardParser.NUMERIC - 32)) | (1 << (flashcardParser.STRING - 32)) | (1 << (flashcardParser.NL - 32)) | (1 << (flashcardParser.NOTBITMARK - 32)) | (1 << (flashcardParser.ELIPSIS - 32)) | (1 << (flashcardParser.SENTENCE - 32)) | (1 << (flashcardParser.BARSTRING - 32)))) !== 0) || _la === flashcardParser.URL);
-				this.state = 1201;
+				this.state = 1208;
 				this.match(flashcardParser.CL);
 				}
 				break;
@@ -5737,11 +5763,11 @@ export class flashcardParser extends Parser {
 			case 2:
 				this.enterOuterAlt(_localctx, 2);
 				{
-				this.state = 1202;
+				this.state = 1209;
 				this.match(flashcardParser.OPHASH);
-				this.state = 1203;
+				this.state = 1210;
 				this.s_and_w();
-				this.state = 1204;
+				this.state = 1211;
 				this.match(flashcardParser.EOF);
 				}
 				break;
@@ -5766,28 +5792,28 @@ export class flashcardParser extends Parser {
 		let _localctx: Bool_labelContext = new Bool_labelContext(this._ctx, this.state);
 		this.enterRule(_localctx, 142, flashcardParser.RULE_bool_label);
 		try {
-			this.state = 1216;
+			this.state = 1223;
 			this._errHandler.sync(this);
 			switch (this._input.LA(1)) {
 			case flashcardParser.AtLabeltrue:
 				this.enterOuterAlt(_localctx, 1);
 				{
-				this.state = 1208;
+				this.state = 1215;
 				this.match(flashcardParser.AtLabeltrue);
-				this.state = 1209;
+				this.state = 1216;
 				this.s_and_w();
-				this.state = 1210;
+				this.state = 1217;
 				this.match(flashcardParser.CL);
 				}
 				break;
 			case flashcardParser.AtLabelfalse:
 				this.enterOuterAlt(_localctx, 2);
 				{
-				this.state = 1212;
+				this.state = 1219;
 				this.match(flashcardParser.AtLabelfalse);
-				this.state = 1213;
+				this.state = 1220;
 				this.s_and_w();
-				this.state = 1214;
+				this.state = 1221;
 				this.match(flashcardParser.CL);
 				}
 				break;
@@ -5814,19 +5840,19 @@ export class flashcardParser extends Parser {
 		let _localctx: Progress_pointsContext = new Progress_pointsContext(this._ctx, this.state);
 		this.enterRule(_localctx, 144, flashcardParser.RULE_progress_points);
 		try {
-			this.state = 1227;
+			this.state = 1234;
 			this._errHandler.sync(this);
-			switch ( this.interpreter.adaptivePredict(this._input, 165, this._ctx) ) {
+			switch ( this.interpreter.adaptivePredict(this._input, 166, this._ctx) ) {
 			case 1:
 				this.enterOuterAlt(_localctx, 1);
 				{
-				this.state = 1218;
+				this.state = 1225;
 				this.match(flashcardParser.AtProgressPoints);
-				this.state = 1219;
+				this.state = 1226;
 				this.match(flashcardParser.COLON);
-				this.state = 1220;
+				this.state = 1227;
 				this.match(flashcardParser.NUMERIC);
-				this.state = 1221;
+				this.state = 1228;
 				this.match(flashcardParser.CL);
 				}
 				break;
@@ -5834,13 +5860,13 @@ export class flashcardParser extends Parser {
 			case 2:
 				this.enterOuterAlt(_localctx, 2);
 				{
-				this.state = 1222;
+				this.state = 1229;
 				this.match(flashcardParser.AtProgressPoints);
-				this.state = 1223;
+				this.state = 1230;
 				this.match(flashcardParser.COLON);
-				this.state = 1224;
+				this.state = 1231;
 				this.s_and_w();
-				this.state = 1225;
+				this.state = 1232;
 				this.match(flashcardParser.CL);
 				}
 				break;
@@ -5867,11 +5893,11 @@ export class flashcardParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1229;
+			this.state = 1236;
 			this.match(flashcardParser.OpAtIsTracked);
-			this.state = 1230;
+			this.state = 1237;
 			this.s_and_w();
-			this.state = 1231;
+			this.state = 1238;
 			this.match(flashcardParser.CL);
 			}
 		}
@@ -5896,11 +5922,11 @@ export class flashcardParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1233;
+			this.state = 1240;
 			this.match(flashcardParser.OpAtIsInfoOnly);
-			this.state = 1234;
+			this.state = 1241;
 			this.s_and_w();
-			this.state = 1235;
+			this.state = 1242;
 			this.match(flashcardParser.CL);
 			}
 		}
@@ -5927,37 +5953,37 @@ export class flashcardParser extends Parser {
 			let _alt: number;
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1237;
+			this.state = 1244;
 			this.atdef_();
-			this.state = 1247;
+			this.state = 1254;
 			this._errHandler.sync(this);
-			_alt = this.interpreter.adaptivePredict(this._input, 167, this._ctx);
+			_alt = this.interpreter.adaptivePredict(this._input, 168, this._ctx);
 			while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
 				if (_alt === 1) {
 					{
 					{
-					this.state = 1241;
+					this.state = 1248;
 					this._errHandler.sync(this);
 					_la = this._input.LA(1);
 					while (_la === flashcardParser.NL) {
 						{
 						{
-						this.state = 1238;
+						this.state = 1245;
 						this.match(flashcardParser.NL);
 						}
 						}
-						this.state = 1243;
+						this.state = 1250;
 						this._errHandler.sync(this);
 						_la = this._input.LA(1);
 					}
-					this.state = 1244;
+					this.state = 1251;
 					this.atdef_();
 					}
 					}
 				}
-				this.state = 1249;
+				this.state = 1256;
 				this._errHandler.sync(this);
-				_alt = this.interpreter.adaptivePredict(this._input, 167, this._ctx);
+				_alt = this.interpreter.adaptivePredict(this._input, 168, this._ctx);
 			}
 			}
 		}
@@ -5982,17 +6008,17 @@ export class flashcardParser extends Parser {
 		let _la: number;
 		try {
 			let _alt: number;
-			this.state = 1272;
+			this.state = 1279;
 			this._errHandler.sync(this);
 			switch (this._input.LA(1)) {
 			case flashcardParser.OPA:
 				this.enterOuterAlt(_localctx, 1);
 				{
-				this.state = 1250;
+				this.state = 1257;
 				this.match(flashcardParser.OPA);
-				this.state = 1251;
+				this.state = 1258;
 				this.s_and_w();
-				this.state = 1252;
+				this.state = 1259;
 				_la = this._input.LA(1);
 				if (!(_la === flashcardParser.COLON || _la === flashcardParser.DBLCOLON)) {
 				this._errHandler.recoverInline(this);
@@ -6004,68 +6030,68 @@ export class flashcardParser extends Parser {
 					this._errHandler.reportMatch(this);
 					this.consume();
 				}
-				this.state = 1253;
+				this.state = 1260;
 				this.s_and_w();
-				this.state = 1259;
+				this.state = 1266;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 				while ((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << flashcardParser.S) | (1 << flashcardParser.OPS) | (1 << flashcardParser.COLON) | (1 << flashcardParser.AMP))) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & ((1 << (flashcardParser.Greater - 32)) | (1 << (flashcardParser.Less - 32)) | (1 << (flashcardParser.RightAngle - 32)) | (1 << (flashcardParser.RightArrow - 32)) | (1 << (flashcardParser.NUMERIC - 32)) | (1 << (flashcardParser.STRING - 32)) | (1 << (flashcardParser.NL - 32)) | (1 << (flashcardParser.NOTBITMARK - 32)) | (1 << (flashcardParser.ELIPSIS - 32)) | (1 << (flashcardParser.SENTENCE - 32)) | (1 << (flashcardParser.BARSTRING - 32)))) !== 0) || _la === flashcardParser.URL) {
 					{
-					this.state = 1257;
+					this.state = 1264;
 					this._errHandler.sync(this);
-					switch ( this.interpreter.adaptivePredict(this._input, 168, this._ctx) ) {
+					switch ( this.interpreter.adaptivePredict(this._input, 169, this._ctx) ) {
 					case 1:
 						{
-						this.state = 1254;
+						this.state = 1261;
 						this.match(flashcardParser.NL);
 						}
 						break;
 
 					case 2:
 						{
-						this.state = 1255;
+						this.state = 1262;
 						this.match(flashcardParser.COLON);
 						}
 						break;
 
 					case 3:
 						{
-						this.state = 1256;
+						this.state = 1263;
 						this.s_and_w();
 						}
 						break;
 					}
 					}
-					this.state = 1261;
+					this.state = 1268;
 					this._errHandler.sync(this);
 					_la = this._input.LA(1);
 				}
-				this.state = 1262;
+				this.state = 1269;
 				this.match(flashcardParser.CL);
 				}
 				break;
 			case flashcardParser.OpAtCopyright:
 				this.enterOuterAlt(_localctx, 2);
 				{
-				this.state = 1264;
+				this.state = 1271;
 				this.match(flashcardParser.OpAtCopyright);
-				this.state = 1268;
+				this.state = 1275;
 				this._errHandler.sync(this);
-				_alt = this.interpreter.adaptivePredict(this._input, 170, this._ctx);
+				_alt = this.interpreter.adaptivePredict(this._input, 171, this._ctx);
 				while (_alt !== 1 && _alt !== ATN.INVALID_ALT_NUMBER) {
 					if (_alt === 1 + 1) {
 						{
 						{
-						this.state = 1265;
+						this.state = 1272;
 						this.matchWildcard();
 						}
 						}
 					}
-					this.state = 1270;
+					this.state = 1277;
 					this._errHandler.sync(this);
-					_alt = this.interpreter.adaptivePredict(this._input, 170, this._ctx);
+					_alt = this.interpreter.adaptivePredict(this._input, 171, this._ctx);
 				}
-				this.state = 1271;
+				this.state = 1278;
 				this.match(flashcardParser.CL);
 				}
 				break;
@@ -6093,49 +6119,49 @@ export class flashcardParser extends Parser {
 		this.enterRule(_localctx, 154, flashcardParser.RULE_dollarans);
 		let _la: number;
 		try {
-			this.state = 1293;
+			this.state = 1300;
 			this._errHandler.sync(this);
-			switch ( this.interpreter.adaptivePredict(this._input, 176, this._ctx) ) {
+			switch ( this.interpreter.adaptivePredict(this._input, 177, this._ctx) ) {
 			case 1:
 				this.enterOuterAlt(_localctx, 1);
 				{
-				this.state = 1274;
+				this.state = 1281;
 				this.match(flashcardParser.OPDOLL);
-				this.state = 1278;
+				this.state = 1285;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 				do {
 					{
-					this.state = 1278;
+					this.state = 1285;
 					this._errHandler.sync(this);
-					switch ( this.interpreter.adaptivePredict(this._input, 172, this._ctx) ) {
+					switch ( this.interpreter.adaptivePredict(this._input, 173, this._ctx) ) {
 					case 1:
 						{
-						this.state = 1275;
+						this.state = 1282;
 						this.s_and_w();
 						}
 						break;
 
 					case 2:
 						{
-						this.state = 1276;
+						this.state = 1283;
 						this.match(flashcardParser.COLON);
 						}
 						break;
 
 					case 3:
 						{
-						this.state = 1277;
+						this.state = 1284;
 						this.match(flashcardParser.NL);
 						}
 						break;
 					}
 					}
-					this.state = 1280;
+					this.state = 1287;
 					this._errHandler.sync(this);
 					_la = this._input.LA(1);
 				} while ((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << flashcardParser.S) | (1 << flashcardParser.OPS) | (1 << flashcardParser.COLON) | (1 << flashcardParser.AMP))) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & ((1 << (flashcardParser.Greater - 32)) | (1 << (flashcardParser.Less - 32)) | (1 << (flashcardParser.RightAngle - 32)) | (1 << (flashcardParser.RightArrow - 32)) | (1 << (flashcardParser.NUMERIC - 32)) | (1 << (flashcardParser.STRING - 32)) | (1 << (flashcardParser.NL - 32)) | (1 << (flashcardParser.NOTBITMARK - 32)) | (1 << (flashcardParser.ELIPSIS - 32)) | (1 << (flashcardParser.SENTENCE - 32)) | (1 << (flashcardParser.BARSTRING - 32)))) !== 0) || _la === flashcardParser.URL);
-				this.state = 1282;
+				this.state = 1289;
 				this.match(flashcardParser.CL);
 				}
 				break;
@@ -6143,43 +6169,43 @@ export class flashcardParser extends Parser {
 			case 2:
 				this.enterOuterAlt(_localctx, 2);
 				{
-				this.state = 1283;
+				this.state = 1290;
 				this.match(flashcardParser.OPDOLL);
-				this.state = 1289;
+				this.state = 1296;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 				while ((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << flashcardParser.S) | (1 << flashcardParser.OPS) | (1 << flashcardParser.COLON) | (1 << flashcardParser.AMP))) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & ((1 << (flashcardParser.Greater - 32)) | (1 << (flashcardParser.Less - 32)) | (1 << (flashcardParser.RightAngle - 32)) | (1 << (flashcardParser.RightArrow - 32)) | (1 << (flashcardParser.NUMERIC - 32)) | (1 << (flashcardParser.STRING - 32)) | (1 << (flashcardParser.NL - 32)) | (1 << (flashcardParser.NOTBITMARK - 32)) | (1 << (flashcardParser.ELIPSIS - 32)) | (1 << (flashcardParser.SENTENCE - 32)) | (1 << (flashcardParser.BARSTRING - 32)))) !== 0) || _la === flashcardParser.URL) {
 					{
-					this.state = 1287;
+					this.state = 1294;
 					this._errHandler.sync(this);
-					switch ( this.interpreter.adaptivePredict(this._input, 174, this._ctx) ) {
+					switch ( this.interpreter.adaptivePredict(this._input, 175, this._ctx) ) {
 					case 1:
 						{
-						this.state = 1284;
+						this.state = 1291;
 						this.s_and_w();
 						}
 						break;
 
 					case 2:
 						{
-						this.state = 1285;
+						this.state = 1292;
 						this.match(flashcardParser.COLON);
 						}
 						break;
 
 					case 3:
 						{
-						this.state = 1286;
+						this.state = 1293;
 						this.match(flashcardParser.NL);
 						}
 						break;
 					}
 					}
-					this.state = 1291;
+					this.state = 1298;
 					this._errHandler.sync(this);
 					_la = this._input.LA(1);
 				}
-				this.state = 1292;
+				this.state = 1299;
 				this.match(flashcardParser.EOF);
 				}
 				break;
@@ -6207,19 +6233,19 @@ export class flashcardParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1295;
+			this.state = 1302;
 			this.match(flashcardParser.OPDANGLE);
-			this.state = 1297;
+			this.state = 1304;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
 			if ((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << flashcardParser.S) | (1 << flashcardParser.OPS) | (1 << flashcardParser.COLON) | (1 << flashcardParser.AMP))) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & ((1 << (flashcardParser.Greater - 32)) | (1 << (flashcardParser.Less - 32)) | (1 << (flashcardParser.RightAngle - 32)) | (1 << (flashcardParser.RightArrow - 32)) | (1 << (flashcardParser.NUMERIC - 32)) | (1 << (flashcardParser.STRING - 32)) | (1 << (flashcardParser.NOTBITMARK - 32)) | (1 << (flashcardParser.ELIPSIS - 32)) | (1 << (flashcardParser.SENTENCE - 32)) | (1 << (flashcardParser.BARSTRING - 32)))) !== 0) || _la === flashcardParser.URL) {
 				{
-				this.state = 1296;
+				this.state = 1303;
 				this.s_and_w();
 				}
 			}
 
-			this.state = 1299;
+			this.state = 1306;
 			this.match(flashcardParser.CL);
 			}
 		}
@@ -6244,7 +6270,7 @@ export class flashcardParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1301;
+			this.state = 1308;
 			this.match(flashcardParser.DBLCOLON);
 			}
 		}
@@ -6270,27 +6296,27 @@ export class flashcardParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1307;
+			this.state = 1314;
 			this._errHandler.sync(this);
 			_la = this._input.LA(1);
 			do {
 				{
 				{
-				this.state = 1303;
+				this.state = 1310;
 				this.s_and_w();
-				this.state = 1305;
+				this.state = 1312;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 				if (_la === flashcardParser.NL) {
 					{
-					this.state = 1304;
+					this.state = 1311;
 					this.match(flashcardParser.NL);
 					}
 				}
 
 				}
 				}
-				this.state = 1309;
+				this.state = 1316;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 			} while ((((_la) & ~0x1F) === 0 && ((1 << _la) & ((1 << flashcardParser.S) | (1 << flashcardParser.OPS) | (1 << flashcardParser.COLON) | (1 << flashcardParser.AMP))) !== 0) || ((((_la - 32)) & ~0x1F) === 0 && ((1 << (_la - 32)) & ((1 << (flashcardParser.Greater - 32)) | (1 << (flashcardParser.Less - 32)) | (1 << (flashcardParser.RightAngle - 32)) | (1 << (flashcardParser.RightArrow - 32)) | (1 << (flashcardParser.NUMERIC - 32)) | (1 << (flashcardParser.STRING - 32)) | (1 << (flashcardParser.NOTBITMARK - 32)) | (1 << (flashcardParser.ELIPSIS - 32)) | (1 << (flashcardParser.SENTENCE - 32)) | (1 << (flashcardParser.BARSTRING - 32)))) !== 0) || _la === flashcardParser.URL);
@@ -6317,34 +6343,34 @@ export class flashcardParser extends Parser {
 		let _la: number;
 		try {
 			let _alt: number;
-			this.state = 1355;
+			this.state = 1362;
 			this._errHandler.sync(this);
-			switch ( this.interpreter.adaptivePredict(this._input, 187, this._ctx) ) {
+			switch ( this.interpreter.adaptivePredict(this._input, 188, this._ctx) ) {
 			case 1:
 				this.enterOuterAlt(_localctx, 1);
 				{
-				this.state = 1311;
-				this.match(flashcardParser.STRING);
 				this.state = 1318;
+				this.match(flashcardParser.STRING);
+				this.state = 1325;
 				this._errHandler.sync(this);
-				switch ( this.interpreter.adaptivePredict(this._input, 181, this._ctx) ) {
+				switch ( this.interpreter.adaptivePredict(this._input, 182, this._ctx) ) {
 				case 1:
 					{
-					this.state = 1313;
+					this.state = 1320;
 					this._errHandler.sync(this);
 					_la = this._input.LA(1);
 					do {
 						{
 						{
-						this.state = 1312;
+						this.state = 1319;
 						this.match(flashcardParser.S);
 						}
 						}
-						this.state = 1315;
+						this.state = 1322;
 						this._errHandler.sync(this);
 						_la = this._input.LA(1);
 					} while (_la === flashcardParser.S);
-					this.state = 1317;
+					this.state = 1324;
 					this.match(flashcardParser.NUMERIC);
 					}
 					break;
@@ -6355,28 +6381,28 @@ export class flashcardParser extends Parser {
 			case 2:
 				this.enterOuterAlt(_localctx, 2);
 				{
-				this.state = 1320;
-				this.words();
 				this.state = 1327;
+				this.words();
+				this.state = 1334;
 				this._errHandler.sync(this);
-				switch ( this.interpreter.adaptivePredict(this._input, 183, this._ctx) ) {
+				switch ( this.interpreter.adaptivePredict(this._input, 184, this._ctx) ) {
 				case 1:
 					{
-					this.state = 1322;
+					this.state = 1329;
 					this._errHandler.sync(this);
 					_la = this._input.LA(1);
 					do {
 						{
 						{
-						this.state = 1321;
+						this.state = 1328;
 						this.match(flashcardParser.S);
 						}
 						}
-						this.state = 1324;
+						this.state = 1331;
 						this._errHandler.sync(this);
 						_la = this._input.LA(1);
 					} while (_la === flashcardParser.S);
-					this.state = 1326;
+					this.state = 1333;
 					this.match(flashcardParser.NUMERIC);
 					}
 					break;
@@ -6387,11 +6413,11 @@ export class flashcardParser extends Parser {
 			case 3:
 				this.enterOuterAlt(_localctx, 3);
 				{
-				this.state = 1329;
+				this.state = 1336;
 				this.match(flashcardParser.OPS);
-				this.state = 1330;
+				this.state = 1337;
 				this.s_and_w();
-				this.state = 1331;
+				this.state = 1338;
 				this.match(flashcardParser.CL);
 				}
 				break;
@@ -6399,7 +6425,7 @@ export class flashcardParser extends Parser {
 			case 4:
 				this.enterOuterAlt(_localctx, 4);
 				{
-				this.state = 1333;
+				this.state = 1340;
 				this.match(flashcardParser.NUMERIC);
 				}
 				break;
@@ -6407,46 +6433,22 @@ export class flashcardParser extends Parser {
 			case 5:
 				this.enterOuterAlt(_localctx, 5);
 				{
-				this.state = 1337;
+				this.state = 1344;
 				this._errHandler.sync(this);
 				_la = this._input.LA(1);
 				while (_la === flashcardParser.S) {
 					{
 					{
-					this.state = 1334;
+					this.state = 1341;
 					this.match(flashcardParser.S);
 					}
 					}
-					this.state = 1339;
+					this.state = 1346;
 					this._errHandler.sync(this);
 					_la = this._input.LA(1);
 				}
-				this.state = 1340;
-				this.match(flashcardParser.COLON);
-				this.state = 1344;
-				this._errHandler.sync(this);
-				_alt = this.interpreter.adaptivePredict(this._input, 185, this._ctx);
-				while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
-					if (_alt === 1) {
-						{
-						{
-						this.state = 1341;
-						this.match(flashcardParser.S);
-						}
-						}
-					}
-					this.state = 1346;
-					this._errHandler.sync(this);
-					_alt = this.interpreter.adaptivePredict(this._input, 185, this._ctx);
-				}
-				}
-				break;
-
-			case 6:
-				this.enterOuterAlt(_localctx, 6);
-				{
 				this.state = 1347;
-				this.match(flashcardParser.AMP);
+				this.match(flashcardParser.COLON);
 				this.state = 1351;
 				this._errHandler.sync(this);
 				_alt = this.interpreter.adaptivePredict(this._input, 186, this._ctx);
@@ -6466,10 +6468,34 @@ export class flashcardParser extends Parser {
 				}
 				break;
 
+			case 6:
+				this.enterOuterAlt(_localctx, 6);
+				{
+				this.state = 1354;
+				this.match(flashcardParser.AMP);
+				this.state = 1358;
+				this._errHandler.sync(this);
+				_alt = this.interpreter.adaptivePredict(this._input, 187, this._ctx);
+				while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
+					if (_alt === 1) {
+						{
+						{
+						this.state = 1355;
+						this.match(flashcardParser.S);
+						}
+						}
+					}
+					this.state = 1360;
+					this._errHandler.sync(this);
+					_alt = this.interpreter.adaptivePredict(this._input, 187, this._ctx);
+				}
+				}
+				break;
+
 			case 7:
 				this.enterOuterAlt(_localctx, 7);
 				{
-				this.state = 1354;
+				this.state = 1361;
 				this.match(flashcardParser.URL);
 				}
 				break;
@@ -6496,7 +6522,7 @@ export class flashcardParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1357;
+			this.state = 1364;
 			this.match(flashcardParser.CL);
 			}
 		}
@@ -6522,7 +6548,7 @@ export class flashcardParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1359;
+			this.state = 1366;
 			_la = this._input.LA(1);
 			if (!(_la === flashcardParser.SSPL || _la === flashcardParser.SSPL2)) {
 			this._errHandler.recoverInline(this);
@@ -6559,51 +6585,51 @@ export class flashcardParser extends Parser {
 			let _alt: number;
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1372;
+			this.state = 1379;
 			this._errHandler.sync(this);
 			_alt = 1;
 			do {
 				switch (_alt) {
 				case 1:
 					{
-					this.state = 1372;
+					this.state = 1379;
 					this._errHandler.sync(this);
 					switch (this._input.LA(1)) {
 					case flashcardParser.SENTENCE:
 						{
-						this.state = 1361;
+						this.state = 1368;
 						this.match(flashcardParser.SENTENCE);
 						}
 						break;
 					case flashcardParser.NOTBITMARK:
 						{
-						this.state = 1362;
+						this.state = 1369;
 						this.match(flashcardParser.NOTBITMARK);
 						}
 						break;
 					case flashcardParser.BARSTRING:
 						{
-						this.state = 1363;
+						this.state = 1370;
 						this.match(flashcardParser.BARSTRING);
 						}
 						break;
 					case flashcardParser.ELIPSIS:
 						{
-						this.state = 1364;
+						this.state = 1371;
 						this.match(flashcardParser.ELIPSIS);
 						}
 						break;
 					case flashcardParser.AMP:
 						{
-						this.state = 1365;
+						this.state = 1372;
 						this.match(flashcardParser.AMP);
 						}
 						break;
 					case flashcardParser.Greater:
 						{
-						this.state = 1366;
+						this.state = 1373;
 						this.match(flashcardParser.Greater);
-						this.state = 1367;
+						this.state = 1374;
 						_la = this._input.LA(1);
 						if (_la <= 0 || (_la === flashcardParser.Greater)) {
 						this._errHandler.recoverInline(this);
@@ -6619,9 +6645,9 @@ export class flashcardParser extends Parser {
 						break;
 					case flashcardParser.Less:
 						{
-						this.state = 1368;
+						this.state = 1375;
 						this.match(flashcardParser.Less);
-						this.state = 1369;
+						this.state = 1376;
 						_la = this._input.LA(1);
 						if (_la <= 0 || (_la === flashcardParser.Less)) {
 						this._errHandler.recoverInline(this);
@@ -6637,13 +6663,13 @@ export class flashcardParser extends Parser {
 						break;
 					case flashcardParser.RightArrow:
 						{
-						this.state = 1370;
+						this.state = 1377;
 						this.match(flashcardParser.RightArrow);
 						}
 						break;
 					case flashcardParser.RightAngle:
 						{
-						this.state = 1371;
+						this.state = 1378;
 						this.match(flashcardParser.RightAngle);
 						}
 						break;
@@ -6655,9 +6681,9 @@ export class flashcardParser extends Parser {
 				default:
 					throw new NoViableAltException(this);
 				}
-				this.state = 1374;
+				this.state = 1381;
 				this._errHandler.sync(this);
-				_alt = this.interpreter.adaptivePredict(this._input, 189, this._ctx);
+				_alt = this.interpreter.adaptivePredict(this._input, 190, this._ctx);
 			} while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER);
 			}
 		}
@@ -6682,7 +6708,7 @@ export class flashcardParser extends Parser {
 		try {
 			this.enterOuterAlt(_localctx, 1);
 			{
-			this.state = 1376;
+			this.state = 1383;
 			this.match(flashcardParser.S);
 			}
 		}
@@ -6703,7 +6729,7 @@ export class flashcardParser extends Parser {
 
 	private static readonly _serializedATNSegments: number = 3;
 	private static readonly _serializedATNSegment0: string =
-		"\x03\uC91D\uCABA\u058D\uAFBA\u4F53\u0607\uEA8B\uC241\x03\xA5\u0565\x04" +
+		"\x03\uC91D\uCABA\u058D\uAFBA\u4F53\u0607\uEA8B\uC241\x03\xA5\u056C\x04" +
 		"\x02\t\x02\x04\x03\t\x03\x04\x04\t\x04\x04\x05\t\x05\x04\x06\t\x06\x04" +
 		"\x07\t\x07\x04\b\t\b\x04\t\t\t\x04\n\t\n\x04\v\t\v\x04\f\t\f\x04\r\t\r" +
 		"\x04\x0E\t\x0E\x04\x0F\t\x0F\x04\x10\t\x10\x04\x11\t\x11\x04\x12\t\x12" +
@@ -6811,150 +6837,151 @@ export class flashcardParser extends Parser {
 		"\vB\x03B\x05B\u0453\nB\x03C\x03C\x03C\x03C\x03D\x03D\x03D\x03D\x06D\u045D" +
 		"\nD\rD\x0ED\u045E\x03D\x03D\x05D\u0463\nD\x03E\x03E\x03E\x03E\x06E\u0469" +
 		"\nE\rE\x0EE\u046A\x03E\x03E\x03F\x03F\x07F\u0471\nF\fF\x0EF\u0474\vF\x03" +
-		"F\x05F\u0477\nF\x03F\x03F\x07F\u047B\nF\fF\x0EF\u047E\vF\x03F\x03F\x07" +
-		"F\u0482\nF\fF\x0EF\u0485\vF\x07F\u0487\nF\fF\x0EF\u048A\vF\x03F\x07F\u048D" +
-		"\nF\fF\x0EF\u0490\vF\x07F\u0492\nF\fF\x0EF\u0495\vF\x03F\x03F\x03F\x07" +
-		"F\u049A\nF\fF\x0EF\u049D\vF\x03F\x05F\u04A0\nF\x03F\x05F\u04A3\nF\x03" +
-		"G\x03G\x06G\u04A7\nG\rG\x0EG\u04A8\x03G\x03G\x03H\x03H\x03H\x06H\u04B0" +
-		"\nH\rH\x0EH\u04B1\x03H\x03H\x03H\x03H\x03H\x05H\u04B9\nH\x03I\x03I\x03" +
-		"I\x03I\x03I\x03I\x03I\x03I\x05I\u04C3\nI\x03J\x03J\x03J\x03J\x03J\x03" +
-		"J\x03J\x03J\x03J\x05J\u04CE\nJ\x03K\x03K\x03K\x03K\x03L\x03L\x03L\x03" +
-		"L\x03M\x03M\x07M\u04DA\nM\fM\x0EM\u04DD\vM\x03M\x07M\u04E0\nM\fM\x0EM" +
-		"\u04E3\vM\x03N\x03N\x03N\x03N\x03N\x03N\x03N\x07N\u04EC\nN\fN\x0EN\u04EF" +
-		"\vN\x03N\x03N\x03N\x03N\x07N\u04F5\nN\fN\x0EN\u04F8\vN\x03N\x05N\u04FB" +
-		"\nN\x03O\x03O\x03O\x03O\x06O\u0501\nO\rO\x0EO\u0502\x03O\x03O\x03O\x03" +
-		"O\x03O\x07O\u050A\nO\fO\x0EO\u050D\vO\x03O\x05O\u0510\nO\x03P\x03P\x05" +
-		"P\u0514\nP\x03P\x03P\x03Q\x03Q\x03R\x03R\x05R\u051C\nR\x06R\u051E\nR\r" +
-		"R\x0ER\u051F\x03S\x03S\x06S\u0524\nS\rS\x0ES\u0525\x03S\x05S\u0529\nS" +
-		"\x03S\x03S\x06S\u052D\nS\rS\x0ES\u052E\x03S\x05S\u0532\nS\x03S\x03S\x03" +
-		"S\x03S\x03S\x03S\x07S\u053A\nS\fS\x0ES\u053D\vS\x03S\x03S\x07S\u0541\n" +
-		"S\fS\x0ES\u0544\vS\x03S\x03S\x07S\u0548\nS\fS\x0ES\u054B\vS\x03S\x05S" +
-		"\u054E\nS\x03T\x03T\x03U\x03U\x03V\x03V\x03V\x03V\x03V\x03V\x03V\x03V" +
-		"\x03V\x03V\x03V\x06V\u055F\nV\rV\x0EV\u0560\x03W\x03W\x03W\x06\u0365\u0378" +
-		"\u03C7\u04F6\x02\x02X\x02\x02\x04\x02\x06\x02\b\x02\n\x02\f\x02\x0E\x02" +
-		"\x10\x02\x12\x02\x14\x02\x16\x02\x18\x02\x1A\x02\x1C\x02\x1E\x02 \x02" +
-		"\"\x02$\x02&\x02(\x02*\x02,\x02.\x020\x022\x024\x026\x028\x02:\x02<\x02" +
-		">\x02@\x02B\x02D\x02F\x02H\x02J\x02L\x02N\x02P\x02R\x02T\x02V\x02X\x02" +
-		"Z\x02\\\x02^\x02`\x02b\x02d\x02f\x02h\x02j\x02l\x02n\x02p\x02r\x02t\x02" +
-		"v\x02x\x02z\x02|\x02~\x02\x80\x02\x82\x02\x84\x02\x86\x02\x88\x02\x8A" +
-		"\x02\x8C\x02\x8E\x02\x90\x02\x92\x02\x94\x02\x96\x02\x98\x02\x9A\x02\x9C" +
-		"\x02\x9E\x02\xA0\x02\xA2\x02\xA4\x02\xA6\x02\xA8\x02\xAA\x02\xAC\x02\x02" +
-		"\x17\x03\x02\'(\x03\x02*+\b\x02`acdrz\x85\x88\x8E\x8F\x91\x93\x05\x02" +
-		"__tt\x85\x85\x04\x02``uu\x05\x02aavw\x87\x87\x04\x02bbxx\x04\x02ccyy\x05" +
-		"\x02ddzz\x88\x88\x04\x02kk~~\x05\x02mm\x7F\x80\x8C\x8C\x04\x02nn\x81\x81" +
-		"\x04\x02oo\x82\x82\x05\x02pp\x83\x83\x8D\x8D\x03\x02?@\x04\x02OORU\x03" +
-		"\x02\x1C\x1C\x04\x02\x1D\x1D\x1F\x1F\x03\x02,-\x03\x02\"\"\x03\x02##\x02" +
-		"\u061A\x02\xBB\x03\x02\x02\x02\x04\xCA\x03\x02\x02\x02\x06\xD1\x03\x02" +
-		"\x02\x02\b\xD3\x03\x02\x02\x02\n\xEF\x03\x02\x02\x02\f\u011C\x03\x02\x02" +
-		"\x02\x0E\u0153\x03\x02\x02\x02\x10\u0182\x03\x02\x02\x02\x12\u01AC\x03" +
-		"\x02\x02\x02\x14\u01EC\x03\x02\x02\x02\x16\u0227\x03\x02\x02\x02\x18\u0229" +
-		"\x03\x02\x02\x02\x1A\u0233\x03\x02\x02\x02\x1C\u023A\x03\x02\x02\x02\x1E" +
-		"\u0242\x03\x02\x02\x02 \u024A\x03\x02\x02\x02\"\u0263\x03\x02\x02\x02" +
-		"$\u0265\x03\x02\x02\x02&\u0267\x03\x02\x02\x02(\u0272\x03\x02\x02\x02" +
-		"*\u0280\x03\x02\x02\x02,\u0286\x03\x02\x02\x02.\u028D\x03\x02\x02\x02" +
-		"0\u0298\x03\x02\x02\x022\u02A3\x03\x02\x02\x024\u02AA\x03\x02\x02\x02" +
-		"6\u02BA\x03\x02\x02\x028\u02BC\x03\x02\x02\x02:\u02C1\x03\x02\x02\x02" +
-		"<\u02C3\x03\x02\x02\x02>\u02C5\x03\x02\x02\x02@\u02C7\x03\x02\x02\x02" +
-		"B\u02C9\x03\x02\x02\x02D\u02CB\x03\x02\x02\x02F\u02CD\x03\x02\x02\x02" +
-		"H\u02CF\x03\x02\x02\x02J\u02D1\x03\x02\x02\x02L\u02E2\x03\x02\x02\x02" +
-		"N\u02E4\x03\x02\x02\x02P\u02EC\x03\x02\x02\x02R\u02EE\x03\x02\x02\x02" +
-		"T\u02F8\x03\x02\x02\x02V\u0302\x03\x02\x02\x02X\u030F\x03\x02\x02\x02" +
-		"Z\u0316\x03\x02\x02\x02\\\u0321\x03\x02\x02\x02^\u0328\x03\x02\x02\x02" +
-		"`\u0332\x03\x02\x02\x02b\u033D\x03\x02\x02\x02d\u0356\x03\x02\x02\x02" +
-		"f\u0369\x03\x02\x02\x02h\u037C\x03\x02\x02\x02j\u037E\x03\x02\x02\x02" +
-		"l\u0385\x03\x02\x02\x02n\u0399\x03\x02\x02\x02p\u03AA\x03\x02\x02\x02" +
-		"r\u03CB\x03\x02\x02\x02t\u03CD\x03\x02\x02\x02v\u03D1\x03\x02\x02\x02" +
-		"x\u03F1\x03\x02\x02\x02z\u03F3\x03\x02\x02\x02|\u0408\x03\x02\x02\x02" +
-		"~\u0411\x03\x02\x02\x02\x80\u043A\x03\x02\x02\x02\x82\u0452\x03\x02\x02" +
-		"\x02\x84\u0454\x03\x02\x02\x02\x86\u0458\x03\x02\x02\x02\x88\u0464\x03" +
-		"\x02\x02\x02\x8A\u04A2\x03\x02\x02\x02\x8C\u04A4\x03\x02\x02\x02\x8E\u04B8" +
-		"\x03\x02\x02\x02\x90\u04C2\x03\x02\x02\x02\x92\u04CD\x03\x02\x02\x02\x94" +
-		"\u04CF\x03\x02\x02\x02\x96\u04D3\x03\x02\x02\x02\x98\u04D7\x03\x02\x02" +
-		"\x02\x9A\u04FA\x03\x02\x02\x02\x9C\u050F\x03\x02\x02\x02\x9E\u0511\x03" +
-		"\x02\x02\x02\xA0\u0517\x03\x02\x02\x02\xA2\u051D\x03\x02\x02\x02\xA4\u054D" +
-		"\x03\x02\x02\x02\xA6\u054F\x03\x02\x02\x02\xA8\u0551\x03\x02\x02\x02\xAA" +
-		"\u055E\x03\x02\x02\x02\xAC\u0562\x03\x02\x02\x02\xAE\xB8\x05\x04\x03\x02" +
-		"\xAF\xB1\x07\x04\x02\x02\xB0\xAF\x03\x02\x02\x02\xB1\xB4\x03\x02\x02\x02" +
-		"\xB2\xB0\x03\x02\x02\x02\xB2\xB3\x03\x02\x02\x02\xB3\xB5\x03\x02\x02\x02" +
-		"\xB4\xB2\x03\x02\x02\x02\xB5\xB7\x077\x02\x02\xB6\xB2\x03\x02\x02\x02" +
-		"\xB7\xBA\x03\x02\x02\x02\xB8\xB6\x03\x02\x02\x02\xB8\xB9\x03\x02\x02\x02" +
-		"\xB9\xBC\x03\x02\x02\x02\xBA\xB8\x03\x02\x02\x02\xBB\xAE\x03\x02\x02\x02" +
-		"\xBC\xBD\x03\x02\x02\x02\xBD\xBB\x03\x02\x02\x02\xBD\xBE\x03\x02\x02\x02" +
-		"\xBE\xC2\x03\x02\x02\x02\xBF\xC1\x077\x02\x02\xC0\xBF\x03\x02\x02\x02" +
-		"\xC1\xC4\x03\x02\x02\x02\xC2\xC0\x03\x02\x02\x02\xC2\xC3\x03\x02\x02\x02" +
-		"\xC3\xC5\x03\x02\x02\x02\xC4\xC2\x03\x02\x02\x02\xC5\xC6\x07\x02\x02\x03" +
-		"\xC6\x03\x03\x02\x02\x02\xC7\xCB\x05\x06\x04\x02\xC8\xCB\x05\x12\n\x02" +
-		"\xC9\xCB\x05\x14\v\x02\xCA\xC7\x03\x02\x02\x02\xCA\xC8\x03\x02\x02\x02" +
-		"\xCA\xC9\x03\x02\x02\x02\xCB\x05\x03\x02\x02\x02\xCC\xD2\x05\n\x06\x02" +
-		"\xCD\xD2\x05\b\x05\x02\xCE\xD2\x05\f\x07\x02\xCF\xD2\x05\x0E\b\x02\xD0" +
-		"\xD2\x05\x10\t\x02\xD1\xCC\x03\x02\x02\x02\xD1\xCD\x03\x02\x02\x02\xD1" +
-		"\xCE\x03\x02\x02\x02\xD1\xCF\x03\x02\x02\x02\xD1\xD0\x03\x02\x02\x02\xD2" +
-		"\x07\x03\x02\x02\x02\xD3\xD4\x07\x05\x02\x02\xD4\xD5\x05.\x18\x02\xD5" +
-		"\xD6\x07\x1C\x02\x02\xD6\xD7\x077\x02\x02\xD7\xD8\x05\x1C\x0F\x02\xD8" +
-		"\xD9\t\x02\x02\x02\xD9\xDD\x05\x1C\x0F\x02\xDA\xDC\x077\x02\x02\xDB\xDA" +
-		"\x03\x02\x02\x02\xDC\xDF\x03\x02\x02\x02\xDD\xDB\x03\x02\x02\x02\xDD\xDE" +
-		"\x03\x02\x02\x02\xDE\xED\x03\x02\x02\x02\xDF\xDD\x03\x02\x02\x02\xE0\xEA" +
-		"\x05$\x13\x02\xE1\xE3\x077\x02\x02\xE2\xE1\x03\x02\x02\x02\xE3\xE6\x03" +
-		"\x02\x02\x02\xE4\xE2\x03\x02\x02\x02\xE4\xE5\x03\x02\x02\x02\xE5\xE7\x03" +
-		"\x02\x02\x02\xE6\xE4\x03\x02\x02\x02\xE7\xE9\x05$\x13\x02\xE8\xE4\x03" +
-		"\x02\x02\x02\xE9\xEC\x03\x02\x02\x02\xEA\xE8\x03\x02\x02\x02\xEA\xEB\x03" +
-		"\x02\x02\x02\xEB\xEE\x03\x02\x02\x02\xEC\xEA\x03\x02\x02\x02\xED\xE0\x03" +
-		"\x02\x02\x02\xED\xEE\x03\x02\x02\x02\xEE\t\x03\x02\x02\x02\xEF\xF0\x07" +
-		"\x06\x02\x02\xF0\xF1\x05.\x18\x02\xF1\xF5\x07\x1C\x02\x02\xF2\xF4\x07" +
-		"7\x02\x02\xF3\xF2\x03\x02\x02\x02\xF4\xF7\x03\x02\x02\x02\xF5\xF3\x03" +
-		"\x02\x02\x02\xF5\xF6\x03\x02\x02\x02\xF6\xF8\x03\x02\x02\x02\xF7\xF5\x03" +
-		"\x02\x02\x02\xF8\xF9\t\x03\x02\x02\xF9\xFA\x05\x1C\x0F\x02\xFA\xFB\t\x02" +
-		"\x02\x02\xFB\u0103\x05\x1C\x0F\x02\xFC\xFD\t\x03\x02\x02\xFD\xFE\x05\x1C" +
-		"\x0F\x02\xFE\xFF\t\x02\x02\x02\xFF\u0100\x05\x1C\x0F\x02\u0100\u0102\x03" +
-		"\x02\x02\x02\u0101\xFC\x03\x02\x02\x02\u0102\u0105\x03\x02\x02\x02\u0103" +
-		"\u0101\x03\x02\x02\x02\u0103\u0104\x03\x02\x02\x02\u0104\u0106\x03\x02" +
-		"\x02\x02\u0105\u0103\x03\x02\x02\x02\u0106\u010A\t\x03\x02\x02\u0107\u0109" +
-		"\x077\x02\x02\u0108\u0107\x03\x02\x02\x02\u0109\u010C\x03\x02\x02\x02" +
-		"\u010A\u0108\x03\x02\x02\x02\u010A\u010B\x03\x02\x02\x02\u010B\u011A\x03" +
-		"\x02\x02\x02\u010C\u010A\x03\x02\x02\x02\u010D\u0117\x05$\x13\x02\u010E" +
-		"\u0110\x077\x02\x02\u010F\u010E\x03\x02\x02\x02\u0110\u0113\x03\x02\x02" +
-		"\x02\u0111\u010F\x03\x02\x02\x02\u0111\u0112\x03\x02\x02\x02\u0112\u0114" +
-		"\x03\x02\x02\x02\u0113\u0111\x03\x02\x02\x02\u0114\u0116\x05$\x13\x02" +
-		"\u0115\u0111\x03\x02\x02\x02\u0116\u0119\x03\x02\x02\x02\u0117\u0115\x03" +
-		"\x02\x02\x02\u0117\u0118\x03\x02\x02\x02\u0118\u011B\x03\x02\x02\x02\u0119" +
-		"\u0117\x03\x02\x02\x02\u011A\u010D\x03\x02\x02\x02\u011A\u011B\x03\x02" +
-		"\x02\x02\u011B\v\x03\x02\x02\x02\u011C\u011D\x07\x07\x02\x02\u011D\u011E" +
-		"\x05.\x18\x02\u011E\u0122\x07\x1C\x02\x02\u011F\u0121\x077\x02\x02\u0120" +
-		"\u011F\x03\x02\x02\x02\u0121\u0124\x03\x02\x02\x02\u0122\u0120\x03\x02" +
-		"\x02\x02\u0122\u0123\x03\x02\x02\x02\u0123\u012A\x03\x02\x02\x02\u0124" +
-		"\u0122\x03\x02\x02\x02\u0125\u0126\t\x03\x02\x02\u0126\u0127\x05\x1C\x0F" +
-		"\x02\u0127\u0128\t\x02\x02\x02\u0128\u0129\x05\x1C\x0F\x02\u0129\u012B" +
-		"\x03\x02\x02\x02\u012A\u0125\x03\x02\x02\x02\u012A\u012B\x03\x02\x02\x02" +
-		"\u012B\u013A\x03\x02\x02\x02\u012C\u012D\t\x03\x02\x02\u012D\u012E\x05" +
-		"\x1C\x0F\x02\u012E\u012F\t\x02\x02\x02\u012F\u0135\x05\x1C\x0F\x02\u0130" +
-		"\u0131\x077\x02\x02\u0131\u0132\x07)\x02\x02\u0132\u0134\x05\x1C\x0F\x02" +
-		"\u0133\u0130\x03\x02\x02\x02\u0134\u0137\x03\x02\x02\x02\u0135\u0133\x03" +
-		"\x02\x02\x02\u0135\u0136\x03\x02\x02\x02\u0136\u0139\x03\x02\x02\x02\u0137" +
-		"\u0135\x03\x02\x02\x02\u0138\u012C\x03\x02\x02\x02\u0139\u013C\x03\x02" +
-		"\x02\x02\u013A\u0138\x03\x02\x02\x02\u013A\u013B\x03\x02\x02\x02\u013B" +
-		"\u013D\x03\x02\x02\x02\u013C\u013A\x03\x02\x02\x02\u013D\u0141\t\x03\x02" +
-		"\x02\u013E\u0140\x077\x02\x02\u013F\u013E\x03\x02\x02\x02\u0140\u0143" +
-		"\x03\x02\x02\x02\u0141\u013F\x03\x02\x02\x02\u0141\u0142\x03\x02\x02\x02" +
-		"\u0142\u0151\x03\x02\x02\x02\u0143\u0141\x03\x02\x02\x02\u0144\u014E\x05" +
-		"$\x13\x02\u0145\u0147\x077\x02\x02\u0146\u0145\x03\x02\x02\x02\u0147\u014A" +
-		"\x03\x02\x02\x02\u0148\u0146\x03\x02\x02\x02\u0148\u0149\x03\x02\x02\x02" +
-		"\u0149\u014B\x03\x02\x02\x02\u014A\u0148\x03\x02\x02\x02\u014B\u014D\x05" +
-		"$\x13\x02\u014C\u0148\x03\x02\x02\x02\u014D\u0150\x03\x02\x02\x02\u014E" +
-		"\u014C\x03\x02\x02\x02\u014E\u014F";
+		"F\x07F\u0477\nF\fF\x0EF\u047A\vF\x03F\x07F\u047D\nF\fF\x0EF\u0480\vF\x03" +
+		"F\x06F\u0483\nF\rF\x0EF\u0484\x03F\x03F\x07F\u0489\nF\fF\x0EF\u048C\v" +
+		"F\x07F\u048E\nF\fF\x0EF\u0491\vF\x03F\x07F\u0494\nF\fF\x0EF\u0497\vF\x07" +
+		"F\u0499\nF\fF\x0EF\u049C\vF\x03F\x03F\x03F\x07F\u04A1\nF\fF\x0EF\u04A4" +
+		"\vF\x03F\x05F\u04A7\nF\x03F\x05F\u04AA\nF\x03G\x03G\x06G\u04AE\nG\rG\x0E" +
+		"G\u04AF\x03G\x03G\x03H\x03H\x03H\x06H\u04B7\nH\rH\x0EH\u04B8\x03H\x03" +
+		"H\x03H\x03H\x03H\x05H\u04C0\nH\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03" +
+		"I\x05I\u04CA\nI\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x05J\u04D5" +
+		"\nJ\x03K\x03K\x03K\x03K\x03L\x03L\x03L\x03L\x03M\x03M\x07M\u04E1\nM\f" +
+		"M\x0EM\u04E4\vM\x03M\x07M\u04E7\nM\fM\x0EM\u04EA\vM\x03N\x03N\x03N\x03" +
+		"N\x03N\x03N\x03N\x07N\u04F3\nN\fN\x0EN\u04F6\vN\x03N\x03N\x03N\x03N\x07" +
+		"N\u04FC\nN\fN\x0EN\u04FF\vN\x03N\x05N\u0502\nN\x03O\x03O\x03O\x03O\x06" +
+		"O\u0508\nO\rO\x0EO\u0509\x03O\x03O\x03O\x03O\x03O\x07O\u0511\nO\fO\x0E" +
+		"O\u0514\vO\x03O\x05O\u0517\nO\x03P\x03P\x05P\u051B\nP\x03P\x03P\x03Q\x03" +
+		"Q\x03R\x03R\x05R\u0523\nR\x06R\u0525\nR\rR\x0ER\u0526\x03S\x03S\x06S\u052B" +
+		"\nS\rS\x0ES\u052C\x03S\x05S\u0530\nS\x03S\x03S\x06S\u0534\nS\rS\x0ES\u0535" +
+		"\x03S\x05S\u0539\nS\x03S\x03S\x03S\x03S\x03S\x03S\x07S\u0541\nS\fS\x0E" +
+		"S\u0544\vS\x03S\x03S\x07S\u0548\nS\fS\x0ES\u054B\vS\x03S\x03S\x07S\u054F" +
+		"\nS\fS\x0ES\u0552\vS\x03S\x05S\u0555\nS\x03T\x03T\x03U\x03U\x03V\x03V" +
+		"\x03V\x03V\x03V\x03V\x03V\x03V\x03V\x03V\x03V\x06V\u0566\nV\rV\x0EV\u0567" +
+		"\x03W\x03W\x03W\x06\u0365\u0378\u03C7\u04FD\x02\x02X\x02\x02\x04\x02\x06" +
+		"\x02\b\x02\n\x02\f\x02\x0E\x02\x10\x02\x12\x02\x14\x02\x16\x02\x18\x02" +
+		"\x1A\x02\x1C\x02\x1E\x02 \x02\"\x02$\x02&\x02(\x02*\x02,\x02.\x020\x02" +
+		"2\x024\x026\x028\x02:\x02<\x02>\x02@\x02B\x02D\x02F\x02H\x02J\x02L\x02" +
+		"N\x02P\x02R\x02T\x02V\x02X\x02Z\x02\\\x02^\x02`\x02b\x02d\x02f\x02h\x02" +
+		"j\x02l\x02n\x02p\x02r\x02t\x02v\x02x\x02z\x02|\x02~\x02\x80\x02\x82\x02" +
+		"\x84\x02\x86\x02\x88\x02\x8A\x02\x8C\x02\x8E\x02\x90\x02\x92\x02\x94\x02" +
+		"\x96\x02\x98\x02\x9A\x02\x9C\x02\x9E\x02\xA0\x02\xA2\x02\xA4\x02\xA6\x02" +
+		"\xA8\x02\xAA\x02\xAC\x02\x02\x17\x03\x02\'(\x03\x02*+\b\x02`acdrz\x85" +
+		"\x88\x8E\x8F\x91\x93\x05\x02__tt\x85\x85\x04\x02``uu\x05\x02aavw\x87\x87" +
+		"\x04\x02bbxx\x04\x02ccyy\x05\x02ddzz\x88\x88\x04\x02kk~~\x05\x02mm\x7F" +
+		"\x80\x8C\x8C\x04\x02nn\x81\x81\x04\x02oo\x82\x82\x05\x02pp\x83\x83\x8D" +
+		"\x8D\x03\x02?@\x04\x02OORU\x03\x02\x1C\x1C\x04\x02\x1D\x1D\x1F\x1F\x03" +
+		"\x02,-\x03\x02\"\"\x03\x02##\x02\u0622\x02\xBB\x03\x02\x02\x02\x04\xCA" +
+		"\x03\x02\x02\x02\x06\xD1\x03\x02\x02\x02\b\xD3\x03\x02\x02\x02\n\xEF\x03" +
+		"\x02\x02\x02\f\u011C\x03\x02\x02\x02\x0E\u0153\x03\x02\x02\x02\x10\u0182" +
+		"\x03\x02\x02\x02\x12\u01AC\x03\x02\x02\x02\x14\u01EC\x03\x02\x02\x02\x16" +
+		"\u0227\x03\x02\x02\x02\x18\u0229\x03\x02\x02\x02\x1A\u0233\x03\x02\x02" +
+		"\x02\x1C\u023A\x03\x02\x02\x02\x1E\u0242\x03\x02\x02\x02 \u024A\x03\x02" +
+		"\x02\x02\"\u0263\x03\x02\x02\x02$\u0265\x03\x02\x02\x02&\u0267\x03\x02" +
+		"\x02\x02(\u0272\x03\x02\x02\x02*\u0280\x03\x02\x02\x02,\u0286\x03\x02" +
+		"\x02\x02.\u028D\x03\x02\x02\x020\u0298\x03\x02\x02\x022\u02A3\x03\x02" +
+		"\x02\x024\u02AA\x03\x02\x02\x026\u02BA\x03\x02\x02\x028\u02BC\x03\x02" +
+		"\x02\x02:\u02C1\x03\x02\x02\x02<\u02C3\x03\x02\x02\x02>\u02C5\x03\x02" +
+		"\x02\x02@\u02C7\x03\x02\x02\x02B\u02C9\x03\x02\x02\x02D\u02CB\x03\x02" +
+		"\x02\x02F\u02CD\x03\x02\x02\x02H\u02CF\x03\x02\x02\x02J\u02D1\x03\x02" +
+		"\x02\x02L\u02E2\x03\x02\x02\x02N\u02E4\x03\x02\x02\x02P\u02EC\x03\x02" +
+		"\x02\x02R\u02EE\x03\x02\x02\x02T\u02F8\x03\x02\x02\x02V\u0302\x03\x02" +
+		"\x02\x02X\u030F\x03\x02\x02\x02Z\u0316\x03\x02\x02\x02\\\u0321\x03\x02" +
+		"\x02\x02^\u0328\x03\x02\x02\x02`\u0332\x03\x02\x02\x02b\u033D\x03\x02" +
+		"\x02\x02d\u0356\x03\x02\x02\x02f\u0369\x03\x02\x02\x02h\u037C\x03\x02" +
+		"\x02\x02j\u037E\x03\x02\x02\x02l\u0385\x03\x02\x02\x02n\u0399\x03\x02" +
+		"\x02\x02p\u03AA\x03\x02\x02\x02r\u03CB\x03\x02\x02\x02t\u03CD\x03\x02" +
+		"\x02\x02v\u03D1\x03\x02\x02\x02x\u03F1\x03\x02\x02\x02z\u03F3\x03\x02" +
+		"\x02\x02|\u0408\x03\x02\x02\x02~\u0411\x03\x02\x02\x02\x80\u043A\x03\x02" +
+		"\x02\x02\x82\u0452\x03\x02\x02\x02\x84\u0454\x03\x02\x02\x02\x86\u0458" +
+		"\x03\x02\x02\x02\x88\u0464\x03\x02\x02\x02\x8A\u04A9\x03\x02\x02\x02\x8C" +
+		"\u04AB\x03\x02\x02\x02\x8E\u04BF\x03\x02\x02\x02\x90\u04C9\x03\x02\x02" +
+		"\x02\x92\u04D4\x03\x02\x02\x02\x94\u04D6\x03\x02\x02\x02\x96\u04DA\x03" +
+		"\x02\x02\x02\x98\u04DE\x03\x02\x02\x02\x9A\u0501\x03\x02\x02\x02\x9C\u0516" +
+		"\x03\x02\x02\x02\x9E\u0518\x03\x02\x02\x02\xA0\u051E\x03\x02\x02\x02\xA2" +
+		"\u0524\x03\x02\x02\x02\xA4\u0554\x03\x02\x02\x02\xA6\u0556\x03\x02\x02" +
+		"\x02\xA8\u0558\x03\x02\x02\x02\xAA\u0565\x03\x02\x02\x02\xAC\u0569\x03" +
+		"\x02\x02\x02\xAE\xB8\x05\x04\x03\x02\xAF\xB1\x07\x04\x02\x02\xB0\xAF\x03" +
+		"\x02\x02\x02\xB1\xB4\x03\x02\x02\x02\xB2\xB0\x03\x02\x02\x02\xB2\xB3\x03" +
+		"\x02\x02\x02\xB3\xB5\x03\x02\x02\x02\xB4\xB2\x03\x02\x02\x02\xB5\xB7\x07" +
+		"7\x02\x02\xB6\xB2\x03\x02\x02\x02\xB7\xBA\x03\x02\x02\x02\xB8\xB6\x03" +
+		"\x02\x02\x02\xB8\xB9\x03\x02\x02\x02\xB9\xBC\x03\x02\x02\x02\xBA\xB8\x03" +
+		"\x02\x02\x02\xBB\xAE\x03\x02\x02\x02\xBC\xBD\x03\x02\x02\x02\xBD\xBB\x03" +
+		"\x02\x02\x02\xBD\xBE\x03\x02\x02\x02\xBE\xC2\x03\x02\x02\x02\xBF\xC1\x07" +
+		"7\x02\x02\xC0\xBF\x03\x02\x02\x02\xC1\xC4\x03\x02\x02\x02\xC2\xC0\x03" +
+		"\x02\x02\x02\xC2\xC3\x03\x02\x02\x02\xC3\xC5\x03\x02\x02\x02\xC4\xC2\x03" +
+		"\x02\x02\x02\xC5\xC6\x07\x02\x02\x03\xC6\x03\x03\x02\x02\x02\xC7\xCB\x05" +
+		"\x06\x04\x02\xC8\xCB\x05\x12\n\x02\xC9\xCB\x05\x14\v\x02\xCA\xC7\x03\x02" +
+		"\x02\x02\xCA\xC8\x03\x02\x02\x02\xCA\xC9\x03\x02\x02\x02\xCB\x05\x03\x02" +
+		"\x02\x02\xCC\xD2\x05\n\x06\x02\xCD\xD2\x05\b\x05\x02\xCE\xD2\x05\f\x07" +
+		"\x02\xCF\xD2\x05\x0E\b\x02\xD0\xD2\x05\x10\t\x02\xD1\xCC\x03\x02\x02\x02" +
+		"\xD1\xCD\x03\x02\x02\x02\xD1\xCE\x03\x02\x02\x02\xD1\xCF\x03\x02\x02\x02" +
+		"\xD1\xD0\x03\x02\x02\x02\xD2\x07\x03\x02\x02\x02\xD3\xD4\x07\x05\x02\x02" +
+		"\xD4\xD5\x05.\x18\x02\xD5\xD6\x07\x1C\x02\x02\xD6\xD7\x077\x02\x02\xD7" +
+		"\xD8\x05\x1C\x0F\x02\xD8\xD9\t\x02\x02\x02\xD9\xDD\x05\x1C\x0F\x02\xDA" +
+		"\xDC\x077\x02\x02\xDB\xDA\x03\x02\x02\x02\xDC\xDF\x03\x02\x02\x02\xDD" +
+		"\xDB\x03\x02\x02\x02\xDD\xDE\x03\x02\x02\x02\xDE\xED\x03\x02\x02\x02\xDF" +
+		"\xDD\x03\x02\x02\x02\xE0\xEA\x05$\x13\x02\xE1\xE3\x077\x02\x02\xE2\xE1" +
+		"\x03\x02\x02\x02\xE3\xE6\x03\x02\x02\x02\xE4\xE2\x03\x02\x02\x02\xE4\xE5" +
+		"\x03\x02\x02\x02\xE5\xE7\x03\x02\x02\x02\xE6\xE4\x03\x02\x02\x02\xE7\xE9" +
+		"\x05$\x13\x02\xE8\xE4\x03\x02\x02\x02\xE9\xEC\x03\x02\x02\x02\xEA\xE8" +
+		"\x03\x02\x02\x02\xEA\xEB\x03\x02\x02\x02\xEB\xEE\x03\x02\x02\x02\xEC\xEA" +
+		"\x03\x02\x02\x02\xED\xE0\x03\x02\x02\x02\xED\xEE\x03\x02\x02\x02\xEE\t" +
+		"\x03\x02\x02\x02\xEF\xF0\x07\x06\x02\x02\xF0\xF1\x05.\x18\x02\xF1\xF5" +
+		"\x07\x1C\x02\x02\xF2\xF4\x077\x02\x02\xF3\xF2\x03\x02\x02\x02\xF4\xF7" +
+		"\x03\x02\x02\x02\xF5\xF3\x03\x02\x02\x02\xF5\xF6\x03\x02\x02\x02\xF6\xF8" +
+		"\x03\x02\x02\x02\xF7\xF5\x03\x02\x02\x02\xF8\xF9\t\x03\x02\x02\xF9\xFA" +
+		"\x05\x1C\x0F\x02\xFA\xFB\t\x02\x02\x02\xFB\u0103\x05\x1C\x0F\x02\xFC\xFD" +
+		"\t\x03\x02\x02\xFD\xFE\x05\x1C\x0F\x02\xFE\xFF\t\x02\x02\x02\xFF\u0100" +
+		"\x05\x1C\x0F\x02\u0100\u0102\x03\x02\x02\x02\u0101\xFC\x03\x02\x02\x02" +
+		"\u0102\u0105\x03\x02\x02\x02\u0103\u0101\x03\x02\x02\x02\u0103\u0104\x03" +
+		"\x02\x02\x02\u0104\u0106\x03\x02\x02\x02\u0105\u0103\x03\x02\x02\x02\u0106" +
+		"\u010A\t\x03\x02\x02\u0107\u0109\x077\x02\x02\u0108\u0107\x03\x02\x02" +
+		"\x02\u0109\u010C\x03\x02\x02\x02\u010A\u0108\x03\x02\x02\x02\u010A\u010B" +
+		"\x03\x02\x02\x02\u010B\u011A\x03\x02\x02\x02\u010C\u010A\x03\x02\x02\x02" +
+		"\u010D\u0117\x05$\x13\x02\u010E\u0110\x077\x02\x02\u010F\u010E\x03\x02" +
+		"\x02\x02\u0110\u0113\x03\x02\x02\x02\u0111\u010F\x03\x02\x02\x02\u0111" +
+		"\u0112\x03\x02\x02\x02\u0112\u0114\x03\x02\x02\x02\u0113\u0111\x03\x02" +
+		"\x02\x02\u0114\u0116\x05$\x13\x02\u0115\u0111\x03\x02\x02\x02\u0116\u0119" +
+		"\x03\x02\x02\x02\u0117\u0115\x03\x02\x02\x02\u0117\u0118\x03\x02\x02\x02" +
+		"\u0118\u011B\x03\x02\x02\x02\u0119\u0117\x03\x02\x02\x02\u011A\u010D\x03" +
+		"\x02\x02\x02\u011A\u011B\x03\x02\x02\x02\u011B\v\x03\x02\x02\x02\u011C" +
+		"\u011D\x07\x07\x02\x02\u011D\u011E\x05.\x18\x02\u011E\u0122\x07\x1C\x02" +
+		"\x02\u011F\u0121\x077\x02\x02\u0120\u011F\x03\x02\x02\x02\u0121\u0124" +
+		"\x03\x02\x02\x02\u0122\u0120\x03\x02\x02\x02\u0122\u0123\x03\x02\x02\x02" +
+		"\u0123\u012A\x03\x02\x02\x02\u0124\u0122\x03\x02\x02\x02\u0125\u0126\t" +
+		"\x03\x02\x02\u0126\u0127\x05\x1C\x0F\x02\u0127\u0128\t\x02\x02\x02\u0128" +
+		"\u0129\x05\x1C\x0F\x02\u0129\u012B\x03\x02\x02\x02\u012A\u0125\x03\x02" +
+		"\x02\x02\u012A\u012B\x03\x02\x02\x02\u012B\u013A\x03\x02\x02\x02\u012C" +
+		"\u012D\t\x03\x02\x02\u012D\u012E\x05\x1C\x0F\x02\u012E\u012F\t\x02\x02" +
+		"\x02\u012F\u0135\x05\x1C\x0F\x02\u0130\u0131\x077\x02\x02\u0131\u0132" +
+		"\x07)\x02\x02\u0132\u0134\x05\x1C\x0F\x02\u0133\u0130\x03\x02\x02\x02" +
+		"\u0134\u0137\x03\x02\x02\x02\u0135\u0133\x03\x02\x02\x02\u0135\u0136\x03" +
+		"\x02\x02\x02\u0136\u0139\x03\x02\x02\x02\u0137\u0135\x03\x02\x02\x02\u0138" +
+		"\u012C\x03\x02\x02\x02\u0139\u013C\x03\x02\x02\x02\u013A\u0138\x03\x02" +
+		"\x02\x02\u013A\u013B\x03\x02\x02\x02\u013B\u013D\x03\x02\x02\x02\u013C" +
+		"\u013A\x03\x02\x02\x02\u013D\u0141\t\x03\x02\x02\u013E\u0140\x077\x02" +
+		"\x02\u013F\u013E\x03\x02\x02\x02\u0140\u0143\x03\x02\x02\x02\u0141\u013F" +
+		"\x03\x02\x02\x02\u0141\u0142\x03\x02\x02\x02\u0142\u0151\x03\x02\x02\x02" +
+		"\u0143\u0141\x03\x02\x02\x02\u0144\u014E\x05$\x13\x02\u0145\u0147\x07" +
+		"7\x02\x02\u0146\u0145\x03\x02\x02\x02\u0147\u014A\x03\x02\x02\x02\u0148" +
+		"\u0146\x03\x02\x02\x02\u0148\u0149\x03\x02\x02\x02\u0149\u014B\x03\x02" +
+		"\x02\x02\u014A\u0148\x03\x02\x02\x02\u014B\u014D\x05$\x13\x02\u014C\u0148" +
+		"\x03";
 	private static readonly _serializedATNSegment1: string =
-		"\x03\x02\x02\x02\u014F\u0152\x03\x02\x02\x02\u0150\u014E\x03\x02\x02\x02" +
-		"\u0151\u0144\x03\x02\x02\x02\u0151\u0152\x03\x02\x02\x02\u0152\r\x03\x02" +
-		"\x02\x02\u0153\u0154\x07\b\x02\x02\u0154\u0155\x05.\x18\x02\u0155\u0159" +
-		"\x07\x1C\x02\x02\u0156\u0158\x077\x02\x02\u0157\u0156\x03\x02\x02\x02" +
-		"\u0158\u015B\x03\x02\x02\x02\u0159\u0157\x03\x02\x02\x02\u0159\u015A\x03" +
-		"\x02\x02\x02\u015A\u015C\x03\x02\x02\x02\u015B\u0159\x03\x02\x02\x02\u015C" +
-		"\u0168\x05\x1A\x0E\x02\u015D\u015E\t\x03\x02\x02\u015E\u015F\x05\x18\r" +
-		"\x02\u015F\u0160\x077\x02\x02\u0160\u0161\x05\x1A\x0E\x02\u0161\u0164" +
-		"\x03\x02\x02\x02\u0162\u0163\t\x02\x02\x02\u0163\u0165\x05\x1A\x0E\x02" +
-		"\u0164\u0162\x03\x02\x02\x02\u0165\u0166\x03\x02\x02\x02\u0166\u0164\x03" +
-		"\x02\x02\x02\u0166\u0167\x03\x02\x02\x02\u0167\u0169\x03\x02\x02\x02\u0168" +
-		"\u015D\x03\x02\x02\x02\u0169\u016A\x03\x02\x02\x02\u016A\u0168\x03\x02" +
-		"\x02\x02\u016A\u016B\x03\x02\x02\x02\u016B\u016C\x03\x02\x02\x02\u016C" +
+		"\x02\x02\x02\u014D\u0150\x03\x02\x02\x02\u014E\u014C\x03\x02\x02\x02\u014E" +
+		"\u014F\x03\x02\x02\x02\u014F\u0152\x03\x02\x02\x02\u0150\u014E\x03\x02" +
+		"\x02\x02\u0151\u0144\x03\x02\x02\x02\u0151\u0152\x03\x02\x02\x02\u0152" +
+		"\r\x03\x02\x02\x02\u0153\u0154\x07\b\x02\x02\u0154\u0155\x05.\x18\x02" +
+		"\u0155\u0159\x07\x1C\x02\x02\u0156\u0158\x077\x02\x02\u0157\u0156\x03" +
+		"\x02\x02\x02\u0158\u015B\x03\x02\x02\x02\u0159\u0157\x03\x02\x02\x02\u0159" +
+		"\u015A\x03\x02\x02\x02\u015A\u015C\x03\x02\x02\x02\u015B\u0159\x03\x02" +
+		"\x02\x02\u015C\u0168\x05\x1A\x0E\x02\u015D\u015E\t\x03\x02\x02\u015E\u015F" +
+		"\x05\x18\r\x02\u015F\u0160\x077\x02\x02\u0160\u0161\x05\x1A\x0E\x02\u0161" +
+		"\u0164\x03\x02\x02\x02\u0162\u0163\t\x02\x02\x02\u0163\u0165\x05\x1A\x0E" +
+		"\x02\u0164\u0162\x03\x02\x02\x02\u0165\u0166\x03\x02\x02\x02\u0166\u0164" +
+		"\x03\x02\x02\x02\u0166\u0167\x03\x02\x02\x02\u0167\u0169\x03\x02\x02\x02" +
+		"\u0168\u015D\x03\x02\x02\x02\u0169\u016A\x03\x02\x02\x02\u016A\u0168\x03" +
+		"\x02\x02\x02\u016A\u016B\x03\x02\x02\x02\u016B\u016C\x03\x02\x02\x02\u016C" +
 		"\u0170\t\x03\x02\x02\u016D\u016F\x077\x02\x02\u016E\u016D\x03\x02\x02" +
 		"\x02\u016F\u0172\x03\x02\x02\x02\u0170\u016E\x03\x02\x02\x02\u0170\u0171" +
 		"\x03\x02\x02\x02\u0171\u0180\x03\x02\x02\x02\u0172\u0170\x03\x02\x02\x02" +
@@ -7254,13 +7281,12 @@ export class flashcardParser extends Parser {
 		"\u03EE\x03\x02\x02\x02\u03ED\u03EB\x03\x02\x02\x02\u03EE\u03F0\x05z>\x02" +
 		"\u03EF\u03EB\x03\x02\x02\x02\u03EF\u03F0\x03\x02\x02\x02\u03F0\u03F2\x03" +
 		"\x02\x02\x02\u03F1\u03D3\x03\x02\x02\x02\u03F1\u03DE\x03\x02\x02\x02\u03F2" +
-		"y\x03\x02\x02\x02\u03F3\u03F4\x07\x1A\x02\x02\u03F4\u03F9\x05\xA4S\x02" +
-		"\u03F5\u03F8\x07\x1D\x02\x02\u03F6\u03F8\x05\xAAV\x02\u03F7\u03F5\x03" +
-		"\x02";
+		"y\x03\x02\x02\x02\u03F3\u03F4\x07\x1A\x02\x02\u03F4\u03F9\x05\xA4S";
 	private static readonly _serializedATNSegment2: string =
-		"\x02\x02\u03F7\u03F6\x03\x02\x02\x02\u03F8\u03FB\x03\x02\x02\x02\u03F9" +
-		"\u03F7\x03\x02\x02\x02\u03F9\u03FA\x03\x02\x02\x02\u03FA\u03FC\x03\x02" +
-		"\x02\x02\u03FB\u03F9\x03\x02\x02\x02\u03FC\u03FD\x07\x1C\x02\x02\u03FD" +
+		"\x02\u03F5\u03F8\x07\x1D\x02\x02\u03F6\u03F8\x05\xAAV\x02\u03F7\u03F5" +
+		"\x03\x02\x02\x02\u03F7\u03F6\x03\x02\x02\x02\u03F8\u03FB\x03\x02\x02\x02" +
+		"\u03F9\u03F7\x03\x02\x02\x02\u03F9\u03FA\x03\x02\x02\x02\u03FA\u03FC\x03" +
+		"\x02\x02\x02\u03FB\u03F9\x03\x02\x02\x02\u03FC\u03FD\x07\x1C\x02\x02\u03FD" +
 		"{\x03\x02\x02\x02\u03FE\u0400\x07\x0F\x02\x02\u03FF\u0401\x05\xA4S\x02" +
 		"\u0400\u03FF\x03\x02\x02\x02\u0400\u0401\x03\x02\x02\x02\u0401\u0402\x03" +
 		"\x02\x02\x02\u0402\u0409\x07\x1C\x02\x02\u0403\u0405\x07\x10\x02\x02\u0404" +
@@ -7318,136 +7344,139 @@ export class flashcardParser extends Parser {
 		"\x02\x02\x02\u046B\u046C\x03\x02\x02\x02\u046C\u046D\x07\x1C\x02\x02\u046D" +
 		"\x89\x03\x02\x02\x02\u046E\u0472\x07\x13\x02\x02\u046F\u0471\x077\x02" +
 		"\x02\u0470\u046F\x03\x02\x02\x02\u0471\u0474\x03\x02\x02\x02\u0472\u0470" +
-		"\x03\x02\x02\x02\u0472\u0473\x03\x02\x02\x02\u0473\u0476\x03\x02\x02\x02" +
+		"\x03\x02\x02\x02\u0472\u0473\x03\x02\x02\x02\u0473\u0478\x03\x02\x02\x02" +
 		"\u0474\u0472\x03\x02\x02\x02\u0475\u0477\x05\xA4S\x02\u0476\u0475\x03" +
-		"\x02\x02\x02\u0476\u0477\x03\x02\x02\x02\u0477\u0493\x03\x02\x02\x02\u0478" +
-		"\u047C\x077\x02\x02\u0479\u047B\x05\xA4S\x02\u047A\u0479\x03\x02\x02\x02" +
-		"\u047B\u047E\x03\x02\x02\x02\u047C\u047A\x03\x02\x02\x02\u047C\u047D\x03" +
-		"\x02\x02\x02\u047D\u0488\x03\x02\x02\x02\u047E\u047C\x03\x02\x02\x02\u047F" +
-		"\u0483\x077\x02\x02\u0480\u0482\x07\x04\x02\x02\u0481\u0480\x03\x02\x02" +
-		"\x02\u0482\u0485\x03\x02\x02\x02\u0483\u0481\x03\x02\x02\x02\u0483\u0484" +
-		"\x03\x02\x02\x02\u0484\u0487\x03\x02\x02\x02\u0485\u0483\x03\x02\x02\x02" +
-		"\u0486\u047F\x03\x02\x02\x02\u0487\u048A\x03\x02\x02\x02\u0488\u0486\x03" +
-		"\x02\x02\x02\u0488\u0489\x03\x02\x02\x02\u0489\u048E\x03\x02\x02\x02\u048A" +
-		"\u0488\x03\x02\x02\x02\u048B\u048D\x077\x02\x02\u048C\u048B\x03\x02\x02" +
-		"\x02\u048D\u0490\x03\x02\x02\x02\u048E\u048C\x03\x02\x02\x02\u048E\u048F" +
-		"\x03\x02\x02\x02\u048F\u0492\x03\x02\x02\x02\u0490\u048E\x03\x02\x02\x02" +
-		"\u0491\u0478\x03\x02\x02\x02\u0492\u0495\x03\x02\x02\x02\u0493\u0491\x03" +
-		"\x02\x02\x02\u0493\u0494\x03\x02\x02\x02\u0494\u0496\x03\x02\x02\x02\u0495" +
-		"\u0493\x03\x02\x02\x02\u0496\u04A3\x07\x1C\x02\x02\u0497\u049B\x07\x13" +
-		"\x02\x02\u0498\u049A\x077\x02\x02\u0499\u0498\x03\x02\x02\x02\u049A\u049D" +
-		"\x03\x02\x02\x02\u049B\u0499\x03\x02\x02\x02\u049B\u049C\x03\x02\x02\x02" +
-		"\u049C\u049F\x03\x02\x02\x02\u049D\u049B\x03\x02\x02\x02\u049E\u04A0\x05" +
-		"\xA4S\x02\u049F\u049E\x03\x02\x02\x02\u049F\u04A0\x03\x02\x02\x02\u04A0" +
-		"\u04A1\x03\x02\x02\x02\u04A1\u04A3\x07\x02\x02\x03\u04A2\u046E\x03\x02" +
-		"\x02\x02\u04A2\u0497\x03\x02\x02\x02\u04A3\x8B\x03\x02\x02\x02\u04A4\u04A6" +
-		"\x07\x14\x02\x02\u04A5\u04A7\n\x12\x02\x02\u04A6\u04A5\x03\x02\x02\x02" +
-		"\u04A7\u04A8\x03\x02\x02\x02\u04A8\u04A6\x03\x02\x02\x02\u04A8\u04A9\x03" +
-		"\x02\x02\x02\u04A9\u04AA\x03\x02\x02\x02\u04AA\u04AB\x07\x1C\x02\x02\u04AB" +
-		"\x8D\x03\x02\x02\x02\u04AC\u04AF\x07\x1B\x02\x02\u04AD\u04B0\x05\xA4S" +
-		"\x02\u04AE\u04B0\x077\x02\x02\u04AF\u04AD\x03\x02\x02\x02\u04AF\u04AE" +
-		"\x03\x02\x02\x02\u04B0\u04B1\x03\x02\x02\x02\u04B1\u04AF\x03\x02\x02\x02" +
-		"\u04B1\u04B2\x03\x02\x02\x02\u04B2\u04B3\x03\x02\x02\x02\u04B3\u04B9\x07" +
-		"\x1C\x02\x02\u04B4\u04B5\x07\x1B\x02\x02\u04B5\u04B6\x05\xA4S\x02\u04B6" +
-		"\u04B7\x07\x02\x02\x03\u04B7\u04B9\x03\x02\x02\x02\u04B8\u04AC\x03\x02" +
-		"\x02\x02\u04B8\u04B4\x03\x02\x02\x02\u04B9\x8F\x03\x02\x02\x02\u04BA\u04BB" +
-		"\x07J\x02\x02\u04BB\u04BC\x05\xA4S\x02\u04BC\u04BD\x07\x1C\x02\x02\u04BD" +
-		"\u04C3\x03\x02\x02\x02\u04BE\u04BF\x07K\x02\x02\u04BF\u04C0\x05\xA4S\x02" +
-		"\u04C0\u04C1\x07\x1C\x02\x02\u04C1\u04C3\x03\x02\x02\x02\u04C2\u04BA\x03" +
-		"\x02\x02\x02\u04C2\u04BE\x03\x02\x02\x02\u04C3\x91\x03\x02\x02\x02\u04C4" +
-		"\u04C5\x07A\x02\x02\u04C5\u04C6\x07\x1D\x02\x02\u04C6\u04C7\x075\x02\x02" +
-		"\u04C7\u04CE\x07\x1C\x02\x02\u04C8\u04C9\x07A\x02\x02\u04C9\u04CA\x07" +
-		"\x1D\x02\x02\u04CA\u04CB\x05\xA4S\x02\u04CB\u04CC\x07\x1C\x02\x02\u04CC" +
-		"\u04CE\x03\x02\x02\x02\u04CD\u04C4\x03\x02\x02\x02\u04CD\u04C8\x03\x02" +
-		"\x02\x02\u04CE\x93\x03\x02\x02\x02\u04CF\u04D0\x07V\x02\x02\u04D0\u04D1" +
-		"\x05\xA4S\x02\u04D1\u04D2\x07\x1C\x02\x02\u04D2\x95\x03\x02\x02\x02\u04D3" +
-		"\u04D4\x07W\x02\x02\u04D4\u04D5\x05\xA4S\x02\u04D5\u04D6\x07\x1C\x02\x02" +
-		"\u04D6\x97\x03\x02\x02\x02\u04D7\u04E1\x05\x9AN\x02\u04D8\u04DA\x077\x02" +
-		"\x02\u04D9\u04D8\x03\x02\x02\x02\u04DA\u04DD\x03\x02\x02\x02\u04DB\u04D9" +
-		"\x03\x02\x02\x02\u04DB\u04DC\x03\x02\x02\x02\u04DC\u04DE\x03\x02\x02\x02" +
-		"\u04DD\u04DB\x03\x02\x02\x02\u04DE\u04E0\x05\x9AN\x02\u04DF\u04DB\x03" +
-		"\x02\x02\x02\u04E0\u04E3\x03\x02\x02\x02\u04E1\u04DF\x03\x02\x02\x02\u04E1" +
-		"\u04E2\x03\x02\x02\x02\u04E2\x99\x03\x02\x02\x02\u04E3\u04E1\x03\x02\x02" +
-		"\x02\u04E4\u04E5\x07\x15\x02\x02\u04E5\u04E6\x05\xA4S\x02\u04E6\u04E7" +
-		"\t\x13\x02\x02\u04E7\u04ED\x05\xA4S\x02\u04E8\u04EC\x077\x02\x02\u04E9" +
-		"\u04EC\x07\x1D\x02\x02\u04EA\u04EC\x05\xA4S\x02\u04EB\u04E8\x03\x02\x02" +
-		"\x02\u04EB\u04E9\x03\x02\x02\x02\u04EB\u04EA\x03\x02\x02\x02\u04EC\u04EF" +
-		"\x03\x02\x02\x02\u04ED\u04EB\x03\x02\x02\x02\u04ED\u04EE\x03\x02\x02\x02" +
-		"\u04EE\u04F0\x03\x02\x02\x02\u04EF\u04ED\x03\x02\x02\x02\u04F0\u04F1\x07" +
-		"\x1C\x02\x02\u04F1\u04FB\x03\x02\x02\x02\u04F2\u04F6\x07T\x02\x02\u04F3" +
-		"\u04F5\v\x02\x02\x02\u04F4\u04F3\x03\x02\x02\x02\u04F5\u04F8\x03\x02\x02" +
-		"\x02\u04F6\u04F7\x03\x02\x02\x02\u04F6\u04F4\x03\x02\x02\x02\u04F7\u04F9" +
-		"\x03\x02\x02\x02\u04F8\u04F6\x03\x02\x02\x02\u04F9\u04FB\x07\x1C\x02\x02" +
-		"\u04FA\u04E4\x03\x02\x02\x02\u04FA\u04F2\x03\x02\x02\x02\u04FB\x9B\x03" +
-		"\x02\x02\x02\u04FC\u0500\x07\f\x02\x02\u04FD\u0501\x05\xA4S\x02\u04FE" +
-		"\u0501\x07\x1D\x02\x02\u04FF\u0501\x077\x02\x02\u0500\u04FD\x03\x02\x02" +
-		"\x02\u0500\u04FE\x03\x02\x02\x02\u0500\u04FF\x03\x02\x02\x02\u0501\u0502" +
-		"\x03\x02\x02\x02\u0502\u0500\x03\x02\x02\x02\u0502\u0503\x03\x02\x02\x02" +
-		"\u0503\u0504\x03\x02\x02\x02\u0504\u0510\x07\x1C\x02\x02\u0505\u050B\x07" +
-		"\f\x02\x02\u0506\u050A\x05\xA4S\x02\u0507\u050A\x07\x1D\x02\x02\u0508" +
-		"\u050A\x077\x02\x02\u0509\u0506\x03\x02\x02\x02\u0509\u0507\x03\x02\x02" +
-		"\x02\u0509\u0508\x03\x02\x02\x02\u050A\u050D\x03\x02\x02\x02\u050B\u0509" +
-		"\x03\x02\x02\x02\u050B\u050C\x03\x02\x02\x02\u050C\u050E\x03\x02\x02\x02" +
-		"\u050D\u050B\x03\x02\x02\x02\u050E\u0510\x07\x02\x02\x03\u050F\u04FC\x03" +
-		"\x02\x02\x02\u050F\u0505\x03\x02\x02\x02\u0510\x9D\x03\x02\x02\x02\u0511" +
-		"\u0513\x07\x11\x02\x02\u0512\u0514\x05\xA4S\x02\u0513\u0512\x03\x02\x02" +
-		"\x02\u0513\u0514\x03\x02\x02\x02\u0514\u0515\x03\x02\x02\x02\u0515\u0516" +
-		"\x07\x1C\x02\x02\u0516\x9F\x03\x02\x02\x02\u0517\u0518\x07\x1F\x02\x02" +
-		"\u0518\xA1\x03\x02\x02\x02\u0519\u051B\x05\xA4S\x02\u051A\u051C\x077\x02" +
-		"\x02\u051B\u051A\x03\x02\x02\x02\u051B\u051C\x03\x02\x02\x02\u051C\u051E" +
-		"\x03\x02\x02\x02\u051D\u0519\x03\x02\x02\x02\u051E\u051F\x03\x02\x02\x02" +
-		"\u051F\u051D\x03\x02\x02\x02\u051F\u0520\x03\x02\x02\x02\u0520\xA3\x03" +
-		"\x02\x02\x02\u0521\u0528\x076\x02\x02\u0522\u0524\x07\x04\x02\x02\u0523" +
-		"\u0522\x03\x02\x02\x02\u0524\u0525\x03\x02\x02\x02\u0525\u0523\x03\x02" +
-		"\x02\x02\u0525\u0526\x03\x02\x02\x02\u0526\u0527\x03\x02\x02\x02\u0527" +
-		"\u0529\x075\x02\x02\u0528\u0523\x03\x02\x02\x02\u0528\u0529\x03\x02\x02" +
-		"\x02\u0529\u054E\x03\x02\x02\x02\u052A\u0531\x05\xAAV\x02\u052B\u052D" +
-		"\x07\x04\x02\x02\u052C\u052B\x03\x02\x02\x02\u052D\u052E\x03\x02\x02\x02" +
-		"\u052E\u052C\x03\x02\x02\x02\u052E\u052F\x03\x02\x02\x02\u052F\u0530\x03" +
-		"\x02\x02\x02\u0530\u0532\x075\x02\x02\u0531\u052C\x03\x02\x02\x02\u0531" +
-		"\u0532\x03\x02\x02\x02\u0532\u054E\x03\x02\x02\x02\u0533\u0534\x07\x18" +
-		"\x02\x02\u0534\u0535\x05\xA4S\x02\u0535\u0536\x07\x1C\x02\x02\u0536\u054E" +
-		"\x03\x02\x02\x02\u0537\u054E\x075\x02\x02\u0538\u053A\x07\x04\x02\x02" +
-		"\u0539\u0538\x03\x02\x02\x02\u053A\u053D\x03\x02\x02\x02\u053B\u0539\x03" +
-		"\x02\x02\x02\u053B\u053C\x03\x02\x02\x02\u053C\u053E\x03\x02\x02\x02\u053D" +
-		"\u053B\x03\x02\x02\x02\u053E\u0542\x07\x1D\x02\x02\u053F\u0541\x07\x04" +
-		"\x02\x02\u0540\u053F\x03\x02\x02\x02\u0541\u0544\x03\x02\x02\x02\u0542" +
-		"\u0540\x03\x02\x02\x02\u0542\u0543\x03\x02\x02\x02\u0543\u054E\x03\x02" +
-		"\x02\x02\u0544\u0542\x03\x02\x02\x02\u0545\u0549\x07\x1E\x02\x02\u0546" +
+		"\x02\x02\x02\u0477\u047A\x03\x02\x02\x02\u0478\u0476\x03\x02\x02\x02\u0478" +
+		"\u0479\x03\x02\x02\x02\u0479\u049A\x03\x02\x02\x02\u047A\u0478\x03\x02" +
+		"\x02\x02\u047B\u047D\x077\x02\x02\u047C\u047B\x03\x02\x02\x02\u047D\u0480" +
+		"\x03\x02\x02\x02\u047E\u047C\x03\x02\x02\x02\u047E\u047F\x03\x02\x02\x02" +
+		"\u047F\u0482\x03\x02\x02\x02\u0480\u047E\x03\x02\x02\x02\u0481\u0483\x05" +
+		"\xA4S\x02\u0482\u0481\x03\x02\x02\x02\u0483\u0484\x03\x02\x02\x02\u0484" +
+		"\u0482\x03\x02\x02\x02\u0484\u0485\x03\x02\x02\x02\u0485\u048F\x03\x02" +
+		"\x02\x02\u0486\u048A\x077\x02\x02\u0487\u0489\x07\x04\x02\x02\u0488\u0487" +
+		"\x03\x02\x02\x02\u0489\u048C\x03\x02\x02\x02\u048A\u0488\x03\x02\x02\x02" +
+		"\u048A\u048B\x03\x02\x02\x02\u048B\u048E\x03\x02\x02\x02\u048C\u048A\x03" +
+		"\x02\x02\x02\u048D\u0486\x03\x02\x02\x02\u048E\u0491\x03\x02\x02\x02\u048F" +
+		"\u048D\x03\x02\x02\x02\u048F\u0490\x03\x02\x02\x02\u0490\u0495\x03\x02" +
+		"\x02\x02\u0491\u048F\x03\x02\x02\x02\u0492\u0494\x077\x02\x02\u0493\u0492" +
+		"\x03\x02\x02\x02\u0494\u0497\x03\x02\x02\x02\u0495\u0493\x03\x02\x02\x02" +
+		"\u0495\u0496\x03\x02\x02\x02\u0496\u0499\x03\x02\x02\x02\u0497\u0495\x03" +
+		"\x02\x02\x02\u0498\u047E\x03\x02\x02\x02\u0499\u049C\x03\x02\x02\x02\u049A" +
+		"\u0498\x03\x02\x02\x02\u049A\u049B\x03\x02\x02\x02\u049B\u049D\x03\x02" +
+		"\x02\x02\u049C\u049A\x03\x02\x02\x02\u049D\u04AA\x07\x1C\x02\x02\u049E" +
+		"\u04A2\x07\x13\x02\x02\u049F\u04A1\x077\x02\x02\u04A0\u049F\x03\x02\x02" +
+		"\x02\u04A1\u04A4\x03\x02\x02\x02\u04A2\u04A0\x03\x02\x02\x02\u04A2\u04A3" +
+		"\x03\x02\x02\x02\u04A3\u04A6\x03\x02\x02\x02\u04A4\u04A2\x03\x02\x02\x02" +
+		"\u04A5\u04A7\x05\xA4S\x02\u04A6\u04A5\x03\x02\x02\x02\u04A6\u04A7\x03" +
+		"\x02\x02\x02\u04A7\u04A8\x03\x02\x02\x02\u04A8\u04AA\x07\x02\x02\x03\u04A9" +
+		"\u046E\x03\x02\x02\x02\u04A9\u049E\x03\x02\x02\x02\u04AA\x8B\x03\x02\x02" +
+		"\x02\u04AB\u04AD\x07\x14\x02\x02\u04AC\u04AE\n\x12\x02\x02\u04AD\u04AC" +
+		"\x03\x02\x02\x02\u04AE\u04AF\x03\x02\x02\x02\u04AF\u04AD\x03\x02\x02\x02" +
+		"\u04AF\u04B0\x03\x02\x02\x02\u04B0\u04B1\x03\x02\x02\x02\u04B1\u04B2\x07" +
+		"\x1C\x02\x02\u04B2\x8D\x03\x02\x02\x02\u04B3\u04B6\x07\x1B\x02\x02\u04B4" +
+		"\u04B7\x05\xA4S\x02\u04B5\u04B7\x077\x02\x02\u04B6\u04B4\x03\x02\x02\x02" +
+		"\u04B6\u04B5\x03\x02\x02\x02\u04B7\u04B8\x03\x02\x02\x02\u04B8\u04B6\x03" +
+		"\x02\x02\x02\u04B8\u04B9\x03\x02\x02\x02\u04B9\u04BA\x03\x02\x02\x02\u04BA" +
+		"\u04C0\x07\x1C\x02\x02\u04BB\u04BC\x07\x1B\x02\x02\u04BC\u04BD\x05\xA4" +
+		"S\x02\u04BD\u04BE\x07\x02\x02\x03\u04BE\u04C0\x03\x02\x02\x02\u04BF\u04B3" +
+		"\x03\x02\x02\x02\u04BF\u04BB\x03\x02\x02\x02\u04C0\x8F\x03\x02\x02\x02" +
+		"\u04C1\u04C2\x07J\x02\x02\u04C2\u04C3\x05\xA4S\x02\u04C3\u04C4\x07\x1C" +
+		"\x02\x02\u04C4\u04CA\x03\x02\x02\x02\u04C5\u04C6\x07K\x02\x02\u04C6\u04C7" +
+		"\x05\xA4S\x02\u04C7\u04C8\x07\x1C\x02\x02\u04C8\u04CA\x03\x02\x02\x02" +
+		"\u04C9\u04C1\x03\x02\x02\x02\u04C9\u04C5\x03\x02\x02\x02\u04CA\x91\x03" +
+		"\x02\x02\x02\u04CB\u04CC\x07A\x02\x02\u04CC\u04CD\x07\x1D\x02\x02\u04CD" +
+		"\u04CE\x075\x02\x02\u04CE\u04D5\x07\x1C\x02\x02\u04CF\u04D0\x07A\x02\x02" +
+		"\u04D0\u04D1\x07\x1D\x02\x02\u04D1\u04D2\x05\xA4S\x02\u04D2\u04D3\x07" +
+		"\x1C\x02\x02\u04D3\u04D5\x03\x02\x02\x02\u04D4\u04CB\x03\x02\x02\x02\u04D4" +
+		"\u04CF\x03\x02\x02\x02\u04D5\x93\x03\x02\x02\x02\u04D6\u04D7\x07V\x02" +
+		"\x02\u04D7\u04D8\x05\xA4S\x02\u04D8\u04D9\x07\x1C\x02\x02\u04D9\x95\x03" +
+		"\x02\x02\x02\u04DA\u04DB\x07W\x02\x02\u04DB\u04DC\x05\xA4S\x02\u04DC\u04DD" +
+		"\x07\x1C\x02\x02\u04DD\x97\x03\x02\x02\x02\u04DE\u04E8\x05\x9AN\x02\u04DF" +
+		"\u04E1\x077\x02\x02\u04E0\u04DF\x03\x02\x02\x02\u04E1\u04E4\x03\x02\x02" +
+		"\x02\u04E2\u04E0\x03\x02\x02\x02\u04E2\u04E3\x03\x02\x02\x02\u04E3\u04E5" +
+		"\x03\x02\x02\x02\u04E4\u04E2\x03\x02\x02\x02\u04E5\u04E7\x05\x9AN\x02" +
+		"\u04E6\u04E2\x03\x02\x02\x02\u04E7\u04EA\x03\x02\x02\x02\u04E8\u04E6\x03" +
+		"\x02\x02\x02\u04E8\u04E9\x03\x02\x02\x02\u04E9\x99\x03\x02\x02\x02\u04EA" +
+		"\u04E8\x03\x02\x02\x02\u04EB\u04EC\x07\x15\x02\x02\u04EC\u04ED\x05\xA4" +
+		"S\x02\u04ED\u04EE\t\x13\x02\x02\u04EE\u04F4\x05\xA4S\x02\u04EF\u04F3\x07" +
+		"7\x02\x02\u04F0\u04F3\x07\x1D\x02\x02\u04F1\u04F3\x05\xA4S\x02\u04F2\u04EF" +
+		"\x03\x02\x02\x02\u04F2\u04F0\x03\x02\x02\x02\u04F2\u04F1\x03\x02\x02\x02" +
+		"\u04F3\u04F6\x03\x02\x02\x02\u04F4\u04F2\x03\x02\x02\x02\u04F4\u04F5\x03" +
+		"\x02\x02\x02\u04F5\u04F7\x03\x02\x02\x02\u04F6\u04F4\x03\x02\x02\x02\u04F7" +
+		"\u04F8\x07\x1C\x02\x02\u04F8\u0502\x03\x02\x02\x02\u04F9\u04FD\x07T\x02" +
+		"\x02\u04FA\u04FC\v\x02\x02\x02\u04FB\u04FA\x03\x02\x02\x02\u04FC\u04FF" +
+		"\x03\x02\x02\x02\u04FD\u04FE\x03\x02\x02\x02\u04FD\u04FB\x03\x02\x02\x02" +
+		"\u04FE\u0500\x03\x02\x02\x02\u04FF\u04FD\x03\x02\x02\x02\u0500\u0502\x07" +
+		"\x1C\x02\x02\u0501\u04EB\x03\x02\x02\x02\u0501\u04F9\x03\x02\x02\x02\u0502" +
+		"\x9B\x03\x02\x02\x02\u0503\u0507\x07\f\x02\x02\u0504\u0508\x05\xA4S\x02" +
+		"\u0505\u0508\x07\x1D\x02\x02\u0506\u0508\x077\x02\x02\u0507\u0504\x03" +
+		"\x02\x02\x02\u0507\u0505\x03\x02\x02\x02\u0507\u0506\x03\x02\x02\x02\u0508" +
+		"\u0509\x03\x02\x02\x02\u0509\u0507\x03\x02\x02\x02\u0509\u050A\x03\x02" +
+		"\x02\x02\u050A\u050B\x03\x02\x02\x02\u050B\u0517\x07\x1C\x02\x02\u050C" +
+		"\u0512\x07\f\x02\x02\u050D\u0511\x05\xA4S\x02\u050E\u0511\x07\x1D\x02" +
+		"\x02\u050F\u0511\x077\x02\x02\u0510\u050D\x03\x02\x02\x02\u0510\u050E" +
+		"\x03\x02\x02\x02\u0510\u050F\x03\x02\x02\x02\u0511\u0514\x03\x02\x02\x02" +
+		"\u0512\u0510\x03\x02\x02\x02\u0512\u0513\x03\x02\x02\x02\u0513\u0515\x03" +
+		"\x02\x02\x02\u0514\u0512\x03\x02\x02\x02\u0515\u0517\x07\x02\x02\x03\u0516" +
+		"\u0503\x03\x02\x02\x02\u0516\u050C\x03\x02\x02\x02\u0517\x9D\x03\x02\x02" +
+		"\x02\u0518\u051A\x07\x11\x02\x02\u0519\u051B\x05\xA4S\x02\u051A\u0519" +
+		"\x03\x02\x02\x02\u051A\u051B\x03\x02\x02\x02\u051B\u051C\x03\x02\x02\x02" +
+		"\u051C\u051D\x07\x1C\x02\x02\u051D\x9F\x03\x02\x02\x02\u051E\u051F\x07" +
+		"\x1F\x02\x02\u051F\xA1\x03\x02\x02\x02\u0520\u0522\x05\xA4S\x02\u0521" +
+		"\u0523\x077\x02\x02\u0522\u0521\x03\x02\x02\x02\u0522\u0523\x03\x02\x02" +
+		"\x02\u0523\u0525\x03\x02\x02\x02\u0524\u0520\x03\x02\x02\x02\u0525\u0526" +
+		"\x03\x02\x02\x02\u0526\u0524\x03\x02\x02\x02\u0526\u0527\x03\x02\x02\x02" +
+		"\u0527\xA3\x03\x02\x02\x02\u0528\u052F\x076\x02\x02\u0529\u052B\x07\x04" +
+		"\x02\x02\u052A\u0529\x03\x02\x02\x02\u052B\u052C\x03\x02\x02\x02\u052C" +
+		"\u052A\x03\x02\x02\x02\u052C\u052D\x03\x02\x02\x02\u052D\u052E\x03\x02" +
+		"\x02\x02\u052E\u0530\x075\x02\x02\u052F\u052A\x03\x02\x02\x02\u052F\u0530" +
+		"\x03\x02\x02\x02\u0530\u0555\x03\x02\x02\x02\u0531\u0538\x05\xAAV\x02" +
+		"\u0532\u0534\x07\x04\x02\x02\u0533\u0532\x03\x02\x02\x02\u0534\u0535\x03" +
+		"\x02\x02\x02\u0535\u0533\x03\x02\x02\x02\u0535\u0536\x03\x02\x02\x02\u0536" +
+		"\u0537\x03\x02\x02\x02\u0537\u0539\x075\x02\x02\u0538\u0533\x03\x02\x02" +
+		"\x02\u0538\u0539\x03\x02\x02\x02\u0539\u0555\x03\x02\x02\x02\u053A\u053B" +
+		"\x07\x18\x02\x02\u053B\u053C\x05\xA4S\x02\u053C\u053D\x07\x1C\x02\x02" +
+		"\u053D\u0555\x03\x02\x02\x02\u053E\u0555\x075\x02\x02\u053F\u0541\x07" +
+		"\x04\x02\x02\u0540\u053F\x03\x02\x02\x02\u0541\u0544\x03\x02\x02\x02\u0542" +
+		"\u0540\x03\x02\x02\x02\u0542\u0543\x03\x02\x02\x02\u0543\u0545\x03\x02" +
+		"\x02\x02\u0544\u0542\x03\x02\x02\x02\u0545\u0549\x07\x1D\x02\x02\u0546" +
 		"\u0548\x07\x04\x02\x02\u0547\u0546\x03\x02\x02\x02\u0548\u054B\x03\x02" +
 		"\x02\x02\u0549\u0547\x03\x02\x02\x02\u0549\u054A\x03\x02\x02\x02\u054A" +
-		"\u054E\x03\x02\x02\x02\u054B\u0549\x03\x02\x02\x02\u054C\u054E\x07\xA3" +
-		"\x02\x02\u054D\u0521\x03\x02\x02\x02\u054D\u052A\x03\x02\x02\x02\u054D" +
-		"\u0533\x03\x02\x02\x02\u054D\u0537\x03\x02\x02\x02\u054D\u053B\x03\x02" +
-		"\x02\x02\u054D\u0545\x03\x02\x02\x02\u054D\u054C\x03\x02\x02\x02\u054E" +
-		"\xA5\x03\x02\x02\x02\u054F\u0550\x07\x1C\x02\x02\u0550\xA7\x03\x02\x02" +
-		"\x02\u0551\u0552\t\x14\x02\x02\u0552\xA9\x03\x02\x02\x02\u0553\u055F\x07" +
-		":\x02\x02\u0554\u055F\x078\x02\x02\u0555\u055F\x07;\x02\x02\u0556\u055F" +
-		"\x079\x02\x02\u0557\u055F\x07\x1E\x02\x02\u0558\u0559\x07\"\x02\x02\u0559" +
-		"\u055F\n\x15\x02\x02\u055A\u055B\x07#\x02\x02\u055B\u055F\n\x16\x02\x02" +
-		"\u055C\u055F\x07&\x02\x02\u055D\u055F\x07%\x02\x02\u055E\u0553\x03\x02" +
-		"\x02\x02\u055E\u0554\x03\x02\x02\x02\u055E\u0555\x03\x02\x02\x02\u055E" +
-		"\u0556\x03\x02\x02\x02\u055E\u0557\x03\x02\x02\x02\u055E\u0558\x03\x02" +
-		"\x02\x02\u055E\u055A\x03\x02\x02\x02\u055E\u055C\x03\x02\x02\x02\u055E" +
-		"\u055D\x03\x02\x02\x02\u055F\u0560\x03\x02\x02\x02\u0560\u055E\x03\x02" +
-		"\x02\x02\u0560\u0561\x03\x02\x02\x02\u0561\xAB\x03\x02\x02\x02\u0562\u0563" +
-		"\x07\x04\x02\x02\u0563\xAD\x03\x02\x02\x02\xC0\xB2\xB8\xBD\xC2\xCA\xD1" +
-		"\xDD\xE4\xEA\xED\xF5\u0103\u010A\u0111\u0117\u011A\u0122\u012A\u0135\u013A" +
-		"\u0141\u0148\u014E\u0151\u0159\u0166\u016A\u0170\u0177\u017D\u0180\u0188" +
-		"\u0195\u019A\u01A1\u01A7\u01AA\u01B2\u01B9\u01BE\u01C5\u01CB\u01CF\u01D4" +
-		"\u01DA\u01E1\u01E7\u01EA\u01F2\u01F9\u01FE\u0205\u020B\u020F\u0217\u021D" +
-		"\u0220\u0227\u022B\u0230\u0237\u023F\u0247\u0263\u026D\u026F\u0276\u027B" +
-		"\u0284\u028D\u0293\u0295\u02A3\u02AA\u02AF\u02B3\u02B7\u02BA\u02BF\u02D6" +
-		"\u02DB\u02E0\u02E2\u02EC\u02F6\u0300\u0306\u030D\u0313\u031B\u0325\u0330" +
-		"\u0336\u033B\u0342\u034B\u034F\u0353\u0356\u0365\u0369\u0378\u037C\u0382" +
-		"\u038D\u0392\u0397\u0399\u039E\u03A3\u03A8\u03AA\u03AF\u03B5\u03BA\u03BC" +
-		"\u03C7\u03CB\u03D8\u03DC\u03E2\u03E4\u03EB\u03EF\u03F1\u03F7\u03F9\u0400" +
-		"\u0405\u0408\u040E\u0411\u0415\u041C\u0421\u0427\u042C\u0434\u0436\u043A" +
-		"\u0441\u0443\u044C\u044E\u0452\u045C\u045E\u0462\u0468\u046A\u0472\u0476" +
-		"\u047C\u0483\u0488\u048E\u0493\u049B\u049F\u04A2\u04A8\u04AF\u04B1\u04B8" +
-		"\u04C2\u04CD\u04DB\u04E1\u04EB\u04ED\u04F6\u04FA\u0500\u0502\u0509\u050B" +
-		"\u050F\u0513\u051B\u051F\u0525\u0528\u052E\u0531\u053B\u0542\u0549\u054D" +
-		"\u055E\u0560";
+		"\u0555\x03\x02\x02\x02\u054B\u0549\x03\x02\x02\x02\u054C\u0550\x07\x1E" +
+		"\x02\x02\u054D\u054F\x07\x04\x02\x02\u054E\u054D\x03\x02\x02\x02\u054F" +
+		"\u0552\x03\x02\x02\x02\u0550\u054E\x03\x02\x02\x02\u0550\u0551\x03\x02" +
+		"\x02\x02\u0551\u0555\x03\x02\x02\x02\u0552\u0550\x03\x02\x02\x02\u0553" +
+		"\u0555\x07\xA3\x02\x02\u0554\u0528\x03\x02\x02\x02\u0554\u0531\x03\x02" +
+		"\x02\x02\u0554\u053A\x03\x02\x02\x02\u0554\u053E\x03\x02\x02\x02\u0554" +
+		"\u0542\x03\x02\x02\x02\u0554\u054C\x03\x02\x02\x02\u0554\u0553\x03\x02" +
+		"\x02\x02\u0555\xA5\x03\x02\x02\x02\u0556\u0557\x07\x1C\x02\x02\u0557\xA7" +
+		"\x03\x02\x02\x02\u0558\u0559\t\x14\x02\x02\u0559\xA9\x03\x02\x02\x02\u055A" +
+		"\u0566\x07:\x02\x02\u055B\u0566\x078\x02\x02\u055C\u0566\x07;\x02\x02" +
+		"\u055D\u0566\x079\x02\x02\u055E\u0566\x07\x1E\x02\x02\u055F\u0560\x07" +
+		"\"\x02\x02\u0560\u0566\n\x15\x02\x02\u0561\u0562\x07#\x02\x02\u0562\u0566" +
+		"\n\x16\x02\x02\u0563\u0566\x07&\x02\x02\u0564\u0566\x07%\x02\x02\u0565" +
+		"\u055A\x03\x02\x02\x02\u0565\u055B\x03\x02\x02\x02\u0565\u055C\x03\x02" +
+		"\x02\x02\u0565\u055D\x03\x02\x02\x02\u0565\u055E\x03\x02\x02\x02\u0565" +
+		"\u055F\x03\x02\x02\x02\u0565\u0561\x03\x02\x02\x02\u0565\u0563\x03\x02" +
+		"\x02\x02\u0565\u0564\x03\x02\x02\x02\u0566\u0567\x03\x02\x02\x02\u0567" +
+		"\u0565\x03\x02\x02\x02\u0567\u0568\x03\x02\x02\x02\u0568\xAB\x03\x02\x02" +
+		"\x02\u0569\u056A\x07\x04\x02\x02\u056A\xAD\x03\x02\x02\x02\xC1\xB2\xB8" +
+		"\xBD\xC2\xCA\xD1\xDD\xE4\xEA\xED\xF5\u0103\u010A\u0111\u0117\u011A\u0122" +
+		"\u012A\u0135\u013A\u0141\u0148\u014E\u0151\u0159\u0166\u016A\u0170\u0177" +
+		"\u017D\u0180\u0188\u0195\u019A\u01A1\u01A7\u01AA\u01B2\u01B9\u01BE\u01C5" +
+		"\u01CB\u01CF\u01D4\u01DA\u01E1\u01E7\u01EA\u01F2\u01F9\u01FE\u0205\u020B" +
+		"\u020F\u0217\u021D\u0220\u0227\u022B\u0230\u0237\u023F\u0247\u0263\u026D" +
+		"\u026F\u0276\u027B\u0284\u028D\u0293\u0295\u02A3\u02AA\u02AF\u02B3\u02B7" +
+		"\u02BA\u02BF\u02D6\u02DB\u02E0\u02E2\u02EC\u02F6\u0300\u0306\u030D\u0313" +
+		"\u031B\u0325\u0330\u0336\u033B\u0342\u034B\u034F\u0353\u0356\u0365\u0369" +
+		"\u0378\u037C\u0382\u038D\u0392\u0397\u0399\u039E\u03A3\u03A8\u03AA\u03AF" +
+		"\u03B5\u03BA\u03BC\u03C7\u03CB\u03D8\u03DC\u03E2\u03E4\u03EB\u03EF\u03F1" +
+		"\u03F7\u03F9\u0400\u0405\u0408\u040E\u0411\u0415\u041C\u0421\u0427\u042C" +
+		"\u0434\u0436\u043A\u0441\u0443\u044C\u044E\u0452\u045C\u045E\u0462\u0468" +
+		"\u046A\u0472\u0478\u047E\u0484\u048A\u048F\u0495\u049A\u04A2\u04A6\u04A9" +
+		"\u04AF\u04B6\u04B8\u04BF\u04C9\u04D4\u04E2\u04E8\u04F2\u04F4\u04FD\u0501" +
+		"\u0507\u0509\u0510\u0512\u0516\u051A\u0522\u0526\u052C\u052F\u0535\u0538" +
+		"\u0542\u0549\u0550\u0554\u0565\u0567";
 	public static readonly _serializedATN: string = Utils.join(
 		[
 			flashcardParser._serializedATNSegment0,

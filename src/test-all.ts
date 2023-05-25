@@ -174,6 +174,8 @@ const testfiles:string[] = [
   './tests/utfgpun.bit',
   './tests/vendor-amchart.bit',  
   './tests/url-regex.bit',
+  './tests/aiX.bit',
+  './tests/ai.bit',
   
   // GMB
   './tests/GMB/cloze.bit',

@@ -36,24 +36,6 @@ function replaceFrom(base: string, search:string, replace:string, from:number):s
     return base;
 };
 
-/*
-interface String {
-    camelize(s:String): String;
-    replaceFrom(search:string, replace:string, from:number): string;
-};
-String.prototype.camelize = function(s:string):string {
-    return s.replace(/-./g, x=>x[1].toUpperCase());
-};
-// Sep 10, 2022 added this to fix  a bug in exitMpanswer__ body text replace.
-String.prototype.replaceFrom = function(search:string, replace:string, from:number):string {
-    if (this.length > from) {
-	return this.slice(0, from) + this.slice(from).replace(search, replace);
-    }
-    return this.toString(); // ?????
-};
-*/
-
-
 
 // This class defines a complete listener for a parse tree produced by bitmarkParser.
 class BitmarkListener {
@@ -73,6 +55,7 @@ class BitmarkListener {
     fmtlist: string[];
     atdef_str: string[];
     atdef_num: string[];
+    atdef_bool: string[];
     bot_action_rating: any[];
     body_key: string;
     num_angleref: number;
@@ -122,6 +105,7 @@ class BitmarkListener {
 			    'releaseDate', 'releaseVersion'
 			   ];
 	this.atdef_num = ['focusX', 'focusY', 'numberOfStars'];
+	this.atdef_bool = ['aiGenerated'];	
 	this.bot_action_rating = [];  // for storing bot-action-rating at exitHint()
 	
 	this.body_key = 'body';
@@ -394,9 +378,8 @@ class BitmarkListener {
 	if (0 < this.stk.size) {
 	    const what = this.curr_bit_stk.top();
 
-	    if (what==='cplus' || what==='cminus' || what==='pair'
-		|| what==='interview_qanda' || what==='essay'
-		|| what==='mcrmisc' || what==='panswer') {
+	    if (['cplus', 'cminus', 'pair', 'interview_qanda', 'essay', 'mcrmisc', 'panswer']
+		    .indexOf(what) >= 0) {
 		(this.curr_bit_stk.bottom()).instruction = val;  // was second
 	    }
 	    else if (what==='mpanswer') {
@@ -412,6 +395,9 @@ class BitmarkListener {
 	    }
 	    else if (what==='menu') {
 		this.curr_bit_stk.third()['instruction'] = val;
+	    }
+	    else if (0<=['ai-prompt', 'article-ai', 'summary-ai', 'note-ai'].indexOf(what)) {
+		this.stk.top().bit['instruction'] = val;
 	    }
 	    else if (what != null) {
 		let key_obj:string|string[] = '';
@@ -1808,6 +1794,9 @@ class BitmarkListener {
 	    else if (-1 < this.atdef_num.indexOf(vals[0])) {
 		this.stk.top().bit[vals[0]] = parseInt(vals[1]);
 	    }
+	    else if (-1 < this.atdef_bool.indexOf(vals[0])) {
+		this.stk.top().bit[vals[0]] = JSON.parse(vals[1]); // jso.parse removes quotes
+	    }	    
 	    else if (what==='website-link') {
 		this.stk.top().bit['resource'].preview[vals[0]] = vals[1];
 	    }
@@ -2821,7 +2810,19 @@ class BitmarkListener {
     enterNotebook_article(ctx: ParserRuleContext):void { this.push_tmpl(ctx, 'notebook-article'); };
     enterWorkbook_article(ctx: ParserRuleContext):void { this.push_tmpl(ctx, 'workbook-article'); };
 
-
+    enterAi_prompt(ctx: ParserRuleContext):void
+        { this.push_tmpl(ctx, 'ai-prompt'); this.curr_bit_stk.push('ai-prompt'); };
+    exitAi_prompt(ctx: ParserRuleContext):void { this.curr_bit_stk.pop(); };
+    enterNote_ai(ctx: ParserRuleContext):void
+        { this.push_tmpl(ctx, 'note-ai'); this.curr_bit_stk.push('note-ai'); };
+    exitNote_ai(ctx: ParserRuleContext):void { this.curr_bit_stk.pop(); };
+    enterSummary_ai(ctx: ParserRuleContext):void
+        { this.push_tmpl(ctx, 'summary-ai'); this.curr_bit_stk.push('summary-ai'); };
+    exitSummary_ai(ctx: ParserRuleContext):void { this.curr_bit_stk.pop(); };
+    enterArticle_ai(ctx: ParserRuleContext):void
+        { this.push_tmpl(ctx, 'article-ai'); this.curr_bit_stk.push('article-ai'); };
+    exitArticle_ai(ctx: ParserRuleContext):void { this.curr_bit_stk.pop(); };
+    
     enterConversation_left_1(ctx: ParserRuleContext):void { this.push_tmpl(ctx, 'conversation-left-1'); }
     enterConversation_right_1(ctx: ParserRuleContext):void { this.push_tmpl(ctx, 'conversation-right-1'); }
     enterConversation_left_1_thought(ctx: ParserRuleContext):void { this.push_tmpl(ctx, 'conversation-left-1-thought'); }

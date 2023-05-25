@@ -14624,5 +14624,84 @@
         }
     }
 ]
+<<<<./tests/ai.bit
+[
+    {
+        "bitmark": "[.ai-prompt]\n[@aiGenerated: true]\n[!About chatGPT]\n申し訳ありませんが、私は人工知能であり、食事を摂ることができません。しかし、あなたにいくつかのアイデアを提供することができます。例えば、オートミール、卵料理、フルーツ、ヨーグルト、トースト、ベーコン、パンケーキ、ワッフルなどがあります。あなたの好みに合わせて、健康的で栄養価の高い朝食を選んでください。",
+        "bit": {
+            "type": "ai-prompt",
+            "format": "bitmark--",
+            "body": "申し訳ありませんが、私は人工知能であり、食事を摂ることができません。しかし、あなたにいくつかのアイデアを提供することができます。例えば、オートミール、卵料理、フルーツ、ヨーグルト、トースト、ベーコン、パンケーキ、ワッフルなどがあります。あなたの好みに合わせて、健康的で栄養価の高い朝食を選んでください。",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "aiGenerated": true,
+            "instruction": "About chatGPT"
+        }
+    },
+    {
+        "bitmark": "[.note-ai]\n[@aiGenerated: true]\n[!About chatGPT]\n申し訳ありませんが、私は人工知能であり、食事を摂ることができません。しかし、あなたにいくつかのアイデアを提供することができます。例えば、オートミール、卵料理、フルーツ、ヨーグルト、トースト、ベーコン、パンケーキ、ワッフルなどがあります。あなたの好みに合わせて、健康的で栄養価の高い朝食を選んでください。",
+        "bit": {
+            "type": "note-ai",
+            "format": "bitmark--",
+            "body": "申し訳ありませんが、私は人工知能であり、食事を摂ることができません。しかし、あなたにいくつかのアイデアを提供することができます。例えば、オートミール、卵料理、フルーツ、ヨーグルト、トースト、ベーコン、パンケーキ、ワッフルなどがあります。あなたの好みに合わせて、健康的で栄養価の高い朝食を選んでください。",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "aiGenerated": true,
+            "instruction": "About chatGPT"
+        }
+    },
+    {
+        "bitmark": "[.summary-ai]\n[@aiGenerated: false]\n[!About chatGPT]\n申し訳ありませんが、私は人工知能であり、食事を摂ることができません。しかし、あなたにいくつかのアイデアを提供することができます。例えば、オートミール、卵料理、フルーツ、ヨーグルト、トースト、ベーコン、パンケーキ、ワッフルなどがあります。あなたの好みに合わせて、健康的で栄養価の高い朝食を選んでください。",
+        "bit": {
+            "type": "summary-ai",
+            "format": "bitmark--",
+            "body": "申し訳ありませんが、私は人工知能であり、食事を摂ることができません。しかし、あなたにいくつかのアイデアを提供することができます。例えば、オートミール、卵料理、フルーツ、ヨーグルト、トースト、ベーコン、パンケーキ、ワッフルなどがあります。あなたの好みに合わせて、健康的で栄養価の高い朝食を選んでください。",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "aiGenerated": false,
+            "instruction": "About chatGPT"
+        }
+    },
+    {
+        "bitmark": "[.article-ai]\n[@aiGenerated: false]\n[!About chatGPT]\n申し訳ありませんが、私は人工知能であり、食事を摂ることができません。しかし、あなたにいくつかのアイデアを提供することができます。例えば、オートミール、卵料理、フルーツ、ヨーグルト、トースト、ベーコン、パンケーキ、ワッフルなどがあります。あなたの好みに合わせて、健康的で栄養価の高い朝食を選んでください。",
+        "bit": {
+            "type": "article-ai",
+            "format": "bitmark--",
+            "body": "申し訳ありませんが、私は人工知能であり、食事を摂ることができません。しかし、あなたにいくつかのアイデアを提供することができます。例えば、オートミール、卵料理、フルーツ、ヨーグルト、トースト、ベーコン、パンケーキ、ワッフルなどがあります。あなたの好みに合わせて、健康的で栄養価の高い朝食を選んでください。",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "aiGenerated": false,
+            "instruction": "About chatGPT"
+        }
+    }
+]
+<<<<./tests/aiX.bit
+[
+    {
+        "bitmark": "[.article-ai]\n[@aiGenerated: false]\n[!About chatGPT]\n[@noda: yoshikazu]\nts-node automatically finds and loads tsconfig.json. Most ts-node options can be specified in a \"ts-node\" object using their programmatic, camelCase names. We recommend this because it works even when you cannot pass CLI flags, such as node --require ts-node/register and when using shebangs.",
+        "bit": {
+            "type": "article-ai",
+            "format": "bitmark--",
+            "body": "ts-node automatically finds and loads tsconfig.json. Most ts-node options can be specified in a \"ts-node\" object using their programmatic, camelCase names. We recommend this because it works even when you cannot pass CLI flags, such as node --require ts-node/register and when using shebangs.",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "aiGenerated": false,
+            "instruction": "About chatGPT",
+            "noda": [
+                "yoshikazu"
+            ]
+        }
+    }
+]
 <<<<
   

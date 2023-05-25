@@ -1,0 +1,6 @@
+[.article-ai]
+[@aiGenerated: false]
+[!About chatGPT]
+[@noda: yoshikazu]
+ts-node automatically finds and loads tsconfig.json. Most ts-node options can be specified in a "ts-node" object using their programmatic, camelCase names. We recommend this because it works even when you cannot pass CLI flags, such as node --require ts-node/register and when using shebangs.
+
