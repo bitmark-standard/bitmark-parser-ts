@@ -112,7 +112,7 @@ fragment
 STR:
   ([-0-9̈A-Za-z_"\p{Block=Latin_1_Supplement}\p{Emoji}]|IPA|EM0|EM2|VS0|SS0|LEA|LEB|GAL|GALC|PHON|EURO|TRANSL|GERMAN|POLISH|ROMANIA|JAPANESE|'\\'|'{'|'}')+ ;
 
-SENTENCE:   // Has a space
+SENTENCE:   // Has space, tab but not newline
   ([0-9A-Za-z_̈%?@!=*+-/ \t$#;"'–•●—➔^ |()\p{Block=Latin_1_Supplement}\p{Emoji}]|IPA|EM0|EM2|VS0|SS0|LEA|LEB|GAL|GALC|PHON|EURO|TRANSL|GERMAN|POLISH|ROMANIA|JAPANESE|'\\'|'{'|'}'|'…')+
 ;
 
@@ -131,7 +131,7 @@ AtLonganswer:	  OPAT S* 'longAnswer]' ;
 AtExampleWithStr:OPAT S* 'example:' (SENTENCE|NL)* CL ;
 AtExamplecol:    OPAT S* 'example:'  ;
 AtExamplecl:     OPAT S* 'example]'  ;
-AtSampleSolution: OPAT S* 'sampleSolution:'  SENTENCE CL ;
+AtSampleSolution: OPAT S* 'sampleSolution:' (SENTENCE|NL)* CL ;
 
 AtPartialAnswerS:OPAT S* 'partialAnswer:' SENTENCE CL ;
 AtPartialAnswer: OPAT S* 'partialAnswer]' ;

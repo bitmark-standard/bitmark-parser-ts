@@ -1,5 +1,9 @@
-[.vendor-amcharts-5-chart]
-[@id:298225]
-[%item 1]
-[!This is my first chart bit with a JSON body]
-{"Testing": 200, "Checking": [1,2,3,4,5,6]}
+[.essay:bitmark--&image]
+[!Describe the graphic. What did you expect, what surprised you?]
+[@partialAnswer:This is a ...]
+[&image:https://cdn.bitmark.cloud/publishers/3/books/26363/statistics_en.jpg]
+[@sampleSolution:
+This is a **really** nice graphic!
+It really surprised me, that the chosen color of the graph is blue.
+]
+[&image:https://cdn.bitmark.cloud/publishers/3/books/26363/statistics_en.jpg]
