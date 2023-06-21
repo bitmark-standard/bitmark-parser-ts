@@ -1,6 +1,6 @@
 {
   "name": "bitmark-parser-ts",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bitmark-standard/bitmark-parser-ts.git"

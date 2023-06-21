@@ -1,9 +1,16 @@
-[.essay:bitmark--&image]
-[!Describe the graphic. What did you expect, what surprised you?]
-[@partialAnswer:This is a ...]
-[&image:https://cdn.bitmark.cloud/publishers/3/books/26363/statistics_en.jpg]
-[@sampleSolution:
-This is a **really** nice graphic!
-It really surprised me, that the chosen color of the graph is blue.
-]
-[&image:https://cdn.bitmark.cloud/publishers/3/books/26363/statistics_en.jpg]
+[.article]
+[@id:229899]
+[%][%A new role for L&D]
+If you use Visual Studio Code, you can view and incorporate suggestions from GitHub Copilot directly within the editor. This guide demonstrates how to use GitHub Copilot within Visual Studio Code for macOS, Windows, or Linux.
+
+|| OK ||
+[.true-false]
+[@id:229899]
+[%][%A new role for L&D]
+===
+[+Ein Elefant ist grösser als eine Maus.][@example:meiyou]
+===
+[+Ein Tiger ist grösser als eine Hauskatze.]
+===
+[-Eine Kuh ist kleiner als ein Hund.]
+===

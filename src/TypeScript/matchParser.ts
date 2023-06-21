@@ -6941,6 +6941,7 @@ export class matchParser extends Parser {
 		this.enterRule(_localctx, 168, matchParser.RULE_item);
 		let _la: number;
 		try {
+			let _alt: number;
 			this.state = 1637;
 			this._errHandler.sync(this);
 			switch ( this.interpreter.adaptivePredict(this._input, 223, this._ctx) ) {
@@ -6987,39 +6988,32 @@ export class matchParser extends Parser {
 				this.s_and_w();
 				this.state = 1624;
 				this._errHandler.sync(this);
-				_la = this._input.LA(1);
-				while (((((_la - 28)) & ~0x1F) === 0 && ((1 << (_la - 28)) & ((1 << (matchParser.COLON - 28)) | (1 << (matchParser.AMP - 28)) | (1 << (matchParser.Greater - 28)) | (1 << (matchParser.Less - 28)) | (1 << (matchParser.RightAngle - 28)) | (1 << (matchParser.RightArrow - 28)) | (1 << (matchParser.NOTBITMARK - 28)) | (1 << (matchParser.ELIPSIS - 28)) | (1 << (matchParser.SENTENCE - 28)) | (1 << (matchParser.BARSTRING - 28)))) !== 0)) {
-					{
-					this.state = 1622;
-					this._errHandler.sync(this);
-					switch (this._input.LA(1)) {
-					case matchParser.COLON:
+				_alt = this.interpreter.adaptivePredict(this._input, 220, this._ctx);
+				while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
+					if (_alt === 1) {
 						{
-						this.state = 1620;
-						this.match(matchParser.COLON);
+						this.state = 1622;
+						this._errHandler.sync(this);
+						switch ( this.interpreter.adaptivePredict(this._input, 219, this._ctx) ) {
+						case 1:
+							{
+							this.state = 1620;
+							this.match(matchParser.COLON);
+							}
+							break;
+
+						case 2:
+							{
+							this.state = 1621;
+							this.s_and_w();
+							}
+							break;
 						}
-						break;
-					case matchParser.AMP:
-					case matchParser.Greater:
-					case matchParser.Less:
-					case matchParser.RightAngle:
-					case matchParser.RightArrow:
-					case matchParser.NOTBITMARK:
-					case matchParser.ELIPSIS:
-					case matchParser.SENTENCE:
-					case matchParser.BARSTRING:
-						{
-						this.state = 1621;
-						this.words();
 						}
-						break;
-					default:
-						throw new NoViableAltException(this);
-					}
 					}
 					this.state = 1626;
 					this._errHandler.sync(this);
-					_la = this._input.LA(1);
+					_alt = this.interpreter.adaptivePredict(this._input, 220, this._ctx);
 				}
 				this.state = 1627;
 				this.match(matchParser.CL);
@@ -7069,8 +7063,8 @@ export class matchParser extends Parser {
 	public lead(): LeadContext {
 		let _localctx: LeadContext = new LeadContext(this._ctx, this.state);
 		this.enterRule(_localctx, 170, matchParser.RULE_lead);
-		let _la: number;
 		try {
+			let _alt: number;
 			this.enterOuterAlt(_localctx, 1);
 			{
 			this.state = 1639;
@@ -7079,39 +7073,32 @@ export class matchParser extends Parser {
 			this.s_and_w();
 			this.state = 1645;
 			this._errHandler.sync(this);
-			_la = this._input.LA(1);
-			while (((((_la - 28)) & ~0x1F) === 0 && ((1 << (_la - 28)) & ((1 << (matchParser.COLON - 28)) | (1 << (matchParser.AMP - 28)) | (1 << (matchParser.Greater - 28)) | (1 << (matchParser.Less - 28)) | (1 << (matchParser.RightAngle - 28)) | (1 << (matchParser.RightArrow - 28)) | (1 << (matchParser.NOTBITMARK - 28)) | (1 << (matchParser.ELIPSIS - 28)) | (1 << (matchParser.SENTENCE - 28)) | (1 << (matchParser.BARSTRING - 28)))) !== 0)) {
-				{
-				this.state = 1643;
-				this._errHandler.sync(this);
-				switch (this._input.LA(1)) {
-				case matchParser.COLON:
+			_alt = this.interpreter.adaptivePredict(this._input, 225, this._ctx);
+			while (_alt !== 2 && _alt !== ATN.INVALID_ALT_NUMBER) {
+				if (_alt === 1) {
 					{
-					this.state = 1641;
-					this.match(matchParser.COLON);
+					this.state = 1643;
+					this._errHandler.sync(this);
+					switch ( this.interpreter.adaptivePredict(this._input, 224, this._ctx) ) {
+					case 1:
+						{
+						this.state = 1641;
+						this.match(matchParser.COLON);
+						}
+						break;
+
+					case 2:
+						{
+						this.state = 1642;
+						this.s_and_w();
+						}
+						break;
 					}
-					break;
-				case matchParser.AMP:
-				case matchParser.Greater:
-				case matchParser.Less:
-				case matchParser.RightAngle:
-				case matchParser.RightArrow:
-				case matchParser.NOTBITMARK:
-				case matchParser.ELIPSIS:
-				case matchParser.SENTENCE:
-				case matchParser.BARSTRING:
-					{
-					this.state = 1642;
-					this.words();
 					}
-					break;
-				default:
-					throw new NoViableAltException(this);
-				}
 				}
 				this.state = 1647;
 				this._errHandler.sync(this);
-				_la = this._input.LA(1);
+				_alt = this.interpreter.adaptivePredict(this._input, 225, this._ctx);
 			}
 			this.state = 1648;
 			this.match(matchParser.CL);
@@ -10293,7 +10280,7 @@ export class matchParser extends Parser {
 		"\x02\x02\u0651\u0653\x05\xACW\x02\u0652\u064E\x03\x02\x02\x02\u0652\u0653" +
 		"\x03\x02\x02\x02\u0653\u0668\x03\x02\x02\x02\u0654\u0655\x07\x1B\x02\x02" +
 		"\u0655\u065A\x05\xDAn\x02\u0656\u0659\x07\x1E\x02\x02\u0657\u0659\x05" +
-		"\xF6|\x02\u0658\u0656\x03\x02\x02\x02\u0658\u0657\x03\x02\x02\x02\u0659" +
+		"\xDAn\x02\u0658\u0656\x03\x02\x02\x02\u0658\u0657\x03\x02\x02\x02\u0659" +
 		"\u065C\x03\x02\x02\x02\u065A\u0658\x03\x02\x02\x02\u065A\u065B\x03\x02" +
 		"\x02\x02\u065B\u065D\x03\x02\x02\x02\u065C\u065A\x03\x02\x02\x02\u065D" +
 		"\u0665\x07\x1D\x02\x02\u065E\u0660\x07\x04\x02\x02\u065F\u065E\x03\x02" +
@@ -10303,7 +10290,7 @@ export class matchParser extends Parser {
 		"\x03\x02\x02\x02\u0666\u0668\x03\x02\x02\x02\u0667\u0649\x03\x02\x02\x02" +
 		"\u0667\u0654\x03\x02\x02\x02\u0668\xAB\x03\x02\x02\x02\u0669\u066A\x07" +
 		"\x1B\x02\x02\u066A\u066F\x05\xDAn\x02\u066B\u066E\x07\x1E\x02\x02\u066C" +
-		"\u066E\x05\xF6|\x02\u066D\u066B\x03\x02\x02\x02\u066D\u066C\x03\x02\x02" +
+		"\u066E\x05\xDAn\x02\u066D\u066B\x03\x02\x02\x02\u066D\u066C\x03\x02\x02" +
 		"\x02\u066E\u0671\x03\x02\x02\x02\u066F\u066D\x03\x02\x02\x02\u066F\u0670" +
 		"\x03\x02\x02\x02\u0670\u0672\x03\x02\x02\x02\u0671\u066F\x03\x02\x02\x02" +
 		"\u0672\u0673\x07\x1D\x02\x02\u0673\xAD\x03\x02\x02\x02\u0674\u0676\x07" +
@@ -13988,8 +13975,14 @@ export class ItemContext extends ParserRuleContext {
 			return this.getToken(matchParser.S, i);
 		}
 	}
-	public s_and_w(): S_and_wContext | undefined {
-		return this.tryGetRuleContext(0, S_and_wContext);
+	public s_and_w(): S_and_wContext[];
+	public s_and_w(i: number): S_and_wContext;
+	public s_and_w(i?: number): S_and_wContext | S_and_wContext[] {
+		if (i === undefined) {
+			return this.getRuleContexts(S_and_wContext);
+		} else {
+			return this.getRuleContext(i, S_and_wContext);
+		}
 	}
 	public COLON(): TerminalNode[];
 	public COLON(i: number): TerminalNode;
@@ -13998,15 +13991,6 @@ export class ItemContext extends ParserRuleContext {
 			return this.getTokens(matchParser.COLON);
 		} else {
 			return this.getToken(matchParser.COLON, i);
-		}
-	}
-	public words(): WordsContext[];
-	public words(i: number): WordsContext;
-	public words(i?: number): WordsContext | WordsContext[] {
-		if (i === undefined) {
-			return this.getRuleContexts(WordsContext);
-		} else {
-			return this.getRuleContext(i, WordsContext);
 		}
 	}
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {
@@ -14031,8 +14015,14 @@ export class ItemContext extends ParserRuleContext {
 
 export class LeadContext extends ParserRuleContext {
 	public OPC(): TerminalNode { return this.getToken(matchParser.OPC, 0); }
-	public s_and_w(): S_and_wContext {
-		return this.getRuleContext(0, S_and_wContext);
+	public s_and_w(): S_and_wContext[];
+	public s_and_w(i: number): S_and_wContext;
+	public s_and_w(i?: number): S_and_wContext | S_and_wContext[] {
+		if (i === undefined) {
+			return this.getRuleContexts(S_and_wContext);
+		} else {
+			return this.getRuleContext(i, S_and_wContext);
+		}
 	}
 	public CL(): TerminalNode { return this.getToken(matchParser.CL, 0); }
 	public COLON(): TerminalNode[];
@@ -14042,15 +14032,6 @@ export class LeadContext extends ParserRuleContext {
 			return this.getTokens(matchParser.COLON);
 		} else {
 			return this.getToken(matchParser.COLON, i);
-		}
-	}
-	public words(): WordsContext[];
-	public words(i: number): WordsContext;
-	public words(i?: number): WordsContext | WordsContext[] {
-		if (i === undefined) {
-			return this.getRuleContexts(WordsContext);
-		} else {
-			return this.getRuleContext(i, WordsContext);
 		}
 	}
 	constructor(parent: ParserRuleContext | undefined, invokingState: number) {

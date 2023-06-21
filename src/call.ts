@@ -14,43 +14,43 @@ import * as process from 'process';
 import * as parser from './index.ts';
 
 
-let __main__ = function(filepath: string,
-			trace: boolean,
-			debug: boolean,
-			bit: string|null):void {
-    let dbg:boolean = false;
-    let text:string;
-  
+let __main__ = function (filepath: string,
+  trace: boolean,
+  debug: boolean,
+  bit: string | null): void {
+  let dbg: boolean = false;
+  let text: string;
+
   //if (typeof debug !== 'undefined')
   //  dbg = debug;
-  
+
   if (fs.existsSync(filepath))
     text = fs.readFileSync(filepath, 'utf8');
   else
     text = filepath;
 
-  let parser_options = {trace: trace, debug: debug, need_error_report: false};
+  let parser_options = { trace: trace, debug: debug, need_error_report: false };
   let bitmark = new parser.BitmarkParser(text, parser_options, bit);
 
   try {
-      let json:string = bitmark.parse();
+    let json: string = bitmark.parse();
     if (json)
       console.log(json);
   }
-  catch(e) {
+  catch (e) {
     console.error(e);
   }
 }
 
-let myArgs:string[] = process.argv.slice(0, process.argv.length)
-let debug:boolean = false;
-let trace:boolean = false;
-let bit:string|null = null;
+let myArgs: string[] = process.argv.slice(0, process.argv.length)
+let debug: boolean = false;
+let trace: boolean = false;
+let bit: string | null = null;
 const LANG_EXT = '.bit';
 
 
 if (3 < myArgs.length) {
-  for (let i=2; i<myArgs.length; i++) {
+  for (let i = 2; i < myArgs.length; i++) {
     if (myArgs[i] === '--debug')
       debug = true;
     if (myArgs[i] === '--trace')
@@ -72,12 +72,12 @@ if (3 <= myArgs.length) {
       let dir = myArgs[2];
       // iterate over all .c files in the dicrectory
       fs.readdir(dir, (err, files) => {
-	files.forEach(file => {
-	  if (file.endsWith(LANG_EXT)) {
-	    console.log(file);
-	    __main__(dir+'/'+file, trace, debug, bit);
-	  }
-	})
+        files.forEach(file => {
+          if (file.endsWith(LANG_EXT)) {
+            console.log(file);
+            __main__(dir + '/' + file, trace, debug, bit);
+          }
+        })
       })
     }
     else
@@ -85,6 +85,6 @@ if (3 <= myArgs.length) {
   }
 }
 else {
-  __main__('', trace, debug, bit)    
+  __main__('', trace, debug, bit)
 }
 
