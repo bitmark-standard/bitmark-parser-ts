@@ -2837,6 +2837,7 @@ class BitmarkListener {
 	enterConversation_right_1_thought(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'conversation-right-1-thought'); }
 	enterConversation_left_1_scream(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'conversation-left-1-scream'); }
 	enterConversation_right_1_scream(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'conversation-right-1-scream'); }
+	enterRelease_notes_summary(ctx: ParserRuleContext): void {	this.push_tmpl(ctx, 'release-notes-summary'); }
 
 	enterMenu_3_course(ctx: ParserRuleContext): void {
 		this.push_tmpl(ctx, 'menu-3-course');

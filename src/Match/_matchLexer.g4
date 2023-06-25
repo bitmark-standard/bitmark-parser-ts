@@ -9,21 +9,18 @@ lexer grammar matchLexer;
 OPDOT:	         '[.' ;
 S:		 [ \t] ;
 OP:		 '[' ;
-BitMatch:        NL OPDOT S* 'match'    ;
-BitMatchmatrix:	 NL OPDOT S* 'match-matrix'    ;
-BitMatchall:	 NL OPDOT S* 'match-all'    ;
-BitMatchrev:	 NL OPDOT S* 'match-reverse'    ;
-BitMatchallrev:	 NL OPDOT S* 'match-all-reverse'    ;
-BitMatchpic:	 NL OPDOT S* 'match-picture'    ;
-BitMatchaudio:	 NL OPDOT S* 'match-audio'    ;
-BitMatchsolgrp:	 NL OPDOT S* 'match-solution-grouped'    ;
+BitMatch:         NL OPDOT S* 'match'    ;
+BitMatchmatrix:	  NL OPDOT S* 'match-matrix'    ;
+BitMatchall:	    NL OPDOT S* 'match-all'    ;
+BitMatchrev:	    NL OPDOT S* 'match-reverse'    ;
+BitMatchallrev:	  NL OPDOT S* 'match-all-reverse'    ;
+BitMatchpic:	    NL OPDOT S* 'match-picture'    ;
+BitMatchaudio:	  NL OPDOT S* 'match-audio'    ;
+BitMatchsolgrp:	  NL OPDOT S* 'match-solution-grouped'    ;
 
 //
-OPDOLL:		'[' S* '$' ;      // Dollar
+OPDOLL:		      '[' S* '$' ;      // Dollar
 OPBUL:          '[' S* '•' ;      // Bullet
-
-//OPESC:        '[^' ;      // Escaped bracketted def
-//OPAMP:	'[&' ;	    // Get conflict if exist.
 
 OPRANGLES:      '[' '►' S* ;  // Right angle - internal link
 OPRANGLEL:      '[' '▶' S* ;  // Right angle - internal link
@@ -39,24 +36,22 @@ OPR:		'[*' S* ;  // [*
 OPC:		'[%' S* ;  // [% Item
 OPHASH:		'[#'  ;
 
-CL:		']' ;
-COLON:		':' ;
+CL:		  ']' ;
+COLON:	':' ;
 AMP:		'&' ;
 DBLCOLON:	'::' ;
 PLUS:		'+' ;
-DotAt:	   	'.@' ;
-Greater: 	'>' ;
+DotAt:	'.@' ;
+Greater:'>' ;
 Less:		'<' ;
 DOT:		'.' ;
 RightAngle:	'►' ;
-RightArrow:     '→' ;
-//BETA:		'' ;
-//HISHI:          '◇' ;
+RightArrow: '→' ;
 
 // Separators
-EQ:		'==' ;
+EQ:		  '==' ;
 HSPL:		'===' ;
-OR:	        NL '--' NL ;
+OR:	    NL '--' NL ;
 
 TENSE: '__(' .*? ')__' ;
 

@@ -176,7 +176,8 @@ const testfiles: string[] = [
     './tests/url-regex.bit',
     './tests/aiX.bit',
     './tests/ai.bit',
-
+    './tests/release-notes-summary.bit',
+    
     // GMB
     './tests/GMB/cloze.bit',
     './tests/GMB/cloze_attachment.bit',
