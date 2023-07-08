@@ -193,6 +193,16 @@ class BitUtil {
 					nloff = (nlat - start) + 2;  // x]\n
 				}
 				else if (this.source[start - 1] != '\n') {
+					if (this.source[start] === '\n') { 
+            start++;
+            while (this.source[stop] !== '\n')
+              stop++;
+          }
+          else if (this.source[start - 2] === '\n') { // source[start] is the 2nd char of a utf code
+            start--; nloff = 1;
+            while (this.source[stop] !== '\n')
+              stop++;
+          }
 					while (this.source[start - nloff] != '\n')
 						nloff++;
 					nloff--;   // skip \n
