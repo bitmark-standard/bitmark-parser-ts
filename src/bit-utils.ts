@@ -173,53 +173,62 @@ class BitUtil {
 	}
 
 	// Retrieve the string between ]nl and nl
-	getstring_insidenl(ctx: ParserRuleContext): string {
-		let tmps: string = 'no children';
-		if (!ctx.children) {
+	// This is used for the string inside a block
+  getstring_insidenl(ctx: ParserRuleContext): string {
+    let tmps:string = 'no children';
+    if (!ctx.children) {
 
-			let stop: number;
+      let stop:number;
 			stop = ctx.stop === undefined ? ctx._start.stopIndex : ctx.stop.stopIndex;
-			let start: number = ctx.start.startIndex;
-			if (this.source[start - 1] === '|') {
-				// ENCLBARS (enclose in ||) then
-				start -= 1;
-				tmps = slice(start, stop, this.source);
-			}
-			else {
-				// not ENCLBARS
-				let nlat: number = this.source.indexOf(']\n', start);
-				let nloff: number = 0;
-				if (0 < nlat && (nlat - start) < 8) {  // 8 is a hack value
-					nloff = (nlat - start) + 2;  // x]\n
-				}
-				else if (this.source[start - 1] != '\n') {
-					if (this.source[start] === '\n') { 
+      let start:number = ctx.start.startIndex;
+      if (this.source[start - 1] === '|') {
+        // ENCLBARS (enclose in ||) then
+        start -= 1;
+        tmps =  slice(start, stop, this.source);
+      }
+      else {
+        // not ENCLBARS
+        let nlat:number = this.source.indexOf(']\n', start);
+        let nloff:number = 0;
+        if (0 < nlat && (nlat - start) < 8) {  // 8 is a hack value
+          nloff = (nlat - start) + 2;  // x]\n
+        }
+        else if (this.source[start - 1] != '\n') {
+          if (this.source[start] === '\n') { 
             start++;
             while (this.source[stop] !== '\n')
               stop++;
           }
-          else if (this.source[start - 2] === '\n') { // source[start] is the 2nd char of a utf code
-            start--; nloff = 1;
-            while (this.source[stop] !== '\n')
-              stop++;
+          else {
+            if (this.source[start - 2] === '\n') { // source[start] is the 2nd char of a utf code
+              // some emojis are 3 chars long
+              start--; 
+              nloff = 1;
+              while (this.source[stop] !== '\n')
+                stop++;
+            }
           }
-					while (this.source[start - nloff] != '\n')
-						nloff++;
-					nloff--;   // skip \n
-					return slice(start - nloff, stop + nloff, this.source);
-				}
-				let nloff0: number = nloff;
-				tmps = slice(start + nloff, stop + nloff + 2, this.source);
-				let i: number = 0;
-				while (tmps[i++].match(/[ \t\n\r]/))
-					nloff++;
-				if (nloff0 != nloff)
-					tmps = slice(start + nloff, stop + nloff + 2, this.source);
-			}
-			return tmps;
-		}
-		return '';
-	}
+          while (this.source[start - nloff] != '\n')
+            nloff++;
+          nloff--;   // skip \n
+          let sr:string =  slice(start - nloff, stop + nloff, this.source);
+          return sr;
+        }
+        let nloff0:number = nloff, magic = 2;
+        if (this.source[stop + nloff + magic] !== '\n')
+          magic++;
+        
+        tmps =  slice(start + nloff, stop + nloff + magic, this.source);
+        let i:number = 0;
+        while (tmps[i++].match(/[ \t\n\r]/))
+          nloff++;
+        if (nloff0 != nloff)
+          tmps = slice(start + nloff, stop + nloff + magic, this.source);
+      }
+      return tmps;
+    }
+    return '';
+  }  
 
 	/*
 	 * Splits the source bitbook into each and every bit.
