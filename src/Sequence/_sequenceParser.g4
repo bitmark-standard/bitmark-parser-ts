@@ -15,7 +15,8 @@ bit:   sequence | menu_3_course ;
 
 //
 sequence:
-    BitSequence format CL ( NL* bitElem )* NL*
+    BitSequence format CL ( NL* bitElem )*
+   |BitSequence format CL ( NL* bitElem )* NL*
        HSPL ( seqstr minusminus )* seqstr HSPL
        footer?
        ( resource (NL* resource)* )?
@@ -98,7 +99,9 @@ bullet_item:
     OPBUL s_and_w CL ( atpoint )?
 ;
 
+// ********************** import the common parser here*************
 <<<<<<common<<<<<<
+// ******************************************************************
 
 dcolon: DBLCOLON ;
 
@@ -123,7 +126,7 @@ sspl:	  SSPL|SSPL2 ;
 
 words:  ( SENTENCE
 	| NOTBITMARK	
-	| BARSTRING  | ELIPSIS
+	| BARSTRING | ELIPSIS
 	| LIST_LINE
 	| AMP | Greater ~(Greater) | Less ~(Less) 
 	| RightArrow | RightAngle 

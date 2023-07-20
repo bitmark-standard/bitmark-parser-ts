@@ -46,8 +46,10 @@ SSPL:	  	NL '---' S* NL  ; // soft split
 SSPL2:	  	'---'   S* NL  ; // soft split
 
 
-//<<<<<<<<<<<<<<<< COMMON LEXER RULES <<<<<<<<<<<<<<<<<<<<
+/*
+    common part of the bitmark lexer
 
+*/
 COMMENT:  '||' UTF8*? '||' S* NL* ->skip ;
 
 DCANY:  NL* '::' STRING (':' SENTENCE)? '::' (NL|.)*? '::' NL ;  // OK1
@@ -61,7 +63,7 @@ ArticleText: '[' S* AmpArticle COLON (.|[ \t\r\n])*? CL ;
 NOTCL:    [^\]] ;
 NUMERIC:  ('+'|'-')?[0-9]+ ;
 STRING:   STR  ;
-NL:	  ('\n'|'\r\n') ;
+NL:	      ('\n'|'\r\n') ;
 NOTBITMARK:  '[^' .*?  ']' ;
 ELIPSIS:  ('[…'|'[...') .*? ']' ;
 
@@ -82,7 +84,7 @@ fragment GERMAN:   [ÄäẞÖöÜü] ;
 fragment POLISH:   [ĄąĆćĘęŁłŃńÓóŚśŹźŻż] ;
 fragment TRANSL:   [ČčĎďĚěǦǧȞȟǏǐJ̌ǰǨǩĽľŇňǑǒŘřŠšŤťǓǔǙǚŽžǮǯ] ;
 fragment EURO:     [☞→↓←↑€“”’…„́«»◇◼︎◎ʌɪˈ_̈₂‰≤≥‘≠Ωʳᵉ−] ;
-fragment IPA:	   [ɛɜːɡʊuɔɪəɒæʌʉo] ;
+fragment IPA:	     [ɛɜːɡʊuɔɪəɒæʌʉo] ;
 fragment JAPANESE : [\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}\u{2460}-\u{24FF}\u{3001}-\u{3002}\u{3220}-\u{325F}\u{FF01}-\u{FF5E}ー「」『』〜〈〉] ;
 
 
@@ -98,7 +100,7 @@ fragment
 STR:
   ([-0-9̈A-Za-z_"\p{Block=Latin_1_Supplement}\p{Emoji}]|IPA|EM0|EM2|VS0|SS0|LEA|LEB|GAL|GALC|PHON|EURO|TRANSL|GERMAN|POLISH|ROMANIA|JAPANESE|'\\'|'{'|'}')+ ;
 
-SENTENCE:   // Has space, tab but not newline
+SENTENCE:   // Has a space
   ([0-9A-Za-z_̈%?@!=*+-/ \t$#;"'–•●—➔^ |()\p{Block=Latin_1_Supplement}\p{Emoji}]|IPA|EM0|EM2|VS0|SS0|LEA|LEB|GAL|GALC|PHON|EURO|TRANSL|GERMAN|POLISH|ROMANIA|JAPANESE|'\\'|'{'|'}'|'…')+
 ;
 
@@ -114,24 +116,24 @@ AtProgressPoints: OPAT S* 'progressPoints' ;
 AtShortanswer:	  OPAT S* 'shortAnswer]'  ;
 AtLonganswer:	  OPAT S* 'longAnswer]' ;
 
-AtExampleWithStr:OPAT S* 'example:' (SENTENCE|NL)* CL ;
+AtExampleWithStr:OPAT S* 'example:' (SENTENCE|COLON|NL)* CL ;
 AtExamplecol:    OPAT S* 'example:'  ;
 AtExamplecl:     OPAT S* 'example]'  ;
-AtSampleSolution: OPAT S* 'sampleSolution:' (SENTENCE|NL)* CL ;
+AtSampleSolution: OPAT S* 'sampleSolution:' (SENTENCE|COLON|NL)* CL ;
 
 AtPartialAnswerS:OPAT S* 'partialAnswer:' SENTENCE CL ;
 AtPartialAnswer: OPAT S* 'partialAnswer]' ;
 AtLabeltrue:     OPAT S* 'labelTrue:'  ;
 AtLabelfalse:    OPAT S* 'labelFalse:'  ;
 AtPoints:        OPAT S* 'points:'  ;
-AtSrc:		 OPAT S* 'src' [0-9]+'x' ;  // added Sep 17
-AtPartner:	 OPAT S* 'partner:' ;
+AtSrc:		       OPAT S* 'src' [0-9]+'x' ;  // added Sep 17
+AtPartner:	     OPAT S* 'partner:' ;
 
-OPATALT: 	 OPAT S* 'alt:' ;
-OPAMARK: 	 OPAT S* 'mark:' ;
+OPATALT: 	       OPAT S* 'alt:' ;
+OPAMARK: 	       OPAT S* 'mark:' ;
 ShowInIndex:     OPAT S* 'showInIndex]' ;
 OpAtCaption:     OPAT S* 'caption:' ;
-OpAtLicense:	 OPAT S* 'license:' ;
+OpAtLicense:	   OPAT S* 'license:' ;
 OpAtCopyright:	 OPAT S* 'copyright:' ;
 OpAtSearch:      OPAT S* 'search:' ;
 
@@ -146,11 +148,11 @@ AtDate:		 OPAT S* 'date:' ;
 
 Http:	  	 'http://'  ;
 Https:   	 'https://'  ;
-AmpAudio:	 '&audio' ;
-AmpImage:	 '&image' ;
+AmpAudio:	       '&audio' ;
+AmpImage:	       '&image' ;
 AmpImageZoom:    '&image-zoom' ;
 AmpImageWAudio:	 '&image-with-audio' ;
-AmpVideo:	 '&video' ;
+AmpVideo:	       '&video' ;
 AmpArticle:      '&article' ;
 AmpDocument:     '&document' ;
 AmpApp:        	 '&app' ;
@@ -158,11 +160,11 @@ AmpWebsite:      '&website' ;  // NEW added 12/2/2020 usage [.message&website]..
 AmpStillImageFilm:'&still-image-film' ;  // *
 AmpPdf:	         '&pdf' ;
 
-OpAmpAudio:	 '[&' S* 'audio' ;
-OpAmpImage:	 '[&' S* 'image' ;
+OpAmpAudio:	     '[&' S* 'audio' ;
+OpAmpImage:	     '[&' S* 'image' ;
 OpAmpImageZoom:  '[&' S* 'image-zoom' ;
 OpAmpImageWAudio:'[&' S* 'image-with-audio' ; 
-OpAmpVideo:	 '[&' S* 'video' ;
+OpAmpVideo:	     '[&' S* 'video' ;
 OpAmpArticle:    '[&' S* 'article' ;
 OpAmpArticleAtt: '[&' S* 'article-attachment' ;
 OpAmpDocument:   '[&' S* 'document' ;
@@ -173,13 +175,13 @@ OpAmpStillImageFilm: '[&' S* 'still-image-film' ;
 BracEnclose:     '[' ([A-Za-z]|ROMANIA)+ ;
 
 // Added links Aug 18 2021
-AmpAudioLink:	 '&audio-link' ; 
-AmpImageLink:	 '&image-link' ; 
-AmpVideoLink:	 '&video-link' ; 
+AmpAudioLink:	   '&audio-link' ; 
+AmpImageLink:	   '&image-link' ; 
+AmpVideoLink:	   '&video-link' ; 
 AmpArticleLink:  '&article-link' ; 
 AmpDocumentLink: '&document-link' ;
 AmpDocumentDownload: '&document-download' ; 
-AmpAppLink:	 '&app-link' ;  
+AmpAppLink:	     '&app-link' ;  
 AmpWebsiteLink:  '&website-link' ; 
 AmpStillImageFilmLink:'&still-image-film-link' ;
 
@@ -219,9 +221,9 @@ JPG:    ':jpg' ;
 PNG:    ':png' ;
 GIF:    ':gif' ;
 SVG:    ':svg' ;
-MP2:	':mp2' ;
-MP3:	':mp3' ;
-MP4:	':mp4' ;
+MP2:    ':mp2' ;
+MP3:    ':mp3' ;
+MP4:    ':mp4' ;
 FLV:    ':flv' ;
 WMV:    ':wmv' ;
 MPEG:   ':mpeg';
@@ -241,5 +243,5 @@ LIST_LINE:
 ;
 ENCLBARS:	'|' .*? '|' ;
 
-//<<<<<<<<<<<<<<<< COMMON <<<<<<<<<<<<<<<<<<<<
+
 

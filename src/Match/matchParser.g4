@@ -26,51 +26,53 @@ matches:
 	| match_solution_grouped
 ;
 
-// match eq='\n==\n'
+
 match_:
-     BitMatch format CL NL+ ( bitElem NL* )*
+    BitMatch format CL NL* ( bitElem NL* )*
+  | BitMatch format CL NL+ ( bitElem NL* )*
         ( (HSPL NL) pair_heading )? pairs 
         NL* ( resource (NL* resource)* )?
 ;
-// New 9/2/2020
 match_matrix:
-     BitMatchmatrix format CL NL+ ( bitElem NL* )*
+     BitMatchmatrix format CL NL* ( bitElem NL* )*
+   | BitMatchmatrix format CL NL+ ( bitElem NL* )*
         ( (HSPL NL) pair_heading_multi )? pair_multivals 
 	NL* ( resource (NL* resource)* )?
 ;
-//
 match_solution_grouped:
-     BitMatchsolgrp format CL NL+ ( bitElem NL* )*
+     BitMatchsolgrp format CL NL* ( bitElem NL* )*
+   | BitMatchsolgrp format CL NL+ ( bitElem NL* )*
         ( (HSPL NL) pair_heading )? pairs
         NL* ( resource (NL* resource)* )?
 ;
-// added June 7
 match_reverse:
-     BitMatchrev format CL NL+ ( bitElem NL* )*
+     BitMatchrev format CL NL* ( bitElem NL* )*
+   | BitMatchrev format CL NL+ ( bitElem NL* )*
         ( (HSPL NL) pair_heading )? pairs 
         NL* ( resource (NL* resource)* )?
 ;
-// An alias of match-reverse 7/31
+// An alias of match-reverse 
 match_all_reverse:
-     BitMatchallrev format CL NL+ ( bitElem NL* )*
+     BitMatchallrev format CL NL* ( bitElem NL* )*
+    |BitMatchallrev format CL NL+ ( bitElem NL* )*
         ( (HSPL NL) pair_heading )? pairs 
         NL* ( resource (NL* resource)* )?
 ;
-// added June 7
 match_picture:
-     BitMatchpic format CL NL+ ( bitElem NL* )*
+     BitMatchpic format CL NL*( bitElem NL* )*
+    |BitMatchpic format CL NL+ ( bitElem NL* )*
         ( (HSPL NL) pair_heading )? pair_images 
         NL* ( resource (NL* resource)* )?
 ;
-// added June 7
 match_audio:
-     BitMatchaudio format CL NL+ ( bitElem NL* )*
+     BitMatchaudio format CL NL* ( bitElem NL* )*
+    |BitMatchaudio format CL NL+ ( bitElem NL* )*
         ( (HSPL NL) pair_heading )? pair_audios
         NL* ( resource (NL* resource)* )?
 ;
-// An alias  of match? 7/31
 match_all:
-     BitMatchall format CL NL+ ( bitElem NL* )*
+     BitMatchall format CL NL* ( bitElem NL* )*
+    |BitMatchall format CL NL+ ( bitElem NL* )*
         ( (HSPL NL) pair_heading )? pairs
         NL* ( resource (NL* resource)* )?
 ;
@@ -186,7 +188,7 @@ mpquery__:
 	| NL* LIST_LINE
 ;
 
-mpanswer: mpanswer__ (longans|shortans)? ( (OR | NL) mpanswer__ (longans|shortans)? )* ;
+mpanswer: mpanswer__ (longans|shortans)? ( (or_ | NL) mpanswer__ (longans|shortans)? )* ;
 mpanswer__:
           example? item? (s_and_w|NL|S|OP|CL|DBLCOLON)+ ( S* example )?
         | instruction? opdoll ( s_and_w|NL|DOT|COLON )+ CL ( example )?
@@ -208,7 +210,11 @@ bullet_item:
     OPBUL s_and_w CL ( atpoint )?
 ;
 
-//<<<<<<<<<<<<<<<<<<<<<<<start common
+// ********************** import the common parser here*************
+/*
+    common part of the bitmark parser
+
+*/
 // [@point:number]
 atpoint:
     AtPoints NUMERIC CL
@@ -235,7 +241,7 @@ resource_format_extra:
 ;
 
 format2:
-   BitmarkMinus | BitmarkPlus | ColonText | ColonJson | /*nil*/
+   BitmarkMinus | BitmarkPlus | ColonText | Placeholder | ColonJson | /*nil*/
 ;
 
 //
@@ -358,8 +364,7 @@ dateprop_chained:
 
 // Instruction
 instruction:
-//    OPB NL* s_and_w? ( s_and_w ( NL S* )* NL* )* CL
-    OPB NL* s_and_w* ( NL* s_and_w+ ( NL S* )* NL* )* CL   // added ( NL 
+    OPB NL* s_and_w? ( (NL S*)* s_and_w )* NL* CL
   | OPB NL* s_and_w? EOF
 ;
 // Hint
@@ -405,7 +410,9 @@ dollarans:
 
 anchor:  OPDANGLE s_and_w? CL ;
 
-//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<end common
+
+
+// ******************************************************************
 
 
 dcolon: DBLCOLON ;

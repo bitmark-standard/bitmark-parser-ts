@@ -27,7 +27,8 @@ multi_choices:
 // multi choice sets
 //
 multiple_choice:
-   BitMultichoice format CL NL+ ( bitElem NL* )*
+   BitMultichoice format CL NL* ( bitElem NL* )*
+  |BitMultichoice format CL NL+ ( bitElem NL* )*
       ( NL* mcrsep ( NL* mcrmisc )? s_and_w? choices )+
       ((HSPL|HSPL2)|NL) ( bitElem NL )? NL* ( resource (NL* resource)* )?
 ;
@@ -38,18 +39,21 @@ mcrmisc: bitElem* NL  ;
 // 1 choice set
 // Level 0 test ok
 multiple_choice_1:
-   BitMultichoice1 format CL NL+ ( bitElem NL* )* choices 
+   BitMultichoice1 format CL NL* ( bitElem NL* )*
+  |BitMultichoice1 format CL NL+ ( bitElem NL* )* choices   
 ;
 
 // 
 multiple_response:
-    BitMultiresp format CL NL+ ( bitElem NL* )*
+    BitMultiresp format CL NL* ( bitElem NL* )*
+   |BitMultiresp format CL NL+ ( bitElem NL* )*
       ( NL* mcrsep ( NL* mcrmisc )? choices )+
       ((HSPL|HSPL2)|NL)? ( bitElem NL* )? NL* ( resource (NL* resource)* )?
 ;
 // 
 multiple_response_1:
-   BitMultiresp1 format CL NL+ ( bitElem NL* )+ choices NL* ( resource (NL* resource)* )?
+    BitMultiresp1 format CL NL+ ( bitElem NL* )*
+   |BitMultiresp1 format CL NL+ ( bitElem NL* )+ choices NL* ( resource (NL* resource)* )?
 ;
 
 //
@@ -167,7 +171,11 @@ bullet_item:
     OPBUL s_and_w CL ( atpoint )?
 ;
 
-//<<<<<<<<<<<<<<<<<<<<<<<start common
+// Import the common part
+/*
+    common part of the bitmark parser
+
+*/
 // [@point:number]
 atpoint:
     AtPoints NUMERIC CL
@@ -194,7 +202,7 @@ resource_format_extra:
 ;
 
 format2:
-   BitmarkMinus | BitmarkPlus | ColonText | ColonJson | /*nil*/
+   BitmarkMinus | BitmarkPlus | ColonText | Placeholder | ColonJson | /*nil*/
 ;
 
 //
@@ -317,8 +325,7 @@ dateprop_chained:
 
 // Instruction
 instruction:
-//    OPB NL* s_and_w? ( s_and_w ( NL S* )* NL* )* CL
-    OPB NL* s_and_w* ( NL* s_and_w+ ( NL S* )* NL* )* CL   // added ( NL 
+    OPB NL* s_and_w? ( (NL S*)* s_and_w )* NL* CL
   | OPB NL* s_and_w? EOF
 ;
 // Hint
@@ -364,7 +371,8 @@ dollarans:
 
 anchor:  OPDANGLE s_and_w? CL ;
 
-//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<end common
+
+
 
 
 dclines: DCANY ;
@@ -387,8 +395,8 @@ clnsp:		CL ;  // without spaces
 sspl:		SSPL|SSPL2 ;
 
 words:          ( SENTENCE
-		| BARSTRING  | ELIPSIS
-		| NOTBITMARK
+		| BARSTRING
+		| NOTBITMARK | ELIPSIS
 		| AMP | Greater ~(Greater) | Less ~(Less) 
 		| RightArrow | RightAngle
 		)+ ;

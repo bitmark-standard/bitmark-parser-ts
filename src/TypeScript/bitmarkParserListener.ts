@@ -158,7 +158,6 @@ import { Notebook_articleContext } from "./bitmarkParser.js";
 import { Workbook_articleContext } from "./bitmarkParser.js";
 import { Release_notes_summaryContext } from "./bitmarkParser.js";
 import { MessageContext } from "./bitmarkParser.js";
-import { Bot_interviewContext } from "./bitmarkParser.js";
 import { Bot_choiceContext } from "./bitmarkParser.js";
 import { RatingContext } from "./bitmarkParser.js";
 import { Bullet_itemContext } from "./bitmarkParser.js";
@@ -1945,17 +1944,6 @@ export interface bitmarkParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitMessage?: (ctx: MessageContext) => void;
-
-	/**
-	 * Enter a parse tree produced by `bitmarkParser.bot_interview`.
-	 * @param ctx the parse tree
-	 */
-	enterBot_interview?: (ctx: Bot_interviewContext) => void;
-	/**
-	 * Exit a parse tree produced by `bitmarkParser.bot_interview`.
-	 * @param ctx the parse tree
-	 */
-	exitBot_interview?: (ctx: Bot_interviewContext) => void;
 
 	/**
 	 * Enter a parse tree produced by `bitmarkParser.bot_choice`.

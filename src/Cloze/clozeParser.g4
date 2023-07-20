@@ -58,19 +58,21 @@ resource:
 //    gaps including an instruction for the first and a hint for the second gap.
 //
 cloze:
-     BitCloze format          CL nl* ( bitElem nl* )+ NL* ( resource (NL* resource)* )?
-//    |BitCloze format_nullable CL nl* ( bitElem nl* )+ NL* ( resource (NL* resource)* )?
+     BitCloze format          CL nl* ( bitElem nl* )*
+/// |BitCloze format_nullable CL nl* ( bitElem nl* )+ NL* ( resource (NL* resource)* )?
 ;
 // 
 cloze_instruction_grouped:
     BitClozeinstgrp format CL nl?
-        ( item nl )? ( instruction )? nl* ( (bitElem nl*) )*
+////    ( item nl )? ( instruction )? nl* ( (bitElem nl*) )*
+        ( bitElem nl* )*
 	NL* ( resource (NL* resource)* )?
 ;
 // 
 cloze_solution_grouped:
     BitClozesolgrp format CL nl?
-    	( item nl )? ( instruction )? nl* ( (bitElem nl*) )*
+////   	( item nl )? ( instruction )? nl* ( (bitElem nl*) )*
+   	( bitElem nl* )*
 	NL* ( resource (NL* resource)* )? 
 ;
 
@@ -89,7 +91,8 @@ single_gap:
 // The students completed the [_cloze] with the correct verb [+forms][-formats].
 // Level 0 test ok
 cloze_and_multiple_choice_text:
-    BitClozeandmulti format CL nl*
+    BitClozeandmulti format CL ( bitElem nl* )*
+   |BitClozeandmulti format CL nl*
        ( bitElem nl* | headed_inline_choices nl* )+
        NL* ( resource (NL* resource)* )?
 ;
@@ -112,7 +115,12 @@ choice_star:  item? OPR s_and_w+ CL ;  // [*
 
 pimagebit:  image_one ( image_chained )* ( OPATALT words CL )? ;
 
-//<<<<<<<<<<<<<<<<<<<<<<<start common
+// Import the common part
+// ********************** import the common parser here*************
+/*
+    common part of the bitmark parser
+
+*/
 // [@point:number]
 atpoint:
     AtPoints NUMERIC CL
@@ -139,7 +147,7 @@ resource_format_extra:
 ;
 
 format2:
-   BitmarkMinus | BitmarkPlus | ColonText | ColonJson | /*nil*/
+   BitmarkMinus | BitmarkPlus | ColonText | Placeholder | ColonJson | /*nil*/
 ;
 
 //
@@ -262,8 +270,7 @@ dateprop_chained:
 
 // Instruction
 instruction:
-//    OPB NL* s_and_w? ( s_and_w ( NL S* )* NL* )* CL
-    OPB NL* s_and_w* ( NL* s_and_w+ ( NL S* )* NL* )* CL   // added ( NL 
+    OPB NL* s_and_w? ( (NL S*)* s_and_w )* NL* CL
   | OPB NL* s_and_w? EOF
 ;
 // Hint
@@ -309,7 +316,10 @@ dollarans:
 
 anchor:  OPDANGLE s_and_w? CL ;
 
-//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<end common
+
+
+// ******************************************************************
+
 
 
 lines: 

@@ -14638,8 +14638,7 @@
             "hint": "",
             "isExample": false,
             "example": "",
-            "aiGenerated": true,
-            "instruction": "About chatGPT"
+            "aiGenerated": true
         }
     },
     {
@@ -14652,12 +14651,11 @@
             "hint": "",
             "isExample": false,
             "example": "",
-            "aiGenerated": true,
-            "instruction": "About chatGPT"
+            "aiGenerated": true
         }
     },
     {
-        "bitmark": "[.summary-ai]\n[@aiGenerated: false]\n[!About chatGPT]\n申し訳ありませんが、私は人工知能であり、食事を摂ることができません。しかし、あなたにいくつかのアイデアを提供することができます。例えば、オートミール、卵料理、フルーツ、ヨーグルト、トースト、ベーコン、パンケーキ、ワッフルなどがあります。あなたの好みに合わせて、健康的で栄養価の高い朝食を選んでください。",
+        "bitmark": "[.summary-ai]\n[@aiGenerated: true]\n[!About chatGPT]\n申し訳ありませんが、私は人工知能であり、食事を摂ることができません。しかし、あなたにいくつかのアイデアを提供することができます。例えば、オートミール、卵料理、フルーツ、ヨーグルト、トースト、ベーコン、パンケーキ、ワッフルなどがあります。あなたの好みに合わせて、健康的で栄養価の高い朝食を選んでください。",
         "bit": {
             "type": "summary-ai",
             "format": "bitmark--",
@@ -14666,8 +14664,7 @@
             "hint": "",
             "isExample": false,
             "example": "",
-            "aiGenerated": false,
-            "instruction": "About chatGPT"
+            "aiGenerated": true
         }
     },
     {
@@ -14680,32 +14677,10 @@
             "hint": "",
             "isExample": false,
             "example": "",
-            "aiGenerated": false,
-            "instruction": "About chatGPT"
+            "aiGenerated": false
         }
     }
-]
-<<<<./tests/aiX.bit
-[
-    {
-        "bitmark": "[.article-ai]\n[@aiGenerated: false]\n[!About chatGPT]\n[@noda: yoshikazu]\nts-node automatically finds and loads tsconfig.json. Most ts-node options can be specified in a \"ts-node\" object using their programmatic, camelCase names. We recommend this because it works even when you cannot pass CLI flags, such as node --require ts-node/register and when using shebangs.",
-        "bit": {
-            "type": "article-ai",
-            "format": "bitmark--",
-            "body": "ts-node automatically finds and loads tsconfig.json. Most ts-node options can be specified in a \"ts-node\" object using their programmatic, camelCase names. We recommend this because it works even when you cannot pass CLI flags, such as node --require ts-node/register and when using shebangs.",
-            "item": "",
-            "hint": "",
-            "isExample": false,
-            "example": "",
-            "aiGenerated": false,
-            "instruction": "About chatGPT",
-            "noda": [
-                "yoshikazu"
-            ]
-        }
-    }
-]
-<<<<./tests/releaase-notes-summary.bit
+]<<<<./tests/release-notes-summary.bit
 [
     {
         "bitmark": "[.release-notes-summary]\n[@id:229899]\n[%][%A new role for L&D]\nIf you use Visual Studio Code, you can view and incorporate suggestions from GitHub Copilot directly within the editor. This guide demonstrates how to use GitHub Copilot within Visual Studio Code for macOS, Windows, or Linux.\nIf you use Visual Studio Code, you can view and incorporate suggestions from GitHub Copilot directly within the editor. This guide demonstrates how to use GitHub Copilot within Visual Studio Code for macOS, Windows, or Linux.\nIf you use Visual Studio Code, you can view and incorporate suggestions from GitHub Copilot directly within the editor. This guide demonstrates how to use GitHub Copilot within Visual Studio Code for macOS, Windows, or Linux.",
@@ -14889,6 +14864,1394 @@
             "footer": "Mit einem hohen Mass an Resilienz, Achtsamkeit, Adaption und Transparenz können wir uns den systemischen Herausforderungen der heutigen Zeit (BANI) stellen.",
             "ratingStart": "Achtsam",
             "ratingEnd": "Transparent"
+        }
+    }
+]
+<<<<./tests/placeholder.bit
+[
+    {
+        "bitmark": "[.article:placeholder]",
+        "bit": {
+            "type": "article",
+            "format": "bitmark--",
+            "body": ""
+        }
+    },
+    {
+        "bitmark": "[.essay:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "essay",
+            "format": "bitmark--",
+            "instruction": "",
+            "partialAnswer": "",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.statement:placeholder]",
+        "bit": {
+            "type": "statement",
+            "format": "bitmark--",
+            "body": ""
+        }
+    },
+    {
+        "bitmark": "[.statement:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "statement",
+            "format": "bitmark--",
+            "body": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.details-1:placeholder]",
+        "bit": {
+            "type": "details-1",
+            "format": "bitmark--",
+            "body": ""
+        }
+    },
+    {
+        "bitmark": "[.details-1:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "details-1",
+            "format": "bitmark--",
+            "body": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.sample-solution:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "sample-solution",
+            "format": "bitmark--",
+            "body": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.message:placeholder]",
+        "bit": {
+            "type": "message",
+            "format": "bitmark--",
+            "body": ""
+        }
+    },
+    {
+        "bitmark": "[.rating:placeholder]",
+        "bit": {
+            "type": "rating",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": ""
+        }
+    },
+    {
+        "bitmark": "[.survey:placeholder]",
+        "bit": {
+            "type": "survey",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": ""
+        }
+    },
+    {
+        "bitmark": "[.survey-1:placeholder]",
+        "bit": {
+            "type": "survey-1",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": ""
+        }
+    },
+    {
+        "bitmark": "[.survey-anonymous:placeholder]",
+        "bit": {
+            "type": "survey-anonymous",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": ""
+        }
+    },
+    {
+        "bitmark": "[.survey-anonymous-1:placeholder]",
+        "bit": {
+            "type": "survey-anonymous-1",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": ""
+        }
+    },
+    {
+        "bitmark": "[.self-assessment:placeholder]",
+        "bit": {
+            "type": "self-assessment",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": ""
+        }
+    },
+    {
+        "bitmark": "[.interview:placeholder]",
+        "bit": {
+            "type": "interview",
+            "format": "bitmark--",
+            "item": "",
+            "instruction": "",
+            "body": "",
+            "footer": "",
+            "hint": "",
+            "questions": []
+        }
+    },
+    {
+        "bitmark": "[.interview:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "interview",
+            "format": "bitmark--",
+            "item": "",
+            "instruction": "",
+            "body": "",
+            "footer": "",
+            "hint": "",
+            "questions": [],
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.book:placeholder]",
+        "bit": {
+            "type": "book",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": ""
+        }
+    },
+    {
+        "bitmark": "[.book:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "book",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.page:placeholder]",
+        "bit": {
+            "type": "page",
+            "format": "bitmark--",
+            "body": ""
+        }
+    },
+    {
+        "bitmark": "[.page:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "page",
+            "format": "bitmark--",
+            "body": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.assignment:placeholder]",
+        "bit": {
+            "type": "assignment",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": ""
+        }
+    },
+    {
+        "bitmark": "[.assignment:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "assignment",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.correction:placeholder]",
+        "bit": {
+            "type": "correction",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": ""
+        }
+    },
+    {
+        "bitmark": "[.correction:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "correction",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.essay:placeholder]",
+        "bit": {
+            "type": "essay",
+            "format": "bitmark--",
+            "instruction": "",
+            "partialAnswer": "",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": ""
+        }
+    },
+    {
+        "bitmark": "[.essay:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "essay",
+            "format": "bitmark--",
+            "instruction": "",
+            "partialAnswer": "",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.flashcard:placeholder]",
+        "bit": {
+            "type": "flashcard",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": ""
+        }
+    },
+    {
+        "bitmark": "[.flashcard:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "flashcard",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.flashcard-1:placeholder]",
+        "bit": {
+            "type": "flashcard-1",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": ""
+        }
+    },
+    {
+        "bitmark": "[.flashcard-1:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "flashcard-1",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.flashcard-set:placeholder]",
+        "bit": {
+            "type": "flashcard-set",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": ""
+        }
+    },
+    {
+        "bitmark": "[.flashcard-set:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "flashcard-set",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.flashcard-language-set:placeholder]",
+        "bit": {
+            "type": "flashcard-language-set",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": ""
+        }
+    },
+    {
+        "bitmark": "[.flashcard-language-set:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "flashcard-language-set",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.flashcard-language-1:placeholder]",
+        "bit": {
+            "type": "flashcard-language-1",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": ""
+        }
+    },
+    {
+        "bitmark": "[.flashcard-language-1:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "flashcard-language-1",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.vocabulary:placeholder]",
+        "bit": {
+            "type": "vocabulary",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": ""
+        }
+    },
+    {
+        "bitmark": "[.vocabulary:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "vocabulary",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.vocabulary-1:placeholder]",
+        "bit": {
+            "type": "vocabulary-1",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": ""
+        }
+    },
+    {
+        "bitmark": "[.vocabulary-1:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "vocabulary-1",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.mark:placeholder]",
+        "bit": {
+            "type": "mark",
+            "format": "bitmark--",
+            "item": "",
+            "instruction": "",
+            "hint": "",
+            "body": "",
+            "marks": {}
+        }
+    },
+    {
+        "bitmark": "[.mark:placeholder]\n[@id:2456]\n\n|| ok to here ||",
+        "bit": {
+            "type": "mark",
+            "format": "bitmark--",
+            "item": "",
+            "instruction": "",
+            "hint": "",
+            "body": "",
+            "marks": {},
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.match:placeholder]",
+        "bit": {
+            "type": "match",
+            "format": "bitmark--",
+            "item": "",
+            "heading": {},
+            "pairs": [],
+            "body": ""
+        }
+    },
+    {
+        "bitmark": "[.match:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "match",
+            "format": "bitmark--",
+            "item": "",
+            "heading": {},
+            "pairs": [],
+            "body": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.match-matrix:placeholder]",
+        "bit": {
+            "type": "match-matrix",
+            "format": "bitmark--",
+            "item": "",
+            "heading": {
+                "forKeys": "",
+                "forValues": []
+            },
+            "matrix": [],
+            "body": ""
+        }
+    },
+    {
+        "bitmark": "[.match-solution-grouped:placeholder]",
+        "bit": {
+            "type": "match-solution-grouped",
+            "format": "bitmark--",
+            "item": "",
+            "heading": {},
+            "pairs": [],
+            "body": ""
+        }
+    },
+    {
+        "bitmark": "[.match-reverse:placeholder]",
+        "bit": {
+            "type": "match-reverse",
+            "format": "bitmark--",
+            "item": "",
+            "heading": {},
+            "pairs": [],
+            "body": ""
+        }
+    },
+    {
+        "bitmark": "[.match-all-reverse:placeholder]",
+        "bit": {
+            "type": "match-all-reverse",
+            "format": "bitmark--",
+            "item": "",
+            "heading": {},
+            "pairs": [],
+            "body": ""
+        }
+    },
+    {
+        "bitmark": "[.match-picture:placeholder]",
+        "bit": {
+            "type": "match-picture",
+            "format": "bitmark--",
+            "item": "",
+            "heading": {},
+            "pairs": [],
+            "body": ""
+        }
+    },
+    {
+        "bitmark": "[.match-audio:placeholder]",
+        "bit": {
+            "type": "match-audio",
+            "format": "bitmark--",
+            "item": "",
+            "heading": {},
+            "pairs": [],
+            "body": ""
+        }
+    },
+    {
+        "bitmark": "[.match-all:placeholder]",
+        "bit": {
+            "type": "match-all",
+            "format": "bitmark--",
+            "item": "",
+            "heading": {},
+            "pairs": [],
+            "body": ""
+        }
+    },
+    {
+        "bitmark": "[.match-matrix:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "match-matrix",
+            "format": "bitmark--",
+            "item": "",
+            "heading": {
+                "forKeys": "",
+                "forValues": []
+            },
+            "matrix": [],
+            "body": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.match-solution-grouped:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "match-solution-grouped",
+            "format": "bitmark--",
+            "item": "",
+            "heading": {},
+            "pairs": [],
+            "body": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.match-reverse:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "match-reverse",
+            "format": "bitmark--",
+            "item": "",
+            "heading": {},
+            "pairs": [],
+            "body": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.match-all-reverse:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "match-all-reverse",
+            "format": "bitmark--",
+            "item": "",
+            "heading": {},
+            "pairs": [],
+            "body": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.match-picture:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "match-picture",
+            "format": "bitmark--",
+            "item": "",
+            "heading": {},
+            "pairs": [],
+            "body": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.match-audio:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "match-audio",
+            "format": "bitmark--",
+            "item": "",
+            "heading": {},
+            "pairs": [],
+            "body": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.match-all:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "match-all",
+            "format": "bitmark--",
+            "item": "",
+            "heading": {},
+            "pairs": [],
+            "body": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.chat:placeholder]",
+        "bit": {
+            "type": "chat",
+            "format": "",
+            "item": "",
+            "instruction": "",
+            "hint": "",
+            "initiator": {
+                "name": "",
+                "avatarImage": {
+                    "width": null,
+                    "height": null,
+                    "alt": "",
+                    "src": ""
+                }
+            },
+            "partner": {
+                "name": "",
+                "avatarImage": {
+                    "width": null,
+                    "height": null,
+                    "alt": "",
+                    "src": ""
+                }
+            },
+            "chat": [],
+            "body": ""
+        }
+    },
+    {
+        "bitmark": "[.chat:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "chat",
+            "format": "",
+            "item": "",
+            "instruction": "",
+            "hint": "",
+            "initiator": {
+                "name": "",
+                "avatarImage": {
+                    "width": null,
+                    "height": null,
+                    "alt": "",
+                    "src": ""
+                }
+            },
+            "partner": {
+                "name": "",
+                "avatarImage": {
+                    "width": null,
+                    "height": null,
+                    "alt": "",
+                    "src": ""
+                }
+            },
+            "chat": [],
+            "body": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.conversation:placeholder]",
+        "bit": {
+            "type": "conversation",
+            "format": "",
+            "item": "",
+            "instruction": "",
+            "hint": "",
+            "initiator": {
+                "name": "",
+                "avatarImage": {
+                    "width": null,
+                    "height": null,
+                    "alt": "",
+                    "src": ""
+                }
+            },
+            "partner": {
+                "name": "",
+                "avatarImage": {
+                    "width": null,
+                    "height": null,
+                    "alt": "",
+                    "src": ""
+                }
+            },
+            "chat": [],
+            "body": ""
+        }
+    },
+    {
+        "bitmark": "[.conversation:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "conversation",
+            "format": "",
+            "item": "",
+            "instruction": "",
+            "hint": "",
+            "initiator": {
+                "name": "",
+                "avatarImage": {
+                    "width": null,
+                    "height": null,
+                    "alt": "",
+                    "src": ""
+                }
+            },
+            "partner": {
+                "name": "",
+                "avatarImage": {
+                    "width": null,
+                    "height": null,
+                    "alt": "",
+                    "src": ""
+                }
+            },
+            "chat": [],
+            "body": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.conversation-left-1:placeholder]",
+        "bit": {
+            "type": "conversation-left-1",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": ""
+        }
+    },
+    {
+        "bitmark": "[.conversation-left-1-thought:placeholder]",
+        "bit": {
+            "type": "conversation-left-1-thought",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": ""
+        }
+    },
+    {
+        "bitmark": "[.conversation-left-1-scream:placeholder]",
+        "bit": {
+            "type": "conversation-left-1-scream",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": ""
+        }
+    },
+    {
+        "bitmark": "[.conversation-right-1:placeholder]",
+        "bit": {
+            "type": "conversation-right-1",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": ""
+        }
+    },
+    {
+        "bitmark": "[.conversation-right-1-thought:placeholder]",
+        "bit": {
+            "type": "conversation-right-1-thought",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": ""
+        }
+    },
+    {
+        "bitmark": "[.conversation-right-1-scream:placeholder]",
+        "bit": {
+            "type": "conversation-right-1-scream",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": ""
+        }
+    },
+    {
+        "bitmark": "[.conversation-left-1:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "conversation-left-1",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.conversation-left-1-thought:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "conversation-left-1-thought",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.conversation-left-1-scream:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "conversation-left-1-scream",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.conversation-right-1:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "conversation-right-1",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.conversation-right-1-thought:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "conversation-right-1-thought",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.conversation-right-1-scream:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "conversation-right-1-scream",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.cloze:placeholder]",
+        "bit": {
+            "type": "cloze",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": ""
+        }
+    },
+    {
+        "bitmark": "[.cloze:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "cloze",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.cloze-instruction-grouped:placeholder]",
+        "bit": {
+            "type": "cloze-instruction-grouped",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": ""
+        }
+    },
+    {
+        "bitmark": "[.cloze-instruction-grouped:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "cloze-instruction-grouped",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.cloze-solution-grouped:placeholder]",
+        "bit": {
+            "type": "cloze-solution-grouped",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": ""
+        }
+    },
+    {
+        "bitmark": "[.cloze-solution-grouped:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "cloze-solution-grouped",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.cloze-and-multiple-choice-text:placeholder]",
+        "bit": {
+            "type": "cloze-and-multiple-choice-text",
+            "format": "bitmark--",
+            "body": "",
+            "placeholders": {}
+        }
+    },
+    {
+        "bitmark": "[.cloze-and-multiple-choice-text:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "cloze-and-multiple-choice-text",
+            "format": "bitmark--",
+            "body": "",
+            "placeholders": {},
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.sequence:placeholder]",
+        "bit": {
+            "type": "sequence",
+            "format": "bitmark--",
+            "instruction": "",
+            "body": "",
+            "elements": [],
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": ""
+        }
+    },
+    {
+        "bitmark": "[.sequence:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "sequence",
+            "format": "bitmark--",
+            "instruction": "",
+            "body": "",
+            "elements": [],
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.true-false:placeholder]",
+        "bit": {
+            "type": "true-false",
+            "format": "bitmark--",
+            "item": "",
+            "lead": "",
+            "instruction": "",
+            "hint": "",
+            "labelTrue": "",
+            "labelFalse": "",
+            "statements": [],
+            "body": ""
+        }
+    },
+    {
+        "bitmark": "[.true-false:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "true-false",
+            "format": "bitmark--",
+            "item": "",
+            "lead": "",
+            "instruction": "",
+            "hint": "",
+            "labelTrue": "",
+            "labelFalse": "",
+            "statements": [],
+            "body": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.true-false-1:placeholder]",
+        "bit": {
+            "type": "true-false-1",
+            "format": "bitmark--",
+            "item": "",
+            "lead": "",
+            "instruction": "",
+            "hint": "",
+            "statement": "",
+            "isCorrect": true,
+            "isExample": false,
+            "body": ""
+        }
+    },
+    {
+        "bitmark": "[.true-false-1:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "true-false-1",
+            "format": "bitmark--",
+            "item": "",
+            "lead": "",
+            "instruction": "",
+            "hint": "",
+            "statement": "",
+            "isCorrect": true,
+            "isExample": false,
+            "body": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.multiple-choice:placeholder]",
+        "bit": {
+            "type": "multiple-choice",
+            "format": "bitmark--",
+            "item": "",
+            "instruction": "",
+            "body": "",
+            "footer": "",
+            "hint": "",
+            "quizzes": []
+        }
+    },
+    {
+        "bitmark": "[.multiple-choice-1:placeholder]",
+        "bit": {
+            "type": "multiple-choice-1",
+            "format": "bitmark--",
+            "item": "",
+            "instruction": "",
+            "body": "",
+            "hint": "",
+            "choices": [],
+            "isExample": false,
+            "example": ""
+        }
+    },
+    {
+        "bitmark": "[.multiple-response:placeholder]",
+        "bit": {
+            "type": "multiple-response",
+            "format": "bitmark--",
+            "item": "",
+            "instruction": "",
+            "body": "",
+            "footer": "",
+            "hint": "",
+            "quizzes": []
+        }
+    },
+    {
+        "bitmark": "[.multiple-response-1:placeholder]",
+        "bit": {
+            "type": "multiple-response-1",
+            "format": "bitmark--",
+            "item": "",
+            "instruction": "",
+            "body": "",
+            "hint": "",
+            "responses": [],
+            "isExample": false,
+            "example": ""
+        }
+    },
+    {
+        "bitmark": "[.multiple-choice-text:placeholder]",
+        "bit": {
+            "type": "multiple-choice-text",
+            "format": "bitmark--",
+            "body": "",
+            "placeholders": {}
+        }
+    },
+    {
+        "bitmark": "[.highlight-text:placeholder]",
+        "bit": {
+            "type": "highlight-text",
+            "format": "bitmark--",
+            "body": "",
+            "placeholders": {}
+        }
+    },
+    {
+        "bitmark": "[.multiple-choice:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "multiple-choice",
+            "format": "bitmark--",
+            "item": "",
+            "instruction": "",
+            "body": "",
+            "footer": "",
+            "hint": "",
+            "quizzes": [],
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.multiple-choice-1:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "multiple-choice-1",
+            "format": "bitmark--",
+            "item": "",
+            "instruction": "",
+            "body": "",
+            "hint": "",
+            "choices": [],
+            "isExample": false,
+            "example": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.multiple-response:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "multiple-response",
+            "format": "bitmark--",
+            "item": "",
+            "instruction": "",
+            "body": "",
+            "footer": "",
+            "hint": "",
+            "quizzes": [],
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.multiple-response-1:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "multiple-response-1",
+            "format": "bitmark--",
+            "item": "",
+            "instruction": "",
+            "body": "",
+            "hint": "",
+            "responses": [],
+            "isExample": false,
+            "example": "",
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.multiple-choice-text:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "multiple-choice-text",
+            "format": "bitmark--",
+            "body": "",
+            "placeholders": {},
+            "id": [
+                "2456"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.highlight-text:placeholder]\n[@id:2456]",
+        "bit": {
+            "type": "highlight-text",
+            "format": "bitmark--",
+            "body": "",
+            "placeholders": {},
+            "id": [
+                "2456"
+            ]
         }
     }
 ]

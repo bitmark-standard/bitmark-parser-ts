@@ -34,34 +34,42 @@ bitmark_:
 // Also conversation
 chat:
     BitChat format CL NL* ( bitElem NL* )*
+   |BitChat format CL NL* ( bitElem NL* )*
         (HSPL|HSPL2) initiator (HSPL|HSPL2) partner
         ( (HSPL|HSPL2) chat_initiator ( sspl_chat_partner )* )+ (HSPL|HSPL2)
 	NL* ( resource (NL* resource)* )?
 ;
 conversation:
     BitConv format CL NL* ( bitElem NL* )*
+   |BitConv format CL NL* ( bitElem NL* )*
         (HSPL|HSPL2) initiator (HSPL|HSPL2) partner
         ( (HSPL|HSPL2) chat_initiator ( sspl_chat_partner )* )+ (HSPL|HSPL2)
 	NL* ( resource (NL* resource)* )?
 ;
 
 conversation_left_1:
-    BitConversationLeft1 format2 CL NL* ( bitElem NL* )* partner1? NL* ( s_and_w NL* )+
+    BitConversationLeft1 format2 CL NL* ( bitElem NL* )* 
+   |BitConversationLeft1 format2 CL NL* ( bitElem NL* )* partner1? NL* ( s_and_w NL* )+
 ;
 conversation_right_1:
-    BitConversationRight1 format2 CL NL* ( bitElem NL* )* partner1? NL* ( s_and_w NL* )+
+    BitConversationRight1 format2 CL NL* ( bitElem NL* )*
+   |BitConversationRight1 format2 CL NL* ( bitElem NL* )* partner1? NL* ( s_and_w NL* )+
 ;
 conversation_right_1_thought:
-    BitConversationRight1Thought format2 CL NL* ( bitElem NL* )* partner1? NL* ( s_and_w NL* )+
+    BitConversationRight1Thought format2 CL NL* ( bitElem NL* )* 
+   |BitConversationRight1Thought format2 CL NL* ( bitElem NL* )* partner1? NL* ( s_and_w NL* )+
 ;
 conversation_right_1_scream: 
-    BitConversationRight1Scream format2 CL NL* ( bitElem NL* )* partner1? NL* ( s_and_w NL* )+
+    BitConversationRight1Scream format2 CL NL* ( bitElem NL* )*
+   |BitConversationRight1Scream format2 CL NL* ( bitElem NL* )* partner1? NL* ( s_and_w NL* )+
 ;
 conversation_left_1_thought:
-    BitConversationLeft1Thought format2 CL NL* ( bitElem NL* )* partner1? NL* ( s_and_w NL* )+
+    BitConversationLeft1Thought format2 CL NL* ( bitElem NL* )*
+   |BitConversationLeft1Thought format2 CL NL* ( bitElem NL* )* partner1? NL* ( s_and_w NL* )+
 ;
 conversation_left_1_scream:
-    BitConversationLeft1Scream format2 CL NL* ( bitElem NL* )* partner1? NL* ( s_and_w NL* )+
+    BitConversationLeft1Scream format2 CL NL* ( bitElem NL* )*
+   |BitConversationLeft1Scream format2 CL NL* ( bitElem NL* )* partner1? NL* ( s_and_w NL* )+
 ;
 
 
@@ -122,7 +130,11 @@ single_gap:
 
 dcolon: DBLCOLON ;
 
-//<<<<<<<<<<<<<<<<<<<<<<<start common
+//***************** import the common parser here*********
+/*
+    common part of the bitmark parser
+
+*/
 // [@point:number]
 atpoint:
     AtPoints NUMERIC CL
@@ -149,7 +161,7 @@ resource_format_extra:
 ;
 
 format2:
-   BitmarkMinus | BitmarkPlus | ColonText | ColonJson | /*nil*/
+   BitmarkMinus | BitmarkPlus | ColonText | Placeholder | ColonJson | /*nil*/
 ;
 
 //
@@ -272,8 +284,7 @@ dateprop_chained:
 
 // Instruction
 instruction:
-//    OPB NL* s_and_w? ( s_and_w ( NL S* )* NL* )* CL
-    OPB NL* s_and_w* ( NL* s_and_w+ ( NL S* )* NL* )* CL   // added ( NL 
+    OPB NL* s_and_w? ( (NL S*)* s_and_w )* NL* CL
   | OPB NL* s_and_w? EOF
 ;
 // Hint
@@ -319,8 +330,9 @@ dollarans:
 
 anchor:  OPDANGLE s_and_w? CL ;
 
-//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<end common
 
+
+//********************************************************
 
 //
 lines: 

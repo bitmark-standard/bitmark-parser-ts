@@ -32,11 +32,13 @@ truefalses:
 
 //
 true_false_1:
-    BitTruefalse1 format CL NL+ ( bitElem NL* )* choices
+    BitTruefalse1 format CL NL* ( bitElem NL* )*
+   |BitTruefalse1 format CL NL+ ( bitElem NL* )* choices
        NL* ( resource (NL* resource)* )?
 ;
 true_false:
-    BitTruefalse format CL NL*
+    BitTruefalse format CL NL* ( bitElem NL* )*
+   |BitTruefalse format CL NL*
        ( bitElem NL* )* ( mcrsep? tfmisc* choices )+
        mcrsep_end
        NL* ( resource (NL* resource)* )?
@@ -104,7 +106,11 @@ bullet_item:
     OPBUL s_and_w CL ( atpoint )?
 ;
 
-//<<<<<<<<<<<<<<<<<<<<<<<start common
+// ********************** import the common parser here*************
+/*
+    common part of the bitmark parser
+
+*/
 // [@point:number]
 atpoint:
     AtPoints NUMERIC CL
@@ -131,7 +137,7 @@ resource_format_extra:
 ;
 
 format2:
-   BitmarkMinus | BitmarkPlus | ColonText | ColonJson | /*nil*/
+   BitmarkMinus | BitmarkPlus | ColonText | Placeholder | ColonJson | /*nil*/
 ;
 
 //
@@ -254,8 +260,7 @@ dateprop_chained:
 
 // Instruction
 instruction:
-//    OPB NL* s_and_w? ( s_and_w ( NL S* )* NL* )* CL
-    OPB NL* s_and_w* ( NL* s_and_w+ ( NL S* )* NL* )* CL   // added ( NL 
+    OPB NL* s_and_w? ( (NL S*)* s_and_w )* NL* CL
   | OPB NL* s_and_w? EOF
 ;
 // Hint
@@ -301,8 +306,9 @@ dollarans:
 
 anchor:  OPDANGLE s_and_w? CL ;
 
-//<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<end common
 
+
+// ******************************************************************
 
 //
 lines: 
@@ -325,7 +331,7 @@ sspl:		SSPL|SSPL2 ;
 
 words:          ( SENTENCE
 		| NOTBITMARK
-		| BARSTRING  | ELIPSIS
+		| BARSTRING | ELIPSIS
 		| AMP | Greater ~(Greater) | Less ~(Less) 
 		| RightArrow | RightAngle
 		)+ ;

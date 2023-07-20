@@ -9,64 +9,64 @@ lexer grammar bitmarkLexer;
 OPDOT:	        '[.' ;
 S:		          [ \t] ;
 
-BitBook:         NL OPDOT S* 'book'    ;
-BitChapter:      NL OPDOT S* 'chapter'    ;
-BitToc:          NL OPDOT S* 'toc'    ;
-BitSummary:      NL OPDOT S* 'summary'    ;
-BitIntlink:      NL OPDOT S* 'internal-link' ;
-BitIntRef:       NL OPDOT S* 'internal-reference' ;
-BitAlias:        NL OPDOT S* 'bit-alias'    ;
-BitGroups:       NL OPDOT S* 'group*'    ;
-BitGroupt:       NL OPDOT S* 'group†'    ;
-BitPlaceholder:  NL OPDOT S* 'placeholder'  ; // for internal use only
-BitStatement:	   NL OPDOT S* 'statement'    ;
-BitDetails:	     NL OPDOT S* 'details-1'    ;
-BitSampleSolution:  NL OPDOT S* 'sample-solution'    ;
-BitTakeAudio:	   NL OPDOT S* 'take-audio'    ;
-CLOZE:		      'CLOZE' ;
-MATCH:		      'MATCH' ;
+BitBook:              NL OPDOT S* 'book'    ;
+BitChapter:           NL OPDOT S* 'chapter'    ;
+BitToc:               NL OPDOT S* 'toc'    ;
+BitSummary:           NL OPDOT S* 'summary'    ;
+BitIntlink:           NL OPDOT S* 'internal-link' ;
+BitIntRef:            NL OPDOT S* 'internal-reference' ;
+BitAlias:             NL OPDOT S* 'bit-alias'    ;
+BitGroups:            NL OPDOT S* 'group*'    ;
+BitGroupt:            NL OPDOT S* 'group†'    ;
+BitPlaceholder:       NL OPDOT S* 'placeholder'  ; // for internal use only
+BitStatement:	      NL OPDOT S* 'statement'    ;
+BitDetails:	      NL OPDOT S* 'details-1'    ;
+BitSampleSolution:    NL OPDOT S* 'sample-solution'    ;
+BitTakeAudio:	        NL OPDOT S* 'take-audio'    ;
+CLOZE:		 'CLOZE' ;
+MATCH:		 'MATCH' ;
 
-BitArticle:	     NL OPDOT S* 'article'  ;
-BitPage:	       NL OPDOT S* 'page'    ;
-BitEssay:        NL OPDOT S* 'essay'    ;
-BitMessage:      NL OPDOT S* 'message'  ;  // NEW added 12/2/2020
-BitCorrection:	 NL OPDOT S* 'correction'    ;
-BitMark:	       NL OPDOT S* 'mark'    ;
-BitTakepic:	     NL OPDOT S* 'take-picture'    ;
-BitRecaud:	     NL OPDOT S* 'record-audio'    ;
-BitPrepnote:	   NL OPDOT S* 'preparation-note'    ;
-BitAssign:	     NL OPDOT S* 'assignment'    ;
+BitArticle:	      NL OPDOT S* 'article'  ;
+BitPage:	      NL OPDOT S* 'page'    ;
+BitEssay:             NL OPDOT S* 'essay'    ;
+BitMessage:           NL OPDOT S* 'message'  ;  // NEW added 12/2/2020
+BitCorrection:	      NL OPDOT S* 'correction'    ;
+BitMark:	            NL OPDOT S* 'mark'    ;
+BitTakepic:	          NL OPDOT S* 'take-picture'    ;
+BitRecaud:	          NL OPDOT S* 'record-audio'    ;
+BitPrepnote:	        NL OPDOT S* 'preparation-note'    ;
+BitAssign:	          NL OPDOT S* 'assignment'    ;
 
-BitBotint: 	     NL OPDOT S* 'bot-interview'    ;
-BitSelfassess: 	 NL OPDOT S* 'self-assessment'    ;
-BitRating: 	     NL OPDOT S* 'rating'    ;
-BitSurvey: 	     NL OPDOT S* 'survey'    ;
-BitSurvey1: 	   NL OPDOT S* 'survey-1'    ;
-BitSurveyanon: 	 NL OPDOT S* 'survey-anonymous'    ;
-BitSurveyanon1:  NL OPDOT S* 'survey-anonymous-1'    ;
+BitBotint: 	          NL OPDOT S* 'bot-interview'    ;
+BitSelfassess: 	      NL OPDOT S* 'self-assessment'    ;
+BitRating: 	          NL OPDOT S* 'rating'    ;
+BitSurvey: 	          NL OPDOT S* 'survey'    ;
+BitSurvey1: 	        NL OPDOT S* 'survey-1'    ;
+BitSurveyanon: 	      NL OPDOT S* 'survey-anonymous'    ;
+BitSurveyanon1:       NL OPDOT S* 'survey-anonymous-1'    ;
 
-BitNote:	       NL OPDOT S* 'note' ;
-BitInfo:  	     NL OPDOT S* 'info' ;
-BitWarning:	     NL OPDOT S* 'warning' ;
-BitRemark:	     NL OPDOT S* 'remark';
-BitHint:	       NL OPDOT S* 'hint';
-BitHelp:	       NL OPDOT S* 'help';
-BitDanger:	     NL OPDOT S* 'danger';
-BitBug:		       NL OPDOT S* 'bug';
-BitSidenote:	   NL OPDOT S* 'side-note';
-BitStickynote:	 NL OPDOT S* 'sticky-note';
-BitQuote:	       NL OPDOT S* 'quote' ;
-BitFootnote:	   NL OPDOT S* 'foot-note' ;
-BitExample:	     NL OPDOT S* 'example' ;
+BitNote:	            NL OPDOT S* 'note' ;
+BitInfo:  	          NL OPDOT S* 'info' ;
+BitWarning:	          NL OPDOT S* 'warning' ;
+BitRemark:	          NL OPDOT S* 'remark';
+BitHint:	            NL OPDOT S* 'hint';
+BitHelp:	            NL OPDOT S* 'help';
+BitDanger:	          NL OPDOT S* 'danger';
+BitBug:		            NL OPDOT S* 'bug';
+BitSidenote:	        NL OPDOT S* 'side-note';
+BitStickynote:	      NL OPDOT S* 'sticky-note';
+BitQuote:	            NL OPDOT S* 'quote' ;
+BitFootnote:	        NL OPDOT S* 'foot-note' ;
+BitExample:	          NL OPDOT S* 'example' ;
+BitButtonCopytext:    NL OPDOT S* 'button-copy-text' ;
+BitWbtContinue:	      NL OPDOT S* 'wbt-continue' ;
+BitLearningPathDetails: NL OPDOT S* 'learning-path-details' ;
 
-BitButtonCopytext:           NL OPDOT S* 'button-copy-text' ;
-BitWbtContinue:	             NL OPDOT S* 'wbt-continue' ;
-BitAiPrompt:                 NL OPDOT S* 'ai-prompt' ;
-BitNoteAi:                   NL OPDOT S* 'note-ai' ;
-BitSummayAi:                 NL OPDOT S* 'summary-ai' ;
-BitArticleAi:                NL OPDOT S* 'article-ai' ;
+BitAiPrompt:		      NL OPDOT S* 'ai-prompt' ;
+BitNoteAi:		        NL OPDOT S* 'note-ai' ;
+BitSummayAi:          NL OPDOT S* 'summary-ai' ;
+BitArticleAi:         NL OPDOT S* 'article-ai' ;
 
-BitLearningPathDetails:      NL OPDOT S* 'learning-path-details' ;
 BitLearningPathLti:          NL OPDOT S* 'learning-path-lti' ;
 BitLearningPathStep:         NL OPDOT S* 'learning-path-step' ;
 BitLearningPathBook:         NL OPDOT S* 'learning-path-book' ;
@@ -80,94 +80,94 @@ BitLearningPathExternalLink: NL OPDOT S* 'learning-path-external-link' ;
 BitLearningPathClassroomTraining: NL OPDOT S* 'learning-path-classroom-training' ;
 // New April 22, 2022
 BitLearningPathClassroomEvent: NL OPDOT S* 'learning-path-classroom-event' ;
-BitBotActionSend:            NL OPDOT S* 'bot-action-send' ;
-BitBotActionAnnounce:        NL OPDOT S* 'bot-action-announce' ;
-BitBotActionSave: 	         NL OPDOT S* 'bot-action-save' ;
-BitBotActionRemind:  	       NL OPDOT S* 'bot-action-remind' ;
+BitBotActionSend:         NL OPDOT S* 'bot-action-send' ;
+BitBotActionAnnounce:     NL OPDOT S* 'bot-action-announce' ;
+BitBotActionSave: 	      NL OPDOT S* 'bot-action-save' ;
+BitBotActionRemind:  	    NL OPDOT S* 'bot-action-remind' ;
 
-BitVendorPadletEmbed:	       NL OPDOT S* 'vendor-padlet-embed' ;
-BitScorm:		                 NL OPDOT S* 'scorm' ;
+BitVendorPadletEmbed:	    NL OPDOT S* 'vendor-padlet-embed' ;
+BitScorm:		              NL OPDOT S* 'scorm' ;
 
-BitImage:			                NL OPDOT S* 'image'   ;
-BitImageLink:			            NL OPDOT S* 'image-link'   ;
-BitImageZoom:			            NL OPDOT S* 'image-zoom'   ;
-BitImagePrototype:		        NL OPDOT S* 'image-prototype'   ;
-BitImageSuperWide:		        NL OPDOT S* 'image-super-wide' ;
-BitAudio:			                NL OPDOT S* 'audio'   ;
-BitAudioLink:			            NL OPDOT S* 'audio-link'   ;
-BitAudioEmbed:			          NL OPDOT S* 'audio-embed'   ;
-BitVideo:			                NL OPDOT S* 'video'   ;
-BitVideoLink:			            NL OPDOT S* 'video-link'   ;
-BitVideoEmbed:			          NL OPDOT S* 'video-embed'   ;
-BitVideoPortrait:		          NL OPDOT S* 'video-portrait'   ;
-BitVideoLandscape:		        NL OPDOT S* 'video-landscape'   ;
-BitStillImageFilm: 		        NL OPDOT S* 'still-image-film'   ;
-BitStillImageFilmLink:		    NL OPDOT S* 'still-image-film-link'   ;
-BitStillImageFilmEmbed:		    NL OPDOT S* 'still-image-film-embed'   ;
-BitWebsiteLink:			          NL OPDOT S* 'website-link'   ;
-BitDocument:			            NL OPDOT S* 'document'   ;
-BitDocumentLink:		          NL OPDOT S* 'document-link'   ;
-BitDocumentEmbed:		          NL OPDOT S* 'document-embed'   ;
-BitDocumentDownload:		      NL OPDOT S* 'document-download'   ;
-BitAppLink:			              NL OPDOT S* 'app-link'   ;
-BitEditorial:			            NL OPDOT S* 'editorial'   ;
+BitImage:			            NL OPDOT S* 'image'   ;
+BitImageLink:			        NL OPDOT S* 'image-link'   ;
+BitImageZoom:			        NL OPDOT S* 'image-zoom'   ;
+BitImagePrototype:		    NL OPDOT S* 'image-prototype'   ;
+BitImageSuperWide:		    NL OPDOT S* 'image-super-wide' ;
+BitAudio:			            NL OPDOT S* 'audio'   ;
+BitAudioLink:			        NL OPDOT S* 'audio-link'   ;
+BitAudioEmbed:			      NL OPDOT S* 'audio-embed'   ;
+BitVideo:			            NL OPDOT S* 'video'   ;
+BitVideoLink:			        NL OPDOT S* 'video-link'   ;
+BitVideoEmbed:			      NL OPDOT S* 'video-embed'   ;
+BitVideoPortrait:		      NL OPDOT S* 'video-portrait'   ;
+BitVideoLandscape:		    NL OPDOT S* 'video-landscape'   ;
+BitStillImageFilm: 		    NL OPDOT S* 'still-image-film'   ;
+BitStillImageFilmLink:		NL OPDOT S* 'still-image-film-link'   ;
+BitStillImageFilmEmbed:		NL OPDOT S* 'still-image-film-embed'   ;
+BitWebsiteLink:			      NL OPDOT S* 'website-link'   ;
+BitDocument:			        NL OPDOT S* 'document'   ;
+BitDocumentLink:		      NL OPDOT S* 'document-link'   ;
+BitDocumentEmbed:		      NL OPDOT S* 'document-embed'   ;
+BitDocumentDownload:		  NL OPDOT S* 'document-download'   ;
+BitAppLink:			          NL OPDOT S* 'app-link'   ;
+BitEditorial:			        NL OPDOT S* 'editorial'   ;
 
-BitBookFrontispiece:		      NL OPDOT S* 'book-frontispiece'   ;
-BitBookTitle:	       		      NL OPDOT S* 'book-title'   ;
-BitBookCopyright:		          NL OPDOT S* 'book-copyright'   ;
-BitBookDedication:		        NL OPDOT S* 'book-dedication'   ;
-BitBookForword:			          NL OPDOT S* 'book-foreword'   ;
-BitBookPreface:			          NL OPDOT S* 'book-preface'   ;
-BitBookPrologue:		          NL OPDOT S* 'book-prologue'   ;
-BitBookEpilogue:		          NL OPDOT S* 'book-epilogue'   ;
-BitBookIntroduction:		      NL OPDOT S* 'book-introduction'   ;
-BitBookIncitingIncident:	    NL OPDOT S* 'book-inciting-incident'   ;
-BitBookConclusion:		        NL OPDOT S* 'book-conclusion'   ;
-BitBookAfterword:		          NL OPDOT S* 'book-afterword'   ;
-BitBookPostscript:		        NL OPDOT S* 'book-postscript'   ;
-BitBookappendix:		          NL OPDOT S* 'book-appendix'   ;
-BitBookAddendum:		          NL OPDOT S* 'book-addendum'   ;
-BitBookAcknowledgments:		    NL OPDOT S* 'book-acknowledgments'   ;
-BitBookListOfContributors:	  NL OPDOT S* 'book-list-of-contributors'   ;
-BitBookBibliography:		      NL OPDOT S* 'book-bibliography'   ;
-BitBookReferenceList:		      NL OPDOT S* 'book-reference-list'   ;
-BitBookEndnotes:		          NL OPDOT S* 'book-endnotes'   ;
-BitBookNotes:			            NL OPDOT S* 'book-notes'   ;
+BitBookFrontispiece:		  NL OPDOT S* 'book-frontispiece'   ;
+BitBookTitle:	       		  NL OPDOT S* 'book-title'   ;
+BitBookCopyright:		      NL OPDOT S* 'book-copyright'   ;
+BitBookDedication:		    NL OPDOT S* 'book-dedication'   ;
+BitBookForword:			      NL OPDOT S* 'book-foreword'   ;
+BitBookPreface:			      NL OPDOT S* 'book-preface'   ;
+BitBookPrologue:		      NL OPDOT S* 'book-prologue'   ;
+BitBookEpilogue:		      NL OPDOT S* 'book-epilogue'   ;
+BitBookIntroduction:		  NL OPDOT S* 'book-introduction'   ;
+BitBookIncitingIncident:	NL OPDOT S* 'book-inciting-incident'   ;
+BitBookConclusion:		    NL OPDOT S* 'book-conclusion'   ;
+BitBookAfterword:		      NL OPDOT S* 'book-afterword'   ;
+BitBookPostscript:		    NL OPDOT S* 'book-postscript'   ;
+BitBookappendix:		      NL OPDOT S* 'book-appendix'   ;
+BitBookAddendum:		      NL OPDOT S* 'book-addendum'   ;
+BitBookAcknowledgments:		NL OPDOT S* 'book-acknowledgments'   ;
+BitBookListOfContributors:	NL OPDOT S* 'book-list-of-contributors'   ;
+BitBookBibliography:		  NL OPDOT S* 'book-bibliography'   ;
+BitBookReferenceList:		  NL OPDOT S* 'book-reference-list'   ;
+BitBookEndnotes:		      NL OPDOT S* 'book-endnotes'   ;
+BitBookNotes:			        NL OPDOT S* 'book-notes'   ;
 BitBookCopyrightPermissions:	NL OPDOT S* 'book-copyright-permissions'   ;
-BitBookTeaser:			          NL OPDOT S* 'book-teaser'   ;
-BitBookAutherBio:		          NL OPDOT S* 'book-author-bio'   ;
+BitBookTeaser:			      NL OPDOT S* 'book-teaser'   ;
+BitBookAutherBio:		      NL OPDOT S* 'book-author-bio'   ;
 BitBookRequestForABookReview:	NL OPDOT S* 'book-request-for-a-book-review'   ;
-BitBookComingSoon:		        NL OPDOT S* 'book-coming-soon'   ;
-BitBookReadMore:		          NL OPDOT S* 'book-read-more'   ;
-BitBookSummary:			          NL OPDOT S* 'book-summary'   ;
-BitBookEpigraph:		          NL OPDOT S* 'book-epigraph'   ;
+BitBookComingSoon:		    NL OPDOT S* 'book-coming-soon'   ;
+BitBookReadMore:		      NL OPDOT S* 'book-read-more'   ;
+BitBookSummary:			      NL OPDOT S* 'book-summary'   ;
+BitBookEpigraph:		      NL OPDOT S* 'book-epigraph'   ;
 
-BitCode:			                NL OPDOT S* 'code'   ;
-BitCard1:			                NL OPDOT S* 'card-1'   ;
-BitQuestion1:			            NL OPDOT S* 'question-1'   ;
+BitCode:			            NL OPDOT S* 'code'   ;
+BitCard1:			            NL OPDOT S* 'card-1'   ;
+BitQuestion1:			        NL OPDOT S* 'question-1'   ;
 
-BitScreenshot:			          NL OPDOT S* 'screenshot'   ;
-BitFocusImage:			          NL OPDOT S* 'focus-image'   ;
-BitPhoto:			                NL OPDOT S* 'photo'   ;
-BitBrowserImage:		          NL OPDOT S* 'browser-image'   ;
-BitBotActionResponse:		      NL OPDOT S* 'bot-action-response'   ;
-BitBotActionTrueFalse:		    NL OPDOT S* 'bot-action-true-false'   ;
-BitBotActionRatingNumber:	    NL OPDOT S* 'bot-action-rating-number'   ;
-BitBotActionRatingStars:	    NL OPDOT S* 'bot-action-rating-stars'   ;
+BitScreenshot:			      NL OPDOT S* 'screenshot'   ;
+BitFocusImage:			      NL OPDOT S* 'focus-image'   ;
+BitPhoto:			            NL OPDOT S* 'photo'   ;
+BitBrowserImage:		      NL OPDOT S* 'browser-image'   ;
+BitBotActionResponse:		  NL OPDOT S* 'bot-action-response'   ;
+BitBotActionTrueFalse:		NL OPDOT S* 'bot-action-true-false'   ;
+BitBotActionRatingNumber:	NL OPDOT S* 'bot-action-rating-number'   ;
+BitBotActionRatingStars:	NL OPDOT S* 'bot-action-rating-stars'   ;
 
-BitChapterSubjectMatter:	    NL OPDOT S* 'chapter-subject-matter' ;
-BitReleaseNote:			          NL OPDOT S* 'release-note' ;
-BitConclusion:			          NL OPDOT S* 'conclusion' ;
+BitChapterSubjectMatter:	NL OPDOT S* 'chapter-subject-matter' ;
+BitReleaseNote:			      NL OPDOT S* 'release-note' ;
+BitConclusion:			      NL OPDOT S* 'conclusion' ;
 
-BitVendorAmcharts5Chart:	    NL OPDOT S* 'vendor-amcharts-5-chart' ;
-BitFeatured:			            NL OPDOT S* 'featured' ;
+BitVendorAmcharts5Chart:	NL OPDOT S* 'vendor-amcharts-5-chart' ;
+BitFeatured:			        NL OPDOT S* 'featured' ;
 
-BitNewspaperArticle:		      NL OPDOT S* 'newspaper-article' ;
-BitBlogArticle:			          NL OPDOT S* 'blog-article' ;
-BitBookArticle:			          NL OPDOT S* 'book-article' ;
-BitNotebookArticle:		        NL OPDOT S* 'notebook-article' ;
-BitWorkbookArticle:		        NL OPDOT S* 'workbook-article' ;
-BitReleaseNotesSummary:		    NL OPDOT S* 'release-notes-summary' ;
+BitNewspaperArticle:		  NL OPDOT S* 'newspaper-article' ;
+BitBlogArticle:			      NL OPDOT S* 'blog-article' ;
+BitBookArticle:			      NL OPDOT S* 'book-article' ;
+BitNotebookArticle:		    NL OPDOT S* 'notebook-article' ;
+BitWorkbookArticle:		    NL OPDOT S* 'workbook-article' ;
+BitReleaseNotesSummary:   NL OPDOT S* 'release-notes-summary' ;
 
 //
 OPDOLL:		      '[' S* '$' ;      // Dollar
@@ -177,39 +177,42 @@ OPRANGLEL:      '[' '▶' S* ;  // Right angle
 OPDANGLE:       '[▼' S* ;  // Down angle - Anchor
 OPU:		        '[_' S* ;  // Underscore
 OPB:		        '[!' S* ;  // Bang!
-OPQ:		        '[?' S* ;  // Question
-OPA:		        '[@' S* ;  // At
+OPQ:	        	'[?' S* ;  // Question
+OPA:	          '[@' S* ;  // At
 OPP:		        '[+' S* ;  // Plus
 OPM:		        '[-' S* ;  // Minus
 OPS:		        '[\'' S* ; // [' Single quote
-OPR:		        '[*' S* ;  // [*
-OPHASH:		      '[#' S* ;
+OPR:		        '[*' S* ;  // [* Asterisk
+OPHASH:	        '[#' S* ;  // [# Hash
 OPC:	          '[%' S* ;  // [% Item
 
-CL:		S* ']' ;
-COLON:		':' ;
-AMP:		'&' ;
-DBLCOLON:	'::' ;
-PLUS:		'+' ;
-DotAt:	   	'.@' ;
-Greater: 	'>' ;
-Less:		'<' ;
-RightAngle:	'►' ;
+CL:		          S* ']' ;
+COLON:		      ':' ;
+AMP:		        '&' ;
+DBLCOLON:	      '::' ;
+PLUS:	  	      '+' ;
+DotAt:	        '.@' ;
+Greater: 	      '>' ;
+Less:		        '<' ;
+RightAngle:	    '►' ;
 RightArrow:     '→' ;
 
 
 // Separators
 DBLEQ:		'==' ;
 
-HSPL:		NL '===' S* NL  ; // hard split
+HSPL:		  NL '===' S* NL  ; // hard split
 HSPL2:		'==='   S* NL  ;   // hard split
 SSPL:	  	NL '---' S* NL  ; // soft split
-SSPL2:	  	'---'   S* NL  ; // soft split
+SSPL2:	 	'---'   S* NL  ; // soft split
 
 QUOTE_INDEX: '[' [0-9]+ ']' ;  // Only for this lexer!
 
-//<<<<<<<<<<<<<<<< COMMON LEXER RULES <<<<<<<<<<<<<<<<<<<<
+// ********************** import the common lexer here***************
+/*
+    common part of the bitmark lexer
 
+*/
 COMMENT:  '||' UTF8*? '||' S* NL* ->skip ;
 
 DCANY:  NL* '::' STRING (':' SENTENCE)? '::' (NL|.)*? '::' NL ;  // OK1
@@ -223,7 +226,7 @@ ArticleText: '[' S* AmpArticle COLON (.|[ \t\r\n])*? CL ;
 NOTCL:    [^\]] ;
 NUMERIC:  ('+'|'-')?[0-9]+ ;
 STRING:   STR  ;
-NL:	  ('\n'|'\r\n') ;
+NL:	      ('\n'|'\r\n') ;
 NOTBITMARK:  '[^' .*?  ']' ;
 ELIPSIS:  ('[…'|'[...') .*? ']' ;
 
@@ -244,7 +247,7 @@ fragment GERMAN:   [ÄäẞÖöÜü] ;
 fragment POLISH:   [ĄąĆćĘęŁłŃńÓóŚśŹźŻż] ;
 fragment TRANSL:   [ČčĎďĚěǦǧȞȟǏǐJ̌ǰǨǩĽľŇňǑǒŘřŠšŤťǓǔǙǚŽžǮǯ] ;
 fragment EURO:     [☞→↓←↑€“”’…„́«»◇◼︎◎ʌɪˈ_̈₂‰≤≥‘≠Ωʳᵉ−] ;
-fragment IPA:	   [ɛɜːɡʊuɔɪəɒæʌʉo] ;
+fragment IPA:	     [ɛɜːɡʊuɔɪəɒæʌʉo] ;
 fragment JAPANESE : [\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}\u{2460}-\u{24FF}\u{3001}-\u{3002}\u{3220}-\u{325F}\u{FF01}-\u{FF5E}ー「」『』〜〈〉] ;
 
 
@@ -260,7 +263,7 @@ fragment
 STR:
   ([-0-9̈A-Za-z_"\p{Block=Latin_1_Supplement}\p{Emoji}]|IPA|EM0|EM2|VS0|SS0|LEA|LEB|GAL|GALC|PHON|EURO|TRANSL|GERMAN|POLISH|ROMANIA|JAPANESE|'\\'|'{'|'}')+ ;
 
-SENTENCE:   // Has space, tab but not newline
+SENTENCE:   // Has a space
   ([0-9A-Za-z_̈%?@!=*+-/ \t$#;"'–•●—➔^ |()\p{Block=Latin_1_Supplement}\p{Emoji}]|IPA|EM0|EM2|VS0|SS0|LEA|LEB|GAL|GALC|PHON|EURO|TRANSL|GERMAN|POLISH|ROMANIA|JAPANESE|'\\'|'{'|'}'|'…')+
 ;
 
@@ -276,24 +279,24 @@ AtProgressPoints: OPAT S* 'progressPoints' ;
 AtShortanswer:	  OPAT S* 'shortAnswer]'  ;
 AtLonganswer:	  OPAT S* 'longAnswer]' ;
 
-AtExampleWithStr:OPAT S* 'example:' (SENTENCE|NL)* CL ;
+AtExampleWithStr:OPAT S* 'example:' (SENTENCE|COLON|NL)* CL ;
 AtExamplecol:    OPAT S* 'example:'  ;
 AtExamplecl:     OPAT S* 'example]'  ;
-AtSampleSolution: OPAT S* 'sampleSolution:' (SENTENCE|NL)* CL ;
+AtSampleSolution: OPAT S* 'sampleSolution:' (SENTENCE|COLON|NL)* CL ;
 
 AtPartialAnswerS:OPAT S* 'partialAnswer:' SENTENCE CL ;
 AtPartialAnswer: OPAT S* 'partialAnswer]' ;
 AtLabeltrue:     OPAT S* 'labelTrue:'  ;
 AtLabelfalse:    OPAT S* 'labelFalse:'  ;
 AtPoints:        OPAT S* 'points:'  ;
-AtSrc:		 OPAT S* 'src' [0-9]+'x' ;  // added Sep 17
-AtPartner:	 OPAT S* 'partner:' ;
+AtSrc:		       OPAT S* 'src' [0-9]+'x' ;  // added Sep 17
+AtPartner:	     OPAT S* 'partner:' ;
 
-OPATALT: 	 OPAT S* 'alt:' ;
-OPAMARK: 	 OPAT S* 'mark:' ;
+OPATALT: 	       OPAT S* 'alt:' ;
+OPAMARK: 	       OPAT S* 'mark:' ;
 ShowInIndex:     OPAT S* 'showInIndex]' ;
 OpAtCaption:     OPAT S* 'caption:' ;
-OpAtLicense:	 OPAT S* 'license:' ;
+OpAtLicense:	   OPAT S* 'license:' ;
 OpAtCopyright:	 OPAT S* 'copyright:' ;
 OpAtSearch:      OPAT S* 'search:' ;
 
@@ -308,11 +311,11 @@ AtDate:		 OPAT S* 'date:' ;
 
 Http:	  	 'http://'  ;
 Https:   	 'https://'  ;
-AmpAudio:	 '&audio' ;
-AmpImage:	 '&image' ;
+AmpAudio:	       '&audio' ;
+AmpImage:	       '&image' ;
 AmpImageZoom:    '&image-zoom' ;
 AmpImageWAudio:	 '&image-with-audio' ;
-AmpVideo:	 '&video' ;
+AmpVideo:	       '&video' ;
 AmpArticle:      '&article' ;
 AmpDocument:     '&document' ;
 AmpApp:        	 '&app' ;
@@ -320,11 +323,11 @@ AmpWebsite:      '&website' ;  // NEW added 12/2/2020 usage [.message&website]..
 AmpStillImageFilm:'&still-image-film' ;  // *
 AmpPdf:	         '&pdf' ;
 
-OpAmpAudio:	 '[&' S* 'audio' ;
-OpAmpImage:	 '[&' S* 'image' ;
+OpAmpAudio:	     '[&' S* 'audio' ;
+OpAmpImage:	     '[&' S* 'image' ;
 OpAmpImageZoom:  '[&' S* 'image-zoom' ;
 OpAmpImageWAudio:'[&' S* 'image-with-audio' ; 
-OpAmpVideo:	 '[&' S* 'video' ;
+OpAmpVideo:	     '[&' S* 'video' ;
 OpAmpArticle:    '[&' S* 'article' ;
 OpAmpArticleAtt: '[&' S* 'article-attachment' ;
 OpAmpDocument:   '[&' S* 'document' ;
@@ -335,13 +338,13 @@ OpAmpStillImageFilm: '[&' S* 'still-image-film' ;
 BracEnclose:     '[' ([A-Za-z]|ROMANIA)+ ;
 
 // Added links Aug 18 2021
-AmpAudioLink:	 '&audio-link' ; 
-AmpImageLink:	 '&image-link' ; 
-AmpVideoLink:	 '&video-link' ; 
+AmpAudioLink:	   '&audio-link' ; 
+AmpImageLink:	   '&image-link' ; 
+AmpVideoLink:	   '&video-link' ; 
 AmpArticleLink:  '&article-link' ; 
 AmpDocumentLink: '&document-link' ;
 AmpDocumentDownload: '&document-download' ; 
-AmpAppLink:	 '&app-link' ;  
+AmpAppLink:	     '&app-link' ;  
 AmpWebsiteLink:  '&website-link' ; 
 AmpStillImageFilmLink:'&still-image-film-link' ;
 
@@ -381,9 +384,9 @@ JPG:    ':jpg' ;
 PNG:    ':png' ;
 GIF:    ':gif' ;
 SVG:    ':svg' ;
-MP2:	':mp2' ;
-MP3:	':mp3' ;
-MP4:	':mp4' ;
+MP2:    ':mp2' ;
+MP3:    ':mp3' ;
+MP4:    ':mp4' ;
 FLV:    ':flv' ;
 WMV:    ':wmv' ;
 MPEG:   ':mpeg';
@@ -403,7 +406,8 @@ LIST_LINE:
 ;
 ENCLBARS:	'|' .*? '|' ;
 
-//<<<<<<<<<<<<<<<< COMMON <<<<<<<<<<<<<<<<<<<<
 
+
+// ******************************************************************
 
 // end

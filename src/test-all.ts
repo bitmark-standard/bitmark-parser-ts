@@ -187,6 +187,8 @@ const testfiles: string[] = [
     './tests/GMB/cloze_emoticons.bit',
     './tests/GMB/essay.bit',
     './tests/GMB/bitmark_example.bit',
+
+    './tests/placeholder.bit',    
 ];
 
 const testfilesX: string[] = [

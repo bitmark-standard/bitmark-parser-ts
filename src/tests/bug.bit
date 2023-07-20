@@ -1,17 +1,43 @@
-[.bot-action-rating-number]
-[@id:110406]
-Brüchig
+[.book:text]
+[! this is my book]
+[# Erkundungen]
+[##  Deutsch als Fremdsprache]
+[%][%k testing L&D R&D]
+[@subject: Integriertes Kurs- und Arbeitsbuch Sprachniveau B2]
+[@ language:en]
+[@ copyright: © 2012 by A Publisher International Ltd., Zurich, Switzerland]
+[@ skills: reading]
+[@ ageRange: 18, 969]
+[@ complexity: intermediate]
+[@seriesTitle: German as a Foreign Language]
+[@seriesId: com.firstpub.e0111]
+[@numberInSeries: 1]
+[@format: Integrated course and work book]
+[@type: book]
+[@isLiveBook: false]
+[@isSmartBook: false]
+[@isHighQuality: true]
+
+
+
+
+[.conversation]
+[%][%k testing L&D R&D]
 ===
-[!Resilient]
-👍🏾 Perfekt!
+[#Emilie]
+[&image:https://cdn.bitbook.education/avatars/cat_70x70@3.jpg]
 ===
-[!Achtsam]
-🙁 this is not right!
+[#John Done]
 ===
-[!Adaptiv]
-🙁 you are super wired!
+Hi John
+--
+How are you today?
 ===
-[!Transparent]
-😭✋😳 you can leave it like that!
+I am fine, thanks. How are you, Emilie?
+--
+I just wanted to let you know ...
 ===
-Mit einem hohen Mass an Resilienz, Achtsamkeit, Adaption und Transparenz können wir uns den systemischen Herausforderungen der heutigen Zeit (BANI) stellen.
+Thanks!
+--
+cu
+===
