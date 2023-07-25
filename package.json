@@ -1,6 +1,6 @@
 {
   "name": "bitmark-parser-ts",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bitmark-standard/bitmark-parser-ts.git"
@@ -14,7 +14,7 @@
   "description": "A parser for Bitmark text",
   "scripts": {
     "test": "cd src && ts-node test-all.ts --diff",
-    "build-ts": "cd src && make -f makefiles/makefile-typescript.mk && python tools/addjs2import.py TypeScript/*.ts",
+    "build-ts": "cd src && make -f makefiles/makefile-typescript.mk && python tools/addjs2import.py antlr/*.ts",
     "build-bundle": "rm -f dist/* && parcel build bundle-test.html"
   },
   "dependencies": {
@@ -36,11 +36,12 @@
     "@types/node": "^18.16.3",
     "antlr4ts-cli": "^0.5.0-alpha.4",
     "assert": "^2.0.0",
+    "bitmark-antlr-grammars": "^1.0.1",
     "node-fetch": "^3.3.1",
+    "parcel-bundler": "^1.12.5",
     "raw-loader": "^4.0.2",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.0.4",
-    "parcel-bundler": "^1.12.5",
     "util": "^0.12.5"
   },
   "type": "module",
@@ -49,5 +50,5 @@
   "bugs": {
     "url": "https://github.com/bitmark-standard/bitmark-parser-ts/issues"
   },
-  "homepage": "https://github.com/bitmark-standard/bitmark-parser-ts#readme"  
+  "homepage": "https://github.com/bitmark-standard/bitmark-parser-ts#readme"
 }
