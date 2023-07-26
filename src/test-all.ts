@@ -188,7 +188,8 @@ const testfiles: string[] = [
     './tests/GMB/essay.bit',
     './tests/GMB/bitmark_example.bit',
 
-    './tests/placeholder.bit',    
+    './tests/placeholder.bit',
+    './tests/cook-lang.bit',
 ];
 
 const testfilesX: string[] = [

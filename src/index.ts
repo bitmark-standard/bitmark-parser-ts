@@ -107,7 +107,8 @@ class Preprocessor {
       sure if this is a good solution. 7/25/2023
     */
     escape_brackets_in_emphasis(text:string):string {
-	let re: RegExp = /(\*\*[^\[\*\s]*\[[^\]\*\s]*\][^\]\*\s]*\*\*)/gms;
+	//let re: RegExp = /(\*\*[^\[\*\s]*\[[^\]\*\s]*\][^\]\*\s]*\*\*)/gms;
+	let re: RegExp = /(\*\*+[^\[\*\n]*\[[^\]\*]*\][^\]\*\n]*\*+\*)/gms;
 	let m: RegExpMatchArray;
 	let text_repl:string=text;
 
