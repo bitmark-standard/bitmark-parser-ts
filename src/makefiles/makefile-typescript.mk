@@ -3,7 +3,7 @@
 # Builds the bitmark parser source for Javascript bundle.
 #
 NODE_MODULES=../node_modules
-PYTHON_EXECUTABLE=$(shell which python 2>/dev/null || which python3 2>/dev/null)
+PYTHON_EXECUTABLE=$(shell which python3 2>/dev/null || which python3 2>/dev/null)
 
 ANTLR4TS=$(NODE_MODULES)/antlr4ts
 ANTLR_OPT=-Dlanguage=JavaScript -o ./
