@@ -2871,8 +2871,14 @@ class BitmarkListener {
     enterLang_vocabulary(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'lang_vocabulary'); }
     enterLang_homework(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'lang_homework'); }
     enterLang_teacher_note(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'lang_teacher_note'); }
-
-
+    enterReview_note(ctx: ParserRuleContext): void  { this.push_tmpl(ctx, 'review-note'); }
+    enterReview_author_note(ctx: ParserRuleContext): void  { this.push_tmpl(ctx, 'review-author-note'); }
+    enterReview_reviewer_note(ctx: ParserRuleContext): void  { this.push_tmpl(ctx, 'review-reviewer-note'); }
+    enterReview_request_for_review_note(ctx: ParserRuleContext): void  { this.push_tmpl(ctx, 'review-request-for-review-note'); }
+    enterReview_approved_note(ctx: ParserRuleContext): void  { this.push_tmpl(ctx, 'review-approved-note'); }
+    enterChecklist(ctx: ParserRuleContext): void  { this.push_tmpl(ctx, 'checklist'); }
+    enterVideo_transcript(ctx: ParserRuleContext): void  { this.push_tmpl(ctx, 'video-transcript'); }
+    enterAudio_transcript(ctx: ParserRuleContext): void  { this.push_tmpl(ctx, 'audio-transcript'); }
 
     enterMenu_3_course(ctx: ParserRuleContext): void {
 	this.push_tmpl(ctx, 'menu-3-course');
