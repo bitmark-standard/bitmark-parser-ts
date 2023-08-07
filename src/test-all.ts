@@ -192,6 +192,7 @@ const testfiles: string[] = [
     './tests/cook-lang.bit',
     './tests/review-note-etc.bit',
     './tests/image-portrait-landscape.bit',
+    './tests/bitmark-example.bit',
 ];
 
 const testfilesX: string[] = [

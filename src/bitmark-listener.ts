@@ -2883,6 +2883,8 @@ class BitmarkListener {
     enterImage_landscape(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'image_landscape');}
     enterImage_on_device(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'image_on_device');}
     
+    enterBitmark_example(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'bitmark-example'); }
+
 
     enterMenu_3_course(ctx: ParserRuleContext): void {
 	this.push_tmpl(ctx, 'menu-3-course');

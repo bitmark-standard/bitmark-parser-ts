@@ -199,6 +199,7 @@ import { Audio_transcriptContext } from "./bitmarkParser.js";
 import { Image_portraitContext } from "./bitmarkParser.js";
 import { Image_landscapeContext } from "./bitmarkParser.js";
 import { Image_on_deviceContext } from "./bitmarkParser.js";
+import { Bitmark_exampleContext } from "./bitmarkParser.js";
 import { Bot_choiceContext } from "./bitmarkParser.js";
 import { RatingContext } from "./bitmarkParser.js";
 import { Bullet_itemContext } from "./bitmarkParser.js";
@@ -2436,6 +2437,17 @@ export interface bitmarkParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitImage_on_device?: (ctx: Image_on_deviceContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `bitmarkParser.bitmark_example`.
+	 * @param ctx the parse tree
+	 */
+	enterBitmark_example?: (ctx: Bitmark_exampleContext) => void;
+	/**
+	 * Exit a parse tree produced by `bitmarkParser.bitmark_example`.
+	 * @param ctx the parse tree
+	 */
+	exitBitmark_example?: (ctx: Bitmark_exampleContext) => void;
 
 	/**
 	 * Enter a parse tree produced by `bitmarkParser.bot_choice`.
