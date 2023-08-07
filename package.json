@@ -1,6 +1,6 @@
 {
   "name": "bitmark-parser-ts",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bitmark-standard/bitmark-parser-ts.git"
@@ -36,7 +36,7 @@
     "@types/node": "^18.16.3",
     "antlr4ts-cli": "^0.5.0-alpha.4",
     "assert": "^2.0.0",
-    "bitmark-antlr-grammars": "^1.0.4",
+    "bitmark-antlr-grammars": "^1.0.7",
     "node-fetch": "^3.3.1",
     "parcel-bundler": "^1.12.5",
     "raw-loader": "^4.0.2",

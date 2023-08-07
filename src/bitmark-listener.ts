@@ -2879,6 +2879,10 @@ class BitmarkListener {
     enterChecklist(ctx: ParserRuleContext): void  { this.push_tmpl(ctx, 'checklist'); }
     enterVideo_transcript(ctx: ParserRuleContext): void  { this.push_tmpl(ctx, 'video-transcript'); }
     enterAudio_transcript(ctx: ParserRuleContext): void  { this.push_tmpl(ctx, 'audio-transcript'); }
+    enterImage_portrait(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'image_portrait'); }
+    enterImage_landscape(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'image_landscape');}
+    enterImage_on_device(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'image_on_device');}
+    
 
     enterMenu_3_course(ctx: ParserRuleContext): void {
 	this.push_tmpl(ctx, 'menu-3-course');
