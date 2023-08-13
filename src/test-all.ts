@@ -194,6 +194,7 @@ const testfiles: string[] = [
     './tests/image-portrait-landscape.bit',
     './tests/bitmark-example.bit',
     './tests/app-ai-prompt.bit',
+    './tests/booklink.bit',
 ];
 
 const testfilesX: string[] = [

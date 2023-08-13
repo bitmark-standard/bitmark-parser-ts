@@ -2886,6 +2886,10 @@ class BitmarkListener {
     enterBitmark_example(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'bitmark-example'); }
     enterApp_ai_prompt(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'app-ai-prompt'); }
 
+    enterBook_link(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'book-link'); }
+    enterBook_link_next(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'book-link-next'); }
+    enterBook_link_prev(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'book-link-prev'); }
+    
 
     enterMenu_3_course(ctx: ParserRuleContext): void {
 	this.push_tmpl(ctx, 'menu-3-course');
