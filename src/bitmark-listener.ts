@@ -2889,7 +2889,8 @@ class BitmarkListener {
     enterBook_link(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'book-link'); }
     enterBook_link_next(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'book-link-next'); }
     enterBook_link_prev(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'book-link-prev'); }
-    
+    enterFigure(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'figure'); }
+
 
     enterMenu_3_course(ctx: ParserRuleContext): void {
 	this.push_tmpl(ctx, 'menu-3-course');

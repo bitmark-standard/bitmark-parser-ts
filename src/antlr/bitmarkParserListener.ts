@@ -204,6 +204,7 @@ import { App_ai_promptContext } from "./bitmarkParser.js";
 import { Book_linkContext } from "./bitmarkParser.js";
 import { Book_link_nextContext } from "./bitmarkParser.js";
 import { Book_link_prevContext } from "./bitmarkParser.js";
+import { FigureContext } from "./bitmarkParser.js";
 import { Bot_choiceContext } from "./bitmarkParser.js";
 import { RatingContext } from "./bitmarkParser.js";
 import { Bullet_itemContext } from "./bitmarkParser.js";
@@ -2496,6 +2497,17 @@ export interface bitmarkParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitBook_link_prev?: (ctx: Book_link_prevContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `bitmarkParser.figure`.
+	 * @param ctx the parse tree
+	 */
+	enterFigure?: (ctx: FigureContext) => void;
+	/**
+	 * Exit a parse tree produced by `bitmarkParser.figure`.
+	 * @param ctx the parse tree
+	 */
+	exitFigure?: (ctx: FigureContext) => void;
 
 	/**
 	 * Enter a parse tree produced by `bitmarkParser.bot_choice`.
