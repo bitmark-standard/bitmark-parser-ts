@@ -26,7 +26,7 @@ log['error'] = logfun;
 
 // kebabcase to camelcase
 //const camelize = s => s.replace(/-./g, x=>x[1].toUpperCase())
-function camelize(s: string): string { // 
+function camelize(s: string): string { //
     return s.replace(/-./g, x => x[1].toUpperCase());
 }
 function replaceFrom(base: string, search: string, replace: string, from: number): string {
@@ -66,13 +66,13 @@ class BitmarkListener {
 		parser: Parser) {
 	this.error_listener = error_listener;
 	this.source = source;
-	this.parser = parser;  // New 10/9/2021  
+	this.parser = parser;  // New 10/9/2021
 	this.stk = new Stack();
 	this.curr_bit_stk = new Stack();
 	this.but = new BitUtil(source.trim());
 	this.format = "";  // &image, &audio, &video etc
 	this.resformat = "";
-	// type starts with one of these}; 
+	// type starts with one of these};
 	this.resselfdesc = {
 	    'image-link': 'image-link',
 	    'audio-link': 'audio-link',
@@ -553,11 +553,11 @@ class BitmarkListener {
 
     //
     exitCplus(ctx: ParserRuleContext): void {
-	this.curr_bit_stk.pop();  // cplus 
+	this.curr_bit_stk.pop();  // cplus
 	this.curr_bit_stk.pop();  // cplus obj
     };
     exitCminus(ctx: ParserRuleContext): void {
-	this.curr_bit_stk.pop();  // cminus 
+	this.curr_bit_stk.pop();  // cminus
 	this.curr_bit_stk.pop();  // cminus obj
     };
 
@@ -791,7 +791,7 @@ class BitmarkListener {
 	let key: string = `{${n}}`;
 
 	this.stk.top().bit['placeholders'][key] = p;
-	this.curr_bit_stk.push(p); // let children know the key  
+	this.curr_bit_stk.push(p); // let children know the key
 	this.curr_bit_stk.push(key); // let children know the key
     };
     exitHeaded_inline_choices(ctx: ParserRuleContext): void {
@@ -811,8 +811,8 @@ class BitmarkListener {
 	let key: string = `{${n}}`;
 
 	this.stk.top().bit['placeholders'][key] = p;
-	// let children know the key e.g. {0}  
-	this.curr_bit_stk.push(p); // let children know the key  
+	// let children know the key e.g. {0}
+	this.curr_bit_stk.push(p); // let children know the key
 	this.curr_bit_stk.push(key);
     };
     exitHighlight_inline_choices(ctx: ParserRuleContext): void {
@@ -828,7 +828,7 @@ class BitmarkListener {
     // Enter a parse tree produced by bitmarkParser#choice_head.
     exitChoice_head(ctx: ParserRuleContext): void {
 	let code: string = this.but.getcode(ctx);
-	const key: string = this.curr_bit_stk.top(); // let children know the key  
+	const key: string = this.curr_bit_stk.top(); // let children know the key
 	const re: RegExp = /\[\'([^\]]*)\]/;
 	let val: string = this.but.get_bit_value(re, code);
 	const bit: Object = this.stk.top().bit;
@@ -941,7 +941,7 @@ class BitmarkListener {
 	}
 	else if (typeof cbit === 'object'
 	    && !(this.stk.top().bit.type.startsWith('interview')) // Interview JSON undef!
-	    && !(this.stk.top().bit.type.startsWith('cloze')) // Need this 
+	    && !(this.stk.top().bit.type.startsWith('cloze')) // Need this
 		) {
 	    // Interview JSON not defined yet
 	    if (this.curr_bit_stk.size === 1) {
@@ -1061,17 +1061,17 @@ class BitmarkListener {
 	}
 	(this.stk.top()).bit['body'] = (this.stk.top()).bit['body'].replace(this.but.getcode(ctx), '');
     };
-    // 
+    //
     exitInterview_text(ctx: ParserRuleContext): void {
 	let cbit: string = this.curr_bit_stk.top();
-	let code: string = this.but.getcode2(ctx).trim();  // was but.getcode()  
+	let code: string = this.but.getcode2(ctx).trim();  // was but.getcode()
 	if (cbit === 'interview_qanda')
 	    (this.curr_bit_stk.second()).question = code;
 	(this.stk.top()).bit['body'] = (this.stk.top()).bit['body'].replace(this.but.getcode(ctx), '');
     };
     exitInterview_sometext(ctx: ParserRuleContext): void {
 	let cbit: string = this.curr_bit_stk.top();
-	let code: string = this.but.getcode2(ctx).trim();  // was but.getcode()  
+	let code: string = this.but.getcode2(ctx).trim();  // was but.getcode()
 	if (cbit === 'interview_qanda')
 	    (this.curr_bit_stk.second()).question += code;
 	(this.stk.top()).bit['body'] = (this.stk.top()).bit['body'].replace(this.but.getcode(ctx), '');
@@ -1084,7 +1084,7 @@ class BitmarkListener {
     // Enter a parse tree produced by bitmarkParser#interview_instruction_grouped.
     //exitInterview_instruction_grouped(ctx: ParserRuleContext) {};
     exitFooter_resource(ctx: ParserRuleContext): void {
-	let code: string = this.but.getcode2(ctx);  // was but.getcode()  
+	let code: string = this.but.getcode2(ctx);  // was but.getcode()
 	(this.stk.top()).bit.footer = (this.stk.top()).bit.footer + code.trim();
 	(this.stk.top()).bit['body'] = (this.stk.top()).bit['body'].replace(code, '');
     };
@@ -1329,7 +1329,7 @@ class BitmarkListener {
 	    }
 	    else if (child === 'videoLink' && key.startsWith('src')) {
 		key = 'thumbnails';
-		// objects in array 
+		// objects in array
 		if (!(key in bit[parent][child]))
 		    bit[parent][child][key] = [];
 		let thumb = clone({ format: '', width: null, height: null });
@@ -2627,7 +2627,7 @@ class BitmarkListener {
 		this.stk.top().bit.item = val;  // save the only first one
 	    }
 	}
-	// remove anyway 
+	// remove anyway
 	(this.stk.top()).bit['body'] = (this.stk.top()).bit['body'].split(code).join('');
     }
 
@@ -2882,7 +2882,7 @@ class BitmarkListener {
     enterImage_portrait(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'image_portrait'); }
     enterImage_landscape(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'image_landscape');}
     enterImage_on_device(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'image_on_device');}
-    
+
     enterBitmark_example(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'bitmark-example'); }
     enterApp_ai_prompt(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'app-ai-prompt'); }
 
@@ -2891,6 +2891,8 @@ class BitmarkListener {
     enterBook_link_prev(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'book-link-prev'); }
     enterFigure(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'figure'); }
 
+	enterVideo_link_portrait(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'video-link-portrait'); }
+	enterVideo_link_landscape(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'video-link-landscape'); }
 
     enterMenu_3_course(ctx: ParserRuleContext): void {
 	this.push_tmpl(ctx, 'menu-3-course');
@@ -2924,7 +2926,7 @@ class BitmarkListener {
 	};
 	this.curr_bit_stk.push(slot);
 	this.curr_bit_stk.push(fn);
-	this.curr_bit_stk.push('menu');  // push a marker.  
+	this.curr_bit_stk.push('menu');  // push a marker.
     };
 
     exitMenu_text(ctx: ParserRuleContext): void {
@@ -2957,4 +2959,3 @@ class BitmarkListener {
 
 /*export {BitmarkListener};*/
 export { BitmarkListener };
-
