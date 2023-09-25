@@ -80,14 +80,14 @@ const testfiles: string[] = [
     './tests/interview8.bit',
 
     './tests/interview100.bit',
-    //'./tests/interview101.bit',  
+    //'./tests/interview101.bit',
     './tests/interview102.bit',
     './tests/interview103.bit',
     './tests/interview104.bit',
     './tests/interview105.bit',
-    //'./tests/interview106.bit',  
+    //'./tests/interview106.bit',
     './tests/interview107.bit',
-    //'./tests/interview108.bit',  
+    //'./tests/interview108.bit',
     './tests/interview109.bit',
     './tests/interview110.bit',
     './tests/interview-image1.bit',
@@ -95,7 +95,7 @@ const testfiles: string[] = [
     './tests/mark1.bit',
     //'./tests/mark2.bit',  // complex
     './tests/match1.bit',
-    //'./tests/match2.bit', 
+    //'./tests/match2.bit',
     './tests/match3.bit',
     './tests/match4.bit',
     //'./tests/match5.bit',
@@ -104,7 +104,7 @@ const testfiles: string[] = [
     './tests/match-pict1.bit',  // 6/7
     './tests/match-pict2.bit',  // 6/7
     './tests/match-audio1.bit',  // 6/7
-    './tests/match-article1.bit',  // 6/7  
+    './tests/match-article1.bit',  // 6/7
     './tests/match-matrix1.bit',
     './tests/match-matrix3.bit',
 
@@ -179,7 +179,7 @@ const testfiles: string[] = [
     './tests/aiX.bit',
     './tests/ai.bit',
     './tests/release-notes-summary.bit',
-    
+
     // GMB
     './tests/GMB/cloze.bit',
     './tests/GMB/cloze_attachment.bit',
@@ -195,6 +195,9 @@ const testfiles: string[] = [
     './tests/bitmark-example.bit',
     './tests/app-ai-prompt.bit',
     './tests/booklink.bit',
+	'./tests/jsfiddle.bit',
+	'./tests/images-logo-grave.bit',
+	'./tests/new09242023.bit',
 ];
 
 const testfilesX: string[] = [
@@ -310,4 +313,4 @@ for (let arg in myArgs) {
     if (myArgs[arg] === '--diff')
         check_diff = true;
 }
-__main__(trace, debug)    
+__main__(trace, debug)

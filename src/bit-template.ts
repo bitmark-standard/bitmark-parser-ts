@@ -162,12 +162,12 @@ const JSON_BIT_TEMPLATES = {
       /*{
         item: ,
         instruction: ,
-        values: 
+        values:
         },
        : {
         item: ,
         instruction: ,
-        values: 
+        values:
         },*/
     ],
     item: '',
@@ -475,6 +475,10 @@ const JSON_BIT_TEMPLATES = {
     license: '',
     copyright: ''
   },
+  Image_logos_element: {
+	  type: 'image',
+      image: {  /*Image_detail_element*/ },
+  },
   ImageLink: {
     provider: '',
     url: ''
@@ -534,7 +538,7 @@ const JSON_BIT_TEMPLATES = {
     }
   },
   MenuItem: {
-    type: '',  // ["appetizer", "mainCourse", "dessert"] 
+    type: '',  // ["appetizer", "mainCourse", "dessert"]
     course: '',
     item: '',
     instruction: '',
