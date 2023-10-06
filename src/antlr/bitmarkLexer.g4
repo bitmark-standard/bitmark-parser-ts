@@ -6,8 +6,8 @@ endof bit -> default mode
 */
 lexer grammar bitmarkLexer;
 
-OPDOT:	        '[.' ;
-S:		          [ \t] ;
+OPDOT:				 '[.' ;
+S:		          	 [ \t] ;
 
 BitBook:              NL OPDOT S* 'book'    ;
 BitChapter:           NL OPDOT S* 'chapter'    ;
@@ -23,8 +23,8 @@ BitStatement:	      NL OPDOT S* 'statement'    ;
 BitDetails:	          NL OPDOT S* 'details-1'    ;
 BitSampleSolution:    NL OPDOT S* 'sample-solution'    ;
 BitTakeAudio:	      NL OPDOT S* 'take-audio'    ;
-CLOZE:		 'CLOZE' ;
-MATCH:		 'MATCH' ;
+CLOZE:		 		  'CLOZE' ;
+MATCH:		 		  'MATCH' ;
 
 BitArticle:	          NL OPDOT S* 'article'  ;
 BitPage:	          NL OPDOT S* 'page'    ;
@@ -252,44 +252,44 @@ BitAppCodeCell:  		   NL OPDOT S* 'app-code-cell' ;
 BitStdout:  			   NL OPDOT S* 'stdout' ;
 BitAppBitmarkFromJavascript:   NL OPDOT S* 'app-bitmark-from-javascript' ;
 BitAppBitmarkFromEditor:   NL OPDOT S* 'app-bitmark-from-editor' ;
-
+BitBookAlias:			   NL OPDOT S* 'book-alias' ;
 
 //
-OPDOLL:		'[' S* '$' ;      // Dollar
+OPDOLL:			'[' S* '$' ;      // Dollar
 OPBUL:          '[' S* '•' ;      // Bullet
 OPRANGLES:      '[' '►' S* ;  // Right angle
 OPRANGLEL:      '[' '▶' S* ;  // Right angle
 OPDANGLE:       '[▼' S* ;  // Down angle - Anchor
-OPU:		'[_' S* ;  // Underscore
-OPB: 		'[!' S* ;  // Bang!
-OPQ: 		'[?' S* ;  // Question
-OPA: 		'[@' S* ;  // At
-OPP: 		'[+' S* ;  // Plus
-OPM: 		'[-' S* ;  // Minus
-OPS: 		'[\'' S* ; // [' Single quote
-OPR: 		'[*' S* ;  // [* Asterisk
+OPU:			'[_' S* ;  // Underscore
+OPB: 			'[!' S* ;  // Bang!
+OPQ: 			'[?' S* ;  // Question
+OPA: 			'[@' S* ;  // At
+OPP: 			'[+' S* ;  // Plus
+OPM: 			'[-' S* ;  // Minus
+OPS: 			'[\'' S* ; // [' Single quote
+OPR: 			'[*' S* ;  // [* Asterisk
 OPHASH:	        '[#' S* ;  // [# Hash
 OPC:	        '[%' S* ;  // [% Item
 
-CL: 		S* ']' ;
-COLON: 		':' ;
-AMP: 		'&' ;
-DBLCOLON: 	'::' ;
-PLUS: 		'+' ;
+CL: 			S* ']' ;
+COLON: 			':' ;
+AMP: 			'&' ;
+DBLCOLON: 		'::' ;
+PLUS: 			'+' ;
 DotAt:	        '.@' ;
-Greater: 	'>' ;
-Less: 		'<' ;
+Greater: 		'>' ;
+Less: 			'<' ;
 RightAngle: 	'►' ;
 RightArrow:     '→' ;
 
 
 // Separators
-DBLEQ:		'==' ;
+DBLEQ:			'==' ;
 
-HSPL:		  NL '===' S* NL  ; // hard split
-HSPL2:		'==='   S* NL  ;   // hard split
-SSPL:	  	NL '---' S* NL  ; // soft split
-SSPL2:	 	'---'   S* NL  ; // soft split
+HSPL:		  	NL '===' S* NL  ; // hard split
+HSPL2:			'==='   S* NL  ;   // hard split
+SSPL:	  		NL '---' S* NL  ; // soft split
+SSPL2:	 		'---'   S* NL  ; // soft split
 
 QUOTE_INDEX: '[' [0-9]+ ']' ;  // Only for this lexer!
 

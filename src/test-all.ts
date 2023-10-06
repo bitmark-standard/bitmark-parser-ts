@@ -198,6 +198,7 @@ const testfiles: string[] = [
 	'./tests/jsfiddle.bit',
 	'./tests/images-logo-grave.bit',
 	'./tests/new09242023.bit',
+	'./tests/book-alias.bit',
 ];
 
 const testfilesX: string[] = [

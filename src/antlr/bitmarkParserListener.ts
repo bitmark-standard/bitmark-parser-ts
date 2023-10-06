@@ -7,6 +7,7 @@ import { BitmarkContext } from "./bitmarkParser.js";
 import { Bitmark_Context } from "./bitmarkParser.js";
 import { BitContext } from "./bitmarkParser.js";
 import { BookContext } from "./bitmarkParser.js";
+import { Book_aliasContext } from "./bitmarkParser.js";
 import { ChapterContext } from "./bitmarkParser.js";
 import { Ai_promptContext } from "./bitmarkParser.js";
 import { Note_aiContext } from "./bitmarkParser.js";
@@ -364,6 +365,17 @@ export interface bitmarkParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitBook?: (ctx: BookContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `bitmarkParser.book_alias`.
+	 * @param ctx the parse tree
+	 */
+	enterBook_alias?: (ctx: Book_aliasContext) => void;
+	/**
+	 * Exit a parse tree produced by `bitmarkParser.book_alias`.
+	 * @param ctx the parse tree
+	 */
+	exitBook_alias?: (ctx: Book_aliasContext) => void;
 
 	/**
 	 * Enter a parse tree produced by `bitmarkParser.chapter`.

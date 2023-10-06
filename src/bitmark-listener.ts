@@ -2185,7 +2185,7 @@ class BitmarkListener {
 			bit[slot][index][key]['format'] = url.split('.').pop();
 			let caption = this.but.get_caption_string(code);
 			if (caption) {
-				bit[slot][index][key]['caption'] = caption;
+				bit[slot][index][key]['caption'] = caption.trim();
 			}
 		}
 		else if (format === 'image' || this.resformat in this.RESOURCE_MAP) {
@@ -2201,7 +2201,7 @@ class BitmarkListener {
 			bit[slot][key]['format'] = url.split('.').pop();
 			let caption = this.but.get_caption_string(code);
 			if (caption) {
-				bit[slot][key]['caption'] = caption;
+				bit[slot][key]['caption'] = caption.trim();
 			}
 		}
 		else if (this.resformat in this.RESOURCE_MAP) {
@@ -2954,6 +2954,9 @@ class BitmarkListener {
 	enterStdout(ctx: ParserRuleContext): void  { this.push_tmpl(ctx, 'stdout'); }
 	enterApp_bitmark_from_javascript(ctx: ParserRuleContext): void  { this.push_tmpl(ctx, 'app-bitmark-from-javascript'); }
 	enterApp_bitmark_from_editor(ctx: ParserRuleContext): void  { this.push_tmpl(ctx, 'app-bitmark-from-editor'); }
+	enterBook_alias(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'book-alias'); }
+
+
 
 	enterImages_logo_grave(ctx: ParserRuleContext): void  {
 		this.push_tmpl(ctx, 'images-logo-grave');
@@ -2976,10 +2979,9 @@ class BitmarkListener {
 		const index = bit[slot].length-1;
 		key = key.substring(1).trim();
 		// add to the last image data in the logos[] array
-		bit[slot][index]['image'][key] = val;
+		bit[slot][index]['image'][key] = val.trim();
 		(this.stk.top()).bit.body = (this.stk.top()).bit.body.replace(code, '');
 	};
-
 
     enterMenu_3_course(ctx: ParserRuleContext): void {
 		this.push_tmpl(ctx, 'menu-3-course');

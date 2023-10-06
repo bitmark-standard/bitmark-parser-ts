@@ -1,6 +1,6 @@
 /*
  * index.ts
- * 
+ *
  */
 //import fetch from "node-fetch";
 import * as process from 'process';
@@ -47,8 +47,8 @@ class Preprocessor {
     constructor() { }
 
     countlines(text: string): number {
-	const lines = (text.match(/\n/g) || '').length + 1;
-	return lines;
+		const lines = (text.match(/\n/g) || '').length + 1;
+		return lines;
     }
 
     /*
@@ -57,49 +57,52 @@ class Preprocessor {
      * The line before the "\n[." is the line to cut
      */
     split_bits(text: string): Array<{ offset: number, bit: string }> {
-	text = text.replace(/\] +$/mg, ']');
-	if (text.charAt(text.length - 1) !== '\n')
-	    text += '\n';
-	let bb: BitUtil = new BitUtil(text);
-	let bits: Array<{ offset: number, bit: string }> = bb.split_bits(); // array of {offset, bittext}
-	return bits;
+		text = text.replace(/\] +$/mg, ']');
+		if (text.charAt(text.length - 1) !== '\n')
+			text += '\n';
+		let bb: BitUtil = new BitUtil(text);
+		let bits: Array<{ offset: number, bit: string }> = bb.split_bits(); // array of {offset, bittext}
+		return bits;
     }
 
     remove_comments(text: string): string {
-	return text.replace(/\|\|[\w\W]*?\|\|/mg, '');
+		return text.replace(/\|\|[\w\W]*?\|\|/mg, '');
     }
 
     replace_text_at(text: string, index: number, replacement: string, orgtext: string): string {
-	return text.substr(0, index) + replacement + text.substr(index + orgtext.length);
+		return text.substr(0, index) + replacement + text.substr(index + orgtext.length);
     }
 
     // Checks if the bit expects JSON data
     is_a_json_bit(text: string): boolean {
-	if (text !== undefined) {
-	    let x:any[] = text.match(/\S*\[(\.[^\]\[]+)\]/);
-	    let s:string = x[1].replace(/\:.*$/, '');  // remove format spec.
-	    return 0 <= JSON_BITS.indexOf(s) ? true : false;
-	}
-	return false;
+		if (text !== undefined) {
+			let x:any[] = text.match(/\S*\[(\.[^\]\[]+)\]/);
+			let s:string = x[1].replace(/\:.*$/, '');  // remove format spec.
+			return 0 <= JSON_BITS.indexOf(s) ? true : false;
+		}
+		return false;
     }
-
+	is_a_js_bit(text) {
+		let m = text.match(/\.app-bitmark-from-javascript/);
+		return m != null;
+	}
     has_a_url(text: string): boolean {
-	let re:RegExp = /\[(&audio|&image|&video|&article|&document|&app|&website|&still-image|@src[0-9]x)[A-Za-z\-]*:(http|https|file):\/\/.*?\](?=\n|\[@)/g;  // look for one
-	let m:RegExpMatchArray = text.match(re);
-	return m && 0 < m.length ? true : false;
+		let re:RegExp = /\[(&audio|&image|&video|&article|&document|&app|&website|&still-image|@src[0-9]x)[A-Za-z\-]*:(http|https|file):\/\/.*?\](?=\n|\[@)/g;  // look for one
+		let m:RegExpMatchArray = text.match(re);
+		return m && 0 < m.length ? true : false;
     }
 
     escape_bracket_in_url_if_any(text: string): string {
-	let re:RegExp = /\[((&audio|&image|&video|&article|&document|&app|&website|&still-image|@src[0-9]x)[A-Za-z\-]*:(http|https|file):\/\/.*?)\](?=\n|\[@)/g;  // look for all
-	let text_repl:string = text;
-	let m:RegExpMatchArray;
+		let re:RegExp = /\[((&audio|&image|&video|&article|&document|&app|&website|&still-image|@src[0-9]x)[A-Za-z\-]*:(http|https|file):\/\/.*?)\](?=\n|\[@)/g;  // look for all
+		let text_repl:string = text;
+		let m:RegExpMatchArray;
 
-	while ((m = re.exec(text_repl)) !== null) {
-	    let mr:string = m[1].replace(/\[/g, '&#91;');
-	    mr = mr.replace(/\]/g, '&#93;');
-	    text_repl = text_repl.replace(m[1], mr);
-	}
-	return text_repl;
+		while ((m = re.exec(text_repl)) !== null) {
+			let mr:string = m[1].replace(/\[/g, '&#91;');
+			mr = mr.replace(/\]/g, '&#93;');
+			text_repl = text_repl.replace(m[1], mr);
+		}
+		return text_repl;
     }
 
     /*
@@ -107,94 +110,95 @@ class Preprocessor {
       sure if this is a good solution. 7/25/2023
     */
     escape_brackets_in_emphasis(text:string):string {
-	//let re: RegExp = /(\*\*[^\[\*\s]*\[[^\]\*\s]*\][^\]\*\s]*\*\*)/gms;
-	let re: RegExp = /(\*\*+[^\[\*\n]*\[[^\]\*]*\][^\]\*\n]*\*+\*)/gms;
-	let m: RegExpMatchArray;
-	let text_repl:string=text;
+		//let re: RegExp = /(\*\*[^\[\*\s]*\[[^\]\*\s]*\][^\]\*\s]*\*\*)/gms;
+		let re: RegExp = /(\*\*+[^\[\*\n]*\[[^\]\*]*\][^\]\*\n]*\*+\*)/gms;
+		let m: RegExpMatchArray;
+		let text_repl:string=text;
 
-	while ((m = re.exec(text_repl)) !== null) {
-	    let mr = m[1].replace(/\[/g, '&#91;');
-	    mr = mr.replace(/\]/g, '&#93;');
-	    text_repl = text_repl.replace(m[0], mr);
-	}
-	return text_repl;
+		while ((m = re.exec(text_repl)) !== null) {
+			let mr = m[1].replace(/\[/g, '&#91;');
+			mr = mr.replace(/\]/g, '&#93;');
+			text_repl = text_repl.replace(m[0], mr);
+		}
+		return text_repl;
     }
 
-    /* 
+    /*
        Escare [] in json data. It confuses with Bitmark bits
        Uses HTML escape strings
        [ = &#91;
        ] = &#93;
     */
     escape_json_for_json_bits(text: string): any[] {
-	//  : Array<{before: string, after: string, offset: number}> {
-	/*String.prototype.lastIndexOfEnd = function(string) {
-	  let io = this.lastIndexOf(string);
-	  return io == -1 ? -1 : io + string.length;
-	  };*/
-	const exjson = (t: string):string => {
-	    // JSON extractor.
-	    const start:number = t.indexOf('{');
-	    const end:number = t.lastIndexOf('}');   // was lastIndexOfEnd
-	    let result:string = t.substring(start, end);
-	    return result;
-	}
-	// Remove non-json bits etc
-	let json_orig:string = exjson(text);
-	let json_repl:string = json_orig.replace(/\[/g, '&#91;');
-	json_repl = json_repl.replace(/\]/g, '&#93;');
-	text = text.replace(json_orig, json_repl);
-	// offset <0 to dont care just replace them
-	return [text, [{ before: '[', after: '&#91;', offset: -1 },
-		       { before: ']', after: '&#93;', offset: -1 }]];
+		//  : Array<{before: string, after: string, offset: number}> {
+		/*String.prototype.lastIndexOfEnd = function(string) {
+		  let io = this.lastIndexOf(string);
+		  return io == -1 ? -1 : io + string.length;
+		  };*/
+		const exjson = (t: string):string => {
+			// JSON extractor.
+			const start:number = t.indexOf('{');
+			const end:number = t.lastIndexOf('}');   // was lastIndexOfEnd
+			let result:string = t.substring(start, end);
+			return result;
+		}
+		// Remove non-json bits etc
+		let json_orig:string = exjson(text);
+		let json_repl:string = json_orig.replace(/\[/g, '&#91;');
+		json_repl = json_repl.replace(/\]/g, '&#93;');
+		text = text.replace(json_orig, json_repl);
+		// offset <0 to dont care just replace them
+		return [text, [{ before: '[', after: '&#91;', offset: -1 },
+					   { before: ']', after: '&#93;', offset: -1 }]];
     }
 
     // Expecting single bit arg
     replace_stray_bitheads(text: string): any[] {
-	let seq:number = 0;
-	let ignore:number = 5;
-	const regex:RegExp = /(\[\.[^\]\[]+\])/;  // for the first bit if any
-	const MAXSEQ:number = 20;  // cant have too many
-	let x_array:any[] = [];
+		let seq:number = 0;
+		let ignore:number = 5;
+		//const regex:RegExp = /(\[\.[^\]\[]+\])/;  // for the first bit if any
+		const regex = /(\[\.[^\]\[]+)/;  // no need closing ] 10/6/2023
+		const MAXSEQ:number = 20;  // cant have too many
+		let x_array:any[] = [];
 
-	while (seq < MAXSEQ) {
-	    // Dont add if not the head doesnt start from 0th column
-	    let where:number = text.slice(ignore).search(regex);
-	    if (where < 0)
-		break;
-	    let tail:string = text.substr(where, text.length);
-	    let m:RegExpMatchArray = tail.match(regex);
-	    if (text.charAt(where - 1) !== '\n') {
-		// Replace that with a marker
-		text = this.replace_text_at(text, where + ignore, `$\{\{${seq}\}\}`, m[1]);
-		let x = {
-		    before: m[1],
-		    after: `$\{\{${seq}\}\}`,
-		    offset: where + ignore
-		};
-		x_array.push(x);
-	    }
-	    ignore += where + m[1].length;
-	    seq++;
-	}
-	return [text, x_array];  // replaced.
+		while (seq < MAXSEQ) {
+			// Dont add if not the head doesnt start from 0th column
+			let where:number = text.slice(ignore).search(regex);
+			if (where < 0)
+				break;
+			let tail:string = text.substr(where, text.length);
+			let m:RegExpMatchArray = tail.match(regex);
+			if (text.charAt(where - 1) !== '\n') {
+				// Replace that with a marker
+				text = this.replace_text_at(text, where + ignore, `$\{\{${seq}\}\}`, m[1]);
+				let x = {
+					before: m[1],
+					after: `$\{\{${seq}\}\}`,
+					offset: where + ignore
+				};
+				x_array.push(x);
+			}
+			ignore += where + m[1].length;
+			seq++;
+		}
+		return [text, x_array];  // replaced.
     }
 
     escapeRegExp(text: string): string {
-	return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
+		return text.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&');
     }
     // simple version. no offset
     unreplace_stray_bitheads(text: string, x_array: Array<any>): string {
-	const unescape_brackets = txt => (txt.replace(/&#91;/g, '[')).replace(/&#93;/g, ']');
-	for (let i in x_array) {
-	    //
-	    let x = x_array[i];
-	    let y = this.escapeRegExp(x.after);
-	    var re = new RegExp(y, 'g');
-	    text = text.replace(re, x.before);
-	}
-	text = unescape_brackets(text);  // get the backets back.
-	return text;
+		const unescape_brackets = txt => (txt.replace(/&#91;/g, '[')).replace(/&#93;/g, ']');
+		for (let i in x_array) {
+			//
+			let x = x_array[i];
+			let y = this.escapeRegExp(x.after);
+			var re = new RegExp(y, 'g');
+			text = text.replace(re, x.before);
+		}
+		text = unescape_brackets(text);  // get the backets back.
+		return text;
     }
 }
 
@@ -207,89 +211,89 @@ class BitmarkErrorListener extends DefaultErrorStrategy {
     source: string;
 
     constructor(source: string, options: string[]) {
-	super();
-	this.options = options;
-	this.errors = [];
-	this.bail_mode = false;
-	this.source = source;
-	return this;
+		super();
+		this.options = options;
+		this.errors = [];
+		this.bail_mode = false;
+		this.source = source;
+		return this;
     }
     //
     clearErrors() {
-	this.errors = [];   // was INST
+		this.errors = [];   // was INST
     }
 
     modifyErrorMessage(msg: string) {
-	const STD_MSGS = [
-	    { regex: /extraneous input ('[^\']*')/, repl: 'Unexpected input ${0}' },
-	    { regex: /mismatched input ('[^\']*')/, repl: 'Rule violation around ${0}' },
-	    { regex: /no viable alternative at input ('[^\']*')/, repl: 'Unexpected input ${0}' },
-	    { regex: /missing/, repl: null },  // no mod
-	];
-	let fn = (ob: Object, msg: string) => {
-	    let m = msg.match(ob['regex']);
-	    let newmsg = null;
-	    if (m) {
-		if (ob['repl'])
-		    newmsg = ob['repl'].replace('${0}', m[1]);
-	    }
-	    return newmsg;
-	};
-	let newmsg: string = null;
-	for (let i: number = 0; i < STD_MSGS.length; i++) {
-	    newmsg = fn(STD_MSGS[i], msg);
-	    if (newmsg)
-		break;
-	}
-	if (!newmsg)
-	    newmsg = msg;
-	return newmsg;
+		const STD_MSGS = [
+			{ regex: /extraneous input ('[^\']*')/, repl: 'Unexpected input ${0}' },
+			{ regex: /mismatched input ('[^\']*')/, repl: 'Rule violation around ${0}' },
+			{ regex: /no viable alternative at input ('[^\']*')/, repl: 'Unexpected input ${0}' },
+			{ regex: /missing/, repl: null },  // no mod
+		];
+		let fn = (ob: Object, msg: string) => {
+			let m = msg.match(ob['regex']);
+			let newmsg = null;
+			if (m) {
+				if (ob['repl'])
+					newmsg = ob['repl'].replace('${0}', m[1]);
+			}
+			return newmsg;
+		};
+		let newmsg: string = null;
+		for (let i: number = 0; i < STD_MSGS.length; i++) {
+			newmsg = fn(STD_MSGS[i], msg);
+			if (newmsg)
+				break;
+		}
+		if (!newmsg)
+			newmsg = msg;
+		return newmsg;
     }
     //
     syntaxError(recognizer: Parser,
-		offendingSymbol: string, line: number, column: number, msg: string, e: RecognitionException) {
-	msg = this.modifyErrorMessage(msg);
-	let tmpl: Object = clone(JSON_BIT_TEMPLATES.Error_Info);
+				offendingSymbol: string, line: number, column: number, msg: string, e: RecognitionException) {
+		msg = this.modifyErrorMessage(msg);
+		let tmpl: Object = clone(JSON_BIT_TEMPLATES.Error_Info);
 
-	tmpl['message'] = msg;
-	tmpl['line'] = line - 1;
-	tmpl['column'] = column;
+		tmpl['message'] = msg;
+		tmpl['line'] = line - 1;
+		tmpl['column'] = column;
 
-	let bb: BitUtil = new BitUtil(this.source);
-	let bit: string = this.source;
-	let errline: string = bb.get_error_line(this.source, line, column);
-	/* Error_Info: {
-	   bitmark: ...
-	   parser: {
-	   fatalError: '',
-	   warnings: [],
-	   errorLine: ''
-	   }
-	   }*/
-	if (0 < errline.length)
-	    tmpl['errorLine'] = errline;
-	if (this.bail_mode) {
-	    throw JSON.stringify(tmpl, null, 4); // bail out
-	}
-	else {
-	    // not aborting
-	    this['errors'].push(tmpl);
-	}
-	return; // leave
+		let bb: BitUtil = new BitUtil(this.source);
+		let bit: string = this.source;
+		let errline: string = bb.get_error_line(this.source, line, column);
+		/* Error_Info: {
+		   bitmark: ...
+		   parser: {
+		   fatalError: '',
+		   warnings: [],
+		   errorLine: ''
+		   }
+		   }*/
+		if (0 < errline.length)
+			tmpl['errorLine'] = errline;
+		if (this.bail_mode) {
+			throw JSON.stringify(tmpl, null, 4); // bail out
+		}
+		else {
+			// not aborting
+			this['errors'].push(tmpl);
+		}
+		return; // leave
     }
     //
     manualError(ctx: ParserRuleContext, line: number, column: number, message: string) {
-	let tmpl = clone(JSON_BIT_TEMPLATES.Error_Info);
-	//tmpl.line = line < 0? ctx._start._line : line; // 1 origin
-	tmpl.line = line < 0 ? ctx._start.line : line; // 1 origin
-	tmpl.column = column; //ctx._start._charPositionInLine;
+		let tmpl = clone(JSON_BIT_TEMPLATES.Error_Info);
+		//tmpl.line = line < 0? ctx._start._line : line; // 1 origin
+		tmpl.line = line < 0 ? ctx._start.line : line; // 1 origin
+		tmpl.column = column; //ctx._start._charPositionInLine;
 
-	let bb: BitUtil = new BitUtil(this.source);
-	let bit: string = this.source;
-	let errline: string = bb.get_error_line(this.source, tmpl.line, column);
-	tmpl.errorLine = errline;
-	tmpl.message = message;
-	this['errors'].push(tmpl);
+		let bb: BitUtil = new BitUtil(this.source);
+		let bit: string = this.source;
+		let errline: string = bb.get_error_line(this.source, tmpl.line, column);
+		tmpl.errorLine = errline;
+		tmpl.message = message;
+		this['errors'].push(tmpl);
     }
 };
 
@@ -311,247 +315,247 @@ class BitmarkParser {
     /*
      */
     constructor(text1: string, options: ParserOption, bit: string | null = null) {
-	this.ParserTable = {
-	    'cloze': {
-		regex: /\n\[\.[ \t]*cloze/,
-		name: 'cloze',
-		lexer: clozeLexer,
-		parser: clozeParser
-	    },
-	    'match': {
-		regex: /\n\[\.[ \t]*match/,
-		name: 'match',
-		lexer: matchLexer,
-		parser: matchParser
-	    },
-	    'multiple': {
-		regex: /\n\[\.[ \t]*(multiple|highlight)/,
-		name: 'multiple',
-		lexer: choiceLexer,
-		parser: choiceParser
-	    },
-	    'interview': {
-		regex: /\n\[\.[ \t]*interview/,
-		name: 'interview',
-		lexer: interviewLexer,
-		parser: interviewParser
-	    },
-	    'true-false': {
-		regex: /\n\[\.[ \t]*true-false/,
-		name: 'true-false',
-		lexer: truefalseLexer,
-		parser: truefalseParser
-	    },
-	    'flashcard': {
-		regex: /\n\[\.[ \t]*(flashcard|vocabulary)/,
-		name: 'flashcard',
-		lexer: flashcardLexer,
-		parser: flashcardParser
-	    },
-	    'vocabulary': {
-		regex: /\n\[\.[ \t]*vocabulary/,
-		name: 'vocabulary',
-		lexer: flashcardLexer,
-		parser: flashcardParser
-	    },
-	    'chat': {
-		regex: /\n\[\.[ \t]*chat/,
-		name: 'chat',
-		lexer: chatLexer,
-		parser: chatParser
-	    },
-	    'conversation': {
-		regex: /\n\[\.[ \t]*conversation/,
-		name: 'chat',
-		lexer: chatLexer,
-		parser: chatParser
-	    },
-	    'sequence': {
-		regex: /\n\[\.[ \t]*sequence/,
-		name: 'sequence',
-		lexer: sequenceLexer,
-		parser: sequenceParser
-	    },
-	    'menu': {
-		regex: /\n\[\.[ \t]*menu-3/,
-		name: 'sequence',
-		lexer: sequenceLexer,
-		parser: sequenceParser
-	    },
-	    'default': {
-		regex: null,
-		name: null,
-		lexer: bitmarkLexer,
-		parser: bitmarkParser
-	    },
-	};
+		this.ParserTable = {
+			'cloze': {
+				regex: /\n\[\.[ \t]*cloze/,
+				name: 'cloze',
+				lexer: clozeLexer,
+				parser: clozeParser
+			},
+			'match': {
+				regex: /\n\[\.[ \t]*match/,
+				name: 'match',
+				lexer: matchLexer,
+				parser: matchParser
+			},
+			'multiple': {
+				regex: /\n\[\.[ \t]*(multiple|highlight)/,
+				name: 'multiple',
+				lexer: choiceLexer,
+				parser: choiceParser
+			},
+			'interview': {
+				regex: /\n\[\.[ \t]*interview/,
+				name: 'interview',
+				lexer: interviewLexer,
+				parser: interviewParser
+			},
+			'true-false': {
+				regex: /\n\[\.[ \t]*true-false/,
+				name: 'true-false',
+				lexer: truefalseLexer,
+				parser: truefalseParser
+			},
+			'flashcard': {
+				regex: /\n\[\.[ \t]*(flashcard|vocabulary)/,
+				name: 'flashcard',
+				lexer: flashcardLexer,
+				parser: flashcardParser
+			},
+			'vocabulary': {
+				regex: /\n\[\.[ \t]*vocabulary/,
+				name: 'vocabulary',
+				lexer: flashcardLexer,
+				parser: flashcardParser
+			},
+			'chat': {
+				regex: /\n\[\.[ \t]*chat/,
+				name: 'chat',
+				lexer: chatLexer,
+				parser: chatParser
+			},
+			'conversation': {
+				regex: /\n\[\.[ \t]*conversation/,
+				name: 'chat',
+				lexer: chatLexer,
+				parser: chatParser
+			},
+			'sequence': {
+				regex: /\n\[\.[ \t]*sequence/,
+				name: 'sequence',
+				lexer: sequenceLexer,
+				parser: sequenceParser
+			},
+			'menu': {
+				regex: /\n\[\.[ \t]*menu-3/,
+				name: 'sequence',
+				lexer: sequenceLexer,
+				parser: sequenceParser
+			},
+			'default': {
+				regex: null,
+				name: null,
+				lexer: bitmarkLexer,
+				parser: bitmarkParser
+			},
+		};
 
-	this.options = options;
-	this.input_text = '\n' + text1;  // whole text. added NL 12/17/2020
-	this.x_array = [];
-	this.parser_vars = {
-	    chars: null,
-	    lexer: null,
-	    parser: null,
-	    tokens: null,
-	    printer: null,
-	    errorlisten: null,
-	    bit: bit
-	};
+		this.options = options;
+		this.input_text = '\n' + text1;  // whole text. added NL 12/17/2020
+		this.x_array = [];
+		this.parser_vars = {
+			chars: null,
+			lexer: null,
+			parser: null,
+			tokens: null,
+			printer: null,
+			errorlisten: null,
+			bit: bit
+		};
     }
 
     // Initialized the parser environment
     init(splitted_text: string, bit: string): void {
 
-	// Tweak the stray bitheads
-	let prep: Preprocessor = new Preprocessor();
-	let replaced: string = splitted_text, x_array = [], y_array = [];
+		// Tweak the stray bitheads
+		let prep: Preprocessor = new Preprocessor();
+		let replaced: string = splitted_text, x_array = [], y_array = [];
 
-	if (prep.has_a_url(splitted_text)) {
-	    // Brackets contained in a URL is problem. Need to escape. No need x_array
-	    replaced = prep.escape_bracket_in_url_if_any(replaced);
-	}
-	if (prep.is_a_json_bit(splitted_text)) {
-	    [replaced, x_array] = prep.escape_json_for_json_bits(replaced);
-	}
-	if (0 < replaced.indexOf('[', 6)) {  // skip initial [] for bit heading
-	    replaced = prep.escape_brackets_in_emphasis(replaced);
-	}
-	
-	[replaced, y_array] = prep.replace_stray_bitheads(replaced);
-	x_array = y_array.concat(x_array);
+		if (prep.has_a_url(splitted_text)) {
+			// Brackets contained in a URL is problem. Need to escape. No need x_array
+			replaced = prep.escape_bracket_in_url_if_any(replaced);
+		}
+		if (prep.is_a_json_bit(splitted_text)) {
+			[replaced, x_array] = prep.escape_json_for_json_bits(replaced);
+		}
+		if (0 < replaced.indexOf('[', 6)) {  // skip initial [] for bit heading
+			replaced = prep.escape_brackets_in_emphasis(replaced);
+		}
 
-	this.x_array = x_array;
-	this.original_text = splitted_text;
-	this.input_text = replaced;
-	splitted_text = replaced;
+		[replaced, y_array] = prep.replace_stray_bitheads(replaced);
+		x_array = y_array.concat(x_array);
 
-	this.parser_vars['bit'] = bit;
-	bit = !bit ? 'default' : bit;
+		this.x_array = x_array;
+		this.original_text = splitted_text;
+		this.input_text = replaced;
+		splitted_text = replaced;
 
-	this.parser_vars['chars'] = CharStreams.fromString(splitted_text);
-	let lp = this.ParserTable[bit];
-	if (!lp) {
-	    console.error(`Error: no parser available for bit ${bit}`);
-	    return null;
-	}
-	this.parser_vars['lexer'] = new lp.lexer(this.parser_vars['chars']);
-	this.parser_vars['tokens'] = new CommonTokenStream(this.parser_vars['lexer']);
-	this.parser_vars['parser'] = new lp.parser(this.parser_vars['tokens']);
-	this.parser_vars['printer'] = null;
+		this.parser_vars['bit'] = bit;
+		bit = !bit ? 'default' : bit;
+
+		this.parser_vars['chars'] = CharStreams.fromString(splitted_text);
+		let lp = this.ParserTable[bit];
+		if (!lp) {
+			console.error(`Error: no parser available for bit ${bit}`);
+			return null;
+		}
+		this.parser_vars['lexer'] = new lp.lexer(this.parser_vars['chars']);
+		this.parser_vars['tokens'] = new CommonTokenStream(this.parser_vars['lexer']);
+		this.parser_vars['parser'] = new lp.parser(this.parser_vars['tokens']);
+		this.parser_vars['printer'] = null;
 
 
-	// Remove default
-	this.parser_vars['lexer'].removeErrorListeners();
-	this.parser_vars['parser'].removeErrorListeners();
-	// And add our own
-	let errlisten = new BitmarkErrorListener(this.input_text, []);
-	this.parser_vars['errorlisten'] = errlisten;
+		// Remove default
+		this.parser_vars['lexer'].removeErrorListeners();
+		this.parser_vars['parser'].removeErrorListeners();
+		// And add our own
+		let errlisten = new BitmarkErrorListener(this.input_text, []);
+		this.parser_vars['errorlisten'] = errlisten;
 
-	this.parser_vars['lexer'].addErrorListener(errlisten);  // for the unreconizable tokens
-	this.parser_vars['parser'].addErrorListener(errlisten);  // for the syntax errors
+		this.parser_vars['lexer'].addErrorListener(errlisten);  // for the unreconizable tokens
+		this.parser_vars['parser'].addErrorListener(errlisten);  // for the syntax errors
     }
 
     /**/
     run_parser(): any[] {
-	this.parser_vars['parser'].buildParseTrees = true;
-	this.parser_vars['parser'].isTrace = this.options.trace;
-	this.parser_vars['parser']._interp.predictionMode = PredictionMode.SLL;  // works!!
-	this.parser_vars['printer'] = new BitmarkListener(this.parser_vars['errorlisten'],
-							  this.input_text,
-							  this.parser_vars['parser']);
-	this.parser_vars['parser'].addParseListener(this.parser_vars['printer']);
-	let tree = this.parser_vars['parser'].bitmark();
-	return this.parser_vars['printer'].get_result();  // not json
+		this.parser_vars['parser'].buildParseTrees = true;
+		this.parser_vars['parser'].isTrace = this.options.trace;
+		this.parser_vars['parser']._interp.predictionMode = PredictionMode.SLL;  // works!!
+		this.parser_vars['printer'] = new BitmarkListener(this.parser_vars['errorlisten'],
+														  this.input_text,
+														  this.parser_vars['parser']);
+		this.parser_vars['parser'].addParseListener(this.parser_vars['printer']);
+		let tree = this.parser_vars['parser'].bitmark();
+		return this.parser_vars['printer'].get_result();  // not json
     }
 
     //
     parse(): string {
-	let pp: Preprocessor = new Preprocessor();
-	let bits: any[] = pp.split_bits(this.input_text);
-	let allobjs: string[] = [];
-	//const t0 = now();
-	let entry: Object = null;
-	let parsed: boolean = false;
+		let pp: Preprocessor = new Preprocessor();
+		let bits: any[] = pp.split_bits(this.input_text);
+		let allobjs: string[] = [];
+		//const t0 = now();
+		let entry: Object = null;
+		let parsed: boolean = false;
 
 
-	for (let bit of bits) {
-	    parsed = false;
-	    let text_with_comments: string = clone(bit.bit);
-	    bit['bit'] = pp.remove_comments(bit['bit']);  // Oct 4,2021
+		for (let bit of bits) {
+			parsed = false;
+			let text_with_comments: string = clone(bit.bit);
+			bit['bit'] = pp.remove_comments(bit['bit']);  // Oct 4,2021
 
-	    for (let key in this.ParserTable) {
-		if (bit['bit'].match(this.ParserTable[key].regex)) {
-		    entry = this.ParserTable[key];
-		    // Initialize with new bitmark
-		    this.init(bit['bit'], entry['name']);
-		    let obj: any[] = this.run_parser();  // obj is an array
+			for (let key in this.ParserTable) {
+				if (bit['bit'].match(this.ParserTable[key].regex)) {
+					entry = this.ParserTable[key];
+					// Initialize with new bitmark
+					this.init(bit['bit'], entry['name']);
+					let obj: any[] = this.run_parser();  // obj is an array
 
-		    if (!obj || !obj.length)
-			obj = [{ bitmark: bit }];
+					if (!obj || !obj.length)
+						obj = [{ bitmark: bit }];
 
-		    obj[0].bitmark = text_with_comments.trim();
+					obj[0].bitmark = text_with_comments.trim();
 
-		    // obj[0].bit.content at this point is bithead replaced text.
-		    obj[0].bit.body = pp.unreplace_stray_bitheads(obj[0].bit.body, this.x_array);
+					// obj[0].bit.content at this point is bithead replaced text.
+					obj[0].bit.body = pp.unreplace_stray_bitheads(obj[0].bit.body, this.x_array);
 
-		    if (0 < this.parser_vars['errorlisten']['errors'].length) {
-			obj[0]['errors'] = this.parser_vars['errorlisten']['errors'];
-			this.parser_vars['errorlisten']['errors'] = [];
-		    }
-		    allobjs = allobjs.concat(obj);
-		    parsed = true;
-		    break;
+					if (0 < this.parser_vars['errorlisten']['errors'].length) {
+						obj[0]['errors'] = this.parser_vars['errorlisten']['errors'];
+						this.parser_vars['errorlisten']['errors'] = [];
+					}
+					allobjs = allobjs.concat(obj);
+					parsed = true;
+					break;
+				}
+			}
+			if (!parsed) {
+				entry = this.ParserTable['default'];
+				// Run the default parser
+				this.init(bit['bit'], entry['name']);
+
+				let obj: any[] = this.run_parser();
+				let unknown = null;
+
+				if (obj.length < 1) {
+					// Most probably wrong bit name
+					let bitre: RegExp = /\s*\[(.*)\]/;
+					let m: any[] = bit['bit'].match(bitre);
+					unknown = m[1];
+				}
+				else
+					obj[0].bitmark = text_with_comments.trim();
+
+				// obj[0].bit.content at this point is bithead replaced text.
+				if (!unknown)
+					obj[0].bit.body = pp.unreplace_stray_bitheads(obj[0].bit.body, this.x_array);
+
+				if (0 < this.parser_vars['errorlisten']['errors'].length) {
+					if (!obj || !obj.length)
+						obj = [{ bitmark: bit }];
+					if (unknown) {
+						obj[0]['errors'] = ["unknown bit name: " + unknown];
+						obj[0].bitmark.offset = 0;
+					}
+					else
+						obj[0]['errors'] = this.parser_vars['errorlisten']['errors'];
+					this.parser_vars['errorlisten']['errors'] = [];
+				}
+				allobjs = allobjs.concat(obj);
+			}
 		}
-	    }
-	    if (!parsed) {
-		entry = this.ParserTable['default'];
-		// Run the default parser
-		this.init(bit['bit'], entry['name']);
+		//const t1 = now();
+		//if (this.options.debug)
+		//  console.log(`Call to parser for 3 took ${t1 - t0} milliseconds.`);
 
-		let obj: any[] = this.run_parser();
-		let unknown = null;
+		let json: string = JSON.stringify(allobjs, null, 4);
+		//while (allobjs.length) {
+		//    delete allobjs.pop();  not allowed in TS
+		//}
+		allobjs = [];  // delete all
+		if (this.options.debug)
+			console.log(json);
 
-		if (obj.length < 1) {
-		    // Most probably wrong bit name 
-		    let bitre: RegExp = /\s*\[(.*)\]/;
-		    let m: any[] = bit['bit'].match(bitre);
-		    unknown = m[1];
-		}
-		else
-		    obj[0].bitmark = text_with_comments.trim();
-
-		// obj[0].bit.content at this point is bithead replaced text.
-		if (!unknown)
-		    obj[0].bit.body = pp.unreplace_stray_bitheads(obj[0].bit.body, this.x_array);
-
-		if (0 < this.parser_vars['errorlisten']['errors'].length) {
-		    if (!obj || !obj.length)
-			obj = [{ bitmark: bit }];
-		    if (unknown) {
-			obj[0]['errors'] = ["unknown bit name: " + unknown];
-			obj[0].bitmark.offset = 0;
-		    }
-		    else
-			obj[0]['errors'] = this.parser_vars['errorlisten']['errors'];
-		    this.parser_vars['errorlisten']['errors'] = [];
-		}
-		allobjs = allobjs.concat(obj);
-	    }
-	}
-	//const t1 = now();
-	//if (this.options.debug)
-	//  console.log(`Call to parser for 3 took ${t1 - t0} milliseconds.`);
-
-	let json: string = JSON.stringify(allobjs, null, 4);
-	//while (allobjs.length) { 
-	//    delete allobjs.pop();  not allowed in TS
-	//}
-	allobjs = [];  // delete all
-	if (this.options.debug)
-	    console.log(json);
-
-	return json;
+		return json;
     }
 
 };
