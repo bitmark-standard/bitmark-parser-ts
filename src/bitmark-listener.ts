@@ -114,16 +114,16 @@ class BitmarkListener {
 		this.fmtlist = ['prosemirror', 'placeholder', 'text'];
 
 		this.atdef_str = ['date', 'location', 'book', 'duration', 'action', 'deepLink',
-						  'botAnnounceAt', 'botSaveAt', 'botSendAt', 'botRemindAt',
-						  'externalLink', 'videoCallLink', 'externalLinkText', 'textReference',
-						  'quotedPerson', 'kind', 'collection', 'book', 'padletId',
-						  'scormSource', 'posterImage', 'computerLanguage', 'icon', 'iconChar',
-						  'releaseDate', 'releaseVersion', 'content2Buy',
-						 ];
+				  'botAnnounceAt', 'botSaveAt', 'botSendAt', 'botRemindAt',
+				  'externalLink', 'videoCallLink', 'externalLinkText', 'textReference',
+				  'quotedPerson', 'kind', 'collection', 'book', 'padletId',
+				  'scormSource', 'posterImage', 'computerLanguage', 'icon', 'iconChar',
+				  'releaseDate', 'releaseVersion', 'content2Buy', 'resolvedDate', 'resolvedBy',
+				 ];
 		this.atdef_num = ['focusX', 'focusY', 'numberOfStars',
-						  'jupyter-execution_count', 'jupyter-id', 'reasonableNumOfChars',
-						  'maxCreatedBits' ];
-		this.atdef_bool = ['aiGenerated'];
+				  'jupyter-execution_count', 'jupyter-id', 'reasonableNumOfChars',
+				  'maxCreatedBits' ];
+                 this.atdef_bool = ['aiGenerated', 'resolved'];
 		this.bot_action_rating = [];  // for storing bot-action-rating at exitHint()
 
 		this.body_key = 'body';
