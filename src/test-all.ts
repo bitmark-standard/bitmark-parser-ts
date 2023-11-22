@@ -195,10 +195,10 @@ const testfiles: string[] = [
     './tests/bitmark-example.bit',
     './tests/app-ai-prompt.bit',
     './tests/booklink.bit',
-	'./tests/jsfiddle.bit',
-	'./tests/images-logo-grave.bit',
-	'./tests/new09242023.bit',
-	'./tests/book-alias.bit',
+    './tests/jsfiddle.bit',
+    './tests/images-logo-grave.bit',
+    './tests/image-and-zoomDisabledprop.bit',
+    './tests/book-alias.bit',
 ];
 
 const testfilesX: string[] = [
