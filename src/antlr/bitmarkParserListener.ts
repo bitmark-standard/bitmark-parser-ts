@@ -237,6 +237,7 @@ import { App_code_cellContext } from "./bitmarkParser.js";
 import { StdoutContext } from "./bitmarkParser.js";
 import { App_bitmark_from_javascriptContext } from "./bitmarkParser.js";
 import { App_bitmark_from_editorContext } from "./bitmarkParser.js";
+import { Toc_chapterContext } from "./bitmarkParser.js";
 import { Images_logo_graveContext } from "./bitmarkParser.js";
 import { LogoContext } from "./bitmarkParser.js";
 import { Logo_attribsContext } from "./bitmarkParser.js";
@@ -2895,6 +2896,17 @@ export interface bitmarkParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitApp_bitmark_from_editor?: (ctx: App_bitmark_from_editorContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `bitmarkParser.toc_chapter`.
+	 * @param ctx the parse tree
+	 */
+	enterToc_chapter?: (ctx: Toc_chapterContext) => void;
+	/**
+	 * Exit a parse tree produced by `bitmarkParser.toc_chapter`.
+	 * @param ctx the parse tree
+	 */
+	exitToc_chapter?: (ctx: Toc_chapterContext) => void;
 
 	/**
 	 * Enter a parse tree produced by `bitmarkParser.images_logo_grave`.

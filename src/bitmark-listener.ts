@@ -45,7 +45,7 @@ class BitmarkListener {
     parser: Parser;
     stk: Stack;
     curr_bit_stk: Stack;
-	logo_stack: Stack;
+    logo_stack: Stack;
     but: BitUtil;
     format: string;
     resformat: string;
@@ -119,10 +119,11 @@ class BitmarkListener {
 				  'quotedPerson', 'kind', 'collection', 'book', 'padletId',
 				  'scormSource', 'posterImage', 'computerLanguage', 'icon', 'iconChar',
 				  'releaseDate', 'releaseVersion', 'content2Buy', 'resolvedDate', 'resolvedBy',
+				  'publisher', 'theme'
 				 ];
 		this.atdef_num = ['focusX', 'focusY', 'numberOfStars',
 				  'jupyter-execution_count', 'jupyter-id', 'reasonableNumOfChars',
-				  'maxCreatedBits' ];
+				  'maxCreatedBits' , 'maxDisplayLevel'];
                 this.atdef_bool = ['aiGenerated', 'resolved', 'zoomDisabled'];
 		this.bot_action_rating = [];  // for storing bot-action-rating at exitHint()
 
@@ -192,10 +193,10 @@ class BitmarkListener {
     //
     //
     set_value_based_on_curr_bit_stk(val1: string,
-									sub1: string,
-									val2: boolean,
-									sub2: string = null,
-									tmpl: Object | null = null) {
+				    sub1: string,
+				    val2: boolean,
+				    sub2: string = null,
+				    tmpl: Object | null = null) {
 		let subscript: string = this.curr_bit_stk.top();
 		let key_obj: string[] = null;
 
@@ -2619,56 +2620,70 @@ class BitmarkListener {
 
     // Enter a parse tree produced by bitmarkParser#item.
     exitItem(ctx: ParserRuleContext): void {
-		const code: string = this.but.getcode(ctx);
-		let regex: RegExp = /\[%\s*([^\]]+)\s*\]/;
-		let val: string = this.but.get_bit_value(regex, code);
-		let cbit: string = this.curr_bit_stk.top();
-		let type: string = this.stk.top().bit.type;
+	const code: string = this.but.getcode(ctx);
+	let regex = /\[%\s*([^\]\s]+)\s*([^\]]*)\]/;  // two captures
+	let vals: string[] = this.but.get_two_bit_values(regex, code);
+	let cbit: string = this.curr_bit_stk.top();
+	let type: string = this.stk.top().bit.type;
+	let val = (vals[1] == '' || (vals[0] != '' && vals[0] != 'item') ? (vals.join('')) : vals[1]).trim();
 
-		if (code.startsWith('[%]')) {
-			// item is [%].
-			(this.stk.top()).bit['body'] = (this.stk.top()).bit['body'].split(code).join('');
-			return;
-		}
-		if (cbit === 'cplus' || cbit === 'cminus' || cbit === 'interview_qanda') {
-			(this.curr_bit_stk.second()).item = val;
-		}
-		else if (cbit === 'pquery') {
-			let lastpair: number = this.stk.top().bit['pairs'].length - 1;
-			this.stk.top().bit['pairs'][lastpair].item = val;
-			this.curr_bit_stk.pop();
-		}
-		else if (cbit === 'mpquery') {
-			let last: number = this.stk.top().bit['matrix'].length - 1;
-			this.stk.top().bit['matrix'][last].item = val;
-			this.curr_bit_stk.pop();
-		}
-		else if (cbit === 'bot_action') {
-			let l: number = this.stk.top().bit['responses'].length;
-			this.stk.top().bit['responses'][l - 1].item = val;
-		}
-		else if (cbit && typeof cbit === 'string' && cbit.startsWith('{')) {
-			this.set_value_based_on_curr_bit_stk(val, 'item', true);
-		}
-		else {
-			if (cbit === 'mcrmisc') {
-				this.curr_bit_stk.second()['item'] = val;
-			}
-			else if (!this.stk.top().bit.item) {
-				this.stk.top().bit.item = val;  // save the only first one
-			}
-		}
-		// remove anyway
-		(this.stk.top()).bit['body'] = (this.stk.top()).bit['body'].split(code).join('');
+	if (code.startsWith('[%]')) {
+	    // item is [%].
+	    (this.stk.top()).bit.body = (this.stk.top()).bit.body.split("[%]").join('');
+	    return;
+	}
+	if (cbit === 'cplus' || cbit === 'cminus' || cbit === 'interview_qanda') {
+	    (this.curr_bit_stk.second()).item = val;
+	}
+	else if (cbit === 'pquery') {
+	    let lastpair: number = this.stk.top().bit['pairs'].length - 1;
+	    this.stk.top().bit['pairs'][lastpair].item = val;
+	    this.curr_bit_stk.pop();
+	}
+	else if (cbit === 'mpquery') {
+	    let last: number = this.stk.top().bit['matrix'].length - 1;
+	    this.stk.top().bit['matrix'][last].item = val;
+	    this.curr_bit_stk.pop();
+	}
+	else if (cbit === 'bot_action') {
+	    let l: number = this.stk.top().bit['responses'].length;
+	    this.stk.top().bit['responses'][l - 1].item = val;
+	}
+	else if (cbit && typeof cbit === 'string' && cbit.startsWith('{')) {
+	    this.set_value_based_on_curr_bit_stk(val, 'item', true);
+	}
+	else {
+	    if (cbit === 'mcrmisc') {
+		this.curr_bit_stk.second()['item'] = val;
+	    }
+	    else if (!this.stk.top().bit.item) {
+		this.stk.top().bit.item = val;  // save the only first one
+	    }
+	}
+	// remove anyway
+	let target:string = code.match(/(\[%[^\]]*\])/)[1];
+	(this.stk.top()).bit.body = (this.stk.top()).bit.body.replace(target, '');
     }
 
     // new 11/20/2021
     exitLead(ctx: ParserRuleContext): void {
-		const code: string = this.but.getcode(ctx);
-		let regex: RegExp = /\[%\s*([^\]]+)\s*\]/;
-		let val: string = this.but.get_bit_value(regex, code);
-		this.stk.top().bit['lead'] = val;  // save the only first one
+	const code = this.but.getcode(ctx);
+	let regex = /\[%\s*([^\]\s]+)\s*([^\]]+)\]/;  // two captures
+	let vals = this.but.get_two_bit_values(regex, code);
+	let key:string, val:string;
+	
+	if (!(vals[0] in ['lead','pageNumber','marginNumber'])) {
+	    key = 'lead';
+	    val = vals.join(' ');
+	}
+	else {
+	    key = vals[0];
+	    val = vals[1];
+	}
+	this.stk.top().bit[key] = val;  // create the key and save the val
+	(this.stk.top()).bit.body = (this.stk.top()).bit.body.replace(code, '');
     }
+    
     // New April 2022
     enterLearning_path_lti(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'learning-path-lti', clone(JSON_BIT_TEMPLATES.LearningPath_bit)); };
     enterLearning_path_step(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'learning-path-step', clone(JSON_BIT_TEMPLATES.LearningPath_bit)); };
@@ -2920,7 +2935,7 @@ class BitmarkListener {
     enterBook_link(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'book-link'); }
     enterBook_link_next(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'book-link-next'); }
     enterBook_link_prev(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'book-link-prev'); }
-    enterFigure(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'figure'); }
+	enterFigure(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'figure'); }
 
 	enterVideo_link_portrait(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'video-link-portrait'); }
 	enterVideo_link_landscape(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'video-link-landscape'); }
@@ -2955,94 +2970,92 @@ class BitmarkListener {
 	enterApp_bitmark_from_javascript(ctx: ParserRuleContext): void  { this.push_tmpl(ctx, 'app-bitmark-from-javascript'); }
 	enterApp_bitmark_from_editor(ctx: ParserRuleContext): void  { this.push_tmpl(ctx, 'app-bitmark-from-editor'); }
 	enterBook_alias(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'book-alias'); }
+	enterToc_chapter(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'toc-chapter'); }
 
 
 
 	enterImages_logo_grave(ctx: ParserRuleContext): void  {
-		this.push_tmpl(ctx, 'images-logo-grave');
-		this.curr_bit_stk.push('images-logo-grave');
-		this.logo_stack = new Stack();  // overwrite if any older data
-		this.stk.top().bit['logos'] = [];
+	    this.push_tmpl(ctx, 'images-logo-grave');
+	    this.curr_bit_stk.push('images-logo-grave');
+	    this.logo_stack = new Stack();  // overwrite if any older data
+	    this.stk.top().bit['logos'] = [];
 	};
 	exitImages_logo_grave(ctx: ParserRuleContext): void  {
-		this.curr_bit_stk.pop();
+	    this.curr_bit_stk.pop();
 	};
 	enterLogo(ctx: ParserRuleContext): void  {
-		let code = this.but.getcode(ctx);
-		this.logo_stack.push(code);
+	    let code = this.but.getcode(ctx);
+	    this.logo_stack.push(code);
 	}
 	exitLogo_attribs(ctx: ParserRuleContext): void  {
-		let code = this.but.getcode(ctx);
-		let [key, val] = this.but.get_url(code);
-		let slot = 'logos'; //this.curr_bit_stk.top();
-		const bit = this.stk.top().bit;
-		const index = bit[slot].length-1;
-		key = key.substring(1).trim();
-		// add to the last image data in the logos[] array
-		bit[slot][index]['image'][key] = val.trim();
-		(this.stk.top()).bit.body = (this.stk.top()).bit.body.replace(code, '');
+	    let code = this.but.getcode(ctx);
+	    let [key, val] = this.but.get_url(code);
+	    let slot = 'logos'; //this.curr_bit_stk.top();
+	    const bit = this.stk.top().bit;
+	    const index = bit[slot].length-1;
+	    key = key.substring(1).trim();
+	    // add to the last image data in the logos[] array
+	    bit[slot][index]['image'][key] = val.trim();
+	    (this.stk.top()).bit.body = (this.stk.top()).bit.body.replace(code, '');
 	};
 
-    enterMenu_3_course(ctx: ParserRuleContext): void {
-		this.push_tmpl(ctx, 'menu-3-course');
-		this.stk.top().bit['menu'] = [];
-		for (let i = 0; i < 3; i++)
-			this.stk.top().bit['menu'].push(clone(JSON_BIT_TEMPLATES.MenuItem));
-		// init static menu order number
-		//if ( typeof this.enterMenu_text.mi == 'undefined')
-		this.enterMenu_text['mi'] = 0;
-    };
-    exitMenu_3_course(ctx: ParserRuleContext): void {
-		this.stk.top().bit['body'] = this.stk.top().bit['body'].replace(/\n*===\n*/g, '');
-    };
-    //enterMenu_list(ctx) {};
-    //exitMenu_list(ctx) {};
+	enterMenu_3_course(ctx: ParserRuleContext): void {
+	    this.push_tmpl(ctx, 'menu-3-course');
+	    this.stk.top().bit['menu'] = [];
+	    for (let i = 0; i < 3; i++)
+		this.stk.top().bit['menu'].push(clone(JSON_BIT_TEMPLATES.MenuItem));
+	    // init static menu order number
+	    //if ( typeof this.enterMenu_text.mi == 'undefined')
+	    this.enterMenu_text['mi'] = 0;
+	};
+	exitMenu_3_course(ctx: ParserRuleContext): void {
+	    this.stk.top().bit['body'] = this.stk.top().bit['body'].replace(/\n*===\n*/g, '');
+	};
+	enterMenu_text(ctx: ParserRuleContext): void {
+	    const MENUITEMS = ["appetizer", "mainCourse", "dessert"];
+	    let t = MENUITEMS[this.enterMenu_text['mi']];  // set default
+	    let slot = this.stk.top().bit['menu'][this.enterMenu_text['mi']];
+	    //this.stk.top().bit['menu'][this.enterMenu_text['mi']]['type'] = t;  // set default type
+	    slot['type'] = t;  // set default type
 
-    enterMenu_text(ctx: ParserRuleContext): void {
+	    // key-val store function
+	    const fn: any = (code: string, key: string, val: string) => {
+		//console.log(`key=${key} val=${val}`);
 		const MENUITEMS = ["appetizer", "mainCourse", "dessert"];
-		let t = MENUITEMS[this.enterMenu_text['mi']];  // set default
-		let slot = this.stk.top().bit['menu'][this.enterMenu_text['mi']];
-		//this.stk.top().bit['menu'][this.enterMenu_text['mi']]['type'] = t;  // set default type
-		slot['type'] = t;  // set default type
-
-		// key-val store function
-		const fn: any = (code: string, key: string, val: string) => {
-			//console.log(`key=${key} val=${val}`);
-			const MENUITEMS = ["appetizer", "mainCourse", "dessert"];
-			let slot = this.curr_bit_stk.third();
-			slot[key] = val;
-			(this.stk.top()).bit['body'] = (this.stk.top()).bit['body'].replace(code, '');
-		};
-		this.curr_bit_stk.push(slot);
-		this.curr_bit_stk.push(fn);
-		this.curr_bit_stk.push('menu');  // push a marker.
-    };
-
-    exitMenu_text(ctx: ParserRuleContext): void {
-		let code: string = this.but.getcode(ctx);
-		// When an entry is emply, the parser captures \n===\n + entry to the next slot.
-		// This is not a full solution to it but at least \n===\n in the data
-		code = code.replace(/\n*===\n*/g, '');
-		let slot = this.stk.top().bit['menu'][this.enterMenu_text['mi']];
-		code = code.replace(/\[.*?\]/g, '').trim();
-		slot['course'] = code;
-
-		this.enterMenu_text['mi']++;
+		let slot = this.curr_bit_stk.third();
+		slot[key] = val;
 		(this.stk.top()).bit['body'] = (this.stk.top()).bit['body'].replace(code, '');
+	    };
+	    this.curr_bit_stk.push(slot);
+	    this.curr_bit_stk.push(fn);
+	    this.curr_bit_stk.push('menu');  // push a marker.
+	};
+	
+	exitMenu_text(ctx: ParserRuleContext): void {
+	    let code: string = this.but.getcode(ctx);
+	    // When an entry is emply, the parser captures \n===\n + entry to the next slot.
+	    // This is not a full solution to it but at least \n===\n in the data
+	    code = code.replace(/\n*===\n*/g, '');
+	    let slot = this.stk.top().bit['menu'][this.enterMenu_text['mi']];
+	    code = code.replace(/\[.*?\]/g, '').trim();
+	    slot['course'] = code;
 
-		this.curr_bit_stk.pop();  // menu
-		this.curr_bit_stk.pop();  // fn
-		this.curr_bit_stk.pop();  // slot
-    };
+	    this.enterMenu_text['mi']++;
+	    (this.stk.top()).bit['body'] = (this.stk.top()).bit['body'].replace(code, '');
 
-    exitAnchor(ctx: ParserRuleContext): void {
-		let code: string = this.but.getcode(ctx);
-		let re: RegExp = /\[▼(([^\]]|[\s])*)\]/s;  // accepts newline
-		let val: string = this.but.get_bit_value(re, code);
-		let slot: string = 'anchor';  // default key
-		this.stk.top().bit[slot] = val;
-		(this.stk.top()).bit['body'] = (this.stk.top()).bit['body'].replace(code, '');
-    };
+	    this.curr_bit_stk.pop();  // menu
+	    this.curr_bit_stk.pop();  // fn
+	    this.curr_bit_stk.pop();  // slot
+	};
+
+	exitAnchor(ctx: ParserRuleContext): void {
+	    let code: string = this.but.getcode(ctx);
+	    let re: RegExp = /\[▼(([^\]]|[\s])*)\]/s;  // accepts newline
+	    let val: string = this.but.get_bit_value(re, code);
+	    let slot: string = 'anchor';  // default key
+	    this.stk.top().bit[slot] = val;
+	    (this.stk.top()).bit['body'] = (this.stk.top()).bit['body'].replace(code, '');
+	};
 
 }
 

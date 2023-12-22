@@ -1,3 +1,69 @@
+
+<<<<./tests/jsfiddle.bit
+[
+    {
+        "bitmark": "[.vendor-jsfiddle&image]\n[@id:119768]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_1024x1024.jpg][@src1x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64.jpg][@src2x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64@2x.jpg][@width:640][@height:640]\nBitmarkListener.prototype.get_result = function () {\n  while (0 < this.curr_bit_stk.size)\n    delete this.curr_bit_stk.pop();\n  return this.stk.bucket;\n};",
+        "bit": {
+            "type": "vendor-jsfiddle",
+            "format": "bitmark--",
+            "body": "BitmarkListener.prototype.get_result = function () {\n  while (0 < this.curr_bit_stk.size)\n    delete this.curr_bit_stk.pop();\n  return this.stk.bucket;\n};",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "id": [
+                "119768"
+            ],
+            "resource": {
+                "type": "image",
+                "image": {
+                    "src": "https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_1024x1024.jpg",
+                    "showInIndex": false,
+                    "format": "jpg",
+                    "width": "640",
+                    "height": "640",
+                    "alt": "",
+                    "caption": "",
+                    "license": "",
+                    "copyright": "",
+                    "src1x": "https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64.jpg",
+                    "src2x": "https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64@2x.jpg"
+                }
+            }
+        }
+    },
+    {
+        "bitmark": "[.vendor-jsfiddle-embed&image]\n[@id:119768]\n\nBitmarkListener.prototype.set_value_based_on_curr_bit_stk = function (val1, sub1, val2, sub2, tmpl = null) {\n  let subscript = this.curr_bit_stk.top();\n  let key_obj = null;\n\n  if (subscript.startsWith('{'))\n    key_obj = subscript.split('$'); // like \"{Diaz:0}:marks\"\n  if (key_obj.length === 2) {\n    if (tmpl && !(key_obj[0] in this.stk.top().bit[key_obj[1]]))\n      (this.stk.top()).bit[key_obj[1]][key_obj[0]] = R.clone(tmpl);\n    if (key_obj[0] in this.stk.top().bit[key_obj[1]]) {\n      // e.g. bit.gaps['{0}'].example = true;\n      (this.stk.top()).bit[key_obj[1]][key_obj[0]][sub1] = val1;\n      if (sub2 != null)\n        (this.stk.top()).bit[key_obj[1]][key_obj[0]][sub2] = val2;\n    }\n  }\n}\n\nbody { font-family: Helvetica, Tahoma; }\nh2 { font-size: 1.5em; margin-bottom: 10px; display: block;}\np { margin-bottom: 15px; display: block; font-size: 0.8em; }\nlabel { font-weight: bold; }\ntextarea, input[type=text] {\n    padding: 3px 5px;\n    width: 80%;\n    display: block;\n    border: 1px solid #ddd;\n    margin-bottom: 5px;\n}\ntextarea { height: 70px; }\n\n<h2>Load a fiddle based on the POST variables</h2>\n<form method='post' action='http://jsfiddle.net/api/post/mootools/1.3/dependencies/more/' target='check'>\n    <p><input type='submit'/> - fiddle will be loaded in different browser window/tab.</p>\n    <select name=\"panel_html\">\n        <option value=\"0\">HTML</option>\n    </select>\n    <textarea name='html'><p class=\"red\">It's magic!</p>\n<p><a href=\"http://doc.jsfiddle.net/api/post.html\">Documentation</a></p></textarea>\n    <select name=\"panel_js\">\n        <option value=\"0\">JavaScript</option>\n        <option value=\"1\">CoffeeScript</option>\n        <option value=\"2\">JavaScript 1.7</option>\n    </select>\n    <textarea name='js'>window.addEvent('domready', function() {\n  $$('p.red').each(function(el) {\n      el.setStyle('color', '#00ff00');\n  });\n});</textarea>\n    <select name=\"panel_css\">\n        <option value=\"0\">CSS</option>\n        <option value=\"1\">SCSS</option>\n    </select>\n    <textarea name='css'>p {font-family: Helvetica, Arial; }</textarea>\n    <label>Title:</label>\n    <input type='text' name='title' value='some title'/>\n    <label>Description:</label>\n    <textarea name='description'>descr</textarea>\n    <label>Resources (comma separated, no spaces):</label>\n    <textarea name='resources'>http://abc.it/xyz.js</textarea>\n    <label>DTD:</label>\n    <input type='text' name='dtd' value='html 4'/>\n    <label>Wrap (l/d/h/b)</label>\n    <input type='text' name='wrap' value='l'/>\n</form>",
+        "bit": {
+            "type": "vendor-jsfiddle-embed",
+            "format": "bitmark--",
+            "body": "BitmarkListener.prototype.set_value_based_on_curr_bit_stk = function (val1, sub1, val2, sub2, tmpl = null) {\n  let subscript = this.curr_bit_stk.top();\n  let key_obj = null;\n\n  if (subscript.startsWith('{'))\n    key_obj = subscript.split('$'); // like \"{Diaz:0}:marks\"\n  if (key_obj.length === 2) {\n    if (tmpl && !(key_obj[0] in this.stk.top().bit[key_obj[1]]))\n      (this.stk.top()).bit[key_obj[1]][key_obj[0]] = R.clone(tmpl);\n    if (key_obj[0] in this.stk.top().bit[key_obj[1]]) {\n      // e.g. bit.gaps['{0}'].example = true;\n      (this.stk.top()).bit[key_obj[1]][key_obj[0]][sub1] = val1;\n      if (sub2 != null)\n        (this.stk.top()).bit[key_obj[1]][key_obj[0]][sub2] = val2;\n    }\n  }\n}\n\nbody { font-family: Helvetica, Tahoma; }\nh2 { font-size: 1.5em; margin-bottom: 10px; display: block;}\np { margin-bottom: 15px; display: block; font-size: 0.8em; }\nlabel { font-weight: bold; }\ntextarea, input[type=text] {\n    padding: 3px 5px;\n    width: 80%;\n    display: block;\n    border: 1px solid #ddd;\n    margin-bottom: 5px;\n}\ntextarea { height: 70px; }\n\n<h2>Load a fiddle based on the POST variables</h2>\n<form method='post' action='http://jsfiddle.net/api/post/mootools/1.3/dependencies/more/' target='check'>\n    <p><input type='submit'/> - fiddle will be loaded in different browser window/tab.</p>\n    <select name=\"panel_html\">\n        <option value=\"0\">HTML</option>\n    </select>\n    <textarea name='html'><p class=\"red\">It's magic!</p>\n<p><a href=\"http://doc.jsfiddle.net/api/post.html\">Documentation</a></p></textarea>\n    <select name=\"panel_js\">\n        <option value=\"0\">JavaScript</option>\n        <option value=\"1\">CoffeeScript</option>\n        <option value=\"2\">JavaScript 1.7</option>\n    </select>\n    <textarea name='js'>window.addEvent('domready', function() {\n  $$('p.red').each(function(el) {\n      el.setStyle('color', '#00ff00');\n  });\n});</textarea>\n    <select name=\"panel_css\">\n        <option value=\"0\">CSS</option>\n        <option value=\"1\">SCSS</option>\n    </select>\n    <textarea name='css'>p {font-family: Helvetica, Arial; }</textarea>\n    <label>Title:</label>\n    <input type='text' name='title' value='some title'/>\n    <label>Description:</label>\n    <textarea name='description'>descr</textarea>\n    <label>Resources (comma separated, no spaces):</label>\n    <textarea name='resources'>http://abc.it/xyz.js</textarea>\n    <label>DTD:</label>\n    <input type='text' name='dtd' value='html 4'/>\n    <label>Wrap (l/d/h/b)</label>\n    <input type='text' name='wrap' value='l'/>\n</form>",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "id": [
+                "119768"
+            ]
+        }
+    },
+    {
+        "bitmark": "[.image-render-svg]\n[@id:119768]\n<?xml version=\"1.0\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n  \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n<svg version=\"1.0\" xmlns=\"http://www.w3.org/2000/svg\"\n width=\"100%\" height=\"100%\" viewBox=\"0 0 1288.000000 728.000000\"\n preserveAspectRatio=\"xMidYMid meet\">\n<g transform=\"translate(0.000000,728.000000) scale(0.100000,-0.100000)\"\nfill=\"#000000\" stroke=\"none\">\n<path d=\"M0 3640 l0 -3640 6440 0 6440 0 0 3640 0 3640 -6440 0 -6440 0 0 -3640z\n m12800 0 l0 -3560 -6360 0 -6360 0 0 3560 0 3560 6360 0 6360 0 0 -3560z\"/>\n</g>\n</svg>",
+        "bit": {
+            "type": "image-render-svg",
+            "format": "bitmark--",
+            "body": "<?xml version=\"1.0\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n  \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n<svg version=\"1.0\" xmlns=\"http://www.w3.org/2000/svg\"\n width=\"100%\" height=\"100%\" viewBox=\"0 0 1288.000000 728.000000\"\n preserveAspectRatio=\"xMidYMid meet\">\n<g transform=\"translate(0.000000,728.000000) scale(0.100000,-0.100000)\"\nfill=\"#000000\" stroke=\"none\">\n<path d=\"M0 3640 l0 -3640 6440 0 6440 0 0 3640 0 3640 -6440 0 -6440 0 0 -3640z\n m12800 0 l0 -3560 -6360 0 -6360 0 0 3560 0 3560 6360 0 6360 0 0 -3560z\"/>\n</g>\n</svg>",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "id": [
+                "119768"
+            ]
+        }
+    }
+]
+
 <<<<./tests/learning-path1.bit
 [
     {
@@ -702,6 +768,7 @@
     }
 ]
 <<<<./tests/book1.bit
+
 [
     {
         "bitmark": "[.book:text]\n[! this is my book]\n[# Erkundungen]\n[##  Deutsch als Fremdsprache]\n[%][%k testing L&D R&D]\n[@subject: Integriertes Kurs- und Arbeitsbuch Sprachniveau B2]\n[@ language:en]\n[@ copyright: © 2012 by A Publisher International Ltd., Zurich, Switzerland]\n[@ skills: reading]\n[@ ageRange: 18, 969]\n[@ complexity: intermediate]\n[@seriesTitle: German as a Foreign Language]\n[@seriesId: com.firstpub.e0111]\n[@numberInSeries: 1]\n[@format: Integrated course and work book]\n[@type: book]\n[@isLiveBook: false]\n[@isSmartBook: false]\n[@isHighQuality: true]",
@@ -2102,12 +2169,12 @@
 <<<<./tests/cloze12.bit
 [
     {
-        "bitmark": "[.cloze] This sentence is a [_cloze][_gap text][!noun] with [_4][?1 or 2] gaps including an instruction for the first and a hint for the second ] gap [. [& means the start of bit [.match][@example]::remark::  <<kool<<\n[&audio:https://cdn.bitbook.education/cat.wmv]\nEND",
+        "bitmark": "[.cloze][%cl12] This sentence is a [_cloze][_gap text][!noun] with [_4][?1 or 2] gaps including an instruction for the first and a hint for the second ] gap [. [& means the start of bit [.match][@example]\n[&audio:https://cdn.bitbook.education/cat.wmv]\nEND",
         "bit": {
             "type": "cloze",
             "format": "bitmark--",
-            "body": "This sentence is a {0} with {1} gaps including an instruction for the first and a hint for the second ] gap [. [& means the start of bit [.match]::remark::  <<kool<<\n\nEND",
-            "item": "",
+            "body": "This sentence is a {0} with {1} gaps including an instruction for the first and a hint for the second ] gap [. [& means the start of bit [.match]\n\nEND",
+            "item": "cl12",
             "hint": "",
             "isExample": false,
             "example": "",
@@ -2596,7 +2663,7 @@
             "instruction": "Berechnen Sie aufgrund des & folgenden Projektablaufplans die Projektdauer in Monaten. \nHinweis: In den Spalten «Vorgänger» und «Nachfolger» ist jeweils nur eine Nummer aufgeführt.",
             "partialAnswer": "",
             "body": "",
-            "item": "05_Ablauf und Termine_022 (Freitext)",
+            "item": "05_Ablaufund Termine_022 (Freitext)",
             "hint": "Korrekte Lösung \n18 Monate. (Hinweis: Für die Berechnung kann das Zeichnen eines Gantt-Diagramms hilfreich sein.)",
             "isExample": false,
             "example": ""
@@ -2627,7 +2694,7 @@
             "instruction": "Berechnen Sie aufgrund des & folgenden Projektablaufplans die Projektdauer in Monaten. \nHinweis: In den Spalten «Vorgänger» und «Nachfolger» ist jeweils nur eine Nummer aufgeführt.",
             "partialAnswer": "",
             "body": "",
-            "item": "05_Ablauf und Termine_022 (Freitext)",
+            "item": "05_Ablaufund Termine_022 (Freitext)",
             "hint": "Korrekte Lösung \n18 Monate. (Hinweis: Für die Berechnung kann das Zeichnen eines Gantt-Diagramms hilfreich sein.)",
             "isExample": false,
             "example": "",
@@ -12537,56 +12604,7 @@
         }
     }
 ]
-<<<<./tests/code.bit
-[
-    {
-        "bitmark": "[.code]\n[@id:51861]\n[@computerLanguage:javascript]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\nFrauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
-        "bit": {
-            "type": "code",
-            "format": "bitmark--",
-            "body": "Frauen welche der Übergangsgeneration angehören und ≠ ihre Altersrente nicht vorbeziehen, erhalten einen lebenslangen Rentenzuschlag.",
-            "item": "",
-            "hint": "",
-            "isExample": false,
-            "example": "",
-            "id": [
-                "51861"
-            ],
-            "computerLanguage": "javascript",
-            "lead": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration"
-        }
-    },
-    {
-        "bitmark": "[.card-1]\n[@language:Japanese]\n::info::\n**Gebrauch der Zeitformen:**\nDas Präteritum verwendet man vor allem für schriftliche Äußerungen.\nIn der mündlichen Kommunikation gebrauchen wir in der Regel das Perfekt.\nDie Hilfsverben __haben__ und __sein__ und die Modalverben bilden eine Ausnahme und werden meistens im Präteritum verwendet.\n::\n\n::info::\n**Bildung des Perfekts:**\nAlle Verben, die einen Akkusativ verlangen, und alle reflexiven Verben bilden das Perfekt mit __haben__.\n__Wir haben ein Haus gebaut. Ich habe mich geärgert.__\nVerben der Orts- und Zustandsänderung sowie sein und bleiben bilden das Perfekt mit __sein__.\n__Wir sind nach Italien gefahren. Die Blumen sind verblüht.__\n::",
-        "bit": {
-            "type": "card-1",
-            "format": "bitmark--",
-            "body": "::info::\n**Gebrauch der Zeitformen:**\nDas Präteritum verwendet man vor allem für schriftliche Äußerungen.\nIn der mündlichen Kommunikation gebrauchen wir in der Regel das Perfekt.\nDie Hilfsverben __haben__ und __sein__ und die Modalverben bilden eine Ausnahme und werden meistens im Präteritum verwendet.\n::\n\n::info::\n**Bildung des Perfekts:**\nAlle Verben, die einen Akkusativ verlangen, und alle reflexiven Verben bilden das Perfekt mit __haben__.\n__Wir haben ein Haus gebaut. Ich habe mich geärgert.__\nVerben der Orts- und Zustandsänderung sowie sein und bleiben bilden das Perfekt mit __sein__.\n__Wir sind nach Italien gefahren. Die Blumen sind verblüht.__\n::",
-            "item": "",
-            "hint": "",
-            "isExample": false,
-            "example": "",
-            "language": [
-                "Japanese"
-            ]
-        }
-    },
-    {
-        "bitmark": "[.question-1]\n\n**Hier finden Sie wichtigen Wortschatz des Kapitels:**\n[%D1]\n[@language:Indonesian]\n**Angaben zur eigenen Person**\n* Ich heiße ...\n* Mein Name ist ...\n* Ich komme aus ...\n* Ich wohne in ...\n* Ich bin von Beruf ...\n* Ich arbeite bei ... als ...\n* Ich bin ledig/Single, verheiratet, geschieden.\n* Ich habe die __(deutsche)__ Staatsbürgerschaft.\n* Ich bin __(Deutsche(r)). __\n* In meiner Freizeit ...\n\n**Schule und Ausbildung**",
-        "bit": {
-            "type": "question-1",
-            "format": "bitmark--",
-            "body": "**Hier finden Sie wichtigen Wortschatz des Kapitels:**\n\n\n**Angaben zur eigenen Person**\n* Ich heiße ...\n* Mein Name ist ...\n* Ich komme aus ...\n* Ich wohne in ...\n* Ich bin von Beruf ...\n* Ich arbeite bei ... als ...\n* Ich bin ledig/Single, verheiratet, geschieden.\n* Ich habe die __(deutsche)__ Staatsbürgerschaft.\n* Ich bin __(Deutsche(r)). __\n* In meiner Freizeit ...\n\n**Schule und Ausbildung**",
-            "item": "D1",
-            "hint": "",
-            "isExample": false,
-            "example": "",
-            "language": [
-                "Indonesian"
-            ]
-        }
-    }
-]
+
 <<<<./tests/image-audio-video.bit
 [
     {
@@ -13471,7 +13489,7 @@
             "type": "vendor-amcharts-5-chart",
             "format": "json",
             "body": "{\"Test\": 100, \"Test2\": \"Json\"}",
-            "item": "item 1",
+            "item": "1",
             "hint": "",
             "isExample": false,
             "example": "",
@@ -13487,7 +13505,7 @@
             "type": "vendor-amcharts-5-chart",
             "format": "json",
             "body": "{\"Testing\": 200, \"Checking\": [1,2,3,4,5,6]}",
-            "item": "item 1",
+            "item": "1",
             "hint": "",
             "isExample": false,
             "example": "",
@@ -13503,7 +13521,7 @@
             "type": "vendor-amcharts-5-chart",
             "format": "json",
             "body": "{\n  \"name\": \"@bitmark-standard/bitmark-grammar\",\n  \"version\": \"1.0.23\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/bitmark-standard/bitmark-grammar.git\"\n  },\n  \"publishConfig\": {\n    \"registry\": \"https://npm.pkg.github.com\"\n  },\n  \"keywords\": [ \"bitmark\", \"grammar\", \"parser\" ],\n  \"keywords\": [ {\"bitmark\":0},{\"grammar\":1},{\"parser\":2}]\n}",
-            "item": "item 2",
+            "item": "2",
             "hint": "",
             "isExample": false,
             "example": "",
@@ -16929,6 +16947,7 @@
         }
     }
 ]
+
 <<<<./tests/image-portrait-landscape.bit
 [
     {
@@ -17018,7 +17037,7 @@
             "type": "bitmark-example",
             "format": "bitmark--",
             "body": "좋은 커밋을 작성하는 것은 미래를 대비하는 것입니다. 유용한 설명을 제공함으로써 문제를 해결하는 동안 자신이나 동료가 이리저리 찾아다니는 시간을 절약할 수 있습니다.\n\n미래의 자신에게 보내는 편지처럼 사려 깊은 커밋 메시지를 작성하는 데 걸리는 추가 시간은 매우 가치 있는 시간입니다. 대규모 프로젝트에서는 유지 관리를 위해 문서화가 필수적입니다.\n\n엔지니어링 팀 내에서는 협업과 커뮤니케이션이 가장 중요합니다. Git 커밋 메시지가 그 대표적인 예입니다. 팀에 커밋 메시지에 대한 규칙이 아직 마련되어 있지 않다면 규칙을 만들 것을 적극 권장합니다.",
-            "item": "Alfabett (the alphabet)",
+            "item": "Alfabett(the alphabet)",
             "hint": "",
             "isExample": false,
             "example": "",
@@ -17264,74 +17283,10 @@
         }
     }
 ]
-<<<<./tests/jsfiddle.bit
-[
-    {
-        "bitmark": "[.vendor-jsfiddle&image]\n[@id:119768]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_1024x1024.jpg][@src1x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64.jpg][@src2x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64@2x.jpg][@width:640][@height:640]\nBitmarkListener.prototype.get_result = function () {\n  while (0 < this.curr_bit_stk.size)\n    delete this.curr_bit_stk.pop();\n  return this.stk.bucket;\n};",
-        "bit": {
-            "type": "vendor-jsfiddle",
-            "format": "bitmark--",
-            "body": "BitmarkListener.prototype.get_result = function () {\n  while (0 < this.curr_bit_stk.size)\n    delete this.curr_bit_stk.pop();\n  return this.stk.bucket;\n};",
-            "item": "",
-            "hint": "",
-            "isExample": false,
-            "example": "",
-            "id": [
-                "119768"
-            ],
-            "resource": {
-                "type": "image",
-                "image": {
-                    "src": "https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_1024x1024.jpg",
-                    "showInIndex": false,
-                    "format": "jpg",
-                    "width": "640",
-                    "height": "640",
-                    "alt": "",
-                    "caption": "",
-                    "license": "",
-                    "copyright": "",
-                    "src1x": "https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64.jpg",
-                    "src2x": "https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64@2x.jpg"
-                }
-            }
-        }
-    },
-    {
-        "bitmark": "[.vendor-jsfiddle-embed&image]\n[@id:119768]\n# JS\nBitmarkListener.prototype.set_value_based_on_curr_bit_stk = function (val1, sub1, val2, sub2, tmpl = null) {\n  let subscript = this.curr_bit_stk.top();\n  let key_obj = null;\n\n  if (subscript.startsWith('{'))\n    key_obj = subscript.split('$'); // like \"{Diaz:0}:marks\"\n  if (key_obj.length === 2) {\n    if (tmpl && !(key_obj[0] in this.stk.top().bit[key_obj[1]]))\n      (this.stk.top()).bit[key_obj[1]][key_obj[0]] = R.clone(tmpl);\n    if (key_obj[0] in this.stk.top().bit[key_obj[1]]) {\n      // e.g. bit.gaps['{0}'].example = true;\n      (this.stk.top()).bit[key_obj[1]][key_obj[0]][sub1] = val1;\n      if (sub2 != null)\n        (this.stk.top()).bit[key_obj[1]][key_obj[0]][sub2] = val2;\n    }\n  }\n}\n# CSS\nbody { font-family: Helvetica, Tahoma; }\nh2 { font-size: 1.5em; margin-bottom: 10px; display: block;}\np { margin-bottom: 15px; display: block; font-size: 0.8em; }\nlabel { font-weight: bold; }\ntextarea, input[type=text] {\n    padding: 3px 5px;\n    width: 80%;\n    display: block;\n    border: 1px solid #ddd;\n    margin-bottom: 5px;\n}\ntextarea { height: 70px; }\n# HTML\n<h2>Load a fiddle based on the POST variables</h2>\n<form method='post' action='http://jsfiddle.net/api/post/mootools/1.3/dependencies/more/' target='check'>\n    <p><input type='submit'/> - fiddle will be loaded in different browser window/tab.</p>\n    <select name=\"panel_html\">\n        <option value=\"0\">HTML</option>\n    </select>\n    <textarea name='html'><p class=\"red\">It's magic!</p>\n<p><a href=\"http://doc.jsfiddle.net/api/post.html\">Documentation</a></p></textarea>\n    <select name=\"panel_js\">\n        <option value=\"0\">JavaScript</option>\n        <option value=\"1\">CoffeeScript</option>\n        <option value=\"2\">JavaScript 1.7</option>\n    </select>\n    <textarea name='js'>window.addEvent('domready', function() {\n  $$('p.red').each(function(el) {\n      el.setStyle('color', '#00ff00');\n  });\n});</textarea>\n    <select name=\"panel_css\">\n        <option value=\"0\">CSS</option>\n        <option value=\"1\">SCSS</option>\n    </select>\n    <textarea name='css'>p {font-family: Helvetica, Arial; }</textarea>\n    <label>Title:</label>\n    <input type='text' name='title' value='some title'/>\n    <label>Description:</label>\n    <textarea name='description'>descr</textarea>\n    <label>Resources (comma separated, no spaces):</label>\n    <textarea name='resources'>http://abc.it/xyz.js</textarea>\n    <label>DTD:</label>\n    <input type='text' name='dtd' value='html 4'/>\n    <label>Wrap (l/d/h/b)</label>\n    <input type='text' name='wrap' value='l'/>\n</form>",
-        "bit": {
-            "type": "vendor-jsfiddle-embed",
-            "format": "bitmark--",
-            "body": "# JS\nBitmarkListener.prototype.set_value_based_on_curr_bit_stk = function (val1, sub1, val2, sub2, tmpl = null) {\n  let subscript = this.curr_bit_stk.top();\n  let key_obj = null;\n\n  if (subscript.startsWith('{'))\n    key_obj = subscript.split('$'); // like \"{Diaz:0}:marks\"\n  if (key_obj.length === 2) {\n    if (tmpl && !(key_obj[0] in this.stk.top().bit[key_obj[1]]))\n      (this.stk.top()).bit[key_obj[1]][key_obj[0]] = R.clone(tmpl);\n    if (key_obj[0] in this.stk.top().bit[key_obj[1]]) {\n      // e.g. bit.gaps['{0}'].example = true;\n      (this.stk.top()).bit[key_obj[1]][key_obj[0]][sub1] = val1;\n      if (sub2 != null)\n        (this.stk.top()).bit[key_obj[1]][key_obj[0]][sub2] = val2;\n    }\n  }\n}\n# CSS\nbody { font-family: Helvetica, Tahoma; }\nh2 { font-size: 1.5em; margin-bottom: 10px; display: block;}\np { margin-bottom: 15px; display: block; font-size: 0.8em; }\nlabel { font-weight: bold; }\ntextarea, input[type=text] {\n    padding: 3px 5px;\n    width: 80%;\n    display: block;\n    border: 1px solid #ddd;\n    margin-bottom: 5px;\n}\ntextarea { height: 70px; }\n# HTML\n<h2>Load a fiddle based on the POST variables</h2>\n<form method='post' action='http://jsfiddle.net/api/post/mootools/1.3/dependencies/more/' target='check'>\n    <p><input type='submit'/> - fiddle will be loaded in different browser window/tab.</p>\n    <select name=\"panel_html\">\n        <option value=\"0\">HTML</option>\n    </select>\n    <textarea name='html'><p class=\"red\">It's magic!</p>\n<p><a href=\"http://doc.jsfiddle.net/api/post.html\">Documentation</a></p></textarea>\n    <select name=\"panel_js\">\n        <option value=\"0\">JavaScript</option>\n        <option value=\"1\">CoffeeScript</option>\n        <option value=\"2\">JavaScript 1.7</option>\n    </select>\n    <textarea name='js'>window.addEvent('domready', function() {\n  $$('p.red').each(function(el) {\n      el.setStyle('color', '#00ff00');\n  });\n});</textarea>\n    <select name=\"panel_css\">\n        <option value=\"0\">CSS</option>\n        <option value=\"1\">SCSS</option>\n    </select>\n    <textarea name='css'>p {font-family: Helvetica, Arial; }</textarea>\n    <label>Title:</label>\n    <input type='text' name='title' value='some title'/>\n    <label>Description:</label>\n    <textarea name='description'>descr</textarea>\n    <label>Resources (comma separated, no spaces):</label>\n    <textarea name='resources'>http://abc.it/xyz.js</textarea>\n    <label>DTD:</label>\n    <input type='text' name='dtd' value='html 4'/>\n    <label>Wrap (l/d/h/b)</label>\n    <input type='text' name='wrap' value='l'/>\n</form>",
-            "item": "",
-            "hint": "",
-            "isExample": false,
-            "example": "",
-            "id": [
-                "119768"
-            ]
-        }
-    },
-    {
-        "bitmark": "[.image-render-svg]\n[@id:119768]\n<?xml version=\"1.0\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n  \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n<svg version=\"1.0\" xmlns=\"http://www.w3.org/2000/svg\"\n width=\"100%\" height=\"100%\" viewBox=\"0 0 1288.000000 728.000000\"\n preserveAspectRatio=\"xMidYMid meet\">\n<g transform=\"translate(0.000000,728.000000) scale(0.100000,-0.100000)\"\nfill=\"#000000\" stroke=\"none\">\n<path d=\"M0 3640 l0 -3640 6440 0 6440 0 0 3640 0 3640 -6440 0 -6440 0 0 -3640z\n m12800 0 l0 -3560 -6360 0 -6360 0 0 3560 0 3560 6360 0 6360 0 0 -3560z\"/>\n</g>\n</svg>",
-        "bit": {
-            "type": "image-render-svg",
-            "format": "bitmark--",
-            "body": "<?xml version=\"1.0\"?>\n<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\"\n  \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">\n<svg version=\"1.0\" xmlns=\"http://www.w3.org/2000/svg\"\n width=\"100%\" height=\"100%\" viewBox=\"0 0 1288.000000 728.000000\"\n preserveAspectRatio=\"xMidYMid meet\">\n<g transform=\"translate(0.000000,728.000000) scale(0.100000,-0.100000)\"\nfill=\"#000000\" stroke=\"none\">\n<path d=\"M0 3640 l0 -3640 6440 0 6440 0 0 3640 0 3640 -6440 0 -6440 0 0 -3640z\n m12800 0 l0 -3560 -6360 0 -6360 0 0 3560 0 3560 6360 0 6360 0 0 -3560z\"/>\n</g>\n</svg>",
-            "item": "",
-            "hint": "",
-            "isExample": false,
-            "example": "",
-            "id": [
-                "119768"
-            ]
-        }
-    }
-]
 <<<<./tests/images-logo-grave.bit
 [
     {
-        "bitmark": "[.images-logo-grave:bitmark--]\n[@id:119768]\n[!logoimages]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_1024x1024.jpg]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat4_1024x1024.jpg]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat5_1024x1024.jpg]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat6_1024x1024.jpg]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat7_1024x1024.jpg]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat8_1024x1024.jpg][@caption: Willy Brandt: Bundeskanzler der Bundesrepublik Deutschland von 1969 bis 1974][@width:1024][@height:256]",
+        "bitmark": "[.images-logo-grave:bitmark--]\n[@id:119768]\n[!logo images]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_1024x1024.jpg]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat4_1024x1024.jpg]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat5_1024x1024.jpg]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat6_1024x1024.jpg]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat7_1024x1024.jpg]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat8_1024x1024.jpg][@caption: Willy Brandt: Bundeskanzler der Bundesrepublik Deutschland von 1969 bis 1974][@width:1024][@height:256]",
         "bit": {
             "type": "images-logo-grave",
             "format": "bitmark--",
@@ -17390,7 +17345,7 @@
             "id": [
                 "119768"
             ],
-            "instruction": "logoimages"
+            "instruction": "logo images"
         }
     }
 ]
@@ -18143,6 +18098,43 @@
                     "src": "https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_1024x1024.jpg"
                 }
             ]
+        }
+    }
+]
+<<<<./tests/toc-chap.bit
+[
+    {
+        "bitmark": "[.toc-chapter]\n[@id:119768]\n[@maxDisplayLevel: 256]\n[%item 1024][%lead 111][%pageNumber 90][%marginNumber 9]\n\n좋은 커밋을 작성하는 것은 미래를 대비하는 것입니다. 유용한 설명을 제공함으로써 문제를 해결하는 동안 자신이나 동료가 이리저리 찾아다니는 시간을 절약할 수 있습니다.\n\n미래의 자신에게 보내는 편지처럼 사려 깊은 커밋 메시지를 작성하는 데 걸리는 추가 시간은 매우 가치 있는 시간입니다. 대규모 프로젝트에서는 유지 관리를 위해 문서화가 필수적입니다.\n\n엔지니어링 팀 내에서는 협업과 커뮤니케이션이 가장 중요합니다. Git 커밋 메시지가 그 대표적인 예입니다. 팀에 커밋 메시지에 대한 규칙이 아직 마련되어 있지 않다면 규칙을 만들 것을 적극 권장합니다.\n[@publisher: 野田ヨシ]\n[@theme: プログラミング言語開発]",
+        "bit": {
+            "type": "toc-chapter",
+            "format": "bitmark--",
+            "body": "좋은 커밋을 작성하는 것은 미래를 대비하는 것입니다. 유용한 설명을 제공함으로써 문제를 해결하는 동안 자신이나 동료가 이리저리 찾아다니는 시간을 절약할 수 있습니다.\n\n미래의 자신에게 보내는 편지처럼 사려 깊은 커밋 메시지를 작성하는 데 걸리는 추가 시간은 매우 가치 있는 시간입니다. 대규모 프로젝트에서는 유지 관리를 위해 문서화가 필수적입니다.\n\n엔지니어링 팀 내에서는 협업과 커뮤니케이션이 가장 중요합니다. Git 커밋 메시지가 그 대표적인 예입니다. 팀에 커밋 메시지에 대한 규칙이 아직 마련되어 있지 않다면 규칙을 만들 것을 적극 권장합니다.",
+            "item": "1024",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "id": [
+                "119768"
+            ],
+            "maxDisplayLevel": 256,
+            "lead": "marginNumber 9",
+            "publisher": "野田ヨシ",
+            "theme": "プログラミング言語開発"
+        }
+    },
+    {
+        "bitmark": "[.toc-chapter]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\n[@publisher: 野田ヨシ]\n[@theme: プログラミング言語開発]",
+        "bit": {
+            "type": "toc-chapter",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "lead": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+            "publisher": "野田ヨシ",
+            "theme": "プログラミング言語開発"
         }
     }
 ]

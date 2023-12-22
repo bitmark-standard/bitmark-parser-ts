@@ -338,6 +338,13 @@ class BitUtil {
 		}
 		return '';
 	}
+	get_two_bit_values(regex: RegExp, text: string): any[] {
+	    let m = text.match(regex);
+	    if (m && m != undefined) {
+ 	       return [ m[1].trim(), m[2].trim()];
+ 	    }
+            return [];
+  	}
 	// multiple results
 	get_bit_value_multi(regex: RegExp, text: string): any[] {
 		let ar = [text.matchAll(regex)];

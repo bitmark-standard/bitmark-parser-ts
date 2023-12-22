@@ -60,6 +60,9 @@ common_parser_file=$(grammar_dir)/common_parser.g4
 .DEFAULT_GOAL = typescript
 
 typescript: $(grammar_files)
+	cp $(common_lexer_file) $(build_dir)
+	cp $(common_parser_file) $(build_dir)
+
 	$(PYTHON_EXECUTABLE) ./tools/replace_parser_content.py $(grammar_dir)/_bitmarkLexer.g4 $(common_lexer_file) $(bitmark_lexer_file) '<<<<<<common<<<<<<'
 	$(PYTHON_EXECUTABLE) ./tools/replace_parser_content.py $(grammar_dir)/_bitmarkParser.g4 $(common_parser_file) $(bitmark_parser_file) '<<<<<<common<<<<<<'
 	$(NODE_MODULES)/antlr4ts-cli/antlr4ts $(ANTLR_OPT) $(bitmark_lexer_file);
