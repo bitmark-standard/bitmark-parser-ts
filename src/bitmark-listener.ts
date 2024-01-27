@@ -341,6 +341,15 @@ class BitmarkListener {
     // Exit a parse tree produced by bitmarkParser#cloze_solution_grouped.
     //exitCloze_solution_grouped(ctx):void {};
 
+
+	enterGap_text(ctx: ParserRuleContext): void {
+		this.push_tmpl(ctx, 'gap-text');  // default template
+	};
+
+	enterGap_text_instruction_grouped(ctx: ParserRuleContext): void {
+		this.push_tmpl(ctx, 'gap-text-instruction-grouped');
+	};
+
     // This is INTENTIONALLY enter!!
     enterGap(ctx: ParserRuleContext): void {
 		let code: string = this.but.getcode(ctx);
@@ -2671,7 +2680,7 @@ class BitmarkListener {
 	let regex = /\[%\s*([^\]\s]+)\s*([^\]]+)\]/;  // two captures
 	let vals = this.but.get_two_bit_values(regex, code);
 	let key:string, val:string;
-	
+
 	if (!(vals[0] in ['lead','pageNumber','marginNumber'])) {
 	    key = 'lead';
 	    val = vals.join(' ');
@@ -2683,7 +2692,7 @@ class BitmarkListener {
 	this.stk.top().bit[key] = val;  // create the key and save the val
 	(this.stk.top()).bit.body = (this.stk.top()).bit.body.replace(code, '');
     }
-    
+
     // New April 2022
     enterLearning_path_lti(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'learning-path-lti', clone(JSON_BIT_TEMPLATES.LearningPath_bit)); };
     enterLearning_path_step(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'learning-path-step', clone(JSON_BIT_TEMPLATES.LearningPath_bit)); };
@@ -3030,7 +3039,7 @@ class BitmarkListener {
 	    this.curr_bit_stk.push(fn);
 	    this.curr_bit_stk.push('menu');  // push a marker.
 	};
-	
+
 	exitMenu_text(ctx: ParserRuleContext): void {
 	    let code: string = this.but.getcode(ctx);
 	    // When an entry is emply, the parser captures \n===\n + entry to the next slot.

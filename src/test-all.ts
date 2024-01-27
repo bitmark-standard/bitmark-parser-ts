@@ -199,6 +199,8 @@ const testfiles: string[] = [
     './tests/images-logo-grave.bit',
     './tests/image-and-zoomDisabledprop.bit',
     './tests/book-alias.bit',
+	"./tests/gap-text1.bit",
+	"./tests/gap-text1-inst.bit",
 ];
 
 const testfilesX: string[] = [

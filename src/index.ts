@@ -382,6 +382,12 @@ class BitmarkParser {
 				lexer: sequenceLexer,
 				parser: sequenceParser
 			},
+			'gap-text': {
+				regex: /\n\[\.[ \t]*gap-text/,
+				name: 'cloze',
+				lexer: clozeLexer,
+				parser: clozeParser
+			},
 			'default': {
 				regex: null,
 				name: null,
