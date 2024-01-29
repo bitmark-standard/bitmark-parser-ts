@@ -2981,7 +2981,14 @@ class BitmarkListener {
 	enterBook_alias(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'book-alias'); }
 	enterToc_chapter(ctx: ParserRuleContext): void { this.push_tmpl(ctx, 'toc-chapter'); }
 
-
+	enterHand_in_audio(ctx: ParserRuleContext): void  { this.push_tmpl(ctx, 'hand-in-audio'); }
+	enterHand_in_voice(ctx: ParserRuleContext): void  { this.push_tmpl(ctx, 'hand-in-voice'); }
+	enterHand_in_video(ctx: ParserRuleContext): void  { this.push_tmpl(ctx, 'hand-in-video'); }
+	enterHand_in_location(ctx: ParserRuleContext): void  { this.push_tmpl(ctx, 'hand-in-location'); }
+	enterHand_in_photo(ctx: ParserRuleContext): void  { this.push_tmpl(ctx, 'hand-in-photo'); }
+	enterHand_in_scan(ctx: ParserRuleContext): void  { this.push_tmpl(ctx, 'hand-in-scan'); }
+	enterHand_in_document(ctx: ParserRuleContext): void  { this.push_tmpl(ctx, 'hand-in-document'); }
+	enterHand_in_contact(ctx: ParserRuleContext): void  { this.push_tmpl(ctx, 'hand-in-contact'); }
 
 	enterImages_logo_grave(ctx: ParserRuleContext): void  {
 	    this.push_tmpl(ctx, 'images-logo-grave');

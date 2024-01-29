@@ -17058,6 +17058,7 @@
         }
     }
 ]
+
 <<<<./tests/app-ai-prompt.bit
 [
     {
@@ -17349,10 +17350,10 @@
         }
     }
 ]
-<<<<./tests/new09242023.bit
+<<<<./tests/image-and-zoomDisabledprop.bit
 [
     {
-        "bitmark": "[.image-mood:bitmark--]\n[@id:119768]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_1024x1024.jpg][@src1x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64.jpg][@src2x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64@2x.jpg][@width:640][@height:640]\nプロンプトとは\nプロンプト（Prompt）とは、AIとの対話やコマンドラインインタフェース（CLI）などの対話形式のシステムにおいて、ユーザが入力する指示や質問のことです。AIがユーザの要求や問いに対して適切な応答や結果を生成するためには、明確で具体的なプロンプトが必要です。不適切なプロンプトを使用すると、AIが望ましくない結果や誤った情報を生成する可能性があります。",
+        "bitmark": "[.image-mood:bitmark--]\n[@id:119768]\n[@zoomDisabled:true]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_1024x1024.jpg][@src1x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64.jpg][@src2x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64@2x.jpg][@width:640][@height:640]\nプロンプトとは\nプロンプト（Prompt）とは、AIとの対話やコマンドラインインタフェース（CLI）などの対話形式のシステムにおいて、ユーザが入力する指示や質問のことです。AIがユーザの要求や問いに対して適切な応答や結果を生成するためには、明確で具体的なプロンプトが必要です。不適切なプロンプトを使用すると、AIが望ましくない結果や誤った情報を生成する可能性があります。",
         "bit": {
             "type": "image-mood",
             "format": "bitmark--",
@@ -17364,6 +17365,7 @@
             "id": [
                 "119768"
             ],
+            "zoomDisabled": true,
             "resource": {
                 "type": "image",
                 "image": {
@@ -17383,7 +17385,7 @@
         }
     },
     {
-        "bitmark": "[.image-figure:bitmark--]\n[@id:119768]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_1024x1024.jpg][@src1x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64.jpg][@src2x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64@2x.jpg][@width:640][@height:640]\nプロンプトとは\nプロンプト（Prompt）とは、AIとの対話やコマンドラインインタフェース（CLI）などの対話形式のシステムにおいて、ユーザが入力する指示や質問のことです。AIがユーザの要求や問いに対して適切な応答や結果を生成するためには、明確で具体的なプロンプトが必要です。不適切なプロンプトを使用すると、AIが望ましくない結果や誤った情報を生成する可能性があります。",
+        "bitmark": "[.image-figure:bitmark--]\n[@id:119768]\n[@zoomDisabled:true]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_1024x1024.jpg][@src1x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64.jpg][@src2x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64@2x.jpg][@width:640][@height:640]\nプロンプトとは\nプロンプト（Prompt）とは、AIとの対話やコマンドラインインタフェース（CLI）などの対話形式のシステムにおいて、ユーザが入力する指示や質問のことです。AIがユーザの要求や問いに対して適切な応答や結果を生成するためには、明確で具体的なプロンプトが必要です。不適切なプロンプトを使用すると、AIが望ましくない結果や誤った情報を生成する可能性があります。",
         "bit": {
             "type": "image-figure",
             "format": "bitmark--",
@@ -17395,6 +17397,7 @@
             "id": [
                 "119768"
             ],
+            "zoomDisabled": true,
             "resource": {
                 "type": "image",
                 "image": {
@@ -17414,7 +17417,7 @@
         }
     },
     {
-        "bitmark": "[.image-banner:bitmark--]\n[@id:119768]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_1024x1024.jpg][@src1x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64.jpg][@src2x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64@2x.jpg][@width:640][@height:640]\nプロンプトとは\nプロンプト（Prompt）とは、AIとの対話やコマンドラインインタフェース（CLI）などの対話形式のシステムにおいて、ユーザが入力する指示や質問のことです。AIがユーザの要求や問いに対して適切な応答や結果を生成するためには、明確で具体的なプロンプトが必要です。不適切なプロンプトを使用すると、AIが望ましくない結果や誤った情報を生成する可能性があります。",
+        "bitmark": "[.image-banner:bitmark--]\n[@id:119768]\n[@zoomDisabled:true]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_1024x1024.jpg][@src1x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64.jpg][@src2x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64@2x.jpg][@width:640][@height:640]\nプロンプトとは\nプロンプト（Prompt）とは、AIとの対話やコマンドラインインタフェース（CLI）などの対話形式のシステムにおいて、ユーザが入力する指示や質問のことです。AIがユーザの要求や問いに対して適切な応答や結果を生成するためには、明確で具体的なプロンプトが必要です。不適切なプロンプトを使用すると、AIが望ましくない結果や誤った情報を生成する可能性があります。",
         "bit": {
             "type": "image-banner",
             "format": "bitmark--",
@@ -17426,6 +17429,7 @@
             "id": [
                 "119768"
             ],
+            "zoomDisabled": true,
             "resource": {
                 "type": "image",
                 "image": {
@@ -17445,7 +17449,7 @@
         }
     },
     {
-        "bitmark": "[.image-styled:bitmark--]\n[@id:119768]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_1024x1024.jpg][@src1x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64.jpg][@src2x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64@2x.jpg][@width:640][@height:640]\nプロンプトとは\nプロンプト（Prompt）とは、AIとの対話やコマンドラインインタフェース（CLI）などの対話形式のシステムにおいて、ユーザが入力する指示や質問のことです。AIがユーザの要求や問いに対して適切な応答や結果を生成するためには、明確で具体的なプロンプトが必要です。不適切なプロンプトを使用すると、AIが望ましくない結果や誤った情報を生成する可能性があります。",
+        "bitmark": "[.image-styled:bitmark--]\n[@id:119768]\n[@zoomDisabled:true]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_1024x1024.jpg][@src1x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64.jpg][@src2x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64@2x.jpg][@width:640][@height:640]\nプロンプトとは\nプロンプト（Prompt）とは、AIとの対話やコマンドラインインタフェース（CLI）などの対話形式のシステムにおいて、ユーザが入力する指示や質問のことです。AIがユーザの要求や問いに対して適切な応答や結果を生成するためには、明確で具体的なプロンプトが必要です。不適切なプロンプトを使用すると、AIが望ましくない結果や誤った情報を生成する可能性があります。",
         "bit": {
             "type": "image-styled",
             "format": "bitmark--",
@@ -17457,6 +17461,7 @@
             "id": [
                 "119768"
             ],
+            "zoomDisabled": true,
             "resource": {
                 "type": "image",
                 "image": {
@@ -17476,7 +17481,7 @@
         }
     },
     {
-        "bitmark": "[.image-screenshot:bitmark--]\n[@id:119768]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_1024x1024.jpg][@src1x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64.jpg][@src2x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64@2x.jpg][@width:640][@height:640]\nプロンプトとは\nプロンプト（Prompt）とは、AIとの対話やコマンドラインインタフェース（CLI）などの対話形式のシステムにおいて、ユーザが入力する指示や質問のことです。AIがユーザの要求や問いに対して適切な応答や結果を生成するためには、明確で具体的なプロンプトが必要です。不適切なプロンプトを使用すると、AIが望ましくない結果や誤った情報を生成する可能性があります。",
+        "bitmark": "[.image-screenshot:bitmark--]\n[@id:119768]\n[@zoomDisabled:true]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_1024x1024.jpg][@src1x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64.jpg][@src2x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64@2x.jpg][@width:640][@height:640]\nプロンプトとは\nプロンプト（Prompt）とは、AIとの対話やコマンドラインインタフェース（CLI）などの対話形式のシステムにおいて、ユーザが入力する指示や質問のことです。AIがユーザの要求や問いに対して適切な応答や結果を生成するためには、明確で具体的なプロンプトが必要です。不適切なプロンプトを使用すると、AIが望ましくない結果や誤った情報を生成する可能性があります。",
         "bit": {
             "type": "image-screenshot",
             "format": "bitmark--",
@@ -17488,6 +17493,7 @@
             "id": [
                 "119768"
             ],
+            "zoomDisabled": true,
             "resource": {
                 "type": "image",
                 "image": {
@@ -17569,7 +17575,7 @@
         }
     },
     {
-        "bitmark": "[.details-image:bitmark--]\n[@id:119768]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_1024x1024.jpg][@src1x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64.jpg][@src2x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64@2x.jpg][@width:640][@height:640]\nプロンプトとは\nプロンプト（Prompt）とは、AIとの対話やコマンドラインインタフェース（CLI）などの対話形式のシステムにおいて、ユーザが入力する指示や質問のことです。AIがユーザの要求や問いに対して適切な応答や結果を生成するためには、明確で具体的なプロンプトが必要です。不適切なプロンプトを使用すると、AIが望ましくない結果や誤った情報を生成する可能性があります。",
+        "bitmark": "[.details-image:bitmark--]\n[@id:119768]\n[@zoomDisabled:true]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_1024x1024.jpg][@src1x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64.jpg][@src2x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64@2x.jpg][@width:640][@height:640]\nプロンプトとは\nプロンプト（Prompt）とは、AIとの対話やコマンドラインインタフェース（CLI）などの対話形式のシステムにおいて、ユーザが入力する指示や質問のことです。AIがユーザの要求や問いに対して適切な応答や結果を生成するためには、明確で具体的なプロンプトが必要です。不適切なプロンプトを使用すると、AIが望ましくない結果や誤った情報を生成する可能性があります。",
         "bit": {
             "type": "details-image",
             "format": "bitmark--",
@@ -17581,6 +17587,7 @@
             "id": [
                 "119768"
             ],
+            "zoomDisabled": true,
             "resource": {
                 "type": "image",
                 "image": {
@@ -17600,7 +17607,7 @@
         }
     },
     {
-        "bitmark": "[.page-banner:bitmark--]\n[@id:119768]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_1024x1024.jpg][@src1x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64.jpg][@src2x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64@2x.jpg][@width:640][@height:640]\nプロンプトとは\nプロンプト（Prompt）とは、AIとの対話やコマンドラインインタフェース（CLI）などの対話形式のシステムにおいて、ユーザが入力する指示や質問のことです。AIがユーザの要求や問いに対して適切な応答や結果を生成するためには、明確で具体的なプロンプトが必要です。不適切なプロンプトを使用すると、AIが望ましくない結果や誤った情報を生成する可能性があります。",
+        "bitmark": "[.page-banner:bitmark--]\n[@id:119768]\n[@zoomDisabled:true]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_1024x1024.jpg][@src1x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64.jpg][@src2x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64@2x.jpg][@width:640][@height:640]\nプロンプトとは\nプロンプト（Prompt）とは、AIとの対話やコマンドラインインタフェース（CLI）などの対話形式のシステムにおいて、ユーザが入力する指示や質問のことです。AIがユーザの要求や問いに対して適切な応答や結果を生成するためには、明確で具体的なプロンプトが必要です。不適切なプロンプトを使用すると、AIが望ましくない結果や誤った情報を生成する可能性があります。",
         "bit": {
             "type": "page-banner",
             "format": "bitmark--",
@@ -17612,6 +17619,7 @@
             "id": [
                 "119768"
             ],
+            "zoomDisabled": true,
             "resource": {
                 "type": "image",
                 "image": {
@@ -17631,7 +17639,7 @@
         }
     },
     {
-        "bitmark": "[.page-buy-button:bitmark--]\n[@id:119768]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_1024x1024.jpg][@src1x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64.jpg][@src2x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64@2x.jpg][@width:640][@height:640]\nプロンプトとは\nプロンプト（Prompt）とは、AIとの対話やコマンドラインインタフェース（CLI）などの対話形式のシステムにおいて、ユーザが入力する指示や質問のことです。AIがユーザの要求や問いに対して適切な応答や結果を生成するためには、明確で具体的なプロンプトが必要です。不適切なプロンプトを使用すると、AIが望ましくない結果や誤った情報を生成する可能性があります。",
+        "bitmark": "[.page-buy-button:bitmark--]\n[@id:119768]\n[@zoomDisabled:true]\n[&image:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_1024x1024.jpg][@src1x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64.jpg][@src2x:https://cdn.bitmark.cloud/books/com.firstpub.book98789/cat3_64x64@2x.jpg][@width:640][@height:640]\nプロンプトとは\nプロンプト（Prompt）とは、AIとの対話やコマンドラインインタフェース（CLI）などの対話形式のシステムにおいて、ユーザが入力する指示や質問のことです。AIがユーザの要求や問いに対して適切な応答や結果を生成するためには、明確で具体的なプロンプトが必要です。不適切なプロンプトを使用すると、AIが望ましくない結果や誤った情報を生成する可能性があります。",
         "bit": {
             "type": "page-buy-button",
             "format": "bitmark--",
@@ -17643,6 +17651,7 @@
             "id": [
                 "119768"
             ],
+            "zoomDisabled": true,
             "resource": {
                 "type": "image",
                 "image": {
@@ -18584,6 +18593,162 @@
                     "example": ""
                 }
             }
+        }
+    }
+]
+<<<<./tests/hand-in-audio.bit
+[
+    {
+        "bitmark": "[.hand-in-audio]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\n[@publisher: 野田ヨシカズ]\n[@theme: プログラミング言語開発\nThis command will run the parser on the target bit file and output json for it. cd to the 'src' directory and run\n]",
+        "bit": {
+            "type": "hand-in-audio",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "lead": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+            "publisher": "野田ヨシカズ",
+            "theme": "プログラミング言語開発\nThis command will run the parser on the target bit file and output json for it. cd to the 'src' directory and run"
+        }
+    },
+    {
+        "bitmark": "[.hand-in-voice]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\n[@publisher: 野田ヨシカズ]\n[@theme: プログラミング言語開発\nThis command will run the parser on the target bit file and output json for it. cd to the 'src' directory and run\n]",
+        "bit": {
+            "type": "hand-in-voice",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "lead": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+            "publisher": "野田ヨシカズ",
+            "theme": "プログラミング言語開発\nThis command will run the parser on the target bit file and output json for it. cd to the 'src' directory and run"
+        }
+    },
+    {
+        "bitmark": "[.hand-in-video]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\n[@publisher: 野田ヨシカズ]\n[@theme: プログラミング言語開発\nThis command will run the parser on the target bit file and output json for it. cd to the 'src' directory and run\n]",
+        "bit": {
+            "type": "hand-in-video",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "lead": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+            "publisher": "野田ヨシカズ",
+            "theme": "プログラミング言語開発\nThis command will run the parser on the target bit file and output json for it. cd to the 'src' directory and run"
+        }
+    },
+    {
+        "bitmark": "[.hand-in-location]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\n[@publisher: 野田ヨシカズ]\n[@theme: プログラミング言語開発\nThis command will run the parser on the target bit file and output json for it. cd to the 'src' directory and run\n]",
+        "bit": {
+            "type": "hand-in-location",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "lead": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+            "publisher": "野田ヨシカズ",
+            "theme": "プログラミング言語開発\nThis command will run the parser on the target bit file and output json for it. cd to the 'src' directory and run"
+        }
+    },
+    {
+        "bitmark": "[.hand-in-photo]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\n[@publisher: 野田ヨシカズ]\n[@theme: プログラミング言語開発\nThis command will run the parser on the target bit file and output json for it. cd to the 'src' directory and run\n]",
+        "bit": {
+            "type": "hand-in-photo",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "lead": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+            "publisher": "野田ヨシカズ",
+            "theme": "プログラミング言語開発\nThis command will run the parser on the target bit file and output json for it. cd to the 'src' directory and run"
+        }
+    },
+    {
+        "bitmark": "[.hand-in-scan]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\n[@publisher: 野田ヨシカズ]\n[@theme: プログラミング言語開発\nThis command will run the parser on the target bit file and output json for it. cd to the 'src' directory and run\n]",
+        "bit": {
+            "type": "hand-in-scan",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "lead": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+            "publisher": "野田ヨシカズ",
+            "theme": "プログラミング言語開発\nThis command will run the parser on the target bit file and output json for it. cd to the 'src' directory and run"
+        }
+    },
+    {
+        "bitmark": "[.hand-in-document]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\n[@publisher: 野田ヨシカズ]\n[@theme: プログラミング言語開発\nThis command will run the parser on the target bit file and output json for it. cd to the 'src' directory and run\n]",
+        "bit": {
+            "type": "hand-in-document",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "lead": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+            "publisher": "野田ヨシカズ",
+            "theme": "プログラミング言語開発\nThis command will run the parser on the target bit file and output json for it. cd to the 'src' directory and run"
+        }
+    },
+    {
+        "bitmark": "[.hand-in-contact]\n[%][%Ausgleichsmassnahmen für Frauen der Übergangsgeneration]\n[@publisher: 野田ヨシカズ]\n[@theme: プログラミング言語開発\nThis command will run the parser on the target bit file and output json for it. cd to the 'src' directory and run\n]",
+        "bit": {
+            "type": "hand-in-contact",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "lead": "Ausgleichsmassnahmen für Frauen der Übergangsgeneration",
+            "publisher": "野田ヨシカズ",
+            "theme": "プログラミング言語開発\nThis command will run the parser on the target bit file and output json for it. cd to the 'src' directory and run"
+        }
+    }
+]
+<<<<./tests/book-alias.bit
+[
+    {
+        "bitmark": "[.book-alias]\n\n[@externalId:e-garantie-so-nehr_jk34jh3kj4hj3kh4jk]\n\n[@spaceId:romanianlife]\n[@language:fr]\n[@publisher:romanianlife]\n[@theme:romanianlife-v3]\n[@coverImage:https://docs.bitmark.cloud/bit-books/swiss_life_select/einkommenssicherung_fr_2023/web-resources/images/cover_sl_garantie_so_mehr.png]\n[#Garantie so mehr]\n\n[@bookAlias: e-garantie-du-revenu_lj4qvpq8gk5m]",
+        "bit": {
+            "type": "book-alias",
+            "format": "bitmark--",
+            "body": "",
+            "item": "",
+            "hint": "",
+            "isExample": false,
+            "example": "",
+            "externalId": [
+                "e-garantie-so-nehr_jk34jh3kj4hj3kh4jk"
+            ],
+            "spaceId": [
+                "romanianlife"
+            ],
+            "language": [
+                "fr"
+            ],
+            "publisher": "romanianlife",
+            "theme": "romanianlife-v3",
+            "coverImage": [
+                "https://docs.bitmark.cloud/bit-books/swiss_life_select/einkommenssicherung_fr_2023/web-resources/images/cover_sl_garantie_so_mehr.png"
+            ],
+            "title": "Garantie so mehr",
+            "bookAlias": [
+                "e-garantie-du-revenu_lj4qvpq8gk5m"
+            ]
         }
     }
 ]

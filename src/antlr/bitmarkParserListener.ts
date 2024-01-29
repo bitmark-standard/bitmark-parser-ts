@@ -241,6 +241,14 @@ import { Toc_chapterContext } from "./bitmarkParser.js";
 import { Images_logo_graveContext } from "./bitmarkParser.js";
 import { LogoContext } from "./bitmarkParser.js";
 import { Logo_attribsContext } from "./bitmarkParser.js";
+import { Hand_in_audioContext } from "./bitmarkParser.js";
+import { Hand_in_voiceContext } from "./bitmarkParser.js";
+import { Hand_in_videoContext } from "./bitmarkParser.js";
+import { Hand_in_locationContext } from "./bitmarkParser.js";
+import { Hand_in_photoContext } from "./bitmarkParser.js";
+import { Hand_in_scanContext } from "./bitmarkParser.js";
+import { Hand_in_documentContext } from "./bitmarkParser.js";
+import { Hand_in_contactContext } from "./bitmarkParser.js";
 import { Bot_choiceContext } from "./bitmarkParser.js";
 import { RatingContext } from "./bitmarkParser.js";
 import { Bullet_itemContext } from "./bitmarkParser.js";
@@ -2940,6 +2948,94 @@ export interface bitmarkParserListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	exitLogo_attribs?: (ctx: Logo_attribsContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `bitmarkParser.hand_in_audio`.
+	 * @param ctx the parse tree
+	 */
+	enterHand_in_audio?: (ctx: Hand_in_audioContext) => void;
+	/**
+	 * Exit a parse tree produced by `bitmarkParser.hand_in_audio`.
+	 * @param ctx the parse tree
+	 */
+	exitHand_in_audio?: (ctx: Hand_in_audioContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `bitmarkParser.hand_in_voice`.
+	 * @param ctx the parse tree
+	 */
+	enterHand_in_voice?: (ctx: Hand_in_voiceContext) => void;
+	/**
+	 * Exit a parse tree produced by `bitmarkParser.hand_in_voice`.
+	 * @param ctx the parse tree
+	 */
+	exitHand_in_voice?: (ctx: Hand_in_voiceContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `bitmarkParser.hand_in_video`.
+	 * @param ctx the parse tree
+	 */
+	enterHand_in_video?: (ctx: Hand_in_videoContext) => void;
+	/**
+	 * Exit a parse tree produced by `bitmarkParser.hand_in_video`.
+	 * @param ctx the parse tree
+	 */
+	exitHand_in_video?: (ctx: Hand_in_videoContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `bitmarkParser.hand_in_location`.
+	 * @param ctx the parse tree
+	 */
+	enterHand_in_location?: (ctx: Hand_in_locationContext) => void;
+	/**
+	 * Exit a parse tree produced by `bitmarkParser.hand_in_location`.
+	 * @param ctx the parse tree
+	 */
+	exitHand_in_location?: (ctx: Hand_in_locationContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `bitmarkParser.hand_in_photo`.
+	 * @param ctx the parse tree
+	 */
+	enterHand_in_photo?: (ctx: Hand_in_photoContext) => void;
+	/**
+	 * Exit a parse tree produced by `bitmarkParser.hand_in_photo`.
+	 * @param ctx the parse tree
+	 */
+	exitHand_in_photo?: (ctx: Hand_in_photoContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `bitmarkParser.hand_in_scan`.
+	 * @param ctx the parse tree
+	 */
+	enterHand_in_scan?: (ctx: Hand_in_scanContext) => void;
+	/**
+	 * Exit a parse tree produced by `bitmarkParser.hand_in_scan`.
+	 * @param ctx the parse tree
+	 */
+	exitHand_in_scan?: (ctx: Hand_in_scanContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `bitmarkParser.hand_in_document`.
+	 * @param ctx the parse tree
+	 */
+	enterHand_in_document?: (ctx: Hand_in_documentContext) => void;
+	/**
+	 * Exit a parse tree produced by `bitmarkParser.hand_in_document`.
+	 * @param ctx the parse tree
+	 */
+	exitHand_in_document?: (ctx: Hand_in_documentContext) => void;
+
+	/**
+	 * Enter a parse tree produced by `bitmarkParser.hand_in_contact`.
+	 * @param ctx the parse tree
+	 */
+	enterHand_in_contact?: (ctx: Hand_in_contactContext) => void;
+	/**
+	 * Exit a parse tree produced by `bitmarkParser.hand_in_contact`.
+	 * @param ctx the parse tree
+	 */
+	exitHand_in_contact?: (ctx: Hand_in_contactContext) => void;
 
 	/**
 	 * Enter a parse tree produced by `bitmarkParser.bot_choice`.

@@ -201,6 +201,7 @@ const testfiles: string[] = [
     './tests/book-alias.bit',
 	"./tests/gap-text1.bit",
 	"./tests/gap-text1-inst.bit",
+	"./tests/hand-in-audio.bit",
 ];
 
 const testfilesX: string[] = [
